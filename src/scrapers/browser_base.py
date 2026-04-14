@@ -33,8 +33,9 @@ class BrowserScraper(ABC):
 
     def _launch(self):
         from playwright.sync_api import sync_playwright
-        from playwright_stealth import stealth_sync
+        from playwright_stealth import Stealth
 
+        stealth = Stealth()
         self._pw = sync_playwright().start()
 
         proxy = os.environ.get("PROXY_URL")
@@ -61,7 +62,7 @@ class BrowserScraper(ABC):
 
         self._context = self._browser.new_context(**context_args)
         page = self._context.new_page()
-        stealth_sync(page)
+        stealth.apply_stealth_sync(page)
         return page
 
     def _save_cookies(self) -> None:

@@ -1,120 +1,90 @@
 from __future__ import annotations
 
-import json
 import logging
 import re
+import time
 
 from src.models import JobPosting
-from src.scrapers.base import BaseScraper
+from src.scrapers.browser_base import BrowserScraper
 
 logger = logging.getLogger(__name__)
 
-SEARCH_URL = "https://jobs.bytedance.com/experienced/position"
+SEARCH_URL = "https://jobs.bytedance.com/experienced/position?keyword={keyword}&limit=30&offset=0"
 
 
-class BytedanceScraper(BaseScraper):
-    """Bytedance uses SSR with embedded JSON data."""
+class BytedanceScraper(BrowserScraper):
+    """ByteDance career site - SPA, requires Playwright."""
 
     @property
     def platform_name(self) -> str:
         return "bytedance"
 
-    def _fetch_jobs(self, keyword: str, city: str) -> list[JobPosting]:
-        params = {"keyword": keyword, "limit": 20, "offset": 0}
-        headers = {"Referer": "https://jobs.bytedance.com/"}
-        resp = self._request_with_retry("GET", SEARCH_URL, params=params, headers=headers)
-        html = resp.text
+    def _fetch_jobs_browser(self, page, keyword: str, city: str) -> list[JobPosting]:
+        url = SEARCH_URL.format(keyword=keyword)
+        jobs: list[JobPosting] = []
 
-        m = re.search(r'<script\s+id="__NEXT_DATA__"[^>]*>(.*?)</script>', html, re.DOTALL)
-        if m:
-            try:
-                next_data = json.loads(m.group(1))
-                return self._parse_next_data(next_data, city)
-            except (json.JSONDecodeError, KeyError):
-                logger.debug("[bytedance] __NEXT_DATA__ parse failed")
-
-        m2 = re.search(r'window\.__INITIAL_STATE__\s*=\s*(\{.*?\});', html, re.DOTALL)
-        if m2:
-            try:
-                state = json.loads(m2.group(1))
-                return self._parse_initial_state(state, city)
-            except (json.JSONDecodeError, KeyError):
-                logger.debug("[bytedance] __INITIAL_STATE__ parse failed")
-
-        return self._parse_html_fallback(html, city)
-
-    def _parse_next_data(self, data: dict, city: str) -> list[JobPosting]:
-        jobs = []
         try:
-            props = data.get("props", {}).get("pageProps", {})
-            job_list = props.get("jobList") or props.get("jobs") or []
-            for item in job_list:
-                job = self._item_to_posting(item)
-                if job and (not city or city in job.location):
-                    jobs.append(job)
+            page.goto(url, wait_until="domcontentloaded", timeout=30000)
+            page.wait_for_timeout(3000)
         except Exception:
-            logger.debug("[bytedance] next_data parsing error", exc_info=True)
-        return jobs
+            logger.warning("[bytedance] page load failed for %s", keyword)
+            return jobs
 
-    def _parse_initial_state(self, state: dict, city: str) -> list[JobPosting]:
-        jobs = []
-        try:
-            job_list = state.get("positionList", {}).get("data", [])
-            for item in job_list:
-                job = self._item_to_posting(item)
-                if job and (not city or city in job.location):
-                    jobs.append(job)
-        except Exception:
-            logger.debug("[bytedance] initial_state parsing error", exc_info=True)
-        return jobs
+        for _ in range(3):
+            page.evaluate("window.scrollBy(0, 600)")
+            page.wait_for_timeout(800)
 
-    def _parse_html_fallback(self, html: str, city: str) -> list[JobPosting]:
-        jobs = []
-        pattern = re.compile(
-            r'href="(/experienced/position/[^"]+)"[^>]*>.*?'
-            r'class="[^"]*title[^"]*"[^>]*>([^<]+)',
-            re.DOTALL,
+        cards = page.query_selector_all(
+            "[class*='JobCard'], [class*='job-card'], "
+            "[class*='position-item'], [class*='PositionItem'], "
+            "li[class*='list-item']"
         )
-        for match in pattern.finditer(html):
-            path, title = match.group(1), match.group(2).strip()
-            if not title:
-                continue
-            job = JobPosting(
-                job_id=path.split("/")[-1].split("?")[0],
-                platform="bytedance",
-                title=title,
-                company="字节跳动",
-                url=f"https://jobs.bytedance.com{path}",
-            )
-            if not city or city in job.location:
+
+        if not cards:
+            cards = page.query_selector_all("a[href*='/position/']")
+
+        for card in cards:
+            try:
+                title_el = card.query_selector(
+                    "[class*='title'], [class*='name'], h3, h4"
+                )
+                dept_el = card.query_selector(
+                    "[class*='department'], [class*='team'], [class*='category']"
+                )
+                loc_el = card.query_selector(
+                    "[class*='city'], [class*='location'], [class*='address']"
+                )
+
+                title = title_el.inner_text().strip() if title_el else card.inner_text().strip().split("\n")[0]
+                dept = dept_el.inner_text().strip() if dept_el else ""
+                location = loc_el.inner_text().strip() if loc_el else ""
+
+                if not title or len(title) < 2:
+                    continue
+
+                href = card.get_attribute("href") or ""
+                if not href:
+                    link_el = card.query_selector("a[href*='/position/']")
+                    href = link_el.get_attribute("href") if link_el else ""
+
+                if city and city not in location and location:
+                    continue
+
+                jid_match = re.search(r'/position/(\d+)', href)
+                job_id = jid_match.group(1) if jid_match else title[:20]
+                full_url = f"https://jobs.bytedance.com{href}" if href and not href.startswith("http") else href
+
+                job = JobPosting(
+                    job_id=job_id,
+                    platform="bytedance",
+                    title=title,
+                    company="字节跳动",
+                    department=dept,
+                    location=location,
+                    url=full_url,
+                )
                 jobs.append(job)
+            except Exception:
+                continue
 
-        if not jobs:
-            logger.info("[bytedance] no jobs extracted (page structure may have changed)")
         return jobs
-
-    def _item_to_posting(self, item: dict) -> JobPosting | None:
-        jid = str(item.get("id", item.get("positionId", "")))
-        if not jid:
-            return None
-        city_info = item.get("city_info") or item.get("city") or {}
-        if isinstance(city_info, dict):
-            location = city_info.get("name", "")
-        elif isinstance(city_info, str):
-            location = city_info
-        else:
-            location = ""
-
-        return JobPosting(
-            job_id=jid,
-            platform="bytedance",
-            title=item.get("title", item.get("name", "")),
-            company="字节跳动",
-            department=item.get("department", item.get("team", "")),
-            location=location,
-            experience=item.get("experience", ""),
-            education=item.get("education", ""),
-            description=item.get("description", item.get("content", "")),
-            requirements=item.get("requirement", ""),
-            url=f"https://jobs.bytedance.com/experienced/position/{jid}",
-        )
