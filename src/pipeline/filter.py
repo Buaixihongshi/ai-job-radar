@@ -1,10 +1,13 @@
-"""Strict title-based filtering.
+"""Precision filtering for AI testing/evaluation job search.
 
-Only 4 categories are kept:
-  1. 测试      - title contains 测试 but NOT 测试开发
-  2. 测试开发  - title contains 测试开发
-  3. Agent评测 - title contains 评测 AND (Agent/AI/大模型/LLM/AIGC)
-  4. Agent产品 - title contains 产品 AND (Agent/AI/大模型/LLM/AIGC)
+Target directions (from user's WPS JD reference):
+  1. 大模型/AI测试    - 大模型测试/AI测试/算法测试 (title must have AI context)
+  2. 测试开发(AI方向)  - 测试开发 with AI/大模型/Agent context in title or description
+  3. Agent评测        - 大模型评测/Agent评测/模型评估
+  4. AI/Agent产品     - ONLY Agent产品/AIGC产品/评测产品 (tight scope)
+
+Excluded: 实习, 硬件, 云, 数据库, 安全, 嵌入式, 纯游戏(无AI in title),
+          算法工程师(非测试/评测), 通用AI产品(非Agent/评测)
 """
 from __future__ import annotations
 
@@ -15,56 +18,118 @@ from src.models import JobPosting
 
 logger = logging.getLogger(__name__)
 
-BLACKLIST_TITLE_PATTERNS = re.compile(
-    r"(安全渗透|安全攻防|红队|渗透测试|安全工程师|"
-    r"设计师|美术|编剧|导演|运营|销售|市场|财务|商务|法务|行政|"
-    r"标注|数据服务|数据标注|"
-    r"短剧|版权|内容创作|"
-    r"实习生)",
+EXCLUDE_TITLE = re.compile(
+    r"(硬件|嵌入式|芯片|射频|FPGA|驱动工程|电气|机械|光学|"
+    r"数据库内核|DBA|存储引擎|SRE|运维工程|"
+    r"安全渗透|红队|攻防|漏洞挖掘|安全合规|安全评测|安全产品|"
+    r"设计师|美术|编剧|导演|短剧|版权|"
+    r"运营(?!.*(?:评测|测试|质量))|销售|市场营销|财务|商务|法务|行政|"
+    r"标注主管|数据标注|"
+    r"MicroLED|显示驱动|ATE测试|"
+    r"实习生|实习(?!.*(?:测试开发|评测))|届\+|27届|28届|"
+    r"后台开发工程师|架构师|解决方案)",
+    re.IGNORECASE,
+)
+
+AI_IN_TITLE = re.compile(
+    r"(AI|人工智能|大模型|LLM|Agent|AIGC|算法|多模态|NLP|"
+    r"模型评[测估]|智能体?|GPT|RAG|Prompt|"
+    r"千问|元宝|混元|文心|通义|copilot|ima|CodeBuddy)",
+    re.IGNORECASE,
+)
+
+AI_IN_DESC = re.compile(
+    r"(大模型|LLM|Agent|AIGC|算法测试|多模态|NLP|"
+    r"模型评[测估]|智能体|GPT|RAG|Prompt|"
+    r"Benchmark|badcase|模型效果|模型质量|AI质量|"
+    r"算法效果|算法质量|评测平台|评测框架)",
+    re.IGNORECASE,
+)
+
+PURE_GAME_PATTERN = re.compile(
+    r"(SLG|MMORPG|单机|FPS|竞速|赛车|格斗|RTS|卡牌|"
+    r"引擎测试|引擎开发|遗忘之海|大世界|天美中台|无限大|"
+    r"服务器方向|破次元|客户端测试(?!.*AI)|"
+    r"游戏研发向|AI生成游戏|AI竞技机器人)",
+    re.IGNORECASE,
+)
+
+PRODUCT_EXCLUDE = re.compile(
+    r"(外贸|社交|音乐|写歌|推荐|分发|投放|广告|OCR|招聘系统|"
+    r"地图|云AI-ToB|轻量云|WeGame|"
+    r"具身智能|data\s*agent|数据|文档产品|"
+    r"平台产品经理|计算平台)",
     re.IGNORECASE,
 )
 
 
+def _title_has_ai(title: str) -> bool:
+    return bool(AI_IN_TITLE.search(title))
+
+
+def _desc_has_ai(job: JobPosting) -> bool:
+    text = f"{job.description} {job.requirements}"
+    return bool(AI_IN_DESC.search(text))
+
+
 def classify_strict(job: JobPosting) -> str | None:
-    """Return category or None if job should be excluded."""
     title = job.title.strip()
 
     if not title or len(title) < 4:
         return None
-
-    if title.startswith("script>"):
+    if title.startswith(("script>", "window.")):
         return None
-    if BLACKLIST_TITLE_PATTERNS.search(title):
+    if EXCLUDE_TITLE.search(title):
+        return None
+    if PURE_GAME_PATTERN.search(title):
         return None
 
-    title_lower = title.lower()
+    title_ai = _title_has_ai(title)
+    desc_ai = _desc_has_ai(job)
+    has_ai = title_ai or desc_ai
 
-    if "测试开发" in title or "测试工具开发" in title:
-        return "测试开发"
+    # --- 测试开发(AI方向) ---
+    if "测试开发" in title:
+        if title_ai:
+            return "测试开发(AI方向)"
+        if desc_ai:
+            return "测试开发(AI方向)"
+        return None
 
-    ai_context = any(kw in title_lower for kw in [
-        "agent", "ai", "大模型", "llm", "aigc", "智能", "模型",
-    ])
-
-    if "评测" in title:
-        if ai_context:
-            return "Agent评测"
+    # --- Agent评测 ---
+    if "评测" in title or ("评估" in title and ("模型" in title or "agent" in title.lower())):
+        if re.search(r"算法(工程师|研究员)", title) and "评测" not in title:
+            return None
         return "Agent评测"
 
-    if "测试" in title:
-        return "测试"
+    # --- 大模型/AI测试 ---
+    if any(kw in title for kw in ["测试", "质量保障"]) or "QA" in title.upper():
+        if "游戏" in title and not title_ai:
+            return None
+        if title_ai:
+            return "大模型/AI测试"
+        if desc_ai:
+            return "大模型/AI测试"
+        return None
 
-    if "产品" in title and ai_context:
-        return "Agent产品"
-
-    if "qa" in title_lower or "质量保障" in title or "质量" in title:
-        return "测试"
+    # --- AI/Agent产品 (tight scope) ---
+    if "产品" in title:
+        title_lower = title.lower()
+        is_agent_product = (
+            "agent" in title_lower
+            or "评测" in title
+            or "评估" in title
+            or "策略产品" in title and ("元宝" in title or "ima" in title or "CodeBuddy" in title or "WorkBuddy" in title)
+            or "AIGC产品" in title
+        )
+        if is_agent_product and not PRODUCT_EXCLUDE.search(title):
+            return "AI/Agent产品"
+        return None
 
     return None
 
 
 def filter_strict(jobs: list[JobPosting]) -> list[JobPosting]:
-    """Keep only jobs matching the 4 target categories, based on title."""
     result = []
     for job in jobs:
         cat = classify_strict(job)
