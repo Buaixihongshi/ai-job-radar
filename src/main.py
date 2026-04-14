@@ -28,6 +28,7 @@ from src.scrapers.tencent import TencentScraper
 from src.scrapers.alibaba import AlibabaScraper
 from src.scrapers.bytedance import BytedanceScraper
 from src.scrapers.baidu import BaiduScraper
+from src.scrapers.netease import NeteaseScraper
 
 # Tier 2: 第三方招聘平台
 from src.scrapers.boss import BossScraper
@@ -53,6 +54,7 @@ SCRAPER_REGISTRY = {
     "alibaba": AlibabaScraper,
     "bytedance": BytedanceScraper,
     "baidu": BaiduScraper,
+    "netease": NeteaseScraper,
     # Tier 2
     "boss": BossScraper,
     "liepin": LiepinScraper,

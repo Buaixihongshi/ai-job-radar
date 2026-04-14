@@ -64,7 +64,7 @@ def generate_readme(jobs: list[JobPosting], output_path: str | Path) -> None:
         "",
         "| 层级 | 来源 | 方式 |",
         "| --- | --- | --- |",
-        "| Tier 1 | 腾讯、百度 | 公司官网 API |",
+        "| Tier 1 | 腾讯、百度、网易 | 公司官网 API |",
         "| Tier 1 | 字节跳动 | 公司官网 + Playwright |",
         "",
         "---",

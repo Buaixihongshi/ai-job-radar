@@ -99,7 +99,7 @@ platforms:
     tier: 1
     name: "小红书"
   netease:
-    enabled: false
+    enabled: true
     tier: 1
     name: "网易"
   huawei:
