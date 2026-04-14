@@ -38,6 +38,8 @@ CAMPUS_RECRUIT = re.compile(
 
 EXCLUDE_TITLE = re.compile(
     r"(硬件|嵌入式|芯片|射频|FPGA|驱动工程|电气|机械|光学|"
+    r"相机测试|传感器测试|基带测试|可靠性测试|认证测试|近距通信|显示测试|"
+    r"PQE|结构工艺|质量PQA|制造质量|电子件|"
     r"数据库内核|DBA|存储引擎|SRE|运维工程|"
     r"安全渗透|红队|攻防|漏洞挖掘|安全合规|安全评测|安全产品|"
     r"设计师|美术|编剧|导演|短剧|版权|"
@@ -107,6 +109,10 @@ def _check_eligibility(job: JobPosting) -> str | None:
     exp = job.experience.strip()
     if exp and HIGH_EXP_FIELD.search(exp):
         return "exp_high"
+    if exp:
+        m_exp = re.search(r"(\d+)\s*年", exp)
+        if m_exp and int(m_exp.group(1)) > 3:
+            return "exp_high"
 
     m = HIGH_EXP_TEXT.search(req_text)
     if m:
@@ -138,7 +144,7 @@ def classify_strict(job: JobPosting) -> str | None:
     has_ai = title_ai or desc_ai
 
     # --- 测试开发(AI方向) ---
-    if "测试开发" in title:
+    if "测试开发" in title or "自动化测试" in title:
         if title_ai:
             return "测试开发(AI方向)"
         if desc_ai:
