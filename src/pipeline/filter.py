@@ -6,8 +6,10 @@ Target directions (from user's WPS JD reference):
   3. Agent评测        - 大模型评测/Agent评测/模型评估
   4. AI/Agent产品     - ONLY Agent产品/AIGC产品/评测产品 (tight scope)
 
-Excluded: 实习, 硬件, 云, 数据库, 安全, 嵌入式, 纯游戏(无AI in title),
-          算法工程师(非测试/评测), 通用AI产品(非Agent/评测)
+Additional constraints:
+  - 社招 only, no 校招/实习
+  - Education: 本科 or below (exclude 硕士/博士 requirement)
+  - Experience: <= 3 years (exclude 三年以上/五年以上/八年以上/3-5年/5-10年)
 """
 from __future__ import annotations
 
@@ -17,6 +19,21 @@ import re
 from src.models import JobPosting
 
 logger = logging.getLogger(__name__)
+
+HIGH_EDU_REQUIRED = re.compile(r"硕士|博士|研究生|Master|PhD", re.IGNORECASE)
+
+HIGH_EXP_FIELD = re.compile(
+    r"(三年以上|五年以上|八年以上|十年以上|3-5年|5-10年|10年以上)",
+)
+
+HIGH_EXP_TEXT = re.compile(
+    r"(\d+)\s*年以?上.{0,6}(工作|经验|经历)",
+)
+
+CAMPUS_RECRUIT = re.compile(
+    r"(校招|应届|届\+|27届|28届|26届|毕业生|campus)",
+    re.IGNORECASE,
+)
 
 EXCLUDE_TITLE = re.compile(
     r"(硬件|嵌入式|芯片|射频|FPGA|驱动工程|电气|机械|光学|"
@@ -72,6 +89,33 @@ def _desc_has_ai(job: JobPosting) -> bool:
     return bool(AI_IN_DESC.search(text))
 
 
+def _check_eligibility(job: JobPosting) -> str | None:
+    """Return rejection reason or None if eligible."""
+    title = job.title
+    if CAMPUS_RECRUIT.search(title):
+        return "campus"
+
+    edu = job.education.strip()
+    if edu and HIGH_EDU_REQUIRED.search(edu):
+        return "edu_high"
+
+    req_text = job.requirements or ""
+    if re.search(r"硕士及以上|硕士以上|研究生及以上|研究生以上|硕士学历", req_text):
+        return "edu_high_in_req"
+
+    exp = job.experience.strip()
+    if exp and HIGH_EXP_FIELD.search(exp):
+        return "exp_high"
+
+    m = HIGH_EXP_TEXT.search(req_text)
+    if m:
+        years = int(m.group(1))
+        if years > 3:
+            return "exp_high_in_req"
+
+    return None
+
+
 def classify_strict(job: JobPosting) -> str | None:
     title = job.title.strip()
 
@@ -82,6 +126,10 @@ def classify_strict(job: JobPosting) -> str | None:
     if EXCLUDE_TITLE.search(title):
         return None
     if PURE_GAME_PATTERN.search(title):
+        return None
+
+    rejection = _check_eligibility(job)
+    if rejection:
         return None
 
     title_ai = _title_has_ai(title)
