@@ -74,7 +74,9 @@ class BaiduScraper(BaseScraper):
         jobs = []
         simple_pattern = re.compile(r'([^<（]+)（([A-Z]\d+)）')
         for m in simple_pattern.finditer(html):
-            title = m.group(1).strip() + f"（{m.group(2)}）"
+            raw_title = m.group(1).strip()
+            raw_title = re.sub(r'^(?:span|div|a|li|h\d)>', '', raw_title)
+            title = raw_title + f"（{m.group(2)}）"
             job = JobPosting(
                 job_id=m.group(2),
                 platform="baidu",
