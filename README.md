@@ -1,18 +1,10 @@
 # AI 岗位雷达
 
-> 自动更新时间: 2026-04-14 12:23 | 活跃岗位总数: **589**
+> 自动更新时间: 2026-04-14 14:10 | 活跃岗位总数: **138**
 
-本仓库自动追踪 AI 相关岗位（大模型测试、自动化测试开发、Agent 产品等），
-数据来源于各大互联网公司招聘官网及主流招聘平台，每日自动更新。
+本仓库自动追踪以下四类 AI 相关岗位，数据来源于各大互联网公司招聘官网，每日自动更新。
 
-## 数据来源
-
-| 层级 | 来源 | 方式 |
-| --- | --- | --- |
-| Tier 1 | 腾讯、百度、网易 | 公司官网 API |
-| Tier 1 | 字节跳动 | 公司官网 + Playwright |
-
----
+**目标岗位类型：** 测试 | 测试开发 | Agent评测 | Agent产品
 
 ## 数据概览
 
@@ -20,714 +12,2940 @@
 
 | 来源 | 岗位数 |
 | --- | --- |
-| 网易 | 318 |
-| 腾讯 | 137 |
-| 百度 | 104 |
-| 字节跳动 | 30 |
+| 网易 | 53 |
+| 百度 | 47 |
+| 腾讯 | 36 |
+| 字节跳动 | 2 |
 
 ### 按城市
 
 | 城市 | 岗位数 |
 | --- | --- |
-| 杭州 | 176 |
-| 广州 | 94 |
-| 北京 | 78 |
-| 深圳 | 76 |
-| 上海 | 49 |
-| 成都 | 10 |
-| 贝尔维尤 | 2 |
+| 杭州 | 25 |
+| 深圳 | 23 |
+| 广州 | 17 |
+| 上海 | 13 |
+| 北京 | 11 |
+| 成都 | 2 |
+
+### 按类型
+
+| 类型 | 岗位数 |
+| --- | --- |
+| 测试 | 34 |
+| 测试开发 | 38 |
+| Agent评测 | 14 |
+| Agent产品 | 52 |
 
 ---
 
-## 测试类（320 个岗位）
+## 测试（34 个岗位）
 
-### 字节跳动
+### 百度（8）
 
-| 岗位 | 部门 | 城市 | 薪资 | 经验 | 来源 |
-| --- | --- | --- | --- | --- | --- |
-| [大模型评测策略运营-CQC](https://jobs.bytedance.com/experienced/position/7612486061584763141/detail) | 运营 | 北京 |  |  | 字节跳动 |
-| [高级测试开发工程师-番茄小说](https://jobs.bytedance.com/experienced/position/7598082157983189253/detail) | 研发 - 测试 | 上海 |  |  | 字节跳动 |
+#### 感知测试（J73458）
 
-### 百度
+🔗 [投递链接](https://talent.baidu.com/jobs/social-list?search=大模型测试) &nbsp;&nbsp; 来源: 百度
 
-| 岗位 | 部门 | 城市 | 薪资 | 经验 | 来源 |
-| --- | --- | --- | --- | --- | --- |
-| [感知测试（J73458）](https://talent.baidu.com/jobs/social-list?search=大模型测试) |  |  |  |  | 百度 |
-| [测试开发工程师（J99207）](https://talent.baidu.com/jobs/social-list?search=大模型测试) |  |  |  |  | 百度 |
-| [测试开发工程师（J99169）](https://talent.baidu.com/jobs/social-list?search=大模型测试) |  |  |  |  | 百度 |
-| [测试开发工程师（J98208）](https://talent.baidu.com/jobs/social-list?search=大模型测试) |  |  |  |  | 百度 |
-| [测试开发工程师（J93510）](https://talent.baidu.com/jobs/social-list?search=大模型测试) |  |  |  |  | 百度 |
-| [ATE测试工程师（J84829）](https://talent.baidu.com/jobs/social-list?search=大模型测试) |  |  |  |  | 百度 |
-| [渗透测试工程师（J73240）](https://talent.baidu.com/jobs/social-list?search=大模型测试) |  |  |  |  | 百度 |
-| [服务端测试负责人（J92170）](https://talent.baidu.com/jobs/social-list?search=大模型测试) |  |  |  |  | 百度 |
-| [【横琴】测试开发（J98745）](https://talent.baidu.com/jobs/social-list?search=大模型测试) |  |  |  |  | 百度 |
-| [AI计算测试开发工程师（J98291）](https://talent.baidu.com/jobs/social-list?search=AI测试) |  |  |  |  | 百度 |
-| [AI软件测试开发工程师（J93911）](https://talent.baidu.com/jobs/social-list?search=AI测试) |  |  |  |  | 百度 |
-| [AI计算平台测试开发工程师（J97448）](https://talent.baidu.com/jobs/social-list?search=AI测试) |  |  |  |  | 百度 |
-| [商业化测试开发（J94796）](https://talent.baidu.com/jobs/social-list?search=AI测试) |  |  |  |  | 百度 |
-| [script>window.__USE_SSR__=true; window.__INITIAL_DATA__ ={"layoutData":{"headerMenuList":[{"name":"首页","value":"\u002F","order":0,"isNewPage":false},{"name":"职位","value":"\u002Flist","order":1,"isNewPage":false},{"name":"招聘动态","value":"\u002Ftrend","order":2,"isNewPage":false},{"name":"了解百度","value":"https:\u002F\u002Fhome.baidu.com\u002F","order":3,"isNewPage":true}],"footerMenuList":[{"name":"相关链接","order":0,"childList":[{"name":"百度社招","value":"https:\u002F\u002Ftalent.baidu.com\u002Fstatic\u002Findex.html","order":0,"isNewPage":true},{"name":"可持续发展","value":"https:\u002F\u002Fesg.baidu.com","order":1,"isNewPage":true}]},{"name":"隐私声明","order":1,"childList":[{"name":"免责声明","value":"https:\u002F\u002Fwww.baidu.com\u002Fduty","order":0,"isNewPage":true},{"name":"隐私权保护声明","value":"https:\u002F\u002Fwww.baidu.com\u002Fduty\u002Fyinsiquan.html","order":1,"isNewPage":true}]}],"socialHeaderMenuList":[{"name":"首页","value":"https:\u002F\u002Ftalent.baidu.com\u002Fstatic\u002Findex.html","order":0,"isNewPage":false},{"name":"社会招聘","value":"\u002Fsocial-list","order":1,"isNewPage":false},{"name":"校园招聘","value":"\u002Fcampus","order":2,"isNewPage":false},{"name":"了解百度","value":"https:\u002F\u002Fhome.baidu.com\u002F","order":3,"isNewPage":true}]},"detailData":{"postInfo":{"education":"","name":"AI能力引擎测试开发实习生（J99074）](https://talent.baidu.com/jobs/social-list?search=AI测试) |  |  |  |  | 百度 |
-| [自动驾驶测试开发工程师（J73214）](https://talent.baidu.com/jobs/social-list?search=算法测试) |  |  |  |  | 百度 |
-| [自动驾驶感知测试开发工程师（J84346）](https://talent.baidu.com/jobs/social-list?search=算法测试) |  |  |  |  | 百度 |
-| [云端自动化测试工程师（J95394）](https://talent.baidu.com/jobs/social-list?search=自动化测试开发) |  |  |  |  | 百度 |
-| [测试开发工程师（J96553）](https://talent.baidu.com/jobs/social-list?search=自动化测试开发) |  |  |  |  | 百度 |
-| [开发测试工程师（J86360）](https://talent.baidu.com/jobs/social-list?search=自动化测试开发) |  |  |  |  | 百度 |
-| [测试开发工程师（J81827）](https://talent.baidu.com/jobs/social-list?search=自动化测试开发) |  |  |  |  | 百度 |
-| [测试开发工程师（J79648）](https://talent.baidu.com/jobs/social-list?search=自动化测试开发) |  |  |  |  | 百度 |
-| [测试开发工程师（J84347）](https://talent.baidu.com/jobs/social-list?search=测试开发工程师) |  |  |  |  | 百度 |
-| [测试开发工程师（J91130）](https://talent.baidu.com/jobs/social-list?search=测试开发工程师) |  |  |  |  | 百度 |
-| [测试开发工程师（J83230）](https://talent.baidu.com/jobs/social-list?search=测试开发工程师) |  |  |  |  | 百度 |
-| [script>window.__USE_SSR__=true; window.__INITIAL_DATA__ ={"layoutData":{"headerMenuList":[{"name":"首页","value":"\u002F","order":0,"isNewPage":false},{"name":"职位","value":"\u002Flist","order":1,"isNewPage":false},{"name":"招聘动态","value":"\u002Ftrend","order":2,"isNewPage":false},{"name":"了解百度","value":"https:\u002F\u002Fhome.baidu.com\u002F","order":3,"isNewPage":true}],"footerMenuList":[{"name":"相关链接","order":0,"childList":[{"name":"百度社招","value":"https:\u002F\u002Ftalent.baidu.com\u002Fstatic\u002Findex.html","order":0,"isNewPage":true},{"name":"可持续发展","value":"https:\u002F\u002Fesg.baidu.com","order":1,"isNewPage":true}]},{"name":"隐私声明","order":1,"childList":[{"name":"免责声明","value":"https:\u002F\u002Fwww.baidu.com\u002Fduty","order":0,"isNewPage":true},{"name":"隐私权保护声明","value":"https:\u002F\u002Fwww.baidu.com\u002Fduty\u002Fyinsiquan.html","order":1,"isNewPage":true}]}],"socialHeaderMenuList":[{"name":"首页","value":"https:\u002F\u002Ftalent.baidu.com\u002Fstatic\u002Findex.html","order":0,"isNewPage":false},{"name":"社会招聘","value":"\u002Fsocial-list","order":1,"isNewPage":false},{"name":"校园招聘","value":"\u002Fcampus","order":2,"isNewPage":false},{"name":"了解百度","value":"https:\u002F\u002Fhome.baidu.com\u002F","order":3,"isNewPage":true}]},"detailData":{"postInfo":{"education":"","name":"数据评测分析方向（J98198）](https://talent.baidu.com/jobs/social-list?search=AIGC产品) |  |  |  |  | 百度 |
-| [大模型评测工程师（J98467）](https://talent.baidu.com/jobs/social-list?search=大模型评测) |  |  |  |  | 百度 |
-| [大模型效果评测工程师（J97941）](https://talent.baidu.com/jobs/social-list?search=大模型评测) |  |  |  |  | 百度 |
-| [大模型算法工程师-模型评测方向（J98466）](https://talent.baidu.com/jobs/social-list?search=大模型评测) |  |  |  |  | 百度 |
-| [大模型评估策略PM（J98762）](https://talent.baidu.com/jobs/social-list?search=大模型评测) |  |  |  |  | 百度 |
-| [内容质量与效率运营（J97284）](https://talent.baidu.com/jobs/social-list?search=AI质量) |  |  |  |  | 百度 |
-| [智能云质量效能资深工程师（J89616）](https://talent.baidu.com/jobs/social-list?search=AI质量) |  |  |  |  | 百度 |
-| [数据库内核质量专家（J84115）](https://talent.baidu.com/jobs/social-list?search=AI质量) |  |  |  |  | 百度 |
-| [无人车嵌入式软件开发和测试（J91954）](https://talent.baidu.com/jobs/social-list?search=智能测试) |  |  |  |  | 百度 |
-
-### 网易
-
-| 岗位 | 部门 | 城市 | 薪资 | 经验 | 来源 |
-| --- | --- | --- | --- | --- | --- |
-| 资深游戏用户研究员（极限战场) | 用户体验中心 | 上海 |  | 不限 | 网易 |
-| AI 技术美术工程师 | 技术中心 | 广州 |  | 0-3年 | 网易 |
-| 游戏测试工程师（沙盒类） | 质量保障中心 | 上海 |  | 3-5年 | 网易 |
-| 创意设计实习生 | 市场中心 | 广州 |  | 不限 | 网易 |
-| 技术美术实习生（AI） | 艺设一部 | 广州 |  | 不限 | 网易 |
-| 游戏GUI 视觉设计（AI） 实习生 | 艺设一部 | 广州 |  | 不限 | 网易 |
-| 游戏技术美术AITA（Agent研发向日常实习生） | 艺设三部 | 杭州 |  | 不限 | 网易 |
-| AI向美术设计实习生（市场营销方向） | 奇点事业部 | 上海 |  | 不限 | 网易 |
-| 游戏AI产品实习生（短期） | 技术中心 | 杭州 |  | 不限 | 网易 |
-| 游戏文案实习生（短期） | 技术中心 | 杭州 |  | 不限 | 网易 |
-| 游戏测试开发工程师（AI方向） | 质量保障中心 | 上海 |  | 3-5年 | 网易 |
-| 游戏测试工程师（竞技体育类） | 质量保障中心 | 广州 |  | 3-5年 | 网易 |
-| 游戏测试工程师（上海七日世界） | 质量保障中心 | 杭州 |  | 3-5年 | 网易 |
-| 游戏测试工程师（射击类） | 质量保障中心 | 广州 |  | 不限 | 网易 |
-| 资深游戏测试工程师（FPS） | 质量保障中心 | 上海 |  | 不限 | 网易 |
-| 游戏测试工程师（SLG单机） | 质量保障中心 | 上海 |  | 3-5年 | 网易 |
-| 工具研发工程师（AI方向） | 质量保障中心 | 杭州 |  | 3-5年 | 网易 |
-| 推荐系统算法工程师 | 传媒事业群 | 杭州 |  | 3-5年 | 网易 |
-| JAVA开发工程师 | 传媒事业群 | 杭州 |  | 不限 | 网易 |
-| 大模型算法工程师（TTS & AI音乐方向） | 音乐事业部 | 杭州 |  | 3-5年 | 网易 |
-| 资深架构师（工程智能化） | 伏羲机器人 | 杭州 |  | 5-10年 | 网易 |
-| 高级/资深投放素材策划 - 杭州/广州 | 渠道发行中心 | 杭州 |  | 5-10年 | 网易 |
-| 测试开发工程师（智能工程机器人） | 伏羲机器人 | 杭州 |  | 3-5年 | 网易 |
-| 投资实习生（AI与具身智能方向） | 雷火事业群 | 北京 |  | 不限 | 网易 |
-| 效能产品经理（ATS招聘系统&AI提效） | 雷火事业群 | 杭州 |  | 3-5年 | 网易 |
-| 游戏战斗策划（怪物向）-在研RPG | 雷火事业群 | 杭州 |  | 3-5年 | 网易 |
-| 资深服务器（天下贰） | 天下事业部 | 广州 |  | 不限 | 网易 |
-| The Renaissance Developer（文艺复兴开发者） | 天下事业部 | 广州 |  | 不限 | 网易 |
-| NLP算法工程师-广州 | 技术中心 | 广州 |  | 3-5年 | 网易 |
-| NLP算法工程师-杭州 | 技术中心 | 杭州 |  | 3-5年 | 网易 |
-| AIGC技术美术工程师（AI-3D方向） | 艺设一部 | 广州 |  | 5-10年 | 网易 |
-| 网易知数产品实习生 | 智企事业部 | 杭州 |  | 0-3年 | 网易 |
-| 资深产品策划/专家 | 效率工程部 | 杭州 |  | 5-10年 | 网易 |
-| 游戏效能工具开发（AI方向） | Joker事业部 | 杭州 |  | 3-5年 | 网易 |
-| 技术策划（阴阳师手游） | 阴阳师事业部 | 广州 |  | 5-10年 | 网易 |
-| 游戏效能工具开发工程师 | Eggy事业部 | 杭州 |  | 不限 | 网易 |
-| 引擎测试开发工程师 | 技术中心 | 杭州 |  | 3-5年 | 网易 |
-| 游戏测试工程师（上海七日世界-2） | 质量保障中心 | 上海 |  | 3-5年 | 网易 |
-| 资深投放素材策划 - 广州 | 渠道发行中心 | 广州 |  | 5-10年 | 网易 |
-| 资深营销素材策划 | 渠道发行中心 | 杭州 |  | 不限 | 网易 |
-| 海外游戏广告创意实习（AI素材方向） | 雷火事业群 | 杭州 |  | 不限 | 网易 |
-| 智能体训练师 | 用户体验中心 | 杭州 |  | 不限 | 网易 |
-| 高级/资深游戏体验设计师（萤火突击） | 用户体验中心 | 上海 |  | 不限 | 网易 |
-| AI对话设计体验实习生（二次元向） | 雷火事业群 | 杭州 |  | 不限 | 网易 |
-| 激光SLAM算法实习生 | 伏羲机器人 | 杭州 |  | 不限 | 网易 |
-| 资深系统运维工程师（SRE方向） | 技术保障部 | 杭州 |  | 5-10年 | 网易 |
-| AI 应用工程师 | 技术中心 | 广州 |  | 3-5年 | 网易 |
-| AI应用工程师（营销工具） | 技术中心 | 广州 |  | 3-5年 | 网易 |
-| AI 平台研发工程师（AI Agent Infra） | 技术中心 | 广州 |  | 3-5年 | 网易 |
-| 游戏测试工程师（成都） | 雷火事业群 | 成都 |  | 3-5年 | 网易 |
-| AI应用工程师 (偏前端) | 技术中心 | 广州 |  | 3-5年 | 网易 |
-| AI应用工程师（偏后端） | 技术中心 | 广州 |  | 3-5年 | 网易 |
-| AI应用工程师（云原生开发方向） | 技术中心 | 广州 |  | 3-5年 | 网易 |
-| 资深游戏测试工程师 | 质量保障中心 | 上海 |  | 不限 | 网易 |
-| 资深AI音乐产品经理 (AIGC方向/AI写歌) | 音乐事业部 | 杭州 |  | 3-5年 | 网易 |
-| 高级/资深Android开发工程师（跨端） | 音乐事业部 | 杭州 |  | 3-5年 | 网易 |
-| 高级/资深Android开发工程师（播放） | 音乐事业部 | 杭州 |  | 3-5年 | 网易 |
-| 高级iOS开发工程师（播放） | 音乐事业部 | 杭州 |  | 3-5年 | 网易 |
-| 资深iOS开发工程师（广告业务） | 音乐事业部 | 杭州 |  | 3-5年 | 网易 |
-| 高级/资深iOS开发工程师（社区&AI） | 音乐事业部 | 杭州 |  | 3-5年 | 网易 |
-| AI Agent 研发工程师（音乐智能助手方向） | 音乐事业部 | 杭州 |  | 3-5年 | 网易 |
-| 资深产品经理（AI&分发方向） | 音乐事业部 | 杭州 |  | 3-5年 | 网易 |
-| 资深平台产品经理（AI/策略/体验） | 音乐事业部 | 杭州 |  | 3-5年 | 网易 |
-| 资深社区策略运营 | 音乐事业部 | 杭州 |  | 5-10年 | 网易 |
-| 大模型算法工程师（NLP/LLM） | 音乐事业部 | 杭州 |  | 3-5年 | 网易 |
-| 高级运维工程师 | 技术支持部 | 杭州 |  | 不限 | 网易 |
-| 高级/资深Java开发工程师（AI写歌） | 音乐事业部 | 杭州 |  | 3-5年 | 网易 |
-| 游戏AI Agent实习生 | 雷火事业群 | 杭州 |  | 不限 | 网易 |
-| 高级/资深海外品牌营销（模拟经营新游） | 雷火事业群 | 杭州 |  | 3-5年 | 网易 |
-| 游戏文案策划实习生（AI游戏向） | 雷火事业群 | 杭州 |  | 不限 | 网易 |
-| 软件测试开发工程师 | 效率工程部 | 杭州 |  | 5-10年 | 网易 |
-| 媒介投放（高级/资深）-广州/杭州/上海 | 渠道发行中心 | 杭州 |  | 3-5年 | 网易 |
-| 游戏测试开发工程师（27届+广/沪/杭） | 用户体验中心 | 广州 |  | 不限 | 网易 |
-| 游戏测试工程师（27届+广/沪/杭） | 用户体验中心 | 广州 |  | 不限 | 网易 |
-| 策略分析师（数据科学方向）27届+广/杭 | 渠道发行中心 | 杭州 |  | 不限 | 网易 |
-| 游戏技术美术工程师（27届+广/杭） | 技术中心 | 广州 |  | 不限 | 网易 |
-| 【平台】高级测试开发工程师 | 游戏应用与平台发展事业部 | 广州 |  | 3-5年 | 网易 |
-| 【平台】AI视频策划（智能体方向） | 游戏应用与平台发展事业部 | 广州 |  | 不限 | 网易 |
-| AI内容运营 | 大神事业部 | 广州 |  | 3-5年 | 网易 |
-| 高级AI产品运营（燕云/暴雪游戏） | 大神事业部 | 广州 |  | 3-5年 | 网易 |
-| 高级AI产品运营（蛋仔派对） | 大神事业部 | 广州 |  | 3-5年 | 网易 |
-| 音频策划（在研3A射击-极限战场） | 荒野事业部 | 上海 |  | 不限 | 网易 |
-| 高级游戏测试工程师（七日世界） | 质量保障中心 | 上海 |  | 不限 | 网易 |
-| AI 工具工程师 | 水滴事业部 | 杭州 |  | 3-5年 | 网易 |
-| 海外AI游戏营销探索实习生 | 雷火事业群 | 杭州 |  | 不限 | 网易 |
-| 测试开发工程师（AI方向） | 质量保障中心 | 广州 |  | 不限 | 网易 |
-| 角色制作（AI工具方向） | 艺设一部 | 广州 |  | 不限 | 网易 |
-| AI真人剧情制作实习生 | 有道事业群 | 广州 |  | 不限 | 网易 |
-| 游戏效能工具开发（AI方向） | Joker事业部 | 杭州 |  | 不限 | 网易 |
-| AI美术（2D/3D） | 艺设二部 | 广州 |  | 不限 | 网易 |
-| 客户端开发工程师（即时制战斗方向-遗忘之海） | Joker事业部 | 杭州 |  | 不限 | 网易 |
-| 工程机械高级仿真研发工程师 | 伏羲机器人 | 杭州 |  | 不限 | 网易 |
-| 游戏体验设计实习生（AI向） | 用户体验中心 | 杭州 |  | 0-3年 | 网易 |
-| 英语内容运营实习生 | 有道事业群 | 广州 |  | 不限 | 网易 |
-| AI产品策划实习生（游戏AI竞技机器人方向） | 雷火事业群 | 杭州 |  | 不限 | 网易 |
-| 资深产品经理 | 运营中心 | 广州 |  | 3-5年 | 网易 |
-| 高级游戏测试工程师（MMORPG） | 质量保障中心 | 上海 |  | 3-5年 | 网易 |
-| 用户增长专家 | 运营中心 | 广州 |  | 不限 | 网易 |
-| AI社交产品经理（破次元恋人） | 元气事业部 | 杭州 |  | 3-5年 | 网易 |
-| 提示词工程师Prompt Engineer（生态治理/安全策略） | 音乐事业部 | 杭州 |  | 3-5年 | 网易 |
-| 资深全栈开发工程师（财经域） | 效率工程部 | 杭州 |  | 5-10年 | 网易 |
-| 高级/资深数据分析师（网易云音乐） | 音乐事业部 | 杭州 |  | 3-5年 | 网易 |
-| 易盾-Agent安全产品经理 | 智企事业部 | 杭州 |  | 不限 | 网易 |
-| 易盾-AI大模型安全工程师 | 智企事业部 | 杭州 |  | 不限 | 网易 |
-| 具身智能算法工程师（工程机械智能化） | 伏羲机器人 | 杭州 |  | 不限 | 网易 |
-| 【HR精英实习生专项：HR Agentic AI 研发实习生】- 组织智慧探索者 | 人力资源部 | 杭州 |  | 不限 | 网易 |
-| Agent安全研究实习生 | 智企事业部 | 杭州 |  | 0-3年 | 网易 |
-| 机器人学习算法研究实习生​​ | 伏羲机器人 | 杭州 |  | 不限 | 网易 |
-| 易盾-Java开发工程师 | 智企事业部 | 杭州 |  | 不限 | 网易 |
-| 大数据-运维开发工程师 | 智企事业部 | 杭州 |  | 不限 | 网易 |
-| 高级测试工程师（大世界-2） | 质量保障中心 | 杭州 |  | 0-3年 | 网易 |
-| 高级/资深游戏测试开发工程师（无限大） | 雷火事业群 | 杭州 |  | 3-5年 | 网易 |
-| 云商-AI应用研发工程师 | 智企事业部 | 杭州 |  | 5-10年 | 网易 |
-| CW-服务端开发工程师（Agent交付方向） | 智企事业部 | 杭州 |  | 5-10年 | 网易 |
-| 全栈开发工程师 | 技术中心 | 广州 |  | 不限 | 网易 |
-| 游戏客户端开发工程师（易次元） | 元气事业部 | 广州 |  | 不限 | 网易 |
-| AI资深开发工程师（美术向） | 海神事业部 | 广州 |  | 5-10年 | 网易 |
-| AI产品经理（游戏研发向） | 海神事业部 | 广州 |  | 5-10年 | 网易 |
-| 资深技术美术（AI 方向） | 艺设一部 | 广州 |  | 不限 | 网易 |
-| 资深游戏测试工程师（引擎） | 质量保障中心 | 上海 |  | 不限 | 网易 |
-| 全栈开发工程师 | 效率工程部 | 杭州 |  | 0-3年 | 网易 |
-| 高级战斗策划（怪物向） | Joker事业部 | 杭州 |  | 不限 | 网易 |
-| 用户产品经理（LOFTER） | 元气事业部 | 杭州 |  | 0-3年 | 网易 |
-| 海外媒体投放优化师（SEM） | 智能邮件事业部 | 杭州 |  | 3-5年 | 网易 |
-| AI音乐工程开发实习生（后端数据向） | 音乐事业部 | 杭州 |  | 不限 | 网易 |
-| Agent 算法研发工程师 | 有道事业群 | 北京 |  | 0-3年 | 网易 |
-| 【平台】全栈开发工程师（AI赋能开发方向） | 游戏应用与平台发展事业部 | 广州 |  | 不限 | 网易 |
-| AI音乐标注实习生 | 音乐事业部 | 杭州 |  | 0-3年 | 网易 |
-| 高级测试工程师 | 雷火事业群 | 杭州 |  | 不限 | 网易 |
-| [客户端测试实习生](https://m.mifengs.com/luv2/01t2zO9) | 传媒事业群 | 北京 |  | 0-3年 | 网易 |
-| 【有转正】硬件产品实习生（AI方向） | 伏羲机器人 | 杭州 |  | 不限 | 网易 |
-| 智能NPC交互体验设计实习生 | 雷火事业群 | 杭州 |  | 不限 | 网易 |
-| 资深营销素材策划（品宣向） | 渠道发行中心 | 广州 |  | 5-10年 | 网易 |
-| 高级艺粉产品营销/运营（AI 综合型） | 音乐事业部 | 杭州 |  | 不限 | 网易 |
-| 游戏测试开发实习生 | 雷火事业群 | 杭州 |  | 不限 | 网易 |
-| 高级游戏测试工程师（成都） | 质量保障中心 | 成都 |  | 3-5年 | 网易 |
-| AIGC设计师 | 艺设二部 | 广州 |  | 不限 | 网易 |
-| 大模型算法实习生 | 有道事业群 | 北京 |  | 不限 | 网易 |
-| AI策划 | 荒野事业部 | 上海 |  | 不限 | 网易 |
-| 资深技术美术工程师 | 艺设二部 | 广州 |  | 3-5年 | 网易 |
-| 高级测试开发工程师（大世界） | 质量保障中心 | 杭州 |  | 3-5年 | 网易 |
-| 资深测试开发工程师（遗忘之海） | 质量保障中心 | 杭州 |  | 不限 | 网易 |
-| 资深游戏测试工程师（遗忘之海） | 质量保障中心 | 杭州 |  | 不限 | 网易 |
-| 海外短剧产品经理 | 有道事业群 | 北京 |  | 0-3年 | 网易 |
-| 考研英语辅导老师 | 有道事业群 | 北京 |  | 3-5年 | 网易 |
-| AI内容创作实习生 | 智企事业部 | 杭州 |  | 0-3年 | 网易 |
-| 大数据-测试工程师实习生 | 智企事业部 | 杭州 |  | 不限 | 网易 |
-| 高级测试工程师（遗忘之海） | 质量保障中心 | 杭州 |  | 不限 | 网易 |
-| 游戏测试工程师（AI方向） | 质量保障中心 | 广州 |  | 3-5年 | 网易 |
-| 高级游戏测试工程师（UGC） | 质量保障中心 | 杭州 |  | 不限 | 网易 |
-| 高级游戏测试工程师（MMORPG) | 质量保障中心 | 广州 |  | 3-5年 | 网易 |
-| [H5策划实习生](https://m.mifengs.com/luv2/02xAxO1) | 传媒事业群 | 北京 |  | 0-3年 | 网易 |
-| 游戏界面AGUI设计师（AI方向） | 艺设一部 | 广州 |  | 不限 | 网易 |
-| 大模型Agent开发工程师 | 严选事业部 | 杭州 |  | 3-5年 | 网易 |
-| AI美术工具流负责人/ AI美术工具资深开发程序 | 荒野事业部 | 广州 |  | 不限 | 网易 |
-| 资深3D美术设计师（AI角色向） | 艺设一部 | 广州 |  | 不限 | 网易 |
-| 动效设计实习生 | 雷火事业群 | 杭州 |  | 不限 | 网易 |
-| [科技频道未来公开课实习生](https://m.mifengs.com/luv2/01mY20F) | 传媒事业群 | 北京 |  | 0-3年 | 网易 |
-| AI产品策划实习生（AIGC方向） | 雷火事业群 | 杭州 |  | 不限 | 网易 |
-| 创意视觉设计实习生 | 音乐事业部 | 杭州 |  | 0-3年 | 网易 |
-| 品牌营销专家 | 智企事业部 | 杭州 |  | 10年以上 | 网易 |
-| AI玩法系统策划 | 技术中心 | 杭州 |  | 不限 | 网易 |
-| 资深游戏AI算法工程师（强化学习/模仿学习方向） | 技术中心 | 杭州 |  | 3-5年 | 网易 |
-| 云商-营销客户运营专家 | 智企事业部 | 杭州 |  | 不限 | 网易 |
-| 云商-线上销售专员 | 智企事业部 | 杭州 |  | 不限 | 网易 |
-| 数字营销专员 | 智企事业部 | 杭州 |  | 3-5年 | 网易 |
-| 少儿编程教研老师 | 有道事业群 | 成都 |  | 0-3年 | 网易 |
-| 高级/资深游戏测试开发工程师（无限大） | 雷火事业群 | 杭州 |  | 3-5年 | 网易 |
-| 游戏测试开发工程师（无限大-服务器方向） | 雷火事业群 | 杭州 |  | 3-5年 | 网易 |
-| 具身智能产品经理 | 伏羲机器人 | 杭州 |  | 5-10年 | 网易 |
-| 高级/资深游戏测试工程师（无限大） | 雷火事业群 | 杭州 |  | 不限 | 网易 |
-| 游戏AI产品策划实习生（智能NPC方向） | 雷火事业群 | 杭州 |  | 不限 | 网易 |
-| 游戏引擎开发工程师（移动端 / PC / PS5） | Joker事业部 | 杭州 |  | 3-5年 | 网易 |
-| 制作实习生（AI解说） | 元气事业部 | 杭州 |  | 不限 | 网易 |
-| 资深战斗策划（怪物设计-明日之后） | 奇点事业部 | 上海 |  | 3-5年 | 网易 |
-| 客户端引擎核心（在研slg） | 奇点事业部 | 上海 |  | 5-10年 | 网易 |
-| 渲染引擎研发工程师（萤火突击） | 奇点事业部 | 杭州 |  | 3-5年 | 网易 |
-| UE客户端引擎开发工程师（在研） | 奇点事业部 | 上海 |  | 3-5年 | 网易 |
-| 游戏技术开发岗（引擎/客户端/服务器） | 奇点事业部 | 上海 |  | 5-10年 | 网易 |
-| 游戏技术开发岗（引擎/客户端/服务器） | 奇点事业部 | 上海 |  | 3-5年 | 网易 |
-| 资深客户端开发工程师（明日） | 奇点事业部 | 上海 |  | 5-10年 | 网易 |
-| 资深引擎渲染专家（萤火） | 奇点事业部 | 上海 |  | 3-5年 | 网易 |
-| 资深游戏研发工程师（性能优化-明日之后） | 奇点事业部 | 上海 |  | 3-5年 | 网易 |
-| 资深战斗策划（AI方向-萤火突击） | 奇点事业部 | 杭州 |  | 5-10年 | 网易 |
-| 平台产品策划实习生 | 雷火事业群 | 杭州 |  | 不限 | 网易 |
-| 海外AI真人短剧剪辑师 | 有道事业群 | 广州 |  | 0-3年 | 网易 |
-| HR产品经理-雷火校招 | 雷火事业群 | 杭州 |  | 3-5年 | 网易 |
-| 游戏测试开发工程师实习生（AI方向） | 雷火事业群 | 杭州 |  | 不限 | 网易 |
-| 【有转正】产品实习生（智能工程机械方向） | 伏羲机器人 | 杭州 |  | 不限 | 网易 |
-| AI漫剧导演 | 运营中心 | 广州 |  | 3-5年 | 网易 |
-| 资深研发效能工程师/专家 | 效率工程部 | 杭州 |  | 5-10年 | 网易 |
-| AI标注主管 | 运营中心 | 成都 |  | 5-10年 | 网易 |
-| 高级产品运营专员 | 运营中心 | 广州 |  | 不限 | 网易 |
-| AI短剧编剧 | 传媒事业群 | 北京 |  | 不限 | 网易 |
-| 游戏AI研究员 / 大模型Agent工程师 （开放世界方向） | 雷火事业群 | 杭州 |  | 0-3年 | 网易 |
-| Windows客户端储备组长（游戏工具型产品） | 游戏应用与平台发展事业部 | 广州 |  | 不限 | 网易 |
-| 测试开发工程师实习生（智能工程机器人） | 伏羲机器人 | 杭州 |  | 不限 | 网易 |
-| AI对话体验设计实习生 | 雷火事业群 | 杭州 |  | 不限 | 网易 |
-| AI对话体验设计实习生 | 雷火事业群 | 杭州 |  | 不限 | 网易 |
-| 游戏引擎开发工程师（cicd-遗忘之海） | Joker事业部 | 杭州 |  | 不限 | 网易 |
-| 高级/资深产品策划专员 | 用户体验中心 | 杭州 |  | 3-5年 | 网易 |
-| 高级/资深产品运营（AI） | 运营中心 | 广州 |  | 3-5年 | 网易 |
-| 高级/资深客户端开发工程师（性能优化-遗忘之海） | Joker事业部 | 杭州 |  | 不限 | 网易 |
-| APP 增长运营专员 | 有道事业群 | 北京 |  | 0-3年 | 网易 |
-| 测试开发工程师 | 有道事业群 | 北京 |  | 不限 | 网易 |
-| LLM/VLM研究型 Agent 实习生（开放世界游戏方向） | 雷火事业群 | 杭州 |  | 不限 | 网易 |
-| 高级/资深客户端开发工程师（回合制战斗方向-遗忘之海） | Joker事业部 | 杭州 |  | 不限 | 网易 |
-| 资深行业市场营销专员（国央企方向） | 智企事业部 | 杭州 |  | 不限 | 网易 |
-| 音乐作词企划（子弹工作室） | 音乐事业部 | 杭州 |  | 不限 | 网易 |
-| iOS开发实习生 | 有道事业群 | 北京 |  | 不限 | 网易 |
-| 资深AI产品经理 | 海神事业部 | 广州 |  | 不限 | 网易 |
-| 云信-硬件产品经理（AI玩具/陪伴硬件方向）深圳/杭州 | 智企事业部 | 深圳 |  | 不限 | 网易 |
-| 战斗策划（AI向） | Joker事业部 | 杭州 |  | 0-3年 | 网易 |
-| 云商-资深产品运营（数据营销） | 智企事业部 | 杭州 |  | 不限 | 网易 |
-| 资深用户运营（策略产品） | 运营中心 | 广州 |  | 不限 | 网易 |
-| 易盾-Java开发工程师 | 智企事业部 | 杭州 |  | 不限 | 网易 |
-| 高级游戏测试工程师（剑心雕龙） | 雷火事业群 | 上海 |  | 不限 | 网易 |
-| 游戏发行运营（回流用户） | 运营中心 | 广州 |  | 不限 | 网易 |
-| AI产品经理 | 智企事业部 | 杭州 |  | 0-3年 | 网易 |
-| 引擎开发专家 | 奇点事业部 | 杭州 |  | 5-10年 | 网易 |
-
-### 腾讯
-
-| 岗位 | 部门 | 城市 | 薪资 | 经验 | 来源 |
-| --- | --- | --- | --- | --- | --- |
-| [元宝-大模型策略产品（语音方向）](http://careers.tencent.com/jobdesc.html?postId=1984457397548240896) | CSIG | 北京 |  | 三年以上工作经验 | 腾讯 |
-| [元宝-后台开发工程师](http://careers.tencent.com/jobdesc.html?postId=1987711767794569216) | CSIG | 深圳 |  | 三年以上工作经验 | 腾讯 |
-| [元宝-大模型评测产品经理（教育方向）](http://careers.tencent.com/jobdesc.html?postId=2043889962096689152) | CSIG | 深圳 |  | 三年以上工作经验 | 腾讯 |
-| [腾讯广告-商业化AIGC产品运营](http://careers.tencent.com/jobdesc.html?postId=2021096471797067776) | CDG | 北京 |  | 两年以上工作经验 | 腾讯 |
-| [元宝-AI搜索算法工程师(检索排序方向)（深圳）](http://careers.tencent.com/jobdesc.html?postId=1986430232781021184) | CSIG | 北京 |  | 三年以上工作经验 | 腾讯 |
-| [元宝-多模态大模型算法工程师](http://careers.tencent.com/jobdesc.html?postId=2001186278137286656) | CSIG | 北京 |  | 三年以上工作经验 | 腾讯 |
-| [元宝-AI搜索算法工程师（大模型后训练方向）](http://careers.tencent.com/jobdesc.html?postId=1986431782635065344) | CSIG | 北京 |  | 三年以上工作经验 | 腾讯 |
-| [《王者荣耀》UGC-游戏客户端开发- AIGC方向](http://careers.tencent.com/jobdesc.html?postId=2002931518883913728) | IEG | 深圳 |  | 五年以上工作经验 | 腾讯 |
-| [企业微信-AI Agent高级评测工程师](http://careers.tencent.com/jobdesc.html?postId=1976128393539899392) | WXG | 广州 |  | 两年以上工作经验 | 腾讯 |
-| [元宝-智能语音理解算法研究员](http://careers.tencent.com/jobdesc.html?postId=1912059627781079040) | CSIG | 北京 |  | 三年以上工作经验 | 腾讯 |
-| [QQ浏览器-大模型后训练算法工程师](http://careers.tencent.com/jobdesc.html?postId=1950741403936071680) | CSIG | 北京 |  | 两年以上工作经验 | 腾讯 |
-| [元宝-大模型策略产品（语音方向）](http://careers.tencent.com/jobdesc.html?postId=1984457400769466368) | CSIG | 深圳 |  | 三年以上工作经验 | 腾讯 |
-| [微信安全-电商内容治理专家算法工程师-大模型方向](http://careers.tencent.com/jobdesc.html?postId=1988168040889602048) | WXG | 广州 |  | 五年以上工作经验 | 腾讯 |
-| [元宝搜索部-AI搜索算法专家](http://careers.tencent.com/jobdesc.html?postId=1987342542588497920) | CSIG | 北京 |  | 五年以上工作经验 | 腾讯 |
-| [QQ浏览器-大模型后训练算法工程师](http://careers.tencent.com/jobdesc.html?postId=1950741392477257728) | CSIG | 深圳 |  | 两年以上工作经验 | 腾讯 |
-| [元宝-大模型评测产品经理](http://careers.tencent.com/jobdesc.html?postId=1984457404208799744) | CSIG | 深圳 |  | 一年以上工作经验 | 腾讯 |
-| [游戏美术 AIGC 产品经理](http://careers.tencent.com/jobdesc.html?postId=2036274661179944960) | IEG | 深圳 |  | 三年以上工作经验 | 腾讯 |
-| [游戏Agentic Engineer](http://careers.tencent.com/jobdesc.html?postId=2039533180888973312) | IEG | 深圳 |  | 三年以上工作经验 | 腾讯 |
-| [混元大语言模型后训练算法工程师（深圳/北京/上海）](http://careers.tencent.com/jobdesc.html?postId=2009467972866957312) | TEG | 深圳 |  | 三年以上工作经验 | 腾讯 |
-| [AI搜索算法工程师（大模型后训练方向）](http://careers.tencent.com/jobdesc.html?postId=2008005886278258688) | CSIG | 北京 |  | 三年以上工作经验 | 腾讯 |
-| [AI 知识管理与评测-技术专家](http://careers.tencent.com/jobdesc.html?postId=2034259484288909312) | CDG | 深圳 |  | 五年以上工作经验 | 腾讯 |
-| [大模型测试工程师（北京/深圳）](http://careers.tencent.com/jobdesc.html?postId=2031246319435284480) | TEG | 北京 |  | 三年以上工作经验 | 腾讯 |
-| [元宝-内容理解算法研究员](http://careers.tencent.com/jobdesc.html?postId=1986435445248122880) | CSIG | 深圳 |  | 一年以上工作经验 | 腾讯 |
-| [元宝-内容理解算法研究员](http://careers.tencent.com/jobdesc.html?postId=1986434927104778240) | CSIG | 北京 |  | 一年以上工作经验 | 腾讯 |
-| [混元多模态大模型评测（北京）](http://careers.tencent.com/jobdesc.html?postId=1997884330793394176) | TEG | 深圳 |  | 三年以上工作经验 | 腾讯 |
-| [腾讯广告-商业化策略产品-大模型评测方向](http://careers.tencent.com/jobdesc.html?postId=2012016099826225152) | CDG | 上海 |  | 两年以上工作经验 | 腾讯 |
-| [元宝-安全评测分析师](http://careers.tencent.com/jobdesc.html?postId=1962347999011168256) | CSIG | 北京 |  | 三年以上工作经验 | 腾讯 |
-| [大模型测试负责人（北京/深圳）](http://careers.tencent.com/jobdesc.html?postId=2027292979852640256) | TEG | 北京 |  | 五年以上工作经验 | 腾讯 |
-| [QClaw-高级TypeScript工程师（qclaw核心引擎方向）](http://careers.tencent.com/jobdesc.html?postId=2032003305391161344) | CSIG | 深圳 |  | 五年以上工作经验 | 腾讯 |
-| [元宝-大模型评测产品经理](http://careers.tencent.com/jobdesc.html?postId=1984457407304196096) | CSIG | 北京 |  | 一年以上工作经验 | 腾讯 |
-| [元宝-AIGC产品经理](http://careers.tencent.com/jobdesc.html?postId=2030596831590903808) | CSIG | 北京 |  | 三年以上工作经验 | 腾讯 |
-| [元宝-大模型后训练算法工程师](http://careers.tencent.com/jobdesc.html?postId=2029339033473286144) | CSIG | 上海 |  | 三年以上工作经验 | 腾讯 |
-| [资深测试开发工程师（AI评测方向）](http://careers.tencent.com/jobdesc.html?postId=1950026512501678080) | CSIG | 北京 |  | 五年以上工作经验 | 腾讯 |
-| [在研UE5射击手游-游戏测试开发工程师](http://careers.tencent.com/jobdesc.html?postId=1914976924824879104) | IEG | 深圳 |  | 两年以上工作经验 | 腾讯 |
-| [魔方工作室-后台开发工程师（AIGC产品）](http://careers.tencent.com/jobdesc.html?postId=2034975551495766016) | IEG | 深圳 |  | 五年以上工作经验 | 腾讯 |
-| [混元大模型评测算法研究员（北京）](http://careers.tencent.com/jobdesc.html?postId=1915233782491881472) | TEG | 深圳 |  | 五年以上工作经验 | 腾讯 |
-| [微信小店-测试开发工程师](http://careers.tencent.com/jobdesc.html?postId=1904008033529323520) | WXG | 广州 |  | 三年以上工作经验 | 腾讯 |
-| [微信小游戏-测试开发工程师](http://careers.tencent.com/jobdesc.html?postId=1945692266278551552) | WXG | 广州 |  | 一年以上工作经验 | 腾讯 |
-| [元宝-安全评测分析师](http://careers.tencent.com/jobdesc.html?postId=2036455998214008832) | CSIG | 深圳 |  | 三年以上工作经验 | 腾讯 |
-| [魔方工作室-测试开发工程师-前台自动化开发](http://careers.tencent.com/jobdesc.html?postId=1945036329888907264) | IEG | 深圳 |  | 两年以上工作经验 | 腾讯 |
-| [《王者荣耀》资深AI全栈工程师](http://careers.tencent.com/jobdesc.html?postId=1993142612818808832) | IEG | 成都 |  | 三年以上工作经验 | 腾讯 |
-| [游戏测试开发工程师-新星引力计划](http://careers.tencent.com/jobdesc.html?postId=2034277345287897088) | IEG | 上海 |  | 两年以上工作经验 | 腾讯 |
-| [元宝-大模型后训练算法工程师](http://careers.tencent.com/jobdesc.html?postId=2013456962615926784) | CSIG | 上海 |  | 一年以上工作经验 | 腾讯 |
-| [《王者荣耀》UGC-游戏客户端开发- AIGC方向](http://careers.tencent.com/jobdesc.html?postId=2002931521002037248) | IEG | 成都 |  | 五年以上工作经验 | 腾讯 |
-| [AI技术型产品运营](http://careers.tencent.com/jobdesc.html?postId=2034114869342666752) | CSIG | 深圳 |  | 三年以上工作经验 | 腾讯 |
-| [腾讯游戏-UE引擎高级Agent开发工程师](http://careers.tencent.com/jobdesc.html?postId=2030858348966080512) | IEG | 杭州 |  | 五年以上工作经验 | 腾讯 |
-| [测试开发工程师-天美中台](http://careers.tencent.com/jobdesc.html?postId=2033719351068229632) | IEG | 深圳 |  | 一年以上工作经验 | 腾讯 |
-| [元宝-多模态大模型算法工程师](http://careers.tencent.com/jobdesc.html?postId=2001186280909725696) | CSIG | 深圳 |  | 三年以上工作经验 | 腾讯 |
-| [微信支付-后台开发工程师](http://careers.tencent.com/jobdesc.html?postId=2000950920418054144) | WXG | 深圳 |  | 一年以上工作经验 | 腾讯 |
-| [腾讯游戏-游戏AI高级算法研究员-新星引力计划](http://careers.tencent.com/jobdesc.html?postId=1877900660188418048) | IEG | 深圳 |  | 一年以上工作经验 | 腾讯 |
-| [ima-海外产品负责人](http://careers.tencent.com/jobdesc.html?postId=2029393561258192896) | CSIG | 深圳 |  | 五年以上工作经验 | 腾讯 |
-| [混元大模型评测平台高级工程师（北京/深圳）](http://careers.tencent.com/jobdesc.html?postId=2016441108523012096) | TEG | 深圳 |  | 两年以上工作经验 | 腾讯 |
-| [腾讯安全-AI安全渗透工程师](http://careers.tencent.com/jobdesc.html?postId=2029339171956621312) | CSIG | 杭州 |  | 三年以上工作经验 | 腾讯 |
-| [AW项目组-游戏 AI 算法工程师（LLM & TTS 方向）](http://careers.tencent.com/jobdesc.html?postId=2030887750663827456) | IEG | 深圳 |  | 一年以上工作经验 | 腾讯 |
-| [元宝搜索部-AI搜索算法工程师](http://careers.tencent.com/jobdesc.html?postId=1986430962480861184) | CSIG | 北京 |  | 三年以上工作经验 | 腾讯 |
-| [元宝- AI策略产品经理（图片理解方向）](http://careers.tencent.com/jobdesc.html?postId=2021846194141167616) | CSIG | 北京 |  | 一年以上工作经验 | 腾讯 |
-| [元宝- AI策略产品经理（图片理解方向）](http://careers.tencent.com/jobdesc.html?postId=2021846191561666560) | CSIG | 深圳 |  | 一年以上工作经验 | 腾讯 |
-| [微信-WeLM 大模型 RL 环境构建研发工程师（深圳、上海）](http://careers.tencent.com/jobdesc.html?postId=2020723058859470848) | WXG | 北京 |  | 两年以上工作经验 | 腾讯 |
-| [腾讯游戏-高级研究员](http://careers.tencent.com/jobdesc.html?postId=2016352736026710016) | IEG | 上海 |  | 两年以上工作经验 | 腾讯 |
-| [腾讯游戏-高级研究员](http://careers.tencent.com/jobdesc.html?postId=2016352734143471616) | IEG | 深圳 |  | 两年以上工作经验 | 腾讯 |
-| [微信 -WeLM 大模型推理优化工程师（深圳、上海）](http://careers.tencent.com/jobdesc.html?postId=2020723060671414272) | WXG | 北京 |  | 两年以上工作经验 | 腾讯 |
-| [腾讯广告-高级商业化AIGC产品运营-北京/上海](http://careers.tencent.com/jobdesc.html?postId=2021096467556630528) | CDG | 上海 |  | 三年以上工作经验 | 腾讯 |
-| [腾讯游戏-资深游戏测试工程师](http://careers.tencent.com/jobdesc.html?postId=2017094358532247552) | IEG | 深圳 |  | 三年以上工作经验 | 腾讯 |
-| [WeGame-高级产品经理-AI产品应用](http://careers.tencent.com/jobdesc.html?postId=2018950192145006592) | IEG | 深圳 |  | 两年以上工作经验 | 腾讯 |
-| [AI产品经理-AI生成游戏](http://careers.tencent.com/jobdesc.html?postId=2011285787706019840) | IEG | 深圳 |  | 一年以上工作经验 | 腾讯 |
-
-## Agent类（201 个岗位）
-
-### 字节跳动
-
-| 岗位 | 部门 | 城市 | 薪资 | 经验 | 来源 |
-| --- | --- | --- | --- | --- | --- |
-| [支付风控算法工程师-国际支付](https://jobs.bytedance.com/experienced/position/7621153447852755253/detail) | 研发 - 算法 | 深圳 |  |  | 字节跳动 |
-| [资深产品经理（ 智能体方向）-火山引擎](https://jobs.bytedance.com/experienced/position/7617756550405196085/detail) | 研发 | 北京 |  |  | 字节跳动 |
-| [大模型Agent技术专家-AI应用与创新](https://jobs.bytedance.com/experienced/position/7615834206706927925/detail) | 研发 | 深圳 |  |  | 字节跳动 |
-| [内容风控模型运营-CQC](https://jobs.bytedance.com/experienced/position/7613396202421242117/detail) | 运营 | 北京 |  |  | 字节跳动 |
-| [豆包大模型算法研究员-Data AML](https://jobs.bytedance.com/experienced/position/7602581034597386501/detail) | 研发 | 上海 |  |  | 字节跳动 |
-| [豆包大模型Agent算法工程师-火山方舟](https://jobs.bytedance.com/experienced/position/7601811392853346613/detail) | 研发 - 算法 | 上海 |  |  | 字节跳动 |
-| [大模型Agent平台研发工程师-Data AML](https://jobs.bytedance.com/experienced/position/7599927303405619509/detail) | 研发 | 北京 |  |  | 字节跳动 |
-
-### 百度
-
-| 岗位 | 部门 | 城市 | 薪资 | 经验 | 来源 |
-| --- | --- | --- | --- | --- | --- |
-| [大模型/多模态大模型应用算法工程师（J80936）](https://talent.baidu.com/jobs/social-list?search=大模型测试) |  |  |  |  | 百度 |
-| [script>window.__USE_SSR__=true; window.__INITIAL_DATA__ ={"layoutData":{"headerMenuList":[{"name":"首页","value":"\u002F","order":0,"isNewPage":false},{"name":"职位","value":"\u002Flist","order":1,"isNewPage":false},{"name":"招聘动态","value":"\u002Ftrend","order":2,"isNewPage":false},{"name":"了解百度","value":"https:\u002F\u002Fhome.baidu.com\u002F","order":3,"isNewPage":true}],"footerMenuList":[{"name":"相关链接","order":0,"childList":[{"name":"百度社招","value":"https:\u002F\u002Ftalent.baidu.com\u002Fstatic\u002Findex.html","order":0,"isNewPage":true},{"name":"可持续发展","value":"https:\u002F\u002Fesg.baidu.com","order":1,"isNewPage":true}]},{"name":"隐私声明","order":1,"childList":[{"name":"免责声明","value":"https:\u002F\u002Fwww.baidu.com\u002Fduty","order":0,"isNewPage":true},{"name":"隐私权保护声明","value":"https:\u002F\u002Fwww.baidu.com\u002Fduty\u002Fyinsiquan.html","order":1,"isNewPage":true}]}],"socialHeaderMenuList":[{"name":"首页","value":"https:\u002F\u002Ftalent.baidu.com\u002Fstatic\u002Findex.html","order":0,"isNewPage":false},{"name":"社会招聘","value":"\u002Fsocial-list","order":1,"isNewPage":false},{"name":"校园招聘","value":"\u002Fcampus","order":2,"isNewPage":false},{"name":"了解百度","value":"https:\u002F\u002Fhome.baidu.com\u002F","order":3,"isNewPage":true}]},"detailData":{"postInfo":{"education":"","name":"NLP\u002F代码智能体算法工程师（J97394）](https://talent.baidu.com/jobs/social-list?search=大模型测试) |  |  |  |  | 百度 |
-| [script>window.__USE_SSR__=true; window.__INITIAL_DATA__ ={"layoutData":{"headerMenuList":[{"name":"首页","value":"\u002F","order":0,"isNewPage":false},{"name":"职位","value":"\u002Flist","order":1,"isNewPage":false},{"name":"招聘动态","value":"\u002Ftrend","order":2,"isNewPage":false},{"name":"了解百度","value":"https:\u002F\u002Fhome.baidu.com\u002F","order":3,"isNewPage":true}],"footerMenuList":[{"name":"相关链接","order":0,"childList":[{"name":"百度社招","value":"https:\u002F\u002Ftalent.baidu.com\u002Fstatic\u002Findex.html","order":0,"isNewPage":true},{"name":"可持续发展","value":"https:\u002F\u002Fesg.baidu.com","order":1,"isNewPage":true}]},{"name":"隐私声明","order":1,"childList":[{"name":"免责声明","value":"https:\u002F\u002Fwww.baidu.com\u002Fduty","order":0,"isNewPage":true},{"name":"隐私权保护声明","value":"https:\u002F\u002Fwww.baidu.com\u002Fduty\u002Fyinsiquan.html","order":1,"isNewPage":true}]}],"socialHeaderMenuList":[{"name":"首页","value":"https:\u002F\u002Ftalent.baidu.com\u002Fstatic\u002Findex.html","order":0,"isNewPage":false},{"name":"社会招聘","value":"\u002Fsocial-list","order":1,"isNewPage":false},{"name":"校园招聘","value":"\u002Fcampus","order":2,"isNewPage":false},{"name":"了解百度","value":"https:\u002F\u002Fhome.baidu.com\u002F","order":3,"isNewPage":true}]},"detailData":{"postInfo":{"education":"","name":"AI应用产品实习生（J98437）](https://talent.baidu.com/jobs/social-list?search=自动化测试开发) |  |  |  |  | 百度 |
-| [Agent产品经理（J97204）](https://talent.baidu.com/jobs/social-list?search=Agent产品) |  |  |  |  | 百度 |
-| [Agent高阶产品经理（J96584）](https://talent.baidu.com/jobs/social-list?search=Agent产品) |  |  |  |  | 百度 |
-| [商家Ai agent产品经理（J99223）](https://talent.baidu.com/jobs/social-list?search=Agent产品) |  |  |  |  | 百度 |
-| [大模型Agent产品运营（J99073）](https://talent.baidu.com/jobs/social-list?search=Agent产品) |  |  |  |  | 百度 |
-| [私域Agent 方向）（J98474）](https://talent.baidu.com/jobs/social-list?search=Agent产品) |  |  |  |  | 百度 |
-| [Agent Research and Development Engineer（J93903）](https://talent.baidu.com/jobs/social-list?search=Agent产品) |  |  |  |  | 百度 |
-| [大模型Agent产品经理（J98946）](https://talent.baidu.com/jobs/social-list?search=Agent产品) |  |  |  |  | 百度 |
-| [AI Agent产品经理(数字员工方向)（J96538）](https://talent.baidu.com/jobs/social-list?search=Agent产品) |  |  |  |  | 百度 |
-| [Agent算法研究员（J97360）](https://talent.baidu.com/jobs/social-list?search=Agent产品) |  |  |  |  | 百度 |
-| [AI Agent 算法工程师（J99071）](https://talent.baidu.com/jobs/social-list?search=Agent产品) |  |  |  |  | 百度 |
-| [AIGC产品经理（J90497）](https://talent.baidu.com/jobs/social-list?search=AIGC产品) |  |  |  |  | 百度 |
-| [AIGC策略产品（J91400）](https://talent.baidu.com/jobs/social-list?search=AIGC产品) |  |  |  |  | 百度 |
-| [AIGC产品运营专家（J92347）](https://talent.baidu.com/jobs/social-list?search=AIGC产品) |  |  |  |  | 百度 |
-| [AIGC商业产品运营（J71880）](https://talent.baidu.com/jobs/social-list?search=AIGC产品) |  |  |  |  | 百度 |
-| [AIGC内容创新产品（J94446）](https://talent.baidu.com/jobs/social-list?search=AIGC产品) |  |  |  |  | 百度 |
-| [商业AIGC产品经理（J94402）](https://talent.baidu.com/jobs/social-list?search=AIGC产品) |  |  |  |  | 百度 |
-| [AIGC）（J96681）](https://talent.baidu.com/jobs/social-list?search=AIGC产品) |  |  |  |  | 百度 |
-| [高级产品运营-AIGC平台（J92973）](https://talent.baidu.com/jobs/social-list?search=AIGC产品) |  |  |  |  | 百度 |
-| [AIGC创意内容产品经理（J85407）](https://talent.baidu.com/jobs/social-list?search=AIGC产品) |  |  |  |  | 百度 |
-| [AIGC视频生成模型产品（J94298）](https://talent.baidu.com/jobs/social-list?search=AIGC产品) |  |  |  |  | 百度 |
-| [script>window.__USE_SSR__=true; window.__INITIAL_DATA__ ={"layoutData":{"headerMenuList":[{"name":"首页","value":"\u002F","order":0,"isNewPage":false},{"name":"职位","value":"\u002Flist","order":1,"isNewPage":false},{"name":"招聘动态","value":"\u002Ftrend","order":2,"isNewPage":false},{"name":"了解百度","value":"https:\u002F\u002Fhome.baidu.com\u002F","order":3,"isNewPage":true}],"footerMenuList":[{"name":"相关链接","order":0,"childList":[{"name":"百度社招","value":"https:\u002F\u002Ftalent.baidu.com\u002Fstatic\u002Findex.html","order":0,"isNewPage":true},{"name":"可持续发展","value":"https:\u002F\u002Fesg.baidu.com","order":1,"isNewPage":true}]},{"name":"隐私声明","order":1,"childList":[{"name":"免责声明","value":"https:\u002F\u002Fwww.baidu.com\u002Fduty","order":0,"isNewPage":true},{"name":"隐私权保护声明","value":"https:\u002F\u002Fwww.baidu.com\u002Fduty\u002Fyinsiquan.html","order":1,"isNewPage":true}]}],"socialHeaderMenuList":[{"name":"首页","value":"https:\u002F\u002Ftalent.baidu.com\u002Fstatic\u002Findex.html","order":0,"isNewPage":false},{"name":"社会招聘","value":"\u002Fsocial-list","order":1,"isNewPage":false},{"name":"校园招聘","value":"\u002Fcampus","order":2,"isNewPage":false},{"name":"了解百度","value":"https:\u002F\u002Fhome.baidu.com\u002F","order":3,"isNewPage":true}]},"detailData":{"postInfo":{"education":"","name":"大模型应用开发工程师（J97670）](https://talent.baidu.com/jobs/social-list?search=AIGC产品) |  |  |  |  | 百度 |
-| [地图AI原生产品部_地图NLP、VIS 策略算法研发（J72866）](https://talent.baidu.com/jobs/social-list?search=AI策略产品) |  |  |  |  | 百度 |
-| [运筹优化算法工程师(LLM/Agent方向)（J96461）](https://talent.baidu.com/jobs/social-list?search=LLM) |  |  |  |  | 百度 |
-| [AIGC算法工程师（J82726）](https://talent.baidu.com/jobs/social-list?search=LLM) |  |  |  |  | 百度 |
-| [AI算法工程师（J78585）](https://talent.baidu.com/jobs/social-list?search=LLM) |  |  |  |  | 百度 |
-| [AI算法工程师（J83087）](https://talent.baidu.com/jobs/social-list?search=LLM) |  |  |  |  | 百度 |
-| [大模型/多模态算法工程师（J98569）](https://talent.baidu.com/jobs/social-list?search=LLM) |  |  |  |  | 百度 |
-| [内容生态研发部_ 推理性能优化工程师（J85683）](https://talent.baidu.com/jobs/social-list?search=LLM) |  |  |  |  | 百度 |
-| [大模型算法工程师（J86536）](https://talent.baidu.com/jobs/social-list?search=LLM) |  |  |  |  | 百度 |
-| [数字人直播策略算法工程师（J84377）](https://talent.baidu.com/jobs/social-list?search=LLM) |  |  |  |  | 百度 |
-| [大模型算法工程师（J85104）](https://talent.baidu.com/jobs/social-list?search=LLM) |  |  |  |  | 百度 |
-| [script>window.__USE_SSR__=true; window.__INITIAL_DATA__ ={"layoutData":{"headerMenuList":[{"name":"首页","value":"\u002F","order":0,"isNewPage":false},{"name":"职位","value":"\u002Flist","order":1,"isNewPage":false},{"name":"招聘动态","value":"\u002Ftrend","order":2,"isNewPage":false},{"name":"了解百度","value":"https:\u002F\u002Fhome.baidu.com\u002F","order":3,"isNewPage":true}],"footerMenuList":[{"name":"相关链接","order":0,"childList":[{"name":"百度社招","value":"https:\u002F\u002Ftalent.baidu.com\u002Fstatic\u002Findex.html","order":0,"isNewPage":true},{"name":"可持续发展","value":"https:\u002F\u002Fesg.baidu.com","order":1,"isNewPage":true}]},{"name":"隐私声明","order":1,"childList":[{"name":"免责声明","value":"https:\u002F\u002Fwww.baidu.com\u002Fduty","order":0,"isNewPage":true},{"name":"隐私权保护声明","value":"https:\u002F\u002Fwww.baidu.com\u002Fduty\u002Fyinsiquan.html","order":1,"isNewPage":true}]}],"socialHeaderMenuList":[{"name":"首页","value":"https:\u002F\u002Ftalent.baidu.com\u002Fstatic\u002Findex.html","order":0,"isNewPage":false},{"name":"社会招聘","value":"\u002Fsocial-list","order":1,"isNewPage":false},{"name":"校园招聘","value":"\u002Fcampus","order":2,"isNewPage":false},{"name":"了解百度","value":"https:\u002F\u002Fhome.baidu.com\u002F","order":3,"isNewPage":true}]},"detailData":{"postInfo":{"education":"","name":"多模态组_AI产品实习生（J97942）](https://talent.baidu.com/jobs/social-list?search=LLM) |  |  |  |  | 百度 |
-| [千帆桌面端Agent引擎开发（J98441）](https://talent.baidu.com/jobs/social-list?search=Agent开发) |  |  |  |  | 百度 |
-| [Agent策略负责人（J98925）](https://talent.baidu.com/jobs/social-list?search=Agent开发) |  |  |  |  | 百度 |
-| [大模型算法工程师（J95522）](https://talent.baidu.com/jobs/social-list?search=大模型评测) |  |  |  |  | 百度 |
-| [大模型算法工程师（J95279）](https://talent.baidu.com/jobs/social-list?search=大模型评测) |  |  |  |  | 百度 |
-| [VLM）算法工程师（J98999）](https://talent.baidu.com/jobs/social-list?search=大模型评测) |  |  |  |  | 百度 |
-| [百度公有云具身大模型训推优化工程师（J98347）](https://talent.baidu.com/jobs/social-list?search=大模型评测) |  |  |  |  | 百度 |
-| [深度学习规划算法工程师（J92529）](https://talent.baidu.com/jobs/social-list?search=大模型评测) |  |  |  |  | 百度 |
-| [script>window.__USE_SSR__=true; window.__INITIAL_DATA__ ={"layoutData":{"headerMenuList":[{"name":"首页","value":"\u002F","order":0,"isNewPage":false},{"name":"职位","value":"\u002Flist","order":1,"isNewPage":false},{"name":"招聘动态","value":"\u002Ftrend","order":2,"isNewPage":false},{"name":"了解百度","value":"https:\u002F\u002Fhome.baidu.com\u002F","order":3,"isNewPage":true}],"footerMenuList":[{"name":"相关链接","order":0,"childList":[{"name":"百度社招","value":"https:\u002F\u002Ftalent.baidu.com\u002Fstatic\u002Findex.html","order":0,"isNewPage":true},{"name":"可持续发展","value":"https:\u002F\u002Fesg.baidu.com","order":1,"isNewPage":true}]},{"name":"隐私声明","order":1,"childList":[{"name":"免责声明","value":"https:\u002F\u002Fwww.baidu.com\u002Fduty","order":0,"isNewPage":true},{"name":"隐私权保护声明","value":"https:\u002F\u002Fwww.baidu.com\u002Fduty\u002Fyinsiquan.html","order":1,"isNewPage":true}]}],"socialHeaderMenuList":[{"name":"首页","value":"https:\u002F\u002Ftalent.baidu.com\u002Fstatic\u002Findex.html","order":0,"isNewPage":false},{"name":"社会招聘","value":"\u002Fsocial-list","order":1,"isNewPage":false},{"name":"校园招聘","value":"\u002Fcampus","order":2,"isNewPage":false},{"name":"了解百度","value":"https:\u002F\u002Fhome.baidu.com\u002F","order":3,"isNewPage":true}]},"detailData":{"postInfo":{"education":"","name":"搜索\u002FAI应用架构工程实习生（J97957）](https://talent.baidu.com/jobs/social-list?search=大模型评测) |  |  |  |  | 百度 |
-| [script>window.__USE_SSR__=true; window.__INITIAL_DATA__ ={"layoutData":{"headerMenuList":[{"name":"首页","value":"\u002F","order":0,"isNewPage":false},{"name":"职位","value":"\u002Flist","order":1,"isNewPage":false},{"name":"招聘动态","value":"\u002Ftrend","order":2,"isNewPage":false},{"name":"了解百度","value":"https:\u002F\u002Fhome.baidu.com\u002F","order":3,"isNewPage":true}],"footerMenuList":[{"name":"相关链接","order":0,"childList":[{"name":"百度社招","value":"https:\u002F\u002Ftalent.baidu.com\u002Fstatic\u002Findex.html","order":0,"isNewPage":true},{"name":"可持续发展","value":"https:\u002F\u002Fesg.baidu.com","order":1,"isNewPage":true}]},{"name":"隐私声明","order":1,"childList":[{"name":"免责声明","value":"https:\u002F\u002Fwww.baidu.com\u002Fduty","order":0,"isNewPage":true},{"name":"隐私权保护声明","value":"https:\u002F\u002Fwww.baidu.com\u002Fduty\u002Fyinsiquan.html","order":1,"isNewPage":true}]}],"socialHeaderMenuList":[{"name":"首页","value":"https:\u002F\u002Ftalent.baidu.com\u002Fstatic\u002Findex.html","order":0,"isNewPage":false},{"name":"社会招聘","value":"\u002Fsocial-list","order":1,"isNewPage":false},{"name":"校园招聘","value":"\u002Fcampus","order":2,"isNewPage":false},{"name":"了解百度","value":"https:\u002F\u002Fhome.baidu.com\u002F","order":3,"isNewPage":true}]},"detailData":{"postInfo":{"education":"","name":"AIGC短视频编导（J98851）](https://talent.baidu.com/jobs/social-list?search=AI质量) |  |  |  |  | 百度 |
-
-### 网易
-
-| 岗位 | 部门 | 城市 | 薪资 | 经验 | 来源 |
-| --- | --- | --- | --- | --- | --- |
-| 数据分析及产品经理（LOFTER） | 元气事业部 | 杭州 |  | 3-5年 | 网易 |
-| 运营策划日常实习生（AI工具/AI应用向） | 奇点事业部 | 上海 |  | 不限 | 网易 |
-| AI产品经理（外贸产品） | 智能邮件事业部 | 杭州 |  | 3-5年 | 网易 |
-| 算法平台开发工程师（AI infra） | 音乐事业部 | 杭州 |  | 不限 | 网易 |
-| 资深AI工作流设计师 | 音乐事业部 | 杭州 |  | 不限 | 网易 |
-| 服务端开发工程师 | 有道事业群 | 北京 |  | 3-5年 | 网易 |
-| AI应用开发工程师 | 有道事业群 | 北京 |  | 3-5年 | 网易 |
-| 高级/资深agent开发工程师（AI智能客服） | 音乐事业部 | 杭州 |  | 3-5年 | 网易 |
-| 强化学习算法工程师 | 雷火事业群 | 杭州 |  | 3-5年 | 网易 |
-| 游戏AI技术策划（天下） | 天下事业部 | 广州 |  | 不限 | 网易 |
-| 游戏AI Agent研发工程师（天下） | 天下事业部 | 广州 |  | 不限 | 网易 |
-| AI Agent 全栈工程师-北京 | 有道事业群 | 北京 |  | 0-3年 | 网易 |
-| AI Agent 全栈工程师 | 有道事业群 | 北京 |  | 3-5年 | 网易 |
-| 客户端专家/客户端负责人 | 阴阳师事业部 | 上海 |  | 5-10年 | 网易 |
-| 广告策略产品经理 | 音乐事业部 | 杭州 |  | 不限 | 网易 |
-| AI 开发工程师（AI编程工具方向） | 技术中心 | 广州 |  | 3-5年 | 网易 |
-| 【平台】AI应用开发工程师 | 游戏应用与平台发展事业部 | 广州 |  | 3-5年 | 网易 |
-| 跨境电商运营 | 智能邮件事业部 | 北京 |  | 3-5年 | 网易 |
-| 网易LOFTER推荐算法实习生（含转正机会） | 元气事业部 | 杭州 |  | 不限 | 网易 |
-| AI Agent 工程师（活动平台） | 音乐事业部 | 杭州 |  | 3-5年 | 网易 |
-| AI Agent 研发工程师（企业智能化平台方向） | 音乐事业部 | 杭州 |  | 3-5年 | 网易 |
-| 资深内容安全算法工程师 | 音乐事业部 | 杭州 |  | 3-5年 | 网易 |
-| 高级/资深品牌视觉设计师 | 雷火事业群 | 杭州 |  | 3-5年 | 网易 |
-| 游戏海外数据增长分析师 | 雷火事业群 | 杭州 |  | 5-10年 | 网易 |
-| 生成式AI产品策划（27届+广） | 合作产品部 | 广州 |  | 不限 | 网易 |
-| AI研究工程师（27届+广/沪/杭） | 艺术采购部（互娱） | 广州 |  | 不限 | 网易 |
-| 大数据平台研发工程师（27届+广） | 市场中心 | 广州 |  | 不限 | 网易 |
-| AI平台研发工程师（27届+广） | 市场中心 | 广州 |  | 不限 | 网易 |
-| AI产品策划 | 大神事业部 | 广州 |  | 不限 | 网易 |
-| 内容运营（AI应用） | 大神事业部 | 广州 |  | 不限 | 网易 |
-| 高级产品运营专员（AIGC方向） | 大神事业部 | 广州 |  | 不限 | 网易 |
-| 易盾-售前解决方案实习生 | 智企事业部 | 杭州 |  | 0-3年 | 网易 |
-| 海外品牌市场公关实习生 - 视觉设计方向 | 有道事业群 | 广州 |  | 不限 | 网易 |
-| 高级数仓开发工程师（网易云音乐） | 音乐事业部 | 杭州 |  | 不限 | 网易 |
-| Agent工程师 | 技术中心 | 杭州 |  | 3-5年 | 网易 |
-| 技术策划 | 技术中心 | 广州 |  | 3-5年 | 网易 |
-| [内容运营实习生](https://m.mifengs.com/luv2/00TNCud) | 传媒事业群 | 北京 |  | 0-3年 | 网易 |
-| 资深搜索推荐及广告算法工程师 | 用户体验中心 | 广州 |  | 3-5年 | 网易 |
-| 国内AIGC直客销售 | 有道事业群 | 北京 |  | 0-3年 | 网易 |
-| [运营视觉设计实习生](https://m.mifengs.com/luv2/02aaQF3) | 传媒事业群 | 北京 |  | 0-3年 | 网易 |
-| 销售中心-AI销售专家 | 智企事业部 | 上海 |  | 不限 | 网易 |
-| AI美术设计师 | 海神事业部 | 广州 |  | 5-10年 | 网易 |
-| 语音交互算法实习生 | 雷火事业群 | 杭州 |  | 不限 | 网易 |
-| 资深/高级AI精灵运营 | 运营中心 | 广州 |  | 0-3年 | 网易 |
-| 大健康行业化负责人 | 智企事业部 | 杭州 |  | 10年以上 | 网易 |
-| AI -Agent战斗架构主策 | 奇点事业部 | 上海 |  | 5-10年 | 网易 |
-| AI Agent 后端研发工程师 | 有道事业群 | 北京 |  | 0-3年 | 网易 |
-| AIGC设计师（AITA） | 艺设二部 | 广州 |  | 不限 | 网易 |
-| [AI导演实习生](https://m.mifengs.com/luv2/01gpnod) | 传媒事业群 | 北京 |  | 不限 | 网易 |
-| 高级/资深 搜索算法工程师（网易云音乐） | 音乐事业部 | 杭州 |  | 0-3年 | 网易 |
-| 云商-交付架构师 | 智企事业部 | 杭州 |  | 3-5年 | 网易 |
-| 资深美术设计师（美术Agent框架搭建） | 艺设三部 | 上海 |  | 不限 | 网易 |
-| 资深技术指导（AI全栈开发） | 艺设三部 | 杭州 |  | 不限 | 网易 |
-| 高级技术美术 | 艺设一部 | 广州 |  | 不限 | 网易 |
-| 高级内容营销（海外） | Joker事业部 | 杭州 |  | 0-3年 | 网易 |
-| 易盾-高级安全策略专员 | 智企事业部 | 杭州 |  | 不限 | 网易 |
-| 爬虫工程师 | 有道事业群 | 北京 |  | 3-5年 | 网易 |
-| 金融及央国企行业解决方案专家 | 智企事业部 | 广州 |  | 5-10年 | 网易 |
-| 大数据-data agent产品经理 | 智企事业部 | 杭州 |  | 不限 | 网易 |
-| 渠道销售经理（AI产品销售） | 智企事业部 | 深圳 |  | 不限 | 网易 |
-| 视觉设计实习生 | 雷火事业群 | 杭州 |  | 不限 | 网易 |
-| 云商-资深生态合作专员 | 智企事业部 | 杭州 |  | 不限 | 网易 |
-| 云商-渠道销售经理（东区） | 智企事业部 | 杭州 |  | 不限 | 网易 |
-| 高级/资深游戏视觉设计师-暴雪游戏 | 雷火事业群 | 杭州 |  | 3-5年 | 网易 |
-| 易盾-产品实习生 | 智企事业部 | 杭州 |  | 不限 | 网易 |
-| AIGC设计师（概念） | 艺设二部 | 广州 |  | 不限 | 网易 |
-| AI向原画设计师（AIGC） | 艺设二部 | 广州 |  | 不限 | 网易 |
-| 高级AI产品经理（推荐） | 在线游戏事业部 | 广州 |  | 3-5年 | 网易 |
-| CW-产品运营实习生 | 智企事业部 | 杭州 |  | 不限 | 网易 |
-| 大模型算法工程师（Agent方向） | 音乐事业部 | 杭州 |  | 0-3年 | 网易 |
-| 高级/资深算法应用工程师 | 用户体验中心 | 杭州 |  | 不限 | 网易 |
-| 高级/资深游戏推广视觉设计师-暴雪游戏 | 雷火事业群 | 杭州 |  | 3-5年 | 网易 |
-| 高级/资深产品经理（AI） | 运营中心 | 广州 |  | 不限 | 网易 |
-| 大模型算法工程师（游戏智能NPC方向） | 雷火事业群 | 杭州 |  | 3-5年 | 网易 |
-| 语音交互算法工程师 | 雷火事业群 | 杭州 |  | 3-5年 | 网易 |
-| 少儿编程教研实习生【成都】 | 有道事业群 | 成都 |  | 不限 | 网易 |
-| 大数据业务中心-资深Hadoop内核开发工程师 | 智企事业部 | 杭州 |  | 不限 | 网易 |
-| AI游戏精灵管理 | 运营中心 | 广州 |  | 不限 | 网易 |
-| 云商-大模型算法工程师 | 智企事业部 | 杭州 |  | 不限 | 网易 |
-| 易盾-安全策略专员（北京/杭州） | 智企事业部 | 北京 |  | 不限 | 网易 |
-
-### 腾讯
-
-| 岗位 | 部门 | 城市 | 薪资 | 经验 | 来源 |
-| --- | --- | --- | --- | --- | --- |
-| [元宝- AI策略产品经理](http://careers.tencent.com/jobdesc.html?postId=1986268577531060224) | CSIG | 北京 |  | 一年以上工作经验 | 腾讯 |
-| [元宝-Agent架构工程师](http://careers.tencent.com/jobdesc.html?postId=2016726999816626176) | CSIG | 深圳 |  | 两年以上工作经验 | 腾讯 |
-| [企业微信-大模型算法工程师-Agent应用（广州/北京）](http://careers.tencent.com/jobdesc.html?postId=1976549654753599488) | WXG | 成都 |  | 三年以上工作经验 | 腾讯 |
-| [微信 -大模型LLM系统研发工程师](http://careers.tencent.com/jobdesc.html?postId=1906552963325857792) | WXG | 北京 |  | 一年以上工作经验 | 腾讯 |
-| [QQ浏览器-高级算法工程师-NLP，RL，LLM](http://careers.tencent.com/jobdesc.html?postId=1997873976650649600) | CSIG | 深圳 |  | 两年以上工作经验 | 腾讯 |
-| [腾讯广告-多模态大模型算法工程师](http://careers.tencent.com/jobdesc.html?postId=2008815464213536768) | CDG | 上海 |  | 三年以上工作经验 | 腾讯 |
-| [元宝- AI策略产品经理](http://careers.tencent.com/jobdesc.html?postId=1925398818564710400) | CSIG | 深圳 |  | 两年以上工作经验 | 腾讯 |
-| [英雄联盟手游-应用研究-大模型应用](http://careers.tencent.com/jobdesc.html?postId=2020821173599895552) | IEG | 深圳 |  | 一年以上工作经验 | 腾讯 |
-| [微信基础-后端开发工程师](http://careers.tencent.com/jobdesc.html?postId=2006202335759585280) | WXG | 北京 |  | 两年以上工作经验 | 腾讯 |
-| [腾讯广告-大模型推荐算法负责人](http://careers.tencent.com/jobdesc.html?postId=1976884159108501504) | CDG | 深圳 |  | 五年以上工作经验 | 腾讯 |
-| [元宝-LLM大模型推理工程师](http://careers.tencent.com/jobdesc.html?postId=1902190186842898432) | CSIG | 深圳 |  | 两年以上工作经验 | 腾讯 |
-| [元宝-LLM大模型推理工程师](http://careers.tencent.com/jobdesc.html?postId=1902190189934100480) | CSIG | 北京 |  | 两年以上工作经验 | 腾讯 |
-| [腾讯广告-多模态大模型算法工程师](http://careers.tencent.com/jobdesc.html?postId=2008815466226802688) | CDG | 深圳 |  | 三年以上工作经验 | 腾讯 |
-| [TAB实验平台-AI产品经理](http://careers.tencent.com/jobdesc.html?postId=2009148280147169280) | PCG | 深圳 |  | 不限 | 腾讯 |
-| [应用开发工程师](http://careers.tencent.com/jobdesc.html?postId=2011000416027959296) | S3 | 深圳 |  | 三年以上工作经验 | 腾讯 |
-| [高性能计算工程师](http://careers.tencent.com/jobdesc.html?postId=2038814816268873728) | CSIG | 上海 |  | 五年以上工作经验 | 腾讯 |
-| [高性能计算工程师](http://careers.tencent.com/jobdesc.html?postId=2038461117801590784) | CSIG | 杭州 |  | 三年以上工作经验 | 腾讯 |
-| [高性能计算工程师](http://careers.tencent.com/jobdesc.html?postId=2038461115658301440) | CSIG | 深圳 |  | 三年以上工作经验 | 腾讯 |
-| [高性能计算工程师](http://careers.tencent.com/jobdesc.html?postId=2038461113494044672) | CSIG | 北京 |  | 三年以上工作经验 | 腾讯 |
-| [机器人具身智能研究员 - 大模型方向](http://careers.tencent.com/jobdesc.html?postId=1987721125542645760) | TEG | 深圳 |  | 五年以上工作经验 | 腾讯 |
-| [企业微信-大模型算法工程师-经营分析（成都/北京）](http://careers.tencent.com/jobdesc.html?postId=1891442262743752704) | WXG | 广州 |  | 五年以上工作经验 | 腾讯 |
-| [推理框架研发工程师-深圳/北京/上海](http://careers.tencent.com/jobdesc.html?postId=2038796566910894080) | CSIG | 上海 |  | 三年以上工作经验 | 腾讯 |
-| [大模型推理框架研发工程师](http://careers.tencent.com/jobdesc.html?postId=2037523714089840640) | CSIG | 杭州 |  | 三年以上工作经验 | 腾讯 |
-| [大模型推理框架研发工程师](http://careers.tencent.com/jobdesc.html?postId=2037523711703281664) | CSIG | 北京 |  | 三年以上工作经验 | 腾讯 |
-| [大模型推理框架研发工程师](http://careers.tencent.com/jobdesc.html?postId=2037523709425778688) | CSIG | 深圳 |  | 三年以上工作经验 | 腾讯 |
-| [大模型推理框架研发工程师](http://careers.tencent.com/jobdesc.html?postId=2037101976877170688) | CSIG | 上海 |  | 三年以上工作经验 | 腾讯 |
-| [混元LLM大模型量化压缩高级算法工程师（北京/深圳/上海）](http://careers.tencent.com/jobdesc.html?postId=2008479663327956992) | TEG | 深圳 |  | 五年以上工作经验 | 腾讯 |
-| [微信小店-大模型算法工程师](http://careers.tencent.com/jobdesc.html?postId=1959974910558363648) | WXG | 广州 |  | 两年以上工作经验 | 腾讯 |
-| [腾讯广告-内容/商品理解算法负责人](http://careers.tencent.com/jobdesc.html?postId=2008842819988508672) | CDG | 深圳 |  | 五年以上工作经验 | 腾讯 |
-| [微信安全-内容理解算法工程师-电商入驻审核](http://careers.tencent.com/jobdesc.html?postId=1936679262442594304) | WXG | 广州 |  | 两年以上工作经验 | 腾讯 |
-| [高性能计算工程师](http://careers.tencent.com/jobdesc.html?postId=2037120831393525760) | CSIG | 上海 |  | 三年以上工作经验 | 腾讯 |
-| [腾讯地图-AI后台开发高级工程师](http://careers.tencent.com/jobdesc.html?postId=1989232491273281536) | CSIG | 深圳 |  | 三年以上工作经验 | 腾讯 |
-| [微信搜索-LLM大模型算法工程师](http://careers.tencent.com/jobdesc.html?postId=1995381946347311104) | WXG | 北京 |  | 三年以上工作经验 | 腾讯 |
-| [腾讯地图-AI策略产品经理](http://careers.tencent.com/jobdesc.html?postId=1984165005532221440) | CSIG | 深圳 |  | 两年以上工作经验 | 腾讯 |
-| [游戏AI-LLM大模型算法研究员](http://careers.tencent.com/jobdesc.html?postId=1995314539217969152) | TEG | 深圳 |  | 三年以上工作经验 | 腾讯 |
-| [大模型算法工程师-LLM&智能营销方向](http://careers.tencent.com/jobdesc.html?postId=1905073051054211072) | TEG | 深圳 |  | 三年以上工作经验 | 腾讯 |
-| [高性能计算工程师-(上海)or(北京)or](http://careers.tencent.com/jobdesc.html?postId=1957694902070562816) | CSIG | 深圳 |  | 两年以上工作经验 | 腾讯 |
-| [《三角洲行动》-AI产品运营](http://careers.tencent.com/jobdesc.html?postId=2006301759437430784) | IEG | 深圳 |  | 两年以上工作经验 | 腾讯 |
-| [AI Agent后端研发工程师（深圳）](http://careers.tencent.com/jobdesc.html?postId=2036281955724722176) | TEG | 深圳 |  | 两年以上工作经验 | 腾讯 |
-| [《三角洲行动》-游戏 AI Agent 开发](http://careers.tencent.com/jobdesc.html?postId=2038877531406499840) | IEG | 深圳 |  | 一年以上工作经验 | 腾讯 |
-| [企业微信-AI Agent开发工程师-平台框架/应用（广州）](http://careers.tencent.com/jobdesc.html?postId=2028299866760966144) | WXG | 成都 |  | 两年以上工作经验 | 腾讯 |
-| [微信公众号-大模型算法工程师](http://careers.tencent.com/jobdesc.html?postId=1926866571192541184) | WXG | 广州 |  | 一年以上工作经验 | 腾讯 |
-| [WeGame游戏平台-AI算法研究](http://careers.tencent.com/jobdesc.html?postId=1982705847465299968) | IEG | 深圳 |  | 三年以上工作经验 | 腾讯 |
-| [Pytorch框架研发高级工程师（深圳/北京/上海/杭州）](http://careers.tencent.com/jobdesc.html?postId=1958073234469572608) | TEG | 深圳 |  | 一年以上工作经验 | 腾讯 |
-| [微信安全-内容理解算法高级工程师-直播电商](http://careers.tencent.com/jobdesc.html?postId=1936679276518678528) | WXG | 广州 |  | 五年以上工作经验 | 腾讯 |
-| [微信读书/微信输入法-大模型应用研发工程师-文本方向](http://careers.tencent.com/jobdesc.html?postId=1934984932162117632) | WXG | 北京 |  | 两年以上工作经验 | 腾讯 |
-| [微信安全-内容理解算法高级工程师-电商入驻审核](http://careers.tencent.com/jobdesc.html?postId=1936679270994804736) | WXG | 广州 |  | 五年以上工作经验 | 腾讯 |
-| [微信秒剪-agent强化学习训练框架开发工程师-（广州）](http://careers.tencent.com/jobdesc.html?postId=1987769449553485824) | WXG | 北京 |  | 一年以上工作经验 | 腾讯 |
-| [游戏用户研究-AI算法工程师](http://careers.tencent.com/jobdesc.html?postId=2004441758305509376) | IEG | 深圳 |  | 不限 | 腾讯 |
-| [微信安全-大模型内容理解算法高级工程师-短视频方向](http://careers.tencent.com/jobdesc.html?postId=1958411884369698816) | WXG | 广州 |  | 五年以上工作经验 | 腾讯 |
-| [搜狗输入法-大模型算法资深专家](http://careers.tencent.com/jobdesc.html?postId=1957620406919778304) | CSIG | 北京 |  | 五年以上工作经验 | 腾讯 |
-| [腾讯会议-音频算法工程师](http://careers.tencent.com/jobdesc.html?postId=2032757901336145920) | CSIG | 北京 |  | 一年以上工作经验 | 腾讯 |
-| [ima copilot-大模型应用算法leader(深圳/北京)](http://careers.tencent.com/jobdesc.html?postId=2002931464739643392) | CSIG | 深圳 |  | 五年以上工作经验 | 腾讯 |
-| [研效洞察平台产品经理](http://careers.tencent.com/jobdesc.html?postId=2034093357088796672) | TEG | 深圳 |  | 五年以上工作经验 | 腾讯 |
-| [大语言模型应用工程师（Agent方向）](http://careers.tencent.com/jobdesc.html?postId=2034117544100655104) | CSIG | 深圳 |  | 三年以上工作经验 | 腾讯 |
-| [《王者荣耀》游戏AI算法研究员- LLM/NLP方向](http://careers.tencent.com/jobdesc.html?postId=2017980286347935744) | IEG | 成都 |  | 三年以上工作经验 | 腾讯 |
-| [《王者荣耀》游戏AI算法研究员- LLM/NLP方向](http://careers.tencent.com/jobdesc.html?postId=2017980284246589440) | IEG | 深圳 |  | 三年以上工作经验 | 腾讯 |
-| [腾讯乐享-高级产品策划](http://careers.tencent.com/jobdesc.html?postId=2029338856909864960) | CSIG | 深圳 |  | 五年以上工作经验 | 腾讯 |
-| [AI产品经理-代码智能化产品](http://careers.tencent.com/jobdesc.html?postId=1867200289648439296) | TEG | 深圳 |  | 三年以上工作经验 | 腾讯 |
-| [ima copilot-大模型应用算法工程师](http://careers.tencent.com/jobdesc.html?postId=1956586714755649536) | CSIG | 北京 |  | 五年以上工作经验 | 腾讯 |
-| [ima copilot-大模型应用算法工程师](http://careers.tencent.com/jobdesc.html?postId=1967441978455117824) | CSIG | 深圳 |  | 一年以上工作经验 | 腾讯 |
-| [AI运维平台技术架构师](http://careers.tencent.com/jobdesc.html?postId=2029862289435426816) | CSIG | 深圳 |  | 五年以上工作经验 | 腾讯 |
-| [元宝-Agent架构工程师](http://careers.tencent.com/jobdesc.html?postId=2016726997581058048) | CSIG | 北京 |  | 两年以上工作经验 | 腾讯 |
-| [Research Internship- Multimodal LLM (Speech/Music/Audio/Vision/Language) 106334](https://tencent.wd1.myworkdayjobs.com/Tencent_Careers/job/US-Washington-Bellevue/Research-Internship--Multimodal-LLM--Speech-Music-Audio-Vision-Language-_R106334-1) | TEG | 贝尔维尤 |  |  | 腾讯 |
-| [Research Internship- Multimodal LLM (Speech/Music/Audio/Vision/Language) 106665](https://tencent.wd1.myworkdayjobs.com/Tencent_Careers/job/US-Washington-Bellevue/Research-Internship--Multimodal-LLM--Speech-Music-Audio-Vision-Language-_R106665-1) | TEG | 贝尔维尤 |  |  | 腾讯 |
-| [腾讯游戏平台-AI算法研究员-新星引力计划](http://careers.tencent.com/jobdesc.html?postId=1953044902606688256) | IEG | 深圳 |  | 一年以上工作经验 | 腾讯 |
-| [腾讯视频-大模型推荐算法负责人](http://careers.tencent.com/jobdesc.html?postId=2020707034835611648) | PCG | 北京 |  | 五年以上工作经验 | 腾讯 |
-| [和平精英-UE引擎工具开发工程师-新星引力计划](http://careers.tencent.com/jobdesc.html?postId=2027216793017417728) | IEG | 深圳 |  | 一年以上工作经验 | 腾讯 |
-| [Project W-AI产品策划（数据向）](http://careers.tencent.com/jobdesc.html?postId=2018585811271970816) | IEG | 深圳 |  | 三年以上工作经验 | 腾讯 |
-| [大模型推理GPU性能优化工程师](http://careers.tencent.com/jobdesc.html?postId=2013865963853864960) | IEG | 深圳 |  | 三年以上工作经验 | 腾讯 |
-
-## 产品类（34 个岗位）
-
-### 字节跳动
-
-| 岗位 | 部门 | 城市 | 薪资 | 经验 | 来源 |
-| --- | --- | --- | --- | --- | --- |
-| [商家风控运营专家-抖音生活服务](https://jobs.bytedance.com/experienced/position/7626320293242341685/detail) | 运营 - 产品运营 | 北京 |  |  | 字节跳动 |
-| [电商策略商业产品经理（券/营销方向）-国际化](https://jobs.bytedance.com/experienced/position/7594309357237061941/detail) | 产品 | 北京 |  |  | 字节跳动 |
-
-### 百度
-
-| 岗位 | 部门 | 城市 | 薪资 | 经验 | 来源 |
-| --- | --- | --- | --- | --- | --- |
-| [script>window.__USE_SSR__=true; window.__INITIAL_DATA__ ={"layoutData":{"headerMenuList":[{"name":"首页","value":"\u002F","order":0,"isNewPage":false},{"name":"职位","value":"\u002Flist","order":1,"isNewPage":false},{"name":"招聘动态","value":"\u002Ftrend","order":2,"isNewPage":false},{"name":"了解百度","value":"https:\u002F\u002Fhome.baidu.com\u002F","order":3,"isNewPage":true}],"footerMenuList":[{"name":"相关链接","order":0,"childList":[{"name":"百度社招","value":"https:\u002F\u002Ftalent.baidu.com\u002Fstatic\u002Findex.html","order":0,"isNewPage":true},{"name":"可持续发展","value":"https:\u002F\u002Fesg.baidu.com","order":1,"isNewPage":true}]},{"name":"隐私声明","order":1,"childList":[{"name":"免责声明","value":"https:\u002F\u002Fwww.baidu.com\u002Fduty","order":0,"isNewPage":true},{"name":"隐私权保护声明","value":"https:\u002F\u002Fwww.baidu.com\u002Fduty\u002Fyinsiquan.html","order":1,"isNewPage":true}]}],"socialHeaderMenuList":[{"name":"首页","value":"https:\u002F\u002Ftalent.baidu.com\u002Fstatic\u002Findex.html","order":0,"isNewPage":false},{"name":"社会招聘","value":"\u002Fsocial-list","order":1,"isNewPage":false},{"name":"校园招聘","value":"\u002Fcampus","order":2,"isNewPage":false},{"name":"了解百度","value":"https:\u002F\u002Fhome.baidu.com\u002F","order":3,"isNewPage":true}]},"detailData":{"postInfo":{"education":"","name":"MEG星海计划-AI产品经理实习生（J98102）](https://talent.baidu.com/jobs/social-list?search=AI测试) |  |  |  |  | 百度 |
-| [script>window.__USE_SSR__=true; window.__INITIAL_DATA__ ={"layoutData":{"headerMenuList":[{"name":"首页","value":"\u002F","order":0,"isNewPage":false},{"name":"职位","value":"\u002Flist","order":1,"isNewPage":false},{"name":"招聘动态","value":"\u002Ftrend","order":2,"isNewPage":false},{"name":"了解百度","value":"https:\u002F\u002Fhome.baidu.com\u002F","order":3,"isNewPage":true}],"footerMenuList":[{"name":"相关链接","order":0,"childList":[{"name":"百度社招","value":"https:\u002F\u002Ftalent.baidu.com\u002Fstatic\u002Findex.html","order":0,"isNewPage":true},{"name":"可持续发展","value":"https:\u002F\u002Fesg.baidu.com","order":1,"isNewPage":true}]},{"name":"隐私声明","order":1,"childList":[{"name":"免责声明","value":"https:\u002F\u002Fwww.baidu.com\u002Fduty","order":0,"isNewPage":true},{"name":"隐私权保护声明","value":"https:\u002F\u002Fwww.baidu.com\u002Fduty\u002Fyinsiquan.html","order":1,"isNewPage":true}]}],"socialHeaderMenuList":[{"name":"首页","value":"https:\u002F\u002Ftalent.baidu.com\u002Fstatic\u002Findex.html","order":0,"isNewPage":false},{"name":"社会招聘","value":"\u002Fsocial-list","order":1,"isNewPage":false},{"name":"校园招聘","value":"\u002Fcampus","order":2,"isNewPage":false},{"name":"了解百度","value":"https:\u002F\u002Fhome.baidu.com\u002F","order":3,"isNewPage":true}]},"detailData":{"postInfo":{"education":"","name":"AI产品实习生（J99151）](https://talent.baidu.com/jobs/social-list?search=算法测试) |  |  |  |  | 百度 |
-| [自动化投放产品经理（J75449）](https://talent.baidu.com/jobs/social-list?search=自动化测试开发) |  |  |  |  | 百度 |
-| [script>window.__USE_SSR__=true; window.__INITIAL_DATA__ ={"layoutData":{"headerMenuList":[{"name":"首页","value":"\u002F","order":0,"isNewPage":false},{"name":"职位","value":"\u002Flist","order":1,"isNewPage":false},{"name":"招聘动态","value":"\u002Ftrend","order":2,"isNewPage":false},{"name":"了解百度","value":"https:\u002F\u002Fhome.baidu.com\u002F","order":3,"isNewPage":true}],"footerMenuList":[{"name":"相关链接","order":0,"childList":[{"name":"百度社招","value":"https:\u002F\u002Ftalent.baidu.com\u002Fstatic\u002Findex.html","order":0,"isNewPage":true},{"name":"可持续发展","value":"https:\u002F\u002Fesg.baidu.com","order":1,"isNewPage":true}]},{"name":"隐私声明","order":1,"childList":[{"name":"免责声明","value":"https:\u002F\u002Fwww.baidu.com\u002Fduty","order":0,"isNewPage":true},{"name":"隐私权保护声明","value":"https:\u002F\u002Fwww.baidu.com\u002Fduty\u002Fyinsiquan.html","order":1,"isNewPage":true}]}],"socialHeaderMenuList":[{"name":"首页","value":"https:\u002F\u002Ftalent.baidu.com\u002Fstatic\u002Findex.html","order":0,"isNewPage":false},{"name":"社会招聘","value":"\u002Fsocial-list","order":1,"isNewPage":false},{"name":"校园招聘","value":"\u002Fcampus","order":2,"isNewPage":false},{"name":"了解百度","value":"https:\u002F\u002Fhome.baidu.com\u002F","order":3,"isNewPage":true}]},"detailData":{"postInfo":{"education":"","name":"AI产品实习生（J98082）](https://talent.baidu.com/jobs/social-list?search=Agent产品) |  |  |  |  | 百度 |
-| [AI策略产品经理（J98917）](https://talent.baidu.com/jobs/social-list?search=AI策略产品) |  |  |  |  | 百度 |
-| [AI搜索策略产品（J93381）](https://talent.baidu.com/jobs/social-list?search=AI策略产品) |  |  |  |  | 百度 |
-| [AI策略产品经理（J84249）](https://talent.baidu.com/jobs/social-list?search=AI策略产品) |  |  |  |  | 百度 |
-| [策略产品（J96783）](https://talent.baidu.com/jobs/social-list?search=AI策略产品) |  |  |  |  | 百度 |
-| [AI产品运营（J91410）](https://talent.baidu.com/jobs/social-list?search=AI策略产品) |  |  |  |  | 百度 |
-| [内容策略产品（J93366）](https://talent.baidu.com/jobs/social-list?search=AI策略产品) |  |  |  |  | 百度 |
-| [AI产品经理（J98328）](https://talent.baidu.com/jobs/social-list?search=AI质量) |  |  |  |  | 百度 |
-| [AI产品经理（J96883）](https://talent.baidu.com/jobs/social-list?search=AI质量) |  |  |  |  | 百度 |
-| [AI产品经理（J84493）](https://talent.baidu.com/jobs/social-list?search=AI质量) |  |  |  |  | 百度 |
-| [AI产品经理（J84492）](https://talent.baidu.com/jobs/social-list?search=AI质量) |  |  |  |  | 百度 |
-| [script>window.__USE_SSR__=true; window.__INITIAL_DATA__ ={"layoutData":{"headerMenuList":[{"name":"首页","value":"\u002F","order":0,"isNewPage":false},{"name":"职位","value":"\u002Flist","order":1,"isNewPage":false},{"name":"招聘动态","value":"\u002Ftrend","order":2,"isNewPage":false},{"name":"了解百度","value":"https:\u002F\u002Fhome.baidu.com\u002F","order":3,"isNewPage":true}],"footerMenuList":[{"name":"相关链接","order":0,"childList":[{"name":"百度社招","value":"https:\u002F\u002Ftalent.baidu.com\u002Fstatic\u002Findex.html","order":0,"isNewPage":true},{"name":"可持续发展","value":"https:\u002F\u002Fesg.baidu.com","order":1,"isNewPage":true}]},{"name":"隐私声明","order":1,"childList":[{"name":"免责声明","value":"https:\u002F\u002Fwww.baidu.com\u002Fduty","order":0,"isNewPage":true},{"name":"隐私权保护声明","value":"https:\u002F\u002Fwww.baidu.com\u002Fduty\u002Fyinsiquan.html","order":1,"isNewPage":true}]}],"socialHeaderMenuList":[{"name":"首页","value":"https:\u002F\u002Ftalent.baidu.com\u002Fstatic\u002Findex.html","order":0,"isNewPage":false},{"name":"社会招聘","value":"\u002Fsocial-list","order":1,"isNewPage":false},{"name":"校园招聘","value":"\u002Fcampus","order":2,"isNewPage":false},{"name":"了解百度","value":"https:\u002F\u002Fhome.baidu.com\u002F","order":3,"isNewPage":true}]},"detailData":{"postInfo":{"education":"","name":"海外产品运营经理（J96653）](https://talent.baidu.com/jobs/social-list?search=AI质量) |  |  |  |  | 百度 |
-
-### 网易
-
-| 岗位 | 部门 | 城市 | 薪资 | 经验 | 来源 |
-| --- | --- | --- | --- | --- | --- |
-| 高级公关经理 | 有道事业群 | 北京 |  | 5-10年 | 网易 |
-| 资深反作弊产品策划 | 效率工程部 | 杭州 |  | 5-10年 | 网易 |
-| 资深系统策划-我的世界 | UGC事业部 | 上海 |  | 3-5年 | 网易 |
-| 游戏品牌视觉设计师（无限大海外） | 雷火事业群 | 杭州 |  | 3-5年 | 网易 |
-| 体验设计实习生 | 音乐事业部 | 杭州 |  | 0-3年 | 网易 |
-| 直播产品策划 | 音乐事业部 | 北京 |  | 不限 | 网易 |
-| 资深内容运营（AI音乐专区） | 音乐事业部 | 杭州 |  | 不限 | 网易 |
-| 营销增长策略（社交） | 音乐事业部 | 杭州 |  | 不限 | 网易 |
-| 创新业务运营-AI课 | 有道事业群 | 杭州 |  | 3-5年 | 网易 |
-| CW-北区销售负责人 | 智企事业部 | 北京 |  | 不限 | 网易 |
-| 销售中心-金融大客户销售专家 | 智企事业部 | 北京 |  | 不限 | 网易 |
-| CW-资深大客户销售专员（北区） | 智企事业部 | 北京 |  | 不限 | 网易 |
-| CW-资深大客户销售专员（深圳） | 智企事业部 | 深圳 |  | 不限 | 网易 |
-| 云商-资深大客户销售（广州） | 智企事业部 | 广州 |  | 不限 | 网易 |
-| 云商-资深大客户销售（深圳） | 智企事业部 | 深圳 |  | 不限 | 网易 |
-| 高级用户运营（梦幻） | 运营中心 | 广州 |  | 不限 | 网易 |
-
-### 腾讯
-
-| 岗位 | 部门 | 城市 | 薪资 | 经验 | 来源 |
-| --- | --- | --- | --- | --- | --- |
-| [ima-AI策略产品经理](http://careers.tencent.com/jobdesc.html?postId=1998225333643530240) | CSIG | 深圳 |  | 两年以上工作经验 | 腾讯 |
-
-## 开发类（14 个岗位）
-
-### 字节跳动
-
-| 岗位 | 部门 | 城市 | 薪资 | 经验 | 来源 |
-| --- | --- | --- | --- | --- | --- |
-| [AIOps开发工程师-基础设施](https://jobs.bytedance.com/experienced/position/7618126532345645317/detail) | 研发 | 北京 |  |  | 字节跳动 |
-| [资源规划与集成交付-计划管理（杭州）](https://jobs.bytedance.com/experienced/position/7615139987778455813/detail) | 研发 | 杭州 |  |  | 字节跳动 |
-| [后端/资深后端研发工程师（智能审核方向）-TikTok Shop](https://jobs.bytedance.com/experienced/position/7610358618642417973/detail) | 研发 - 后端 | 上海 |  |  | 字节跳动 |
-| [业务攻防技术专家-抖音电商](https://jobs.bytedance.com/experienced/position/7603297200170584325/detail) | 研发 - 安全 | 杭州 |  |  | 字节跳动 |
-| [AI存储研发工程师-Data](https://jobs.bytedance.com/experienced/position/7600980383447976197/detail) | 研发 - 后端 | 上海 |  |  | 字节跳动 |
-| [后端研发工程师-抖音商城APP](https://jobs.bytedance.com/experienced/position/7600329207478438197/detail) | 研发 - 后端 | 北京 |  |  | 字节跳动 |
-| [MicroLED微显示工程师-PICO](https://jobs.bytedance.com/experienced/position/7592917428655016245/detail) | 研发 - 硬件 | 上海 |  |  | 字节跳动 |
-| [显示驱动工程师-PICO](https://jobs.bytedance.com/experienced/position/7592917221199939893/detail) | 研发 - 硬件 | 上海 |  |  | 字节跳动 |
-| [数据库云原生管控研发工程师/架构师-veDB](https://jobs.bytedance.com/experienced/position/7592900088659839237/detail) | 研发 - 基础架构 | 杭州 |  |  | 字节跳动 |
-
-### 百度
-
-| 岗位 | 部门 | 城市 | 薪资 | 经验 | 来源 |
-| --- | --- | --- | --- | --- | --- |
-| [script>window.__USE_SSR__=true; window.__INITIAL_DATA__ ={"layoutData":{"headerMenuList":[{"name":"首页","value":"\u002F","order":0,"isNewPage":false},{"name":"职位","value":"\u002Flist","order":1,"isNewPage":false},{"name":"招聘动态","value":"\u002Ftrend","order":2,"isNewPage":false},{"name":"了解百度","value":"https:\u002F\u002Fhome.baidu.com\u002F","order":3,"isNewPage":true}],"footerMenuList":[{"name":"相关链接","order":0,"childList":[{"name":"百度社招","value":"https:\u002F\u002Ftalent.baidu.com\u002Fstatic\u002Findex.html","order":0,"isNewPage":true},{"name":"可持续发展","value":"https:\u002F\u002Fesg.baidu.com","order":1,"isNewPage":true}]},{"name":"隐私声明","order":1,"childList":[{"name":"免责声明","value":"https:\u002F\u002Fwww.baidu.com\u002Fduty","order":0,"isNewPage":true},{"name":"隐私权保护声明","value":"https:\u002F\u002Fwww.baidu.com\u002Fduty\u002Fyinsiquan.html","order":1,"isNewPage":true}]}],"socialHeaderMenuList":[{"name":"首页","value":"https:\u002F\u002Ftalent.baidu.com\u002Fstatic\u002Findex.html","order":0,"isNewPage":false},{"name":"社会招聘","value":"\u002Fsocial-list","order":1,"isNewPage":false},{"name":"校园招聘","value":"\u002Fcampus","order":2,"isNewPage":false},{"name":"了解百度","value":"https:\u002F\u002Fhome.baidu.com\u002F","order":3,"isNewPage":true}]},"detailData":{"postInfo":{"education":"","name":"后端工程师实习生(Go方向)（J98462）](https://talent.baidu.com/jobs/social-list?search=AI策略产品) |  |  |  |  | 百度 |
-| [script>window.__USE_SSR__=true; window.__INITIAL_DATA__ ={"layoutData":{"headerMenuList":[{"name":"首页","value":"\u002F","order":0,"isNewPage":false},{"name":"职位","value":"\u002Flist","order":1,"isNewPage":false},{"name":"招聘动态","value":"\u002Ftrend","order":2,"isNewPage":false},{"name":"了解百度","value":"https:\u002F\u002Fhome.baidu.com\u002F","order":3,"isNewPage":true}],"footerMenuList":[{"name":"相关链接","order":0,"childList":[{"name":"百度社招","value":"https:\u002F\u002Ftalent.baidu.com\u002Fstatic\u002Findex.html","order":0,"isNewPage":true},{"name":"可持续发展","value":"https:\u002F\u002Fesg.baidu.com","order":1,"isNewPage":true}]},{"name":"隐私声明","order":1,"childList":[{"name":"免责声明","value":"https:\u002F\u002Fwww.baidu.com\u002Fduty","order":0,"isNewPage":true},{"name":"隐私权保护声明","value":"https:\u002F\u002Fwww.baidu.com\u002Fduty\u002Fyinsiquan.html","order":1,"isNewPage":true}]}],"socialHeaderMenuList":[{"name":"首页","value":"https:\u002F\u002Ftalent.baidu.com\u002Fstatic\u002Findex.html","order":0,"isNewPage":false},{"name":"社会招聘","value":"\u002Fsocial-list","order":1,"isNewPage":false},{"name":"校园招聘","value":"\u002Fcampus","order":2,"isNewPage":false},{"name":"了解百度","value":"https:\u002F\u002Fhome.baidu.com\u002F","order":3,"isNewPage":true}]},"detailData":{"postInfo":{"education":"","name":"前端实习生（J79401）](https://talent.baidu.com/jobs/social-list?search=大模型评测) |  |  |  |  | 百度 |
-
-### 网易
-
-| 岗位 | 部门 | 城市 | 薪资 | 经验 | 来源 |
-| --- | --- | --- | --- | --- | --- |
-| 安全策略交付实习生（北京） | 智企事业部 | 北京 |  | 不限 | 网易 |
-| 安全策略交付实习生（杭州） | 智企事业部 | 杭州 |  | 不限 | 网易 |
-
-### 腾讯
-
-| 岗位 | 部门 | 城市 | 薪资 | 经验 | 来源 |
-| --- | --- | --- | --- | --- | --- |
-| [QClaw-后台开发工程师](http://careers.tencent.com/jobdesc.html?postId=2032003309698711552) | CSIG | 广州 |  | 三年以上工作经验 | 腾讯 |
-
-## 其他（20 个岗位）
-
-### 字节跳动
-
-| 岗位 | 部门 | 城市 | 薪资 | 经验 | 来源 |
-| --- | --- | --- | --- | --- | --- |
-| [销售支持（项目管理方向）-抖音生活服务](https://jobs.bytedance.com/experienced/position/7626259589584439605/detail) | 运营 - 销售运营 | 广州 |  |  | 字节跳动 |
-| [销售支持-抖音生活服务](https://jobs.bytedance.com/experienced/position/7626258150807750917/detail) | 运营 - 销售运营 | 深圳 |  |  | 字节跳动 |
-| [汽车行业运营-抖音生活服务（北京/上海/杭州）](https://jobs.bytedance.com/experienced/position/7625919394846591285/detail) | 运营 - 商业运营 | 北京 |  |  | 字节跳动 |
-| [财务BP（行政方向）-集团职能](https://jobs.bytedance.com/experienced/position/7623783518276208901/detail) | 职能 / 支持 - 财务 | 北京 |  |  | 字节跳动 |
-| [AI售前解决方案顾问（FDE方向）-飞书](https://jobs.bytedance.com/experienced/position/7623757604086909237/detail) | 销售 - 销售支持 | 北京 |  |  | 字节跳动 |
-| [短剧版权IP合作-短剧版权中台](https://jobs.bytedance.com/experienced/position/7623624747888888069/detail) | 运营 | 北京 |  |  | 字节跳动 |
-| [预算及结算运营Leader-抖音电商](https://jobs.bytedance.com/experienced/position/7610704320645187893/detail) | 运营 | 上海 |  |  | 字节跳动 |
-| [风控策略运营（用户策略）-抖音电商](https://jobs.bytedance.com/experienced/position/7602961543991412997/detail) | 运营 | 北京 |  |  | 字节跳动 |
-| [AI数据服务交付运营（抖音标签方向）-CQC](https://jobs.bytedance.com/experienced/position/7594435176303741237/detail) | 运营 - 内容运营 | 北京 |  |  | 字节跳动 |
-| [内容安全研判运营（印尼语方向）-TikTok](https://jobs.bytedance.com/experienced/position/7593377637675469109/detail) | 运营 | 上海 |  |  | 字节跳动 |
-
-### 百度
-
-| 岗位 | 部门 | 城市 | 薪资 | 经验 | 来源 |
-| --- | --- | --- | --- | --- | --- |
-| [script>window.__USE_SSR__=true; window.__INITIAL_DATA__ ={"layoutData":{"headerMenuList":[{"name":"首页","value":"\u002F","order":0,"isNewPage":false},{"name":"职位","value":"\u002Flist","order":1,"isNewPage":false},{"name":"招聘动态","value":"\u002Ftrend","order":2,"isNewPage":false},{"name":"了解百度","value":"https:\u002F\u002Fhome.baidu.com\u002F","order":3,"isNewPage":true}],"footerMenuList":[{"name":"相关链接","order":0,"childList":[{"name":"百度社招","value":"https:\u002F\u002Ftalent.baidu.com\u002Fstatic\u002Findex.html","order":0,"isNewPage":true},{"name":"可持续发展","value":"https:\u002F\u002Fesg.baidu.com","order":1,"isNewPage":true}]},{"name":"隐私声明","order":1,"childList":[{"name":"免责声明","value":"https:\u002F\u002Fwww.baidu.com\u002Fduty","order":0,"isNewPage":true},{"name":"隐私权保护声明","value":"https:\u002F\u002Fwww.baidu.com\u002Fduty\u002Fyinsiquan.html","order":1,"isNewPage":true}]}],"socialHeaderMenuList":[{"name":"首页","value":"https:\u002F\u002Ftalent.baidu.com\u002Fstatic\u002Findex.html","order":0,"isNewPage":false},{"name":"社会招聘","value":"\u002Fsocial-list","order":1,"isNewPage":false},{"name":"校园招聘","value":"\u002Fcampus","order":2,"isNewPage":false},{"name":"了解百度","value":"https:\u002F\u002Fhome.baidu.com\u002F","order":3,"isNewPage":true}]},"detailData":{"postInfo":{"education":"","name":"数据分析（J98051）](https://talent.baidu.com/jobs/social-list?search=大模型测试) |  |  |  |  | 百度 |
-| [安全与企业效率方向）（J98560）](https://talent.baidu.com/jobs/social-list?search=算法测试) |  |  |  |  | 百度 |
-| [script>window.__USE_SSR__=true; window.__INITIAL_DATA__ ={"layoutData":{"headerMenuList":[{"name":"首页","value":"\u002F","order":0,"isNewPage":false},{"name":"职位","value":"\u002Flist","order":1,"isNewPage":false},{"name":"招聘动态","value":"\u002Ftrend","order":2,"isNewPage":false},{"name":"了解百度","value":"https:\u002F\u002Fhome.baidu.com\u002F","order":3,"isNewPage":true}],"footerMenuList":[{"name":"相关链接","order":0,"childList":[{"name":"百度社招","value":"https:\u002F\u002Ftalent.baidu.com\u002Fstatic\u002Findex.html","order":0,"isNewPage":true},{"name":"可持续发展","value":"https:\u002F\u002Fesg.baidu.com","order":1,"isNewPage":true}]},{"name":"隐私声明","order":1,"childList":[{"name":"免责声明","value":"https:\u002F\u002Fwww.baidu.com\u002Fduty","order":0,"isNewPage":true},{"name":"隐私权保护声明","value":"https:\u002F\u002Fwww.baidu.com\u002Fduty\u002Fyinsiquan.html","order":1,"isNewPage":true}]}],"socialHeaderMenuList":[{"name":"首页","value":"https:\u002F\u002Ftalent.baidu.com\u002Fstatic\u002Findex.html","order":0,"isNewPage":false},{"name":"社会招聘","value":"\u002Fsocial-list","order":1,"isNewPage":false},{"name":"校园招聘","value":"\u002Fcampus","order":2,"isNewPage":false},{"name":"了解百度","value":"https:\u002F\u002Fhome.baidu.com\u002F","order":3,"isNewPage":true}]},"detailData":{"postInfo":{"education":"","name":"战略规划实习生（J98753）](https://talent.baidu.com/jobs/social-list?search=Agent产品) |  |  |  |  | 百度 |
-| [AI）（J95922）](https://talent.baidu.com/jobs/social-list?search=AI策略产品) |  |  |  |  | 百度 |
-| [script>window.__USE_SSR__=true; window.__INITIAL_DATA__ ={"layoutData":{"headerMenuList":[{"name":"首页","value":"\u002F","order":0,"isNewPage":false},{"name":"职位","value":"\u002Flist","order":1,"isNewPage":false},{"name":"招聘动态","value":"\u002Ftrend","order":2,"isNewPage":false},{"name":"了解百度","value":"https:\u002F\u002Fhome.baidu.com\u002F","order":3,"isNewPage":true}],"footerMenuList":[{"name":"相关链接","order":0,"childList":[{"name":"百度社招","value":"https:\u002F\u002Ftalent.baidu.com\u002Fstatic\u002Findex.html","order":0,"isNewPage":true},{"name":"可持续发展","value":"https:\u002F\u002Fesg.baidu.com","order":1,"isNewPage":true}]},{"name":"隐私声明","order":1,"childList":[{"name":"免责声明","value":"https:\u002F\u002Fwww.baidu.com\u002Fduty","order":0,"isNewPage":true},{"name":"隐私权保护声明","value":"https:\u002F\u002Fwww.baidu.com\u002Fduty\u002Fyinsiquan.html","order":1,"isNewPage":true}]}],"socialHeaderMenuList":[{"name":"首页","value":"https:\u002F\u002Ftalent.baidu.com\u002Fstatic\u002Findex.html","order":0,"isNewPage":false},{"name":"社会招聘","value":"\u002Fsocial-list","order":1,"isNewPage":false},{"name":"校园招聘","value":"\u002Fcampus","order":2,"isNewPage":false},{"name":"了解百度","value":"https:\u002F\u002Fhome.baidu.com\u002F","order":3,"isNewPage":true}]},"detailData":{"postInfo":{"education":"","name":"Java实习生(智能客服方向)（J96812）](https://talent.baidu.com/jobs/social-list?search=LLM) |  |  |  |  | 百度 |
-| [旅游方向）（J85579）](https://talent.baidu.com/jobs/social-list?search=Agent开发) |  |  |  |  | 百度 |
-| [script>window.__USE_SSR__=true; window.__INITIAL_DATA__ ={"layoutData":{"headerMenuList":[{"name":"首页","value":"\u002F","order":0,"isNewPage":false},{"name":"职位","value":"\u002Flist","order":1,"isNewPage":false},{"name":"招聘动态","value":"\u002Ftrend","order":2,"isNewPage":false},{"name":"了解百度","value":"https:\u002F\u002Fhome.baidu.com\u002F","order":3,"isNewPage":true}],"footerMenuList":[{"name":"相关链接","order":0,"childList":[{"name":"百度社招","value":"https:\u002F\u002Ftalent.baidu.com\u002Fstatic\u002Findex.html","order":0,"isNewPage":true},{"name":"可持续发展","value":"https:\u002F\u002Fesg.baidu.com","order":1,"isNewPage":true}]},{"name":"隐私声明","order":1,"childList":[{"name":"免责声明","value":"https:\u002F\u002Fwww.baidu.com\u002Fduty","order":0,"isNewPage":true},{"name":"隐私权保护声明","value":"https:\u002F\u002Fwww.baidu.com\u002Fduty\u002Fyinsiquan.html","order":1,"isNewPage":true}]}],"socialHeaderMenuList":[{"name":"首页","value":"https:\u002F\u002Ftalent.baidu.com\u002Fstatic\u002Findex.html","order":0,"isNewPage":false},{"name":"社会招聘","value":"\u002Fsocial-list","order":1,"isNewPage":false},{"name":"校园招聘","value":"\u002Fcampus","order":2,"isNewPage":false},{"name":"了解百度","value":"https:\u002F\u002Fhome.baidu.com\u002F","order":3,"isNewPage":true}]},"detailData":{"postInfo":{"education":"","name":"Apollo·探路星-自动驾驶顶尖技术人才计划（J98170）](https://talent.baidu.com/jobs/social-list?search=Agent开发) |  |  |  |  | 百度 |
-| [AI助手PM（J95570）](https://talent.baidu.com/jobs/social-list?search=AI质量) |  |  |  |  | 百度 |
-| [script>window.__USE_SSR__=true; window.__INITIAL_DATA__ ={"layoutData":{"headerMenuList":[{"name":"首页","value":"\u002F","order":0,"isNewPage":false},{"name":"职位","value":"\u002Flist","order":1,"isNewPage":false},{"name":"招聘动态","value":"\u002Ftrend","order":2,"isNewPage":false},{"name":"了解百度","value":"https:\u002F\u002Fhome.baidu.com\u002F","order":3,"isNewPage":true}],"footerMenuList":[{"name":"相关链接","order":0,"childList":[{"name":"百度社招","value":"https:\u002F\u002Ftalent.baidu.com\u002Fstatic\u002Findex.html","order":0,"isNewPage":true},{"name":"可持续发展","value":"https:\u002F\u002Fesg.baidu.com","order":1,"isNewPage":true}]},{"name":"隐私声明","order":1,"childList":[{"name":"免责声明","value":"https:\u002F\u002Fwww.baidu.com\u002Fduty","order":0,"isNewPage":true},{"name":"隐私权保护声明","value":"https:\u002F\u002Fwww.baidu.com\u002Fduty\u002Fyinsiquan.html","order":1,"isNewPage":true}]}],"socialHeaderMenuList":[{"name":"首页","value":"https:\u002F\u002Ftalent.baidu.com\u002Fstatic\u002Findex.html","order":0,"isNewPage":false},{"name":"社会招聘","value":"\u002Fsocial-list","order":1,"isNewPage":false},{"name":"校园招聘","value":"\u002Fcampus","order":2,"isNewPage":false},{"name":"了解百度","value":"https:\u002F\u002Fhome.baidu.com\u002F","order":3,"isNewPage":true}]},"detailData":{"postInfo":{"education":"","name":"商务实习生（J98094）](https://talent.baidu.com/jobs/social-list?search=智能测试) |  |  |  |  | 百度 |
-| [实习）（J73288）](https://talent.baidu.com/jobs/social-list?search=智能测试) |  |  |  |  | 百度 |
+*详情请点击投递链接查看*
 
 ---
 
-*数据自动采集，更新于 2026-04-14 12:23。仅供求职参考，以各公司官网为准。*
+#### ATE测试工程师（J84829）
+
+🔗 [投递链接](https://talent.baidu.com/jobs/social-list?search=大模型测试) &nbsp;&nbsp; 来源: 百度
+
+*详情请点击投递链接查看*
+
+---
+
+#### 服务端测试负责人（J92170）
+
+🔗 [投递链接](https://talent.baidu.com/jobs/social-list?search=大模型测试) &nbsp;&nbsp; 来源: 百度
+
+*详情请点击投递链接查看*
+
+---
+
+#### 云端自动化测试工程师（J95394）
+
+🔗 [投递链接](https://talent.baidu.com/jobs/social-list?search=自动化测试开发) &nbsp;&nbsp; 来源: 百度
+
+*详情请点击投递链接查看*
+
+---
+
+#### 开发测试工程师（J86360）
+
+🔗 [投递链接](https://talent.baidu.com/jobs/social-list?search=自动化测试开发) &nbsp;&nbsp; 来源: 百度
+
+*详情请点击投递链接查看*
+
+---
+
+#### 智能云质量效能资深工程师（J89616）
+
+🔗 [投递链接](https://talent.baidu.com/jobs/social-list?search=AI质量) &nbsp;&nbsp; 来源: 百度
+
+*详情请点击投递链接查看*
+
+---
+
+#### 数据库内核质量专家（J84115）
+
+🔗 [投递链接](https://talent.baidu.com/jobs/social-list?search=AI质量) &nbsp;&nbsp; 来源: 百度
+
+*详情请点击投递链接查看*
+
+---
+
+#### 无人车嵌入式软件开发和测试（J91954）
+
+🔗 [投递链接](https://talent.baidu.com/jobs/social-list?search=智能测试) &nbsp;&nbsp; 来源: 百度
+
+*详情请点击投递链接查看*
+
+---
+
+### 网易（23）
+
+#### 游戏测试工程师（沙盒类）
+
+来源: 网易
+
+📍 上海 | 🏢 质量保障中心 | 📅 3-5年 | 🎓 本科
+
+**岗位职责：**
+
+1. 负责核心系统深度测试，完成白盒分析，性能测试和压测。
+
+2. 对游戏的系统架构进行把控，对游戏功能的开发和投放做风险评估。
+
+3. 通过工具、脚本等手段提升团队测试效率。
+
+4. 积极发现和推动解决项目中进度、流程和质量风险，并能对项目提出合理建议。
+
+5. 团队培养，提升整个团队的测试深度
+
+6. 深度体验我的世界相关产品，包括原生游戏，玩法mod等内容，结合游戏内容善于敏锐的发现体验问题和游戏设定问题。
+
+**岗位要求：**
+
+1. 具备一定的白盒能力，能够发现代码底层问题。
+
+2. 具备良好的沟通协作能力和外包管理能力。
+
+3. 较强的抗压能力，工作审慎务实。
+
+4. 积极主动，能够主动发现问题并且积极推动解决问题。
+
+5. 深度体验我的世界相关产品者可降低部分要求。
+
+---
+
+#### 游戏测试工程师（竞技体育类）
+
+来源: 网易
+
+📍 广州 | 🏢 质量保障中心 | 📅 3-5年 | 🎓 本科
+
+**岗位职责：**
+
+1. 对产品需求进行分析、评审，提前规避有问题需求，设计测试点、测试用例，制定详细的测试计划和测试方案并组织执行测试。
+
+2. 负责游戏核心功能模块的测试工作，推进测试中的问题解决，及时汇报和反馈进度风险。
+
+3. 使用和维护各种测试工具和测试框架，提高测试效率和测试覆盖率，推进流程优化来提升工作效率。
+
+4. 善于总结，能够及时沉淀自己的工作并输出文档，主动与他人进行知识经验分享。
+
+5. 对游戏可玩性关注，提出有效游戏玩法建议，帮助产品提升游戏品质和用户体验。
+
+**岗位要求：**
+
+1. 本科及以上学历，2年及以上游戏测试经验；有经历过完整大型游戏项目研发上线者优先。
+
+2. 熟悉游戏开发及测试流程，对质量体系、流程、测试风险把控有很好的理解和应用，能针对问题给出解决方案以及推动解决。
+
+3. 较强的沟通协作能力。能够指导他人一起完成任务，有一定组织协调能力，抗压性强。
+
+4. 深入理解产品需求与技术实现原理。有很强的执行力和问题解决能力，具有良好的责任心，逻辑思维，持续学习。
+
+5. 掌握一门脚本语言（Lua/Python等），能编写测试脚本。
+
+6、有足球类游戏或者竞技足球经验者优先
+
+---
+
+#### 游戏测试工程师（上海七日世界）
+
+来源: 网易
+
+📍 杭州 | 🏢 质量保障中心 | 📅 3-5年 | 🎓 本科
+
+**岗位职责：**
+
+1. 负责游戏产品的游戏测试工作，并根据游戏服务端技术框架提出相应的优化建议。
+
+2. 接触不同的行业前沿服务器框架，深度参与游戏服务器的性能优化工作，深耕超大集群的承载能力提升工作。
+
+3. 参与游戏项目的测试开发工作，进一步将该平台打造为行业的标杆产品。
+
+4. 深入研究各类编程语言的性能优势，并将其应用到压测场景中，构建超千万人同时在线的模拟场景。
+
+**岗位要求：**
+
+1. 1年以上互联网/游戏行业测试相关经验，熟悉后端开发的相关架构和技术栈。
+
+2. 有较好的Python、Java或C++编程基础。
+
+3 较强的系统设计思维，能设计出在海量数据场景下最优化的解决方案。
+
+4. 拥有良好的分析问题和解决问题的能力。
+
+5. 能够在压力下工作，并能够处理多个项目。
+
+6.热爱游戏，具有丰富的游戏经历。
+
+---
+
+#### 游戏测试工程师（射击类）
+
+来源: 网易
+
+📍 广州 | 🏢 质量保障中心 | 📅 不限 | 🎓 本科
+
+**岗位职责：**
+
+1. 对产品需求进行分析、评审，提前规避有问题需求，设计测试点、测试用例，制定详细的测试计划和测试方案并组织执行测试。
+
+2. 负责游戏核心功能模块的测试工作，推进测试中的问题解决，及时汇报和反馈进度风险。
+
+3. 使用和维护各种测试工具和测试框架，提高测试效率和测试覆盖率，推进流程优化来提升工作效率。
+
+4. 善于总结，能够及时沉淀自己的工作并输出文档，主动与他人进行知识经验分享。
+
+5. 对游戏可玩性关注，提出有效游戏玩法建议，帮助产品提升游戏品质和用户体验。
+
+**岗位要求：**
+
+1. 本科及以上学历，2年及以上游戏测试经验；有经历过完整大型游戏项目研发上线者优先。
+
+2. 熟悉游戏开发及测试流程，对质量体系、流程、测试风险把控有很好的理解和应用，能针对问题给出解决方案以及推动解决。
+
+3. 较强的沟通协作能力。能够指导他人一起完成任务，有一定组织协调能力，抗压性强。
+
+4. 深入理解产品需求与技术实现原理。有很强的执行力和问题解决能力，具有良好的责任心，逻辑思维，持续学习。
+
+5. 掌握一门脚本语言（Lua/Python等），能编写测试脚本。
+
+---
+
+#### 资深游戏测试工程师（FPS）
+
+来源: 网易
+
+📍 上海 | 🏢 质量保障中心 | 📅 不限 | 🎓 不限
+
+**岗位职责：**
+
+1.负责FPS游戏核心系统或管线深度测试，完成白盒分析，风险评估和性能分析。
+
+2.对游戏的系统架构进行把控，对游戏功能的开发和投放做风险评估。
+
+3.积极发现和推动解决项目中进度、流程和质量风险，并能对项目提出合理建议。
+
+4.使用和维护各种测试工具和测试框架，提高测试效率和测试覆盖率，推进流程优化来提升工作效率。
+
+4.善于总结，能够及时沉淀自己的工作并输出文档，主动与他人进行知识经验分享。
+
+5.对游戏可玩性关注，提出有效游戏玩法建议，帮助产品提升游戏品质和用户体验。
+
+**岗位要求：**
+
+1. 本科及以上学历，5年及以上游戏测试经验；有经历过完整大型游戏项目研发上线者优先，有FPS项目经验优先。
+
+2. 熟悉游戏开发及测试流程，对质量体系、流程、测试风险把控有很好的理解和应用，能针对问题给出解决方案以及推动解决。
+
+3. 较强的沟通协作能力。能够指导他人一起完成任务，有一定组织协调能力，抗压性强。
+
+4. 深入理解产品需求与技术实现原理。有很强的执行力和问题解决能力，具有良好的责任心，逻辑思维，持续学习。
+
+5. 具备一定的白盒能力，能够发现代码底层问题，能够开发和维护测试工具与管线。
+
+---
+
+#### 游戏测试工程师（SLG单机）
+
+来源: 网易
+
+📍 上海 | 🏢 质量保障中心 | 📅 3-5年 | 🎓 本科
+
+**岗位职责：**
+
+1. 负责核心系统深度测试，完成白盒分析，专项测试和跟进如性能测试和压测。
+
+2. 对游戏的系统架构进行把控，对游戏功能的开发和投放做风险评估。
+
+3. 通过工具、脚本等手段提升团队测试效率，善于使用AI提效和关注AI前沿技术者优佳。
+
+4. 积极发现和推动解决项目中进度、流程和质量风险，并能对项目提出合理建议。
+
+5. 能独立负责项目的各项预期和目标管理以及项目情况汇总，具有良好的向上沟通和风险同步意识。
+
+**岗位要求：**
+
+1. 具备一定的白盒能力，能够发现代码底层逻辑或引擎&编辑器相关问题。
+
+2. 具备良好的沟通协作能力和BPO业务管理能力。
+
+3. 较强的抗压能力，工作审慎务实。
+
+4. 积极主动，能够主动发现问题并且积极推动解决问题。
+
+5. 较为丰富的历史题材单机或SLG单机游戏经验（三国志系列、文明系列、三国全面战争等）
+
+6. 熟悉UE5引擎和C#，对各类游戏编辑器原理和应用有一定的了解
+
+---
+
+#### 游戏测试工程师（上海七日世界-2）
+
+来源: 网易
+
+📍 上海 | 🏢 质量保障中心 | 📅 3-5年 | 🎓 本科
+
+**岗位职责：**
+
+1. 负责游戏产品的游戏测试工作，并根据游戏服务端技术框架提出相应的优化建议。
+
+2. 接触不同的行业前沿服务器框架，深度参与游戏服务器的性能优化工作，深耕超大集群的承载能力提升工作。
+
+3. 参与游戏项目的测试开发工作，进一步将该平台打造为行业的标杆产品。
+
+4. 深入研究各类编程语言的性能优势，并将其应用到压测场景中，构建超千万人同时在线的模拟场景。
+
+**岗位要求：**
+
+1. 1年以上互联网/游戏行业测试相关经验，熟悉后端开发的相关架构和技术栈。
+
+2. 有较好的Python、Java或C++编程基础。
+
+3 较强的系统设计思维，能设计出在海量数据场景下最优化的解决方案。
+
+4. 拥有良好的分析问题和解决问题的能力。
+
+5. 能够在压力下工作，并能够处理多个项目。
+
+6.热爱游戏，具有丰富的游戏经历。
+
+---
+
+#### 游戏测试工程师（成都）
+
+来源: 网易
+
+📍 成都 | 🏢 雷火事业群 | 📅 3-5年 | 🎓 本科
+
+**岗位职责：**
+
+1. 对产品需求进行分析、评审，提前规避有问题需求，设计测试点、测试用例，制定详细的测试计划和测试方案并组织执行测试。
+
+2. 负责游戏核心功能模块的测试工作，推进测试中的问题解决，及时汇报和反馈进度风险。
+
+3. 使用和维护各种测试工具和测试框架，提高测试效率和测试覆盖率，推进流程优化来提升工作效率。
+
+4. 善于总结，能够及时沉淀自己的工作并输出文档，主动与他人进行知识经验分享。
+
+5. 统筹管线的测试工作，并对管线测试流程及质量进行建设及复盘，挖掘痛点问题并进行优化改进。
+
+**岗位要求：**
+
+1. 本科及以上学历，3年以上游戏领域测试经验；有经历过完整大型游戏项目研发上线者优先。
+
+2. 熟悉游戏开发及测试流程，对质量体系、流程、测试风险把控有很好的理解和应用，能针对问题给出解决方案以及推动解决。有白盒测试经历者优先。
+
+3. 较强的沟通协作能力。能够指导他人一起完成任务，有一定组织协调能力，抗压性强。在此基础上，﻿有人员管理及培养经验为佳。
+
+4. 能深入理解产品需求与技术实现原理。有很强的执行力和问题解决能力，具有良好的责任心，逻辑思维，持续学习。
+
+5. 掌握脚本语言（如Python），能编写测试脚本，看懂和理解程序代码者优先。
+
+6. 热爱游戏，资深游戏玩家，搜打撤 或 手游MOBA玩家尤佳；
+
+---
+
+#### 资深游戏测试工程师
+
+来源: 网易
+
+📍 上海 | 🏢 质量保障中心 | 📅 不限 | 🎓 不限
+
+**岗位职责：**
+
+1. 对产品需求进行分析、评审，提前规避有问题需求，设计测试点、测试用例，制定详细的测试计划和测试方案并组织执行测试。
+
+2. 负责游戏核心功能模块的测试工作，推进测试中的问题解决，及时汇报和反馈进度风险。
+
+3. 使用和维护各种测试工具和测试框架，提高测试效率和测试覆盖率，推进流程优化来提升工作效率。
+
+4. 善于总结，能够及时沉淀自己的工作并输出文档，主动与他人进行知识经验分享。
+
+5. 对游戏可玩性关注，提出有效游戏玩法建议，帮助产品提升游戏品质和用户体验。
+
+**岗位要求：**
+
+1. 本科及以上学历，3年及以上游戏测试经验；有经历过完整大型游戏项目研发上线者优先。
+
+2. 熟悉游戏开发及测试流程，对质量体系、流程、测试风险把控有很好的理解和应用，能针对问题给出解决方案以及推动解决。
+
+3. 较强的沟通协作能力。能够指导他人一起完成任务，有一定组织协调能力，抗压性强。
+
+4. 深入理解产品需求与技术实现原理。有很强的执行力和问题解决能力，具有良好的责任心，逻辑思维，持续学习。
+
+5. 掌握一门脚本语言（Lua/Python等），能编写测试脚本。
+
+---
+
+#### 游戏测试工程师（27届+广/沪/杭）
+
+来源: 网易
+
+📍 广州 | 🏢 用户体验中心 | 📅 不限 | 🎓 本科
+
+**岗位职责：**
+
+该岗位为校招实习岗位，有明确转正机会！需连续实习至少2个月，实习入职时间灵活！
+
+投递直达：https://game.campus.163.com/position
+
+您可以：
+
+- 加入国内最顶级的游戏研发团队，享受规范和优质的培训体系，获得飞速成长的机会；
+
+- 为不同的平台创造和开发世界一流的游戏，尤其是当前最热的移动平台；
+
+- 破坏游戏规则，通过游戏的深度体验，精准的Bug定位，帮助团队创造最有趣的游戏；
+
+- 深度体验游戏，钻研游戏的各种设计理念，将兴趣融入工作。
+
+**岗位要求：**
+
+我们希望您符合以下任意两条或以上的描述：
+
+- 本科或以上学历，专业不限；
+
+- 游戏爱好者，具备丰富的游戏经验。游戏高端玩家优先；
+
+- 具有敏锐的洞察力，善于发现问题及推进解决；
+
+- 良好的逻辑思维及创新能力；
+
+- 良好的沟通和团队协作能力。
+
+具备以下条件尤佳：
+
+- 拥有编程经验，熟悉数据结构、算法、操作系统和网络等计算机基础知识。
+
+---
+
+#### 高级游戏测试工程师（七日世界）
+
+来源: 网易
+
+📍 上海 | 🏢 质量保障中心 | 📅 不限 | 🎓 不限
+
+**岗位职责：**
+
+1. 负责游戏产品的游戏测试工作，并根据游戏服务端技术框架提出相应的优化建议。
+
+2. 接触不同的行业前沿服务器框架，深度参与游戏服务器的性能优化工作，深耕超大集群的承载能力提升工作。
+
+3. 参与游戏项目的测试开发工作，进一步将该平台打造为行业的标杆产品。
+
+4. 深入研究各类编程语言的性能优势，并将其应用到压测场景中，构建超千万人同时在线的模拟场景。
+
+**岗位要求：**
+
+1. 1年以上互联网/游戏行业测试相关经验，熟悉后端开发的相关架构和技术栈。
+
+2. 有较好的Python、Java或C++编程基础。
+
+3 较强的系统设计思维，能设计出在海量数据场景下最优化的解决方案。
+
+4. 拥有良好的分析问题和解决问题的能力。
+
+5. 能够在压力下工作，并能够处理多个项目。
+
+6.热爱游戏，具有丰富的游戏经历。
+
+---
+
+#### 高级游戏测试工程师（MMORPG）
+
+来源: 网易
+
+📍 上海 | 🏢 质量保障中心 | 📅 3-5年 | 🎓 本科
+
+**岗位职责：**
+
+1、负责整体游戏测试统筹工作，核心功能模块测试
+
+2、使用和维护各种测试工具和测试框架，并根据实际情况持续优化测试流程，提高测试效率和测试覆盖率。
+
+3、深入产品研发环节，自主识别产品及团队问题/风险并推进问题解决，风险规避。
+
+**岗位要求：**
+
+1. 本科及以上学历，3年以上游戏测试经验，具备完整游戏项目研发上线经历，有测试组长或小型游戏项目主QA经验者优先。
+
+2. 熟悉游戏开发与测试流程，对质量体系建设、流程规范及测试风险控制有深入理解，能够独立识别问题并提出有效解决方案，推动落地。
+
+3. 具备出色的沟通与协作能力，能高效跨团队协同，推进各环节问题解决，抗压能力强。
+
+4. 精通至少一门编程语言（如Python、C++、Java等），学习能力突出，能够推动AI技术在游戏测试场景中的落地应用。
+
+---
+
+#### 高级测试工程师（大世界-2）
+
+来源: 网易
+
+📍 杭州 | 🏢 质量保障中心 | 📅 0-3年 | 🎓 本科
+
+**岗位职责：**
+
+1.独立负责航海开放大世界项目的重点业务质量保障工作；
+
+2.深度参与管线生产流程，在质量、效率、流程方面推进优化；
+
+3.自主识别产品及团队问题并推进迭代；
+
+4.负责团队内专项课题攻坚。
+
+**岗位要求：**
+
+1. 具备扎实的计算机知识和工具开发能力，熟练掌握C++\Python；
+
+2. 喜爱专研，善于深入分析问题，善于学习；
+
+3.喜爱游戏，有海盗\航海题材游戏经验优先；
+
+4.有一定代码能力，能对复杂问题进行代码层面的分析和定位；
+
+5. 做事积极主动，执行力强，有责任感，能推动问题解决，有良好的团队精神和沟通能力；
+
+6.有人员管理、培养经验\有引擎功能测试经验为佳。
+
+---
+
+#### 资深游戏测试工程师（引擎）
+
+来源: 网易
+
+📍 上海 | 🏢 质量保障中心 | 📅 不限 | 🎓 不限
+
+**岗位职责：**
+
+1、负责游戏产品的引擎测试工作，包括性能、兼容性及稳定性测试方案设计，制定全流程测试标准和规范。
+
+2、建设引擎测试流程，实现引擎版本的快速验证。跟踪引擎版本更新，提前规划整体测试方案。
+
+3、主导引擎核心模块的深度及自动化测试，识别性能瓶颈、内存泄漏及多平台兼容性问题。与开发团队协作，推动引擎缺陷修复，确保问题闭环。
+
+4、领导引擎测试团队，分配任务并监督执行，确保测试覆盖率和交付质量。跨部门协调开发、美术、策划等团队，对齐技术标准与测试目标。
+
+**岗位要求：**
+
+1、5年以上游戏引擎测试经验，至少主导过1款大型游戏项目的引擎全流程测试。
+
+2、熟悉至少一款引擎架构，有脚本开发或引擎源码调试经验者优先，有AI工具和集成经验优先。
+
+3、具备自动化测试开发能力，熟悉引擎测试自动化框架的搭建。
+
+4、精通性能分析工具，能进行渲染分析更优，熟悉多平台（PC/主机/移动端）适配测试及优化方案。
+
+5、拥有良好的分析问题和解决问题的能力。
+
+6、能够在压力下工作，并能够处理多个项目。
+
+7、有良好的团队合作精神，能够与各种背景的人有效合作
+
+---
+
+#### 高级测试工程师
+
+来源: 网易
+
+📍 杭州 | 🏢 雷火事业群 | 📅 不限 | 🎓 不限
+
+**岗位职责：**
+
+1、负责部门内核心功能模块的测试和统筹，保证功能的稳定和安全；
+
+2、全流程参与到项目交付过程中，能够深入理解产品需求和实现，协同产品和技术团队高质量交付项目；
+
+3、能够深入分析业务质量和效率痛点，通过制定相关的测试流程、策略、方法和工具等创新，提升团队整体质量和效率；
+
+4、能够协同产品和技术团队，积极推进团队整体能力提升，不限于技术框架、交付流程、持续集成等。
+
+**岗位要求：**
+
+1、本科及以上学历，计算机相关专业，有3年以上互联网测试工作经验；
+
+2、熟练使用软件测试相关工具，如接口测试工具、抓包工具、性能测试工具等；
+
+3、具备AI问题解决能力，能够运用AI工具解决测试质量和效率问题，并能够对结果做好分析评估；
+
+4、熟悉python语言，熟练掌握MySQL、mongodb、redis等，了解主流技术栈和设计框架；
+
+5、具有较强的业务分析和综合协调能力，对质量保证有深刻理解，关注项目整个交付流程的持续改进；
+
+6、具备自驱学习能力，能独立思考，乐于接受挑战，在压力中突破自己；
+
+7、热爱游戏，有一定的游戏经验，对游戏有自己的理解。
+
+---
+
+#### 高级游戏测试工程师（成都）
+
+来源: 网易
+
+📍 成都 | 🏢 质量保障中心 | 📅 3-5年 | 🎓 本科
+
+**岗位职责：**
+
+1. 对产品需求进行分析、评审，提前规避有问题需求，设计测试点、测试用例，制定详细的测试计划和测试方案并组织执行测试。
+
+2. 负责游戏核心功能模块的测试工作，推进测试中的问题解决，及时汇报和反馈进度风险。
+
+3. 使用和维护各种测试工具和测试框架，提高测试效率和测试覆盖率，推进流程优化来提升工作效率。
+
+4. 善于总结，能够及时沉淀自己的工作并输出文档，主动与他人进行知识经验分享。
+
+5. 统筹管线的测试工作，并对管线测试流程及质量进行建设及复盘，挖掘痛点问题并进行优化改进。
+
+**岗位要求：**
+
+1. 本科及以上学历，3年以上游戏领域测试经验；有经历过完整大型游戏项目研发上线者优先。
+
+2. 熟悉游戏开发及测试流程，对质量体系、流程、测试风险把控有很好的理解和应用，能针对问题给出解决方案以及推动解决。有白盒测试经历者优先。
+
+3. 较强的沟通协作能力。能够指导他人一起完成任务，有一定组织协调能力，抗压性强。在此基础上，﻿有人员管理及培养经验为佳。
+
+4. 能深入理解产品需求与技术实现原理。有很强的执行力和问题解决能力，具有良好的责任心，逻辑思维，持续学习。
+
+5. 掌握脚本语言（如Python），能编写测试脚本，看懂和理解程序代码者优先。
+
+6. 热爱游戏，资深游戏玩家，搜打撤 或 手游MOBA玩家尤佳；
+
+---
+
+#### 资深游戏测试工程师（遗忘之海）
+
+来源: 网易
+
+📍 杭州 | 🏢 质量保障中心 | 📅 不限 | 🎓 不限
+
+**岗位职责：**
+
+1.独立负责航海开放大世界项目的重点业务质量保障工作；
+
+2.深度参与管线生产流程，在质量、效率、流程方面推进优化；
+
+3.自主识别产品及团队问题并推进迭代；
+
+4.负责团队内专项课题攻坚。
+
+**岗位要求：**
+
+1. 具备扎实的计算机知识和工具开发能力，熟练掌握C++\Python；
+
+2. 喜爱专研，善于深入分析问题，善于学习；
+
+3.喜爱游戏，有海盗\航海题材游戏经验优先；
+
+4.有一定代码能力，能对复杂问题进行代码层面的分析和定位；
+
+5. 做事积极主动，执行力强，有责任感，能推动问题解决，有良好的团队精神和沟通能力；
+
+6.有人员管理、培养经验\有引擎功能测试经验为佳。
+
+---
+
+#### 高级测试工程师（遗忘之海）
+
+来源: 网易
+
+📍 杭州 | 🏢 质量保障中心 | 📅 不限 | 🎓 不限
+
+**岗位职责：**
+
+1.独立负责航海开放大世界项目的重点业务质量保障工作；
+
+2.深度参与管线生产流程，在质量、效率、流程方面推进优化；
+
+3.自主识别产品及团队问题并推进迭代；
+
+4.负责团队内专项课题攻坚。
+
+**岗位要求：**
+
+1. 具备扎实的计算机知识和工具开发能力，熟练掌握C++\Python；
+
+2. 喜爱专研，善于深入分析问题，善于学习；
+
+3.喜爱游戏，有海盗\航海题材游戏经验优先；
+
+4.有一定代码能力，能对复杂问题进行代码层面的分析和定位；
+
+5. 做事积极主动，执行力强，有责任感，能推动问题解决，有良好的团队精神和沟通能力；
+
+6.有人员管理、培养经验\有引擎功能测试经验为佳。
+
+---
+
+#### 游戏测试工程师（AI方向）
+
+来源: 网易
+
+📍 广州 | 🏢 质量保障中心 | 📅 3-5年 | 🎓 本科
+
+**岗位职责：**
+
+1、大型MMORPG产品核心系统与玩法功能的主导测试
+
+2、参与各项专项测试工作，包括性能、压测、平衡性等
+
+3、参与或主导优化业务流程，持续提升产品测试质量及效率
+
+4、通过AI相关工具落地提升日常工作中的测试产能
+
+**岗位要求：**
+
+1、三年以上游戏测试工作经验
+
+2、AI agent开发和相关工具开发和落地经验优先
+
+3、具备较好的代码能力，可阅读产品代码辅助测试，有白盒经验更佳
+
+4、积极主动，能承受一定的工作压力
+
+5、热爱游戏，不排斥MMO类型游戏，有相关经验更佳
+
+6、本科及以上学历、计算机相关专业优先
+
+---
+
+#### 高级游戏测试工程师（UGC）
+
+来源: 网易
+
+📍 杭州 | 🏢 质量保障中心 | 📅 不限 | 🎓 不限
+
+**岗位职责：**
+
+1. 对产品需求进行分析、评审，提前规避有问题需求，设计测试点、测试用例。
+
+2. 负责游戏编辑器、游戏核心玩法等的测试工作，推进问题解决，反馈风险，确保如期上线。
+
+3. 推动项目进度，改善相关流程提高测试的质量和效率。
+
+4. 总结并沉淀日常工作及坑点，输出文档，主动在组内分享经验。
+
+5. 深度体验游戏产品，结合游戏内容善于敏锐的发现体验问题和游戏设定问题。
+
+**岗位要求：**
+
+1. 本科及以上学历，计算机相关专业，2-3年测试工作经验；有良好的测试思维，熟悉测试流程，能够独立设计并执行测试用例，保证项目质量和进度。
+
+2. 至少精通一门编程语言，如python，lua等，有测试脚本开发能力或白盒接口测试能力，有引擎测试或游戏开发经验的优先考虑
+
+3. 良好的沟通能力和解决问题的能力；能主动了解测试过程中遇到的bug的成因，并持续跟进解决bug。
+
+4. 有较强的学习能力和责任心，能承受一定的工作压力。
+
+---
+
+#### 高级游戏测试工程师（MMORPG)
+
+来源: 网易
+
+📍 广州 | 🏢 质量保障中心 | 📅 3-5年 | 🎓 本科
+
+**岗位职责：**
+
+1. 对产品需求进行分析、评审，提前规避有问题需求，设计测试点、测试用例，制定详细的测试计划和测试方案并组织执行测试。
+
+2. 负责游戏核心功能模块的测试工作，推进测试中的问题解决，及时汇报和反馈进度风险。
+
+3. 善于总结，能够及时沉淀自己的工作并输出文档，主动与他人进行知识经验分享。
+
+4.对游戏可玩性关注，提出有效游戏玩法建议，帮助产品提升游戏品质和用户体验。
+
+**岗位要求：**
+
+1. 本科及以上学历，3年及以上游戏测试经验；有经历过完整大型游戏项目研发上线者优先。
+
+2. 熟悉游戏开发及测试流程，对质量体系、流程、测试风险把控有很好的理解和应用，能针对问题给出解决方案以及推动解决。
+
+3. 较强的沟通协作能力。能够指导他人一起完成任务，有一定组织协调能力，抗压性强。
+
+4. 深入理解产品需求与技术实现原理。有很强的执行力和问题解决能力，具有良好的责任心，逻辑思维，持续学习。
+
+5. 掌握一门脚本语言（Lua/Python等），能编写测试脚本，有一定的白盒测试能力
+
+---
+
+#### 高级/资深游戏测试工程师（无限大）
+
+来源: 网易
+
+📍 杭州 | 🏢 雷火事业群 | 📅 不限 | 🎓 本科
+
+**岗位职责：**
+
+1、对产品需求进行分析、评审，提前规避有问题需求，设计测试点、测试用例；
+
+2、负责游戏核心功能模块的测试工作，推进测试中的问题解决，及时汇报和反馈进度风险；
+
+3、通过多样性的测试手段保证功能的稳定性和安全性，通过挖掘测试工具需求、推进流程优化来提升工作效率；
+
+4、善于总结，能够及时沉淀自己的工作并输出文档，主动与他人进行知识经验分享。
+
+**岗位要求：**
+
+1. 计算机相关专业，本科及以上学历，有经历过完整大型游戏项目研发上线者优先；
+
+2. 熟悉游戏开发及测试流程，对质量体系、流程、测试风险把控有很好的理解和应用，能针对问题给出解决方案以及推动解决；
+
+3. 较强的沟通协作能力，能够指导他人一起完成任务，有一定组织协调能力，抗压性强；
+
+4. 深入理解产品需求与技术实现原理。有很强的执行力和问题解决能力，具有良好的责任心，逻辑思维，持续学习；
+
+5. 热爱游戏，有二次元游戏深度体验经历者优先；
+
+6. 有工具思维，在测试工作中熟练运用Unity引擎工具和各类测试工具提升工作效率。
+
+---
+
+#### 高级游戏测试工程师（剑心雕龙）
+
+来源: 网易
+
+📍 上海 | 🏢 雷火事业群 | 📅 不限 | 🎓 不限
+
+**岗位职责：**
+
+1. 负责游戏功能测试、性能测试等，与开发团队密切合作，协助定位和解决问题，并独立跟进及推动问题修复；
+
+2. 对产品需求进行分析、评审，提前规避有问题需求，参与制定测试计划和测试用例，确保测试全面、有效；
+
+3. 开发或协助开发内部测试工具，编写脚本以完成常规测试任务及数据收集；
+
+4. 构建和维护自动化测试环境，确保测试流程的高效运行；
+
+**岗位要求：**
+
+1. 热爱游戏，有主机、PC、移动平台ARPG类游戏深度游玩经历，能承受一定强度的工作压力；
+
+2. 本科及以上学历，3年及以上工作经验，独立负责过游戏核心战斗、动作、技能等方面测试；
+
+3. 深入了解游戏开发流程和各阶段的测试需求，熟悉常用的测试工具和框架，具有搭建和维护自动化测试管线的经验；
+
+4. 优秀的沟通和团队合作能力、强烈的责任心和执行力、良好的学习能力，能够快速定位并主动推进问题解决，与开发团队和其他测试人员有效合作；
+
+5. 具备良好的工具思维，有一定编程能力，能够利用代码来提高测试效率，熟悉python或其他任意一门语言尤佳；
+
+加分项：
+
+1. 计算机科学、软件工程或相关专业，熟悉C++、C#或Python中的一种或多种编程语言，了解和使用过Unity引擎；
+
+2. 了解CI/CD流程，具有DevOps相关经验、具有性能测试经验；
+
+3. 参与过开源项目或具有独立游戏开发经验，善于总结，能够及时沉淀自己的工作并输出文档；
+
+---
+
+### 腾讯（3）
+
+#### 大模型测试工程师（北京/深圳）
+
+🔗 [投递链接](http://careers.tencent.com/jobdesc.html?postId=2031246319435284480) &nbsp;&nbsp; 来源: 腾讯
+
+📍 北京 | 🏢 TEG | 📅 三年以上工作经验
+
+**岗位职责：**
+
+1.协助理解大模型业务需求、场景边界及变更诉求，参与梳理核心质量指标，配合完成需求拆解与测试范围界定，保障测试工作贴合业务目标；
+
+2.参与大模型测试用例设计，覆盖正常 / 异常 / 边界 / 高并发场景，配合完成测试策略梳理与执行计划落地；
+
+3.负责大模型测试执行工作，包含 RL+agent 流程校验、链路质量、协议兼容、推理性能、模型效果等专项测试；
+
+4.作为测试执行对接人，配合模型效果评估团队落实测试标准与数据对接，协同研发、产品、运维团队跟进问题定位、整改及闭环；
+
+5.参与测试用例库、测试流程的沉淀与优化，协助推进测试自动化落地；跟进线上质量问题，配合完成根因分析与改进落地。
+
+---
+
+#### 大模型测试负责人（北京/深圳）
+
+🔗 [投递链接](http://careers.tencent.com/jobdesc.html?postId=2027292979852640256) &nbsp;&nbsp; 来源: 腾讯
+
+📍 北京 | 🏢 TEG | 📅 五年以上工作经验
+
+**岗位职责：**
+
+1.深度理解大模型业务需求、场景边界及变更诉求，梳理核心质量指标，输出需求拆解文档与测试范围界定，确保测试方向与业务目标一致；
+
+2.针对模型服务全链路及效果保障，设计完备的测试用例体系，覆盖正常场景、异常场景、边界场景及高并发场景，制定测试策略与执行计划；
+
+3.主导测试执行，包括链路质量、协议兼容、推理服务、模型效果等方面；
+
+4.作为测试端核心对接人，联动模型效果评估系统团队，明确效果测试标准与数据互通机制，并协同研发、运维、产品团队推进问题定位与优化闭环；
+
+5.沉淀测试方法论与用例库，推动测试自动化、智能化落地；分析线上质量问题，输出根因分析与改进方案，持续提升模型服务质量基线。
+
+---
+
+#### 腾讯游戏-资深游戏测试工程师
+
+🔗 [投递链接](http://careers.tencent.com/jobdesc.html?postId=2017094358532247552) &nbsp;&nbsp; 来源: 腾讯
+
+📍 深圳 | 🏢 IEG | 📅 三年以上工作经验
+
+**岗位职责：**
+
+1.负责AI Agent游戏生成应用的全流程质量保障，覆盖AI Agent生成逻辑、小游戏生成效果及平台功能模块的测试，确保产品核心能力稳定可靠；
+
+2.针对AI生成特性设计针对性测试方案和用例，解决非确定性、多场景、参数化场景下的测试验证难题；
+
+3.精准定位并分析测试中发现的问题，协同研发团队推动问题闭环，输出高质量缺陷报告和根因分析；
+
+4.开展平台性能、兼容性及容错性专项测试，保障产品在多场景下的稳定性和用户体验；
+
+5.参与搭建自动化测试框架和脚本，提升测试效率，沉淀AI Agent产品测试方法和问题库；
+
+6.从测试视角提出产品体验优化建议，参与需求评审，从质量角度提供专业意见；
+
+7.输出完整的测试文档，包括测试计划、报告及缺陷分析，沉淀测试经验和最佳实践。
+
+---
+
+## 测试开发（38 个岗位）
+
+### 字节跳动（1）
+
+#### 高级测试开发工程师-番茄小说
+
+🔗 [投递链接](https://jobs.bytedance.com/experienced/position/7598082157983189253/detail) &nbsp;&nbsp; 来源: 字节跳动
+
+📍 上海 | 🏢 研发 - 测试
+
+*详情请点击投递链接查看*
+
+---
+
+### 百度（17）
+
+#### 测试开发工程师（J99207）
+
+🔗 [投递链接](https://talent.baidu.com/jobs/social-list?search=大模型测试) &nbsp;&nbsp; 来源: 百度
+
+*详情请点击投递链接查看*
+
+---
+
+#### 测试开发工程师（J99169）
+
+🔗 [投递链接](https://talent.baidu.com/jobs/social-list?search=大模型测试) &nbsp;&nbsp; 来源: 百度
+
+*详情请点击投递链接查看*
+
+---
+
+#### 测试开发工程师（J98208）
+
+🔗 [投递链接](https://talent.baidu.com/jobs/social-list?search=大模型测试) &nbsp;&nbsp; 来源: 百度
+
+*详情请点击投递链接查看*
+
+---
+
+#### 测试开发工程师（J93510）
+
+🔗 [投递链接](https://talent.baidu.com/jobs/social-list?search=大模型测试) &nbsp;&nbsp; 来源: 百度
+
+*详情请点击投递链接查看*
+
+---
+
+#### 【横琴】测试开发（J98745）
+
+🔗 [投递链接](https://talent.baidu.com/jobs/social-list?search=大模型测试) &nbsp;&nbsp; 来源: 百度
+
+*详情请点击投递链接查看*
+
+---
+
+#### AI计算测试开发工程师（J98291）
+
+🔗 [投递链接](https://talent.baidu.com/jobs/social-list?search=AI测试) &nbsp;&nbsp; 来源: 百度
+
+*详情请点击投递链接查看*
+
+---
+
+#### AI软件测试开发工程师（J93911）
+
+🔗 [投递链接](https://talent.baidu.com/jobs/social-list?search=AI测试) &nbsp;&nbsp; 来源: 百度
+
+*详情请点击投递链接查看*
+
+---
+
+#### AI计算平台测试开发工程师（J97448）
+
+🔗 [投递链接](https://talent.baidu.com/jobs/social-list?search=AI测试) &nbsp;&nbsp; 来源: 百度
+
+*详情请点击投递链接查看*
+
+---
+
+#### 商业化测试开发（J94796）
+
+🔗 [投递链接](https://talent.baidu.com/jobs/social-list?search=AI测试) &nbsp;&nbsp; 来源: 百度
+
+*详情请点击投递链接查看*
+
+---
+
+#### 自动驾驶测试开发工程师（J73214）
+
+🔗 [投递链接](https://talent.baidu.com/jobs/social-list?search=算法测试) &nbsp;&nbsp; 来源: 百度
+
+*详情请点击投递链接查看*
+
+---
+
+#### 自动驾驶感知测试开发工程师（J84346）
+
+🔗 [投递链接](https://talent.baidu.com/jobs/social-list?search=算法测试) &nbsp;&nbsp; 来源: 百度
+
+*详情请点击投递链接查看*
+
+---
+
+#### 测试开发工程师（J96553）
+
+🔗 [投递链接](https://talent.baidu.com/jobs/social-list?search=自动化测试开发) &nbsp;&nbsp; 来源: 百度
+
+*详情请点击投递链接查看*
+
+---
+
+#### 测试开发工程师（J81827）
+
+🔗 [投递链接](https://talent.baidu.com/jobs/social-list?search=自动化测试开发) &nbsp;&nbsp; 来源: 百度
+
+*详情请点击投递链接查看*
+
+---
+
+#### 测试开发工程师（J79648）
+
+🔗 [投递链接](https://talent.baidu.com/jobs/social-list?search=自动化测试开发) &nbsp;&nbsp; 来源: 百度
+
+*详情请点击投递链接查看*
+
+---
+
+#### 测试开发工程师（J84347）
+
+🔗 [投递链接](https://talent.baidu.com/jobs/social-list?search=测试开发工程师) &nbsp;&nbsp; 来源: 百度
+
+*详情请点击投递链接查看*
+
+---
+
+#### 测试开发工程师（J91130）
+
+🔗 [投递链接](https://talent.baidu.com/jobs/social-list?search=测试开发工程师) &nbsp;&nbsp; 来源: 百度
+
+*详情请点击投递链接查看*
+
+---
+
+#### 测试开发工程师（J83230）
+
+🔗 [投递链接](https://talent.baidu.com/jobs/social-list?search=测试开发工程师) &nbsp;&nbsp; 来源: 百度
+
+*详情请点击投递链接查看*
+
+---
+
+### 网易（13）
+
+#### 游戏测试开发工程师（AI方向）
+
+来源: 网易
+
+📍 上海 | 🏢 质量保障中心 | 📅 3-5年 | 🎓 本科
+
+**岗位职责：**
+
+1. 探索并落地 AI/LLM 技术在游戏测试全流程中的应用
+
+2. 设计并构建 AI Agent 测试助手，实现测试任务的智能调度与执行
+
+3. 沉淀 AI 测试能力平台，输出可复用的工具与最佳实践
+
+4. 与测试、开发、算法团队协作，通过 AI 工具持续改进测试流程与质量体系
+
+5. 有过自动化测试、平台开发部署经验优先；
+
+**岗位要求：**
+
+1. 三年以上测试开发或 AI 应用开发相关经验
+
+2. 熟练掌握 Python，具备良好的工程化能力
+
+3. 熟悉 LLM 应用开发生态，包括但不限于：
+
+- Prompt Engineering 与模型调优
+
+- LangChain / OpenClaw / Codex 等框架
+
+- RAG、Function Calling、MCP、Agent、Skill 架构设计
+
+4. 对 AI 技术有强烈热情，持续关注行业前沿动态
+
+5. 具备较强的自驱力与探索精神，能独立推进创新项目
+
+6. 本科及以上学历，计算机/AI 相关专业优先。
+
+---
+
+#### 测试开发工程师（智能工程机器人）
+
+来源: 网易
+
+📍 杭州 | 🏢 伏羲机器人 | 📅 3-5年 | 🎓 本科
+
+**岗位职责：**
+
+如果你对具身智能、机器人行业感兴趣，渴望在智能工程机器人领域浪潮中发挥关键作用，成为我们工程机器人（智能挖掘机、智能装载机、远控系统）产品质量的“守护者”与创新推动者 ，欢迎你的加入。在这里你能接触到：
+
+1、业界领先机器人仿真解决方案和相关仿真测试工具链的开发，确保机器人从仿真到实地的每一步都坚实可靠；
+
+2、直面感知、决策、控制等核心算法在复杂、动态工地环境中的终极挑战；
+
+3、运用Gazebo、Isaac Sim等仿真工具构建虚拟测试场，并基于ROS开发测试插件与工具，在算法迭代中扮演核心角色
+
+职位描述：
+
+1.负责工程机器人智能挖掘机、智能装载机、远控等产品质量保障工作，包含功能、性能、稳定性、专项测试等工作。
+
+2.根据产品设计需求，编写测试用例、测试计划，设计测试方案和测试数据。
+
+3.了解产品需求，根据测试需求搭建和维护测试环境。
+
+4.协助开发自动化测试脚本，提高测试效率和覆盖率。
+
+5.与开发、产品、交付等团队紧密合作，确保测试过程与产品开发进度同步。
+
+6.支持产品开发生命周期的各个阶段，确保产品高质量的交付。
+
+**岗位要求：**
+
+1.硕士以上学历，机器人、计算机、电子信息、自动化、控制等相关专业。
+
+2.有仿真测试经验，熟悉gazebo、simulink、isaac sim等开源仿真工具
+
+3.熟练掌握至少一种编程语言，如Python、C++、Java等，并能够编写测试脚本和工具。
+
+4.有机器人相关项目经验，了解视觉图像或者运动控制相关的评价指标和测试方法优先
+
+5.熟悉ROS系统，有ROS应用开发经验，熟悉ROS相关插件，有插件的二次开发经验者优先
+
+6.能够适应出差，需要根据项目要求进行现场测试和支持。
+
+7.拥有良好的团队合作精神，能够在跨职能团队环境中高效协作。
+
+---
+
+#### 引擎测试开发工程师
+
+来源: 网易
+
+📍 杭州 | 🏢 技术中心 | 📅 3-5年 | 🎓 本科
+
+**岗位职责：**
+
+职位描述：
+
+负责引擎的全方位质量保障，包括测试用例设计、功能测试、性能及稳定性测试等；
+
+负责测试工具与自动化框架的开发和维护，积极探索并引入AI等前沿测试理念，持续提升测试效率与交付质量；
+
+负责构建与优化引擎测试工作流，实现测试流程的标准化与自动化；
+
+参与引擎版本的发布与日常维护，跟进处理产品反馈问题。
+
+**岗位要求：**
+
+计算机或相关专业统招本科及以上学历，3年以上互联网/游戏/游戏引擎的测试开发经验；
+
+具备扎实的编程底子，熟练掌握 Python及C++；
+
+具备优秀的测试思维，熟悉游戏或引擎开发生命周期与测试流程，拥有白盒测试经验者优先；
+
+具备敏锐的逻辑分析能力，能够深入钻研各类技术瓶颈，并提出有效解决方案；
+
+具备良好的沟通能力，愿意主动学习新技术，善于团队协作完成任务；
+
+具有多种类型游戏项目引擎层或服务端测试，了解美术工作流或具有Blender/3dsMax等软件使用经验者优先；
+
+了解或有实际应用UE或Unity制作开发经验者优先。
+
+---
+
+#### 软件测试开发工程师
+
+来源: 网易
+
+📍 杭州 | 🏢 效率工程部 | 📅 5-10年 | 🎓 本科
+
+**岗位职责：**
+
+1、按照产品架构和业务要求，制定和推进测试策略，测试计划和测试方法；
+
+2、通过测试相关流程、策略、方法和工具等创新，努力提升测试的质量和效率；
+
+3、自动化测试框架及业务测试支撑工具开发，web端、APP端、服务端、Windows客户端不限；
+
+4、发现工作中的效率提升点，调研并能够开发相应测试工具和框架，提升测试效率,立项研发并落地 ；
+
+5、配合产品、开发、测试 一起优化和改进代码结构、发布过程、配置管理，顺利实施持续集成。
+
+职位要求1、工科、计算机或其他相关专业本科以上学历，至少5年以上开发或测试开发工作经验 2、精通Java/Python/C++等至少一门语言，掌握SpringBoot、Vue、React、Bootstrap、testNG等技术栈，熟悉常见的数据库，熟练掌握Mysql，Mongodb，Redis等 3、具有较强的业务分析能力，较好的沟通表达和综合协调能力，对质量保证有深刻理解，具有一定的业务建模能力 4、逻辑能力强，高度的责任心、上进心，积极主动、良好的团队合作能力，自我学习和分析解决问题的能力 5、杰出的自我驱动学习能力，能独立思考，乐于接受挑战，在压力中突破...
+
+**岗位要求：**
+
+1、工科、计算机或其他相关专业本科以上学历，至少5年以上开发或测试开发工作经验；
+
+2、精通Java/Python/C++等至少一门语言，掌握SpringBoot、Vue、React、Bootstrap、testNG等技术栈，熟悉常见的数据库，熟练掌握Mysql，Mongodb，Redis等 ；
+
+3、具有较强的业务分析能力，较好的沟通表达和综合协调能力，对质量保证有深刻理解，具有一定的业务建模能力 ；
+
+4、逻辑能力强，高度的责任心、上进心，积极主动、良好的团队合作能力，自我学习和分析解决问题的能力；5、杰出的自我驱动学习能力，能独立思考，乐于接受挑战，在压力中突破自己；
+
+6、有团队管理经验者优先，有税务、营收、资金相关方向测试经验者优先。
+
+---
+
+#### 游戏测试开发工程师（27届+广/沪/杭）
+
+来源: 网易
+
+📍 广州 | 🏢 用户体验中心 | 📅 不限 | 🎓 本科
+
+**岗位职责：**
+
+该岗位为校招实习岗位，有明确转正机会！需连续实习至少2个月，实习入职时间灵活！
+
+投递直达：https://game.campus.163.com/position
+
+您可以：
+
+- 加入国内最顶级的游戏研发团队，享受规范和优质的培训体系，获得飞速成长的机会；
+
+- 主导研发业内最先进的自动化测试框架和平台，推进行业技术革新；
+
+- 深入了解国内领先的游戏研发流程，自主设计并实现游戏研发团队所需的测试工具；
+
+- 深入接触国内领先的游戏测试方案，通过编写代码，持续保障并提升游戏测试的质量与效率。
+
+**岗位要求：**
+
+我们希望您符合以下描述：
+
+- 计算机相关专业或有计算机相关项目经历，本科及以上学历；
+
+- 具备扎实的计算机基础，精通至少一门编程语言，深入理解数据结构、算法、操作系统和网络等知识；
+
+- 热爱游戏，有意愿去尝试体验不同类型游戏，勇于提出自己的建议；
+
+- 具备优秀的逻辑思维能力和强烈的求知欲，能够快速学习新的知识；
+
+- 做事积极主动，执行力强，能推动问题解决，有良好的团队精神和沟通能力。
+
+具备以下条件尤佳：
+
+- 有丰富的软件开发经验，为多个开源软件项目贡献代码；
+
+- 对算法有深入钻研，有科研、重要期刊或会议Paper，在程序设计大赛获奖；
+
+- 热爱游戏，乐于钻研游戏设定，对游戏有深入理解。
+
+---
+
+#### 【平台】高级测试开发工程师
+
+来源: 网易
+
+📍 广州 | 🏢 游戏应用与平台发展事业部 | 📅 3-5年 | 🎓 本科
+
+**岗位职责：**
+
+1.本岗归属于行业领先的Steam饰品交易平台项目，以技术手段为主，实现质量体系的技术化和提效；
+
+2.负责技术化测试工作（性能、安全、自动化等），统筹测试，高效交付；
+
+3.识别过程质量风险并推动优化；
+
+4.推动AI测试自动化、测试工具链完善。
+
+**岗位要求：**
+
+1.计算机相关专业，3年或以上的软件服务端测试/开发经验；
+
+2.强自我驱动，逻辑思维、抗压能力强，持续学习者优；
+
+3.强技术驱动。熟练掌握Python、服务端性能和Web自动化测试框架；
+
+4.质量敏感，有成功落地提效/质量体系升级经验者优；
+
+5.热爱游戏/交易平台或大电商平台测试经验者优先。
+
+---
+
+#### 测试开发工程师（AI方向）
+
+来源: 网易
+
+📍 广州 | 🏢 质量保障中心 | 📅 不限 | 🎓 不限
+
+**岗位职责：**
+
+1. 负责内部AI平台的开发与维护（前端 React/TypeScript，后端 Python），提升用户体验与稳定性。
+
+2. 负责平台用户的日常对接与技术支持工作，如问题排查、使用答疑、需求沟通等。
+
+3. 关注 AI/LLM 领域技术发展，探索并落地新技术在平台中的应用与改进。
+
+4. 参与 K8s 容器化部署与运维，保障平台服务的可用性。
+
+**岗位要求：**
+
+1. 本科及以上学历，计算机相关专业；2 年以上全栈开发经验，熟练掌握 Python 语言。
+
+2. 具备 AI 相关开发经验，熟悉 AI 业界主流前沿技术，对 Agent 架构、Skills 构建、Prompt Engineering、Function Calling、RAG 等核心技术有基本的认知和理解；有 AI Agent 开发经验者优先。
+
+3. 了解 AI/LLM 应用的质量评估方法，具备 Agent 类应用的测试策略设计能力（如多轮对话测试、工具调用链路验证、Prompt 变更回归等）；有构建自动化评测体系经验者优先。
+
+4. 有持续使用大模型进行开发或测试的实践经验，熟悉主流大模型的能力特点与局限性；熟悉主流 Agent 开发框架（如 Agno、Dify、Coze、LangChain 等）者优先。
+
+5. 善于发现问题，勇于实践，乐于学习新知识；工作积极主动，具备良好的沟通能力和独立解决问题的能力，有较强的责任心。
+
+---
+
+#### 高级/资深游戏测试开发工程师（无限大）
+
+来源: 网易
+
+📍 杭州 | 🏢 雷火事业群 | 📅 3-5年 | 🎓 本科
+
+**岗位职责：**
+
+1 负责游戏相关测试工具平台、自动化脚本开发等工作；
+
+2 能够主动挖掘提升游戏质量的工具需求，并能独立完成工具架构和模块设计、编码、测试、文档编写、使用推广等工作；
+
+3 对于游戏重要代码进行review，有效辅助功能进行白盒测试
+
+4 有数值投放测试经验者尤佳
+
+**岗位要求：**
+
+1 本科及以上学历，三年及以上测试开发工作经验，计算机相关专业
+
+2 熟练掌握Python、C++/C#、Lua、数据结构和算法，熟悉Linux、MySQL操作
+
+3 热爱游戏，有3A主机游戏及开放世界类型游戏体验者优先
+
+4 具备良好的沟通协作能力与团队合作精神，有高度的责任心，具备良好的逻辑分析和解决问题能力
+
+5 熟悉商业游戏引擎（Unreal/UE）优先
+
+---
+
+#### 高级测试开发工程师（大世界）
+
+来源: 网易
+
+📍 杭州 | 🏢 质量保障中心 | 📅 3-5年 | 🎓 本科
+
+**岗位职责：**
+
+1、负责游戏相关测试工具平台、自动化测试框架及自动化脚本开发；
+
+2、主动挖掘能提升游戏质量的工具需求，并能独立完成工具架构和模块设计、编码、测试、文档编写、使用推广等工作；
+
+3、负责相关性能测试，有效支持游戏功能的测试工作；
+
+4、对游戏打包有一定了解更佳。
+
+**岗位要求：**
+
+1、计算机相关专业，本科及以上学历，3年及以上测试开发工作经验，具备游戏行业经验尤佳；
+
+2、有较好的逻辑思维和问题解决能力，对新技术有较强的求知欲望，及时总结沉淀并输出文档；
+
+3、熟练掌握Python编程、C/C#、lua、数据结构和算法；
+
+4、熟悉Linux，熟悉MySQL数据库操作；
+
+5、具备良好学习、沟通能力及团队协作精神，对工作积极严谨，有责任感；
+
+6、能够承受工作压力，具备工作主动性和执行力；
+
+7、热爱游戏，有MMO游戏体验者优先。
+
+---
+
+#### 资深测试开发工程师（遗忘之海）
+
+来源: 网易
+
+📍 杭州 | 🏢 质量保障中心 | 📅 不限 | 🎓 不限
+
+**岗位职责：**
+
+1、负责游戏相关测试工具平台、自动化测试框架及自动化脚本开发；
+
+2、主动挖掘能提升游戏质量的工具需求，并能独立完成工具架构和模块设计、编码、测试、文档编写、使用推广等工作；
+
+3、负责相关性能测试，有效支持游戏功能的测试工作；
+
+4、对游戏打包有一定了解更佳。
+
+**岗位要求：**
+
+1、计算机相关专业，本科及以上学历，3年及以上测试开发工作经验，具备游戏行业经验尤佳；
+
+2、有较好的逻辑思维和问题解决能力，对新技术有较强的求知欲望，及时总结沉淀并输出文档；
+
+3、熟练掌握Python编程、C/C#、lua、数据结构和算法；
+
+4、熟悉Linux，熟悉MySQL数据库操作；
+
+5、具备良好学习、沟通能力及团队协作精神，对工作积极严谨，有责任感；
+
+6、能够承受工作压力，具备工作主动性和执行力；
+
+7、热爱游戏，有MMO游戏体验者优先。
+
+---
+
+#### 高级/资深游戏测试开发工程师（无限大）
+
+来源: 网易
+
+📍 杭州 | 🏢 雷火事业群 | 📅 3-5年 | 🎓 本科
+
+**岗位职责：**
+
+1 负责游戏相关测试工具平台、自动化脚本开发等工作；
+
+2 能够主动挖掘提升游戏质量的工具需求，并能独立完成工具架构和模块设计、编码、测试、文档编写、使用推广等工作；
+
+3 对于游戏重要代码进行review，有效辅助功能进行白盒测试
+
+4 有数值投放测试经验者尤佳
+
+**岗位要求：**
+
+1 本科及以上学历，三年及以上测试开发工作经验，计算机相关专业
+
+2 熟练掌握Python、C++/C#、Lua、数据结构和算法，熟悉Linux、MySQL操作
+
+3 热爱游戏，有3A主机游戏及开放世界类型游戏体验者优先
+
+4 具备良好的沟通协作能力与团队合作精神，有高度的责任心，具备良好的逻辑分析和解决问题能力
+
+5 熟悉商业游戏引擎（Unity/UE）优先
+
+---
+
+#### 游戏测试开发工程师（无限大-服务器方向）
+
+来源: 网易
+
+📍 杭州 | 🏢 雷火事业群 | 📅 3-5年 | 🎓 本科
+
+**岗位职责：**
+
+1. 负责联机模块功能的测试保障及工具/机器人开发，涵盖多种Gameplay与组队、同步、观战等基础逻辑
+
+2. 能够主动挖掘提升游戏质量的工具需求，并能独立完成工具架构和模块设计、编码、测试、文档编写、使用推广等工作；
+
+3. 对于游戏重要代码进行review，有效辅助功能进行白盒测试
+
+4. 有一定的服务器功能开发/测试经验
+
+**岗位要求：**
+
+1 本科及以上学历，三年及以上测试开发工作经验，计算机相关专业
+
+2 熟练掌握Python、C++/C#、Lua、数据结构和算法，熟悉Linux、MySQL操作
+
+3 热爱游戏，有3A主机游戏及开放世界类型游戏体验者优先
+
+4 具备良好的沟通协作能力与团队合作精神，有高度的责任心，具备良好的逻辑分析和解决问题能力
+
+5 熟悉商业游戏引擎（Unity/UE）优先
+
+---
+
+#### 测试开发工程师
+
+来源: 网易
+
+📍 北京 | 🏢 有道事业群 | 📅 不限 | 🎓 不限
+
+**岗位职责：**
+
+1. 负责对计算广告核心系统的白盒测试，包括实时竞价、统计计费等系统；
+
+2. 负责自动化测试平台的建设；
+
+3. 参与需求和技术设计的评审，尽早识别系统风险，提出质量保障方面的建议。
+
+**岗位要求：**
+
+1. 本科及以上学历，计算机科学、软件工程或相关专业优先；
+
+2. 2年以上测试开发或相关工作经验，有计算广告系统测试经验者优先；
+
+3. 熟悉测试流程与测试方法，掌握自动化测试框架设计与开发，熟练使用Python、Java等至少一种编程语言；
+
+4. 具备良好的问题分析与定位能力，能够快速发现并推动解决系统潜在问题；
+
+5. 具备较强的沟通协调能力和团队协作意识，能高效对接产品、研发等多部门；
+
+6. 熟悉性能测试、接口测试、持续集成等技术者优先，具备一定的系统调优经验。
+
+---
+
+### 腾讯（7）
+
+#### 资深测试开发工程师（AI评测方向）
+
+🔗 [投递链接](http://careers.tencent.com/jobdesc.html?postId=1950026512501678080) &nbsp;&nbsp; 来源: 腾讯
+
+📍 北京 | 🏢 CSIG | 📅 五年以上工作经验
+
+**岗位职责：**
+
+1.负责腾讯云AI Coding产品质量保障工作，深度参与产品质量体系建设，识别全链路上的质量风险，建立稳定性保障体系，推动稳定性建设落地；
+
+2.腾讯云AI 产品相关的评测工作，包含AI算法的评测体系建设、评测集构建、以及相关评测工程化建设等；
+
+3.负责AI算法的评测标准和评测流程制定，构建评测集，并推进评测执行，分析评测结果，对模型质量给予充分评估；
+
+4.建设相关评测工具/平台，推动评测工程化和无人化。
+
+---
+
+#### 在研UE5射击手游-游戏测试开发工程师
+
+🔗 [投递链接](http://careers.tencent.com/jobdesc.html?postId=1914976924824879104) &nbsp;&nbsp; 来源: 腾讯
+
+📍 深圳 | 🏢 IEG | 📅 两年以上工作经验
+
+**岗位职责：**
+
+1.负责在研FPS项目的测试工作，作为特性负责人带领子公司及外包同学一起保障产品质量；
+
+2.负责制定对应特性组的测试计划、把控特性风险、推动测试流程与效率优化；
+
+3.从黑盒和白盒的角度进行测试分析，制定测试方案，并跟进外包测试执行，持续优化测试方案；
+
+4.针对游戏业务测试中的难点和盲区主动提出新的解决方案，开发对应的测试工具；
+
+5.负责一个或多个专项测试，包括自动化、性能、兼容性、稳定性、容灾等。
+
+---
+
+#### 微信小店-测试开发工程师
+
+🔗 [投递链接](http://careers.tencent.com/jobdesc.html?postId=1904008033529323520) &nbsp;&nbsp; 来源: 腾讯
+
+📍 广州 | 🏢 WXG | 📅 三年以上工作经验
+
+**岗位职责：**
+
+1.负责微信小店产品质量保障工作，包括日常版本跟进，改进、完善研发测试过程等；
+
+2.参与设计、完善微信小店测试体系，包括开发相关测试工具和平台，补全测试能力，帮助业务提升测试效率和质量。
+
+---
+
+#### 微信小游戏-测试开发工程师
+
+🔗 [投递链接](http://careers.tencent.com/jobdesc.html?postId=1945692266278551552) &nbsp;&nbsp; 来源: 腾讯
+
+📍 广州 | 🏢 WXG | 📅 一年以上工作经验
+
+**岗位职责：**
+
+1.负责微信小游戏产品的测试能力/工具/平台开发；
+
+2.根据业务需求建设合适的测试框架或工具，解决复杂测试问题（如引擎适配、多端兼容、异常检测等），推动研发流程中的质量提升与效率优化。
+
+---
+
+#### 魔方工作室-测试开发工程师-前台自动化开发
+
+🔗 [投递链接](http://careers.tencent.com/jobdesc.html?postId=1945036329888907264) &nbsp;&nbsp; 来源: 腾讯
+
+📍 深圳 | 🏢 IEG | 📅 两年以上工作经验
+
+**岗位职责：**
+
+1.负责多项目并行管理和排期，高效对接业务测试需求，组织开发评审，确保自动化按时高质量交付；
+
+2.对腾讯子公司进行技术辅导培训和管理，提升子公司自动化脚本编写能力，定期进行代码review，严格把控自动化工程质量；
+
+3.跟进每日自动化问题进行分析归类，持续优化自动化测试工程，提升自动化测试稳定性和效率；
+
+4.针对复杂模块功能，独立完成自动化脚本开发；
+
+5.探索并引入新技术优化自动化测试流程，提升测试效率，拓展自动化应用边界。
+
+---
+
+#### 游戏测试开发工程师-新星引力计划
+
+🔗 [投递链接](http://careers.tencent.com/jobdesc.html?postId=2034277345287897088) &nbsp;&nbsp; 来源: 腾讯
+
+📍 上海 | 🏢 IEG | 📅 两年以上工作经验
+
+**岗位职责：**
+
+1.负责在研FPS项目的测试工作，作为特性负责人带领外包同学一起保障产品质量；
+
+2.负责制定对应特性的测试计划、把控特性风险、推动测试流程与效率优化；
+
+3.从黑盒和白盒的角度进行测试分析，制定测试方案，并跟进外包测试执行，持续优化测试方案；
+
+4.针对游戏业务测试中的难点和盲区主动提出新的解决方案，开发对应的测试工具；
+
+5.负责一个或多个专项测试，包括自动化、性能、兼容性、稳定性、容灾等。
+
+---
+
+#### 测试开发工程师-天美中台
+
+🔗 [投递链接](http://careers.tencent.com/jobdesc.html?postId=2033719351068229632) &nbsp;&nbsp; 来源: 腾讯
+
+📍 深圳 | 🏢 IEG | 📅 一年以上工作经验
+
+**岗位职责：**
+
+1.负责智能测试工具平台开发；
+
+2.负责现有测试工具平台AI提效；
+
+3.负责智能测试工具平台落地应用。
+
+---
+
+## Agent评测（14 个岗位）
+
+### 百度（3）
+
+#### 大模型评测工程师（J98467）
+
+🔗 [投递链接](https://talent.baidu.com/jobs/social-list?search=大模型评测) &nbsp;&nbsp; 来源: 百度
+
+*详情请点击投递链接查看*
+
+---
+
+#### 大模型效果评测工程师（J97941）
+
+🔗 [投递链接](https://talent.baidu.com/jobs/social-list?search=大模型评测) &nbsp;&nbsp; 来源: 百度
+
+*详情请点击投递链接查看*
+
+---
+
+#### 大模型算法工程师-模型评测方向（J98466）
+
+🔗 [投递链接](https://talent.baidu.com/jobs/social-list?search=大模型评测) &nbsp;&nbsp; 来源: 百度
+
+*详情请点击投递链接查看*
+
+---
+
+### 腾讯（11）
+
+#### 元宝-大模型评测产品经理（教育方向）
+
+🔗 [投递链接](http://careers.tencent.com/jobdesc.html?postId=2043889962096689152) &nbsp;&nbsp; 来源: 腾讯
+
+📍 深圳 | 🏢 CSIG | 📅 三年以上工作经验
+
+**岗位职责：**
+
+1.负责部门业务的产品评测工作，牵引产品迭代优化；
+
+2.针对具体的评测方向，设计科学地、可衡量的、可迭代的评测体系，构建评测集合，执行并验收评测任务质量；
+
+3.利用大模型能力探索自动化评测体系建设，并在具体评测方向落地；
+
+4.能够结合评测数据输出可供产品迭代参考落地的报告。
+
+---
+
+#### 企业微信-AI Agent高级评测工程师
+
+🔗 [投递链接](http://careers.tencent.com/jobdesc.html?postId=1976128393539899392) &nbsp;&nbsp; 来源: 腾讯
+
+📍 广州 | 🏢 WXG | 📅 两年以上工作经验
+
+**岗位职责：**
+
+1.负责评测体系建设：设计并持续优化 AI Agent 评测框架，覆盖任务完成率、多轮对话质量、工具调用准确性等核心维度
+
+2.评测执行与分析：针对企业微信 AI Agent 场景（总结、搜索、销售、审批、日程助理等）制定测试用例，执行自动化与人工评测，输出量化分析报告
+
+3. Benchmark 研究与构建：跟踪业界主流 Agent 评测基准（如 AgentBench、PinchBench、TAU-bench等），结合企业微信业务场景进行改造与落地
+
+4.数据治理：推动数据标注规范制定和标注质量管控
+
+5. 问题定位与反馈：深度分析 Agent 失败案例，精准定位规划、记忆、工具调用等模块的能力短板，与研发/产品团队闭环跟进
+
+---
+
+#### 元宝-大模型评测产品经理
+
+🔗 [投递链接](http://careers.tencent.com/jobdesc.html?postId=1984457404208799744) &nbsp;&nbsp; 来源: 腾讯
+
+📍 深圳 | 🏢 CSIG | 📅 一年以上工作经验
+
+**岗位职责：**
+
+1.自动评估体系建设：设计并搭建大模型自动评估体系，覆盖通用能力及专项能力（如推理、写作、语音、VLM 等）；构建评测指标体系与自动化评测流程，推动评测体系标准化、模块化、可扩展化；
+
+2.Benchmark 研究与落地：跟踪国内外前沿大模型评测方法与 Benchmark，研究其评测维度与自动化机制；复现与改造高质量评测集，结合业务场景定制评测任务，确保评测的真实性与可复现性；
+
+3.模型效果分析与策略优化：定期对不同版本模型进行系统评测与对比，输出详细分析报告，识别模型优势与薄弱点；针对记忆、写作、语音、多模态（VLM）等专项能力，设计细粒度评测指标与分析策略，支撑模型迭代方向；
+
+4.用户数据分析与体验优化：持续监测与分析真实用户交互数据，挖掘模型表现的 badcase 与典型问题；与算法及产品团队协作，将用户侧问题转化为可量化的评测指标与优化方案；建立用户体验反馈与评测体系联动机制，推动模型效果持续提升与体验闭环优化；
+
+5.跨团队协作与产品规划：与算法、工程、产品团队紧密配合，定义评测需求与指标体系，推动自动评测体系在实际业务与模型研发中的落地，形成评测 → 分析 → 优化的完整闭环。
+
+---
+
+#### AI 知识管理与评测-技术专家
+
+🔗 [投递链接](http://careers.tencent.com/jobdesc.html?postId=2034259484288909312) &nbsp;&nbsp; 来源: 腾讯
+
+📍 深圳 | 🏢 CDG | 📅 五年以上工作经验
+
+**岗位职责：**
+
+1.知识管理体系建设：负责平台知识库管理系统的架构设计与持续优化，主导多路检索融合方案（向量检索、图谱检索、文本检索等）的设计与落地，提升知识召回精度与效率；
+
+2.Agent 评测体系搭建：主导 AI Agent 评测体系的设计与实施，包括评测基准构建、评测数据集建设、自动化评测工具链开发，形成从 Badcase 发现到效果闭环的系统化能力；
+
+3.模型能力优化：针对知识库场景进行检索模型、排序模型的训练与调优，运用大模型微调（如 LoRA、数据合成等）手段提升垂直领域效果，推动模型轻量化与效果平衡；
+
+4.技术带头人：带领技术团队进行核心技术攻关，制定技术路线与迭代计划，在有限资源下实现高 ROI 的技术产出；
+
+5.业务落地推进：与产品、业务团队紧密协作，深入理解业务场景需求，将技术能力转化为可量化的业务价值，推动技术方案在实际场景中快速验证与落地；
+
+6.平台能力沉淀：将 RAG 优化、评测等核心技术能力产品化，沉淀为平台可配置、可复用的基础设施能力，服务多业务线。
+
+---
+
+#### 混元多模态大模型评测（北京）
+
+🔗 [投递链接](http://careers.tencent.com/jobdesc.html?postId=1997884330793394176) &nbsp;&nbsp; 来源: 腾讯
+
+📍 深圳 | 🏢 TEG | 📅 三年以上工作经验
+
+**岗位职责：**
+
+1.评测体系构建：通过紧跟先进模型及应用的前沿发展，设计全面、准确的多维度指标，建立覆盖多模态（语音/图/视频生成/编辑等）生成、多模态理解等全面、多维度的评测体系；
+
+2.评测流程：熟悉大模型评测流程的实际执行与落地，协同多方相关团队高效完成评测工作，定期监控模型效果，分析问题并提供优化方案；
+
+3.行业动态洞察：持续完善快速评测体系构建、快速反馈行业动态及模型能力，发现行业模型以及应用的前进方向、亮点；
+
+4.结果归因：通过各种数据分析方法，深度分析模型评测结果，为大模型的更新调优提供精准的问题分析结论。
+
+---
+
+#### 腾讯广告-商业化策略产品-大模型评测方向
+
+🔗 [投递链接](http://careers.tencent.com/jobdesc.html?postId=2012016099826225152) &nbsp;&nbsp; 来源: 腾讯
+
+📍 上海 | 🏢 CDG | 📅 两年以上工作经验
+
+**岗位职责：**
+
+1.负责腾讯广告业务下大模型相关评测工作，包括不限于Agent、创意、推荐体验和特征质量评估，核心围绕标准制定、机制优化、模型建设、效果评估持续发现并刻画问题，提升模型的质量和效率；
+
+2.参与设计数据自动化生成及模型自动化评估方案，跟踪国内外前沿大模型评测方法与benchmark，结合业务场景实践完善评测能力的建设和优化，确保评测的真实性和稳定性；
+
+3.持续监测与分析评测数据，抽象评测badcase总结典型问题；输出评测报告，支撑模型迭代；
+
+4.与上下游模型算法、工程技术、标注交付团队等紧密协同合作，持续优化标准提升评测模型的人机一致率，探索评测模型的业务应用场景，提升数据应用价值；
+
+5.持续完善内部评测工具建设，收集用户反馈并推广产品使用，提升质量评测影响力。
+
+---
+
+#### 元宝-安全评测分析师
+
+🔗 [投递链接](http://careers.tencent.com/jobdesc.html?postId=1962347999011168256) &nbsp;&nbsp; 来源: 腾讯
+
+📍 北京 | 🏢 CSIG | 📅 三年以上工作经验
+
+**岗位职责：**
+
+1.负责元宝业务下的大模型安全评测，对评测质量、数量和效率负责；
+
+2.基于评测数据，进行深入的数据分析并定期产出兼顾安全与体验的分析报告，推进安全策略的精细化运营和迭代；
+
+3.了解前沿的方法和工具，不断引入新的评测方式，持续提升评测工作的效能和科学性；
+
+4.协同相关安全团队，对齐评测标准、评测数据，持续提升评测工作的全面性。
+
+---
+
+#### 元宝-大模型评测产品经理
+
+🔗 [投递链接](http://careers.tencent.com/jobdesc.html?postId=1984457407304196096) &nbsp;&nbsp; 来源: 腾讯
+
+📍 北京 | 🏢 CSIG | 📅 一年以上工作经验
+
+**岗位职责：**
+
+1.自动评估体系建设：设计并搭建大模型自动评估体系，覆盖通用能力及专项能力（如推理、写作、语音、VLM 等）；构建评测指标体系与自动化评测流程，推动评测体系标准化、模块化、可扩展化；
+
+2.Benchmark 研究与落地：跟踪国内外前沿大模型评测方法与 Benchmark，研究其评测维度与自动化机制；复现与改造高质量评测集，结合业务场景定制评测任务，确保评测的真实性与可复现性；
+
+3.模型效果分析与策略优化：定期对不同版本模型进行系统评测与对比，输出详细分析报告，识别模型优势与薄弱点；针对记忆、写作、语音、多模态（VLM）等专项能力，设计细粒度评测指标与分析策略，支撑模型迭代方向；
+
+4.用户数据分析与体验优化：持续监测与分析真实用户交互数据，挖掘模型表现的 badcase 与典型问题；与算法及产品团队协作，将用户侧问题转化为可量化的评测指标与优化方案；建立用户体验反馈与评测体系联动机制，推动模型效果持续提升与体验闭环优化；
+
+5.跨团队协作与产品规划：与算法、工程、产品团队紧密配合，定义评测需求与指标体系，推动自动评测体系在实际业务与模型研发中的落地，形成评测 → 分析 → 优化的完整闭环。
+
+---
+
+#### 混元大模型评测算法研究员（北京）
+
+🔗 [投递链接](http://careers.tencent.com/jobdesc.html?postId=1915233782491881472) &nbsp;&nbsp; 来源: 腾讯
+
+📍 深圳 | 🏢 TEG | 📅 五年以上工作经验
+
+**岗位职责：**
+
+负责通用AI大模型相关的评测与应用的规划、落地以及平台化能力建设，包括但不限于：
+
+1.通用AI大模型评测基准的构建：建立覆盖文生文、多模态理解、多模态（音视频/3D/图/视频生成）生成等多模态的评测基准，设计全面、准确的多维度指标，构建自动化评测工具链，并随着模型能力的演进持续探索全模态的评测基准；
+
+2.评测数据的自动化生产能力构建：基于数据泛化等能力，构建领域增强型评测数据集生产链路，支持多模态场景的自动化数据扩增与效果验证；
+
+3.自动化评测与归因分析：探索并实现各个模态大模型的自动化评测与模型缺陷归因机制。
+
+---
+
+#### 元宝-安全评测分析师
+
+🔗 [投递链接](http://careers.tencent.com/jobdesc.html?postId=2036455998214008832) &nbsp;&nbsp; 来源: 腾讯
+
+📍 深圳 | 🏢 CSIG | 📅 三年以上工作经验
+
+**岗位职责：**
+
+1.负责元宝业务下的大模型安全评测，对评测质量、数量和效率负责；
+
+2.基于评测数据，进行深入的数据分析并定期产出兼顾安全与体验的分析报告，推进安全策略的精细化运营和迭代；
+
+3.了解前沿的方法和工具，不断引入新的评测方式，持续提升评测工作的效能和科学性；
+
+4.协同相关安全团队，对齐评测标准、评测数据，持续提升评测工作的全面性。
+
+---
+
+#### 混元大模型评测平台高级工程师（北京/深圳）
+
+🔗 [投递链接](http://careers.tencent.com/jobdesc.html?postId=2016441108523012096) &nbsp;&nbsp; 来源: 腾讯
+
+📍 深圳 | 🏢 TEG | 📅 两年以上工作经验
+
+**岗位职责：**
+
+1.负责大模型评测平台的架构设计与核心模块开发，支撑模型全生命周期的评测需求；
+
+2.设计并优化评测任务调度、数据管理、结果分析等核心系统，保障平台稳定性与可扩展性；
+
+3.构建自动化评测流水线，提升评测效率与研发迭代速度；
+
+4.与算法、产品团队紧密协作，理解评测需求并转化为可落地的技术方案。
+
+---
+
+## Agent产品（52 个岗位）
+
+### 字节跳动（1）
+
+#### 资深产品经理（ 智能体方向）-火山引擎
+
+🔗 [投递链接](https://jobs.bytedance.com/experienced/position/7617756550405196085/detail) &nbsp;&nbsp; 来源: 字节跳动
+
+📍 北京 | 🏢 研发
+
+*详情请点击投递链接查看*
+
+---
+
+### 百度（19）
+
+#### Agent产品经理（J97204）
+
+🔗 [投递链接](https://talent.baidu.com/jobs/social-list?search=Agent产品) &nbsp;&nbsp; 来源: 百度
+
+*详情请点击投递链接查看*
+
+---
+
+#### Agent高阶产品经理（J96584）
+
+🔗 [投递链接](https://talent.baidu.com/jobs/social-list?search=Agent产品) &nbsp;&nbsp; 来源: 百度
+
+*详情请点击投递链接查看*
+
+---
+
+#### 商家Ai agent产品经理（J99223）
+
+🔗 [投递链接](https://talent.baidu.com/jobs/social-list?search=Agent产品) &nbsp;&nbsp; 来源: 百度
+
+*详情请点击投递链接查看*
+
+---
+
+#### 大模型Agent产品经理（J98946）
+
+🔗 [投递链接](https://talent.baidu.com/jobs/social-list?search=Agent产品) &nbsp;&nbsp; 来源: 百度
+
+*详情请点击投递链接查看*
+
+---
+
+#### AI Agent产品经理(数字员工方向)（J96538）
+
+🔗 [投递链接](https://talent.baidu.com/jobs/social-list?search=Agent产品) &nbsp;&nbsp; 来源: 百度
+
+*详情请点击投递链接查看*
+
+---
+
+#### AIGC产品经理（J90497）
+
+🔗 [投递链接](https://talent.baidu.com/jobs/social-list?search=AIGC产品) &nbsp;&nbsp; 来源: 百度
+
+*详情请点击投递链接查看*
+
+---
+
+#### AIGC策略产品（J91400）
+
+🔗 [投递链接](https://talent.baidu.com/jobs/social-list?search=AIGC产品) &nbsp;&nbsp; 来源: 百度
+
+*详情请点击投递链接查看*
+
+---
+
+#### AIGC内容创新产品（J94446）
+
+🔗 [投递链接](https://talent.baidu.com/jobs/social-list?search=AIGC产品) &nbsp;&nbsp; 来源: 百度
+
+*详情请点击投递链接查看*
+
+---
+
+#### 商业AIGC产品经理（J94402）
+
+🔗 [投递链接](https://talent.baidu.com/jobs/social-list?search=AIGC产品) &nbsp;&nbsp; 来源: 百度
+
+*详情请点击投递链接查看*
+
+---
+
+#### AIGC创意内容产品经理（J85407）
+
+🔗 [投递链接](https://talent.baidu.com/jobs/social-list?search=AIGC产品) &nbsp;&nbsp; 来源: 百度
+
+*详情请点击投递链接查看*
+
+---
+
+#### AIGC视频生成模型产品（J94298）
+
+🔗 [投递链接](https://talent.baidu.com/jobs/social-list?search=AIGC产品) &nbsp;&nbsp; 来源: 百度
+
+*详情请点击投递链接查看*
+
+---
+
+#### AI策略产品经理（J98917）
+
+🔗 [投递链接](https://talent.baidu.com/jobs/social-list?search=AI策略产品) &nbsp;&nbsp; 来源: 百度
+
+*详情请点击投递链接查看*
+
+---
+
+#### AI搜索策略产品（J93381）
+
+🔗 [投递链接](https://talent.baidu.com/jobs/social-list?search=AI策略产品) &nbsp;&nbsp; 来源: 百度
+
+*详情请点击投递链接查看*
+
+---
+
+#### AI策略产品经理（J84249）
+
+🔗 [投递链接](https://talent.baidu.com/jobs/social-list?search=AI策略产品) &nbsp;&nbsp; 来源: 百度
+
+*详情请点击投递链接查看*
+
+---
+
+#### 地图AI原生产品部_地图NLP、VIS 策略算法研发（J72866）
+
+🔗 [投递链接](https://talent.baidu.com/jobs/social-list?search=AI策略产品) &nbsp;&nbsp; 来源: 百度
+
+*详情请点击投递链接查看*
+
+---
+
+#### AI产品经理（J98328）
+
+🔗 [投递链接](https://talent.baidu.com/jobs/social-list?search=AI质量) &nbsp;&nbsp; 来源: 百度
+
+*详情请点击投递链接查看*
+
+---
+
+#### AI产品经理（J96883）
+
+🔗 [投递链接](https://talent.baidu.com/jobs/social-list?search=AI质量) &nbsp;&nbsp; 来源: 百度
+
+*详情请点击投递链接查看*
+
+---
+
+#### AI产品经理（J84493）
+
+🔗 [投递链接](https://talent.baidu.com/jobs/social-list?search=AI质量) &nbsp;&nbsp; 来源: 百度
+
+*详情请点击投递链接查看*
+
+---
+
+#### AI产品经理（J84492）
+
+🔗 [投递链接](https://talent.baidu.com/jobs/social-list?search=AI质量) &nbsp;&nbsp; 来源: 百度
+
+*详情请点击投递链接查看*
+
+---
+
+### 网易（17）
+
+#### AI产品经理（外贸产品）
+
+来源: 网易
+
+📍 杭州 | 🏢 智能邮件事业部 | 📅 3-5年 | 🎓 本科
+
+**岗位职责：**
+
+1、AI产品策划
+
+--深入外贸全流程（获客、营销、履约、客户管理），结合大模型/NLP/智能体等技术，策划可落地的AI功能
+
+--方向包括：多语种营销内容生成、AI客户接待、商品设计辅助、报关履约优化等
+
+--目标：提升商户经营效率与成交转化
+
+2、产品落地与迭代
+
+--负责AI产品全生命周期：需求挖掘 → 场景抽象 → 技术评估 → 算法协同 → 上线验证
+
+--联动技术团队定义能力边界、明确训练目标与评估指标
+
+--构建数据闭环，持续优化AI功能的适配性与商业价值
+
+3、跨部门协同 联动研发、算法、市场、运营、销售、客户成功等团队，推进技术落地与推广
+
+4、行业与竞品分析 跟踪外贸软件AI应用趋势，分析竞品优劣，输出分析报告，支撑产品策略决策
+
+5、商业价值落地 推动AI能力商业化变现（增值服务、功能付费等），挖掘外贸场景的商业潜力
+
+**岗位要求：**
+
+1、本科及以上，计算机/软件工程/国际贸易等相关专业优先；硕士加分
+
+2、3年+产品经验，其中1年+AI产品经验；外贸软件/跨境电商/SaaS背景优先，熟悉外贸全流程者加分
+
+3、了解大模型/NLP/机器学习的应用场景与实现逻辑；技术背景（研发转产品）优先
+
+4、具备AI需求拆解与场景抽象能力，能快速对齐技术团队、明确模型边界与评估指标；数据驱动，能基于效果数据快速迭代
+
+---
+
+#### 效能产品经理（ATS招聘系统&AI提效）
+
+来源: 网易
+
+📍 杭州 | 🏢 雷火事业群 | 📅 3-5年 | 🎓 本科
+
+**岗位职责：**
+
+1.	负责雷火内部招聘系统（ATS）的整体规划与功能落地，梳理并重塑线下复杂招聘流程，确保核心系统的稳定交付与高效运转。
+
+2.	结合HR业务场景，设计并推动AI技术（如大语言模型、MCP协议等）在智能初筛、面试辅助、数据洞察等环节的实际落地，重塑系统体验。
+
+3.	在稳定招聘业务后，可逐步拓展负责更多内部中后台业务（如游戏研发流程管理、效能工具等）的产品规划与AI能力接入，持续提升组织运转效率。
+
+4.	搭建核心业务数据看板，以数据驱动产品迭代与AI策略优化。
+
+**岗位要求：**
+
+1.	本科及以上学历，4年以上ToB/B端中后台产品经验，其中包含1年以上HR/ATS相关产品经验，能快速接手并梳理复杂业务。
+
+2.	具备出色的业务解构与抽象能力，熟悉复杂的多角色权限模型与动态流转机制；熟练掌握Axure、Figma等主流产品设计工具。
+
+3.	深度拥抱AI，能将AI工具熟练融入日常产品工作流，并具备将其转化为业务赋能方案的敏锐嗅觉与落地能力。
+
+4.	具备快速学习全新业务领域（如游戏研发工业化流程）的能力，能敏锐捕捉业务痛点并输出体系化解决方案。
+
+5.	具备极强的跨部门沟通、协调和拿结果能力；自驱力强，好奇心重，能在快节奏环境中保持高质量交付。
+
+【加分项】
+
+1.	对大语言模型（LLM）、AI Agent在B端场景有实际落地经验，或对MCP协议等前沿技术有深入研究者优先。
+
+2.	具备大型游戏或互联网公司内部效能平台建设经验，熟悉游戏研发管线（Pipeline）与项目管理流程者优先。
+
+3.	有主导过大型企业HR SaaS系统实施落地经验者优先。
+
+---
+
+#### 资深AI音乐产品经理 (AIGC方向/AI写歌)
+
+来源: 网易
+
+📍 杭州 | 🏢 音乐事业部 | 📅 3-5年 | 🎓 本科
+
+**岗位职责：**
+
+1、产品规划与设计：负责网易云音乐 App 内“AI写歌/音乐生成”核心功能的产品规划与设计，支持用户通过文本/歌词/哼唱生成高质量的词曲编唱全链路音乐作品。
+
+2、模型与算法协同：深入对接算法团队，针对音乐生成的风格多样性、人声拟真度、情感表达进行调优；建立音乐美学评估标准，将晦涩的技术参数转化为用户可感知的音乐参数（如情绪、流派、配器）。
+
+3、场景融合与生态打通：将 AI 生成能力融入网易云音乐现有生态（如评论区互动写歌、云村社区二创、歌单增强），探索 AI 音乐在社交分享、版权变现及创作者辅助工具中的应用场景。
+
+4、用户体验与增长：关注 AIGC 领域的最新动态（如 Suno, Udio 等竞品分析），持续优化生成速度与交互体验，通过数据分析驱动产品迭代，对 AI 音乐功能的留存率和 UGC 内容传播量负责。
+
+**岗位要求：**
+
+1、经验要求：本科及以上学历，3 年以上互联网产品经验，至少拥有 1 年以上 AIGC/大模型相关产品经验（有音频/音乐类 AI 产品落地经验者优先）。
+
+2、技术理解力：深刻理解生成式 AI 的底层逻辑（如 Transformer, Diffusion, Audio LMs），能够与算法工程师同频对话，准确判断技术边界与可行性。
+
+3、音乐审美：重度音乐爱好者，具备优秀的音乐审美能力，对流行、电子、国风等多种音乐流派的结构和编曲有基本认知，能敏锐捕捉用户对“好听”的定义。
+
+4、产品思维：具备极强的用户同理心，能将复杂的 AI 生成流程简化为“低门槛、高趣味”的大众化玩法，具备优秀的数据分析及逻辑思维能力。
+
+加分项
+
+1、复合背景：具备“计算机+音乐”复合背景（如音乐工程专业），或熟练掌握至少一种 DAW（数字音频工作站）及乐理知识，能亲自撰写高质量的 Prompt 进行模型测试。
+
+2、爆款经验：曾主导或参与过百万级用户量的 AIGC 产品（不限于文本、图像、音频），或在 GitHub/Hugging Face 上有高 star 的开源 AI 项目贡献。
+
+---
+
+#### 资深产品经理（AI&分发方向）
+
+来源: 网易
+
+📍 杭州 | 🏢 音乐事业部 | 📅 3-5年 | 🎓 本科
+
+**岗位职责：**
+
+1、负责云音乐 AI/Agent 能力站内应用和站外拓展。与外部大模型/Agent 厂商深度合作，探索站外音乐分发生态，包括但不限于云音乐 CLI、TUI、MCP、Skill 能力设计，围绕 Agent 能力，打造智能化用户交互与服务体验。
+
+2、负责云音乐首页重点模块产品功能，包括但不限于容器样式、推荐策略、分层内容承接。结合云音乐 AI 能力，不断提升首页模块分发效率。
+
+3、通过数据分析、用户调研、竞品跟踪等手段，深度提炼用户意图，不断推动策略机制完善和升级。
+
+4、与设计、算法、数据团队密切合作，发现新的产品改进机会，持续打磨 C 端视觉呈现与交互体验，打造极致的发现与收听链路。
+
+5、协同整合横向各方资源，保障平台目标高效实现。
+
+**岗位要求：**
+
+1、对前沿 AI 技术有深刻理解，擅长利用 AI 能力解决问题。有实际的 AI/Agent C 端产品探索或落地经验者优先。
+
+2、3～5 年互联网 C 端产品经验，良好的用户洞察意识，具有音乐、音频、长短视频或内容社区类平台产品经验、深度了解音乐行业者优先。
+
+3、高效、有责任心，能够独立负责一个产品领域的演进方向，保证落地效率和质量。
+
+4、优秀的审美、用户同理心、逻辑思维能力。理解复杂业务场景用户诉求，发现问题并拆解解决方案。
+
+5、较强的抗压能力、良好的补位意识。能够跨团队推动复杂项目合作。
+
+---
+
+#### 资深平台产品经理（AI/策略/体验）
+
+来源: 网易
+
+📍 杭州 | 🏢 音乐事业部 | 📅 3-5年 | 🎓 本科
+
+**岗位职责：**
+
+1、负责云音乐首页、我的页、歌单产品功能和策略，包括但不限于容器样式、内容推荐策略、用户分层及承接。
+
+2、通过数据分析、用户调研、竞品跟踪等手段，深度提炼用户意图，不断推动策略机制完善和升级。
+
+3、与设计、算法、数据团队密切合作，发现新的产品改进机会，持续打磨 C 端视觉呈现与交互体验，打造极致的发现与收听链路。
+
+4、探索 AI 在音乐分发场景下的创新应用，利用大模型能力重塑用户的音乐发现体验。
+
+5、协同整合横向各方资源，保障平台目标高效实现。
+
+**岗位要求：**
+
+1、3～5 年互联网 C 端产品经验，有良好的用户洞察意识，具有音乐、音频、长短视频或内容社区类平台产品经验、深度了解音乐行业者优先。
+
+2、高效、有责任心，能够独立负责一个产品领域的演进方向，保证落地效率和质量。
+
+3、优秀的审美、用户同理心、逻辑思维能力。理解复杂业务场景用户诉求，发现问题并拆解解决方案。对个性化推荐系统和算法逻辑有一定认知。
+
+4、对前沿 AI 技术（如 LLM、AI Agent 等）保持高度敏感，有实际的 AI C端产品探索或落地经验者优先。
+
+5、较强的抗压能力、良好的补位意识。能够跨团队推动复杂项目合作。
+
+---
+
+#### 生成式AI产品策划（27届+广）
+
+来源: 网易
+
+📍 广州 | 🏢 合作产品部 | 📅 不限 | 🎓 不限
+
+**岗位职责：**
+
+该岗位为校招实习岗位，有明确转正机会！需连续实习至少2个月，实习入职时间灵活！
+
+投递直达：https://game.campus.163.com/position
+
+您可以：
+
+1.负责AIGC在游戏生产、玩法、营销等场景的工具应用建设，包括：AI绘图、AI代码、LLMs应用、音视频生成、机器学习平台等。
+
+2.跟进业界动向，为公司引入前沿 AI 技术，促进AIGC在游戏场景的落地，推进产品规模化应用。
+
+**岗位要求：**
+
+我们希望您：
+
+1.本科以上学历。有Stable Diffusion、Midjourney、Dalle、LLMs各类模型和应用的实践经验者优先。
+
+2.熟练使用Office、Axure 等相关软件，具备基本的产品文档撰写功底和交互设计能力。
+
+3.热爱 AIGC 相关技术，关注最新的 AIGC 产品动态，熟悉掌握1-2个 AIGC 产品的使用方法。
+
+4.擅长对用户和企业需求的产品理解和表达，有较强的数据和用户行为分析能力。
+
+---
+
+#### AI产品策划
+
+来源: 网易
+
+📍 广州 | 🏢 大神事业部 | 📅 不限 | 🎓 本科
+
+**岗位职责：**
+
+1、从0到1搭建AI驱动的生成式推荐体系；
+
+2、联动算法搭建AI打标和素材管线，实现自动化用户分群和素材生成；
+
+3、设计"千人千面"个性化推荐策略，拓展多元推荐场景、
+
+4、持续优化推荐全链路效果，快速迭代策略。
+
+**岗位要求：**
+
+1、3-5年推荐产品经验，有推荐框架全局思维（从底层到展示层全流程理解）；
+
+2、AI+推荐融合能力，理解AI如何改造传统推荐各环节；
+
+3、独立搭建能力，学习能力强，能快速理解生成式推荐新范式。
+
+---
+
+#### AI社交产品经理（破次元恋人）
+
+来源: 网易
+
+📍 杭州 | 🏢 元气事业部 | 📅 3-5年 | 🎓 本科
+
+**岗位职责：**
+
+1、产品规划与设计：负责AI社交产品（或AI社交功能模块）从0到1的规划、设计与迭代，制定产品路线图；将大模型、推荐算法、多模态等AI能力转化为具体的社交产品功能和用户体验方案。
+
+2、用户研究与需求定义：深入研究用户社交行为、关系链构建、互动模式，识别AI技术可介入的高价值场景；输出清晰的PRD，定义AI能力在社交场景中的交互方式、效果预期和兜底策略。
+
+3、AI能力落地：与算法/NLP/大模型团队紧密协作，定义AI功能的产品化标准（如AI对话的人格设定、内容推荐的策略框架、匹配算法的优化方向等）；制定AI输出质量的评估标准，建立人工评测与数据评测结合的效果衡量体系。
+
+4、数据驱动增长：建立核心指标体系（留存、互动率、匹配成功率、AI功能渗透率等），通过数据分析驱动产品迭代；设计A/B测试方案，验证AI策略对社交体验和商业目标的影响。
+
+5、跨团队协作：协调设计、研发、算法、运营、安全合规等团队，推动项目按期交付；关注内容安全、用户隐私和伦理问题，确保AI能力在合规框架内落地。
+
+**岗位要求：**
+
+1、本科及以上学历，1-3年产品策划经验；
+
+2、关注AI领域，能准确传达AI产品价值，结合AI与业务场景输出清晰的PRD；
+
+3、优先项：有AI陪伴/AI角色/AI Agent相关产品经验，有社交关系链或社区生态的构建经验，有出海社交产品经验，了解海外用户文化差异和合规要求。
+
+---
+
+#### 易盾-Agent安全产品经理
+
+来源: 网易
+
+📍 杭州 | 🏢 智企事业部 | 📅 不限 | 🎓 不限
+
+**岗位职责：**
+
+1.产品规划与设计：
+
+（1）负责Agent安全产品线的整体规划和版本迭代路线图制定
+
+（2）深入研究Agent安全领域的前沿技术、威胁模型和行业最佳实践
+
+（3）持续监控AI Agent生态的安全风险和攻击手段演进趋势
+
+2.需求分析与方案设计
+
+（1）收集和分析客户需求，将业务需求转化为产品功能规格
+
+（2）完成PRD撰写和产品原型设计，与研发团队对齐实现方案
+
+（3）定义产品核心指标，追踪产品效果和用户反馈，持续优化方案
+
+3. 产品迭代与交付
+
+（1）负责产品验收测试，把控产品质量和用户体验
+
+（2）协调跨团队资源，确保项目按期交付
+
+4.市场洞察与对标
+
+（1）调研国内外Agent安全厂商的产品功能、竞争优势和市场定位
+
+（2）输出竞品分析报告，提炼产品差异化卖点
+
+5.参与编写产品宣传材料、案例白皮书和解决方案文档
+
+**岗位要求：**
+
+1.学历背景
+
+本科及以上学历，计算机、网络安全、人工智能等相关专业优先
+
+2.工作经验
+
+（1）3-5年以上网络安全产品经验
+
+（2）有AI大模型、Agent安全、应用安全、数据安全经验者优先
+
+（3）有从0到1推动安全产品落地经验者优先
+
+3.专业能力
+
+（1）深入理解大模型技术原理，对Agent生态有系统性认知
+
+（2）熟悉AI Agent的典型攻击手法（间接Prompt注入、越权工具调用、供应链攻击、数据污染等）
+
+（3）了解MCP、OpenClaw、LangChain、OpenAI Agent等主流Agent框架
+
+（4）熟悉静态安全扫描、动态行为监控、安全沙箱、风险评分等安全技术
+
+（5）敏锐的市场洞察力和产品规划能力，能独立完成产品方案设计
+
+---
+
+#### AI产品经理（游戏研发向）
+
+来源: 网易
+
+📍 广州 | 🏢 海神事业部 | 📅 5-10年 | 🎓 本科
+
+**岗位职责：**
+
+1. 深入调研美术等研发流程，精准识别效能卡点，提出可执行的AI解决方案，打通 AI 能力与业务全链路。 为海神美术AI全流程落地实际赋能。
+
+2. 统筹规划游戏研发流程中的 AIGC 落地进程，协同美术、程序、算法团队，推动 AI 解决方案落地，并对实际效果负责
+
+3. 整合 AI 核心技术，设计适配内部工作室的 AI 提效工具/模块，深度集成现有生产管线（如自研引擎、DCC 插件等）
+
+4. 深入了解 AIGC 相关技术与业界进展，建立合理的 AI 产出质量与效能评估标准体系
+
+5. 在形成一定的思路和落地实践成绩以后，可以系统性架构海神美术需要的工作能力平台（如有需要）
+
+6. 在攻坚美术流程之余，也希望能进一步切入策划流程进行分析和研究。
+
+**岗位要求：**
+
+1. 本科及以上学历，具备 AIGC/AI 产品背景，有平台/管线搭建产品经验者优先
+
+2. 3 年以上游戏+AI 产品经理经验，有产品从 0 到 1 上线及迭代成功案例
+
+3. 深度掌握 Stable Diffusion, Midjourney, ComfyUI 等主流 AIGC 工具，对模型训练、采样原理、ControlNet 等有实战经验
+
+4. 具备优秀的用户洞察、需求分析及产品设计能力，熟练使用调研、原型设计工具
+
+5. 具备良好跨团队沟通能力、项目推动力及责任心，在复杂工作场景下保障目标落地
+
+---
+
+#### 大数据-data agent产品经理
+
+来源: 网易
+
+📍 杭州 | 🏢 智企事业部 | 📅 不限 | 🎓 不限
+
+**岗位职责：**
+
+1、参与dataagent产品的全生命周期工作，包括市场调研、客户需求分析、产品规划与设计、产品价值与商业推广验证等，端到端负责产品。
+
+2、深入理解B端客户业务场景，挖掘用户在数据处理、业务分析等的痛点，结合LLM、知识图谱、BI分析等特性，设计dataagent产品的核心功能和使用逻辑，帮助客户加速数据价值应用，用AI能力解决业务痛点。
+
+3、推动跨团队协作，协调研发、售前、交付、服务等多团队同学共同保障产品发布与推广验证。
+
+4、持续跟踪DataAgent、智能数据应用等前沿技术动态、竞品发展动态、行业最佳实践，挖掘创新业务机会，输出产品创新方向与解决方案。
+
+**岗位要求：**
+
+1、本科及以上学历，理工科背景，计算机、信息管理、应用数学等相关专业优先。
+
+2、3年以上B端产品经理/产品运营/解决方案等工作经验，有数据治理/数据分析/dataagent类产品经理经验优先，有B端产品经验。
+
+3、对LLM、RAG、agent等相关技术有一定的认知，有实践AI项目优先，有AI工具使用经验。
+
+4、热爱生活，热爱产品，积极向上，热情自信，敢于决策和担责，用热情和真诚打磨产品，主动负责。
+
+5、对AI技术及AI商业应用领域发展趋势有持续关注和独立思考者优先，有AI工具实践经验者优先。
+
+---
+
+#### 具身智能产品经理
+
+来源: 网易
+
+📍 杭州 | 🏢 伏羲机器人 | 📅 5-10年 | 🎓 本科
+
+**岗位职责：**
+
+1.主导产品全周期管理：独立负责工程机器人产品的战略规划、需求定义、原型设计至量产落地，精准定义端侧算法指标、人机交互逻辑与硬件集成方案；
+
+2.驱动商业闭环：深度参与商业模式设计、定价策略与交付路径规划，用产品力支撑营收增长，对关键业务指标（如客户采纳率、复购率）负责；
+
+3.高效协同与赋能：高质量输出PRD/用户手册等文档，主导跨部门评审；指导初级成员，沉淀产品方法论，提升团队作战能力；
+
+4.扎根真实场景：高频深入工地、矿山、港口一线，主导用户调研与真机测试，将客户痛点转化为产品迭代方向，用数据验证产品价值；
+
+5.赋能前线作战：协同商务与交付团队，打造高转化率的解决方案包，参与关键客户技术交流，助力签单与规模化复制。
+
+**岗位要求：**
+
+1.硬核经验：3年以上B端硬件/机器人/智能装备/自动驾驶领域产品经理经验，必须有至少1款产品从0到1成功落地并规模化商用的完整案例（请附项目说明）；
+
+2.技术理解力：熟悉机器人系统架构（感知-决策-控制链路），能与算法/嵌入式工程师高效对话；了解SLAM、路径规划、多传感器融合等关键技术原理；
+
+3.硬件专业度：深入理解工程机械或移动机器人硬件体系（激光雷达、IMU、CAN总线、上/下位机等），具备硬件选型、供应链协作或测试验收经验；
+
+4.行业洞察：拥有自动驾驶、机器人、工程机械、矿山装备或港口自动化领域背景，深刻理解行业作业流程、客户决策逻辑与竞争格局；
+
+5.核心素质：结果导向，具备强推动力与跨部门协作能力；能承受高频出差与现场工作强度；对“机器替人”的产业变革有坚定信念与热情。
+
+---
+
+#### 高级AI产品经理（推荐）
+
+来源: 网易
+
+📍 广州 | 🏢 在线游戏事业部 | 📅 3-5年 | 🎓 本科
+
+**岗位职责：**
+
+1、负责平台生成式 AI 技术在电商交易链路中的应用规划，主导AI智能导购产品的落地建设和持续迭代，利用大模型能力重构“搜索-推荐-转化”路径；
+
+2、定义 AI 输出策略，与算法团队深度联动，通过 GenAI 技术优化非标品特征提取与用户意图理解，显著提升商品推荐的精准度和点击转化率（CTR/CVR）；
+
+3、针对 C2C交易的特点，利用 AI 赋能平台广告投放系统，通过智能生成广告素材、精准圈选人群，全面提升平台活动及广告投放的ROI和转化效率；
+
+4、设计 AI 业务的反馈闭环，建立基于用户行为（搜索、点击、收藏、下单）的数据回流机制，以此驱动模型的持续迭代与调优；
+
+5、与研发、设计、运营、数据团队紧密协作；制定核心监控指标体系，对最终业务结果负责。
+
+**岗位要求：**
+
+1、5 年以上互联网产品经验，其中至少 2 年 AI/算法产品相关经验（有电商推荐或广告算法策略经验者优先）；
+
+2、熟悉 NLP、Machine Learning 及大语言模型（LLM）的基础原理，了解 RAG（检索增强生成）及 Agent 工作流，能与算法工程师同频对话；
+
+3、具备从需求定义、模型调优到上线运营的全流程把控能力；
+
+4、数据敏感，精通 A/B 实验设计与分析，能通过数据归因发现问题并指导产品迭代；
+
+5、具备优秀的跨团队沟通能力和项目推动力，能在 C2C 复杂的供需场景下找到技术与商业的最佳结合点。
+
+---
+
+#### 高级/资深产品经理（AI）
+
+来源: 网易
+
+📍 广州 | 🏢 运营中心 | 📅 不限 | 🎓 本科
+
+**岗位职责：**
+
+1、负责 AI (AIGC+LLM)领域产品的核心产品规划和设计；
+
+2、负责梳理业务需求，调研行业发展趋势，制定切实可行的AI产品策略；
+
+3、负责AI模型的用户体验和反馈分析，持续优化产品力；
+
+4、深入了解AI业务场景、用户需求和痛点，促进业务创新，产品落地；
+
+5、对接和推进组织内部其他相关团队，对AI人工智能的应用，推进业务优化；
+
+6、持续学习前沿的AI大模型领域的新技术，研究AI竞品情况，探索AI业务应用新领域。
+
+**岗位要求：**
+
+1、统招本科以上学历，计算机、人工智能等相关专业优先；
+
+2、有2年以上AI产品设计和产品迭代能力，有游戏产品经验优先；
+
+3、具备扎实产品设计能力，能够深入了解用户需求和痛点，制定切实可行的产品策略，提升用户体验和满意度；
+
+4、具备良好的团队沟通和团队协作能力，与算法技术紧密合作，完成AI产品开发和推广落地；
+
+5、具有创新意识，能够推动团队不断创新，探索AI业务的应用场景；
+
+6、具备强自驱学习力和抗压能力，逻辑强，能适应快速发展和变化的环境。
+
+---
+
+#### 资深AI产品经理
+
+来源: 网易
+
+📍 广州 | 🏢 海神事业部 | 📅 不限 | 🎓 不限
+
+**岗位职责：**
+
+1. 负责对接游戏业务的AI需求，提升游戏品质、生产效率，降低成本。 主要是AI应用层面， 并持续推进落地。对整个AI需求的项目有较好的把控和跟进能力。
+
+2. 负责对接公司其他AI专业部门，了解对方业务，并把对方的AI技术能力持续化为我部门生产力。具备很好的沟通能力， 并及时发现业务推进中的问题。
+
+3. 持续拆解部门游戏业务，持续发现AI可以落地的点。
+
+4. 制定AI内容制作规范和标准，优化制作流程。
+
+5. 推动AI普及， 对主策/核心人员/部门成员进行定期AI推广
+
+6. 编写文档
+
+**岗位要求：**
+
+1. 具备优秀的AI应用能力，用AI解决过一些实际的问题。并且了解比较新的AI发展趋势。 这个职位对视觉AI的能力要求比较多， 但也可以具备其他AI知识，比如各种llm， 这些是加分项。
+
+2. 具备扎实的AI思维和熟悉主流AI各种工具平台。  熟练使用某一款蓝图类工具， prompt较为精通。 训练和调优过lora。对banana、即梦、可灵、mj、sd等其中一部分有了解并层深度使用。
+
+3. 具备良好的产品思维，尤其对于AI不确定性较高的情况下， 能够平衡预期、最终质量、研发消耗和生产效率， 对大局面和技术细节有个大概的判断
+
+4. 对美术、策划及程序的工作方式有充分了解，能够与美术、策划和程序进行有效的项目协同开发，协助解决美术和程序间的技术问题。
+
+5. 能够与团队中各职能人员保持良好的沟通，具备较好的逻辑思维能力，善于自我管理，积极主动。
+
+6. 拥有敏锐的流程优化意识，能够识别生产过程中的瓶颈和重复性工作，并将其转化为AI自动化工作流。有Pipeline/工具链开发经验者优先，了解CI/CD、自动化测试等概念。
+
+7. 本科以上学历。
+
+---
+
+#### 云信-硬件产品经理（AI玩具/陪伴硬件方向）深圳/杭州
+
+来源: 网易
+
+📍 深圳 | 🏢 智企事业部 | 📅 不限 | 🎓 不限
+
+**岗位职责：**
+
+1、市场洞察与规划：关注AI玩具、语音/视觉交互、陪伴类硬件产品趋势，制定产品路线图。
+
+2、产品定义与落地：负责AI智能硬件从概念到量产全流程，包括功能定义、原型机开发、性能指标、交互体验及AI模型融合。
+
+3、项目管理：主导项目计划、样机验证、供应链协调及风险控制，确保交付质量与进度。
+
+4、产业协同：对接AI团队、ODM厂商与IP方，推动产品软硬一体化落地与生态合作。
+
+**岗位要求：**
+
+1、3年以上智能硬件或消费电子产品经验，熟悉语音类设备、智能玩具、穿戴类产品。
+
+2、具备硬件开发流程与供应链协作经验，有2年以上嵌入式开发经验的优先，理解软硬件系统集成。
+
+3、具备项目推进、成本控制与质量管理能力，对项目结果负责。
+
+4、自驱高效，善于跨团队沟通，结果导向。
+
+5、了解AI模型及语音/视觉交互技术的优先，熟悉AI技术在硬件产品中的应用。
+
+---
+
+#### AI产品经理
+
+来源: 网易
+
+📍 杭州 | 🏢 智企事业部 | 📅 0-3年 | 🎓 本科
+
+**岗位职责：**
+
+1、负责AI应用产品的设计和商业化工作。深入客户业务场景，深刻理解和挖掘行业和企业客户需求和痛点，设计AI Agent产品并负责实施落地，完善商业化相关配套设计，达成商业化结果。
+
+2、负责设计并实现多Agent协作机制及Agent平台架构。
+
+3、通过与销售、解决方案、研发、运营等团队的合作，推动产品的GTM工作，确保产品交付质量、客户体验和价值匹配。
+
+4、研究AI技术的发展和应用、跟踪和分析AI市场的动态和趋势，制定并及时调整AI产品策略方向和落地规划。
+
+5、推动组织完善AI Agent产品设计方法论和软件设计研发流程迭代，以适应客户需求及技术、市场的快速变化，加速AI应用成功落地。
+
+**岗位要求：**
+
+1、有2年以上AI产品设计与落地经验，3年以上toB SaaS、PaaS、aPaaS产品设计与商业化经验，能识别业务痛点并通过技术手段提升业务指标。
+
+2、熟悉LLM发展现状与最新动态，了解AI应用最新趋势；清楚LLM能力边界，掌握基于LLM能力和最新工具、平台解决实际业务问题的方法论，日常使用AI编程/分析工具（如Copilot、Claude），能判断AI输出质量。
+
+3、有扎实的toB产品商业化方法论和创新思维，有从0到1并规模化复制推广的经验，具备制定商业模式、定价策略以及渠道拓展的能力。
+
+4、有强大的商业洞察能力和市场分析能力，具备敏锐的判断和快速响应变化的能力，能够在快节奏和不断变化的环境中工作，能评估技术方案对业务的长期影响。
+
+5、有优秀的沟通和人际交往能力，能够与各个层级的团队成员和客户有效沟通。
+
+---
+
+### 腾讯（15）
+
+#### 元宝- AI策略产品经理
+
+🔗 [投递链接](http://careers.tencent.com/jobdesc.html?postId=1986268577531060224) &nbsp;&nbsp; 来源: 腾讯
+
+📍 北京 | 🏢 CSIG | 📅 一年以上工作经验
+
+**岗位职责：**
+
+1.优化Agent能力，通过包括不限于RAG、Tools、Memory等方式，不断提升用户体验；
+
+2.了解行业最新动态，并总结产品创新路径，探索行业最佳实践；
+
+3.抽象沉淀通用组建和能力，完善agent平台能力，提升业务迭代效率。
+
+---
+
+#### 元宝-大模型策略产品（语音方向）
+
+🔗 [投递链接](http://careers.tencent.com/jobdesc.html?postId=1984457397548240896) &nbsp;&nbsp; 来源: 腾讯
+
+📍 北京 | 🏢 CSIG | 📅 三年以上工作经验
+
+**岗位职责：**
+
+1.负责从模型策略、架构设计、交互逻辑等提升端到端的语音效果和影响力；
+
+2.协同算法团队、工程团队、评测团队，从产品视角提出功能优化方向，确保产品体验和用户口碑在市场中处于领先位置；
+
+3.深入挖掘用户需求并提出产品策略，协同交互和设计团队，推动产品创新。
+
+---
+
+#### ima-AI策略产品经理
+
+🔗 [投递链接](http://careers.tencent.com/jobdesc.html?postId=1998225333643530240) &nbsp;&nbsp; 来源: 腾讯
+
+📍 深圳 | 🏢 CSIG | 📅 两年以上工作经验
+
+**岗位职责：**
+
+1.负责 ima 的 AI能力建设，探索结合 AI 技术更好满足用户需求的方案，并快速推动落地；
+
+2.深入洞察业务场景，定义具体场景下的能力理想态，并形成可执行可量化的评估标准，持续发现问题，不断牵引能力升级；
+
+3.跟踪国内外行业趋势及相关产品动态，积极探索产品创新。
+
+---
+
+#### 元宝- AI策略产品经理
+
+🔗 [投递链接](http://careers.tencent.com/jobdesc.html?postId=1925398818564710400) &nbsp;&nbsp; 来源: 腾讯
+
+📍 深圳 | 🏢 CSIG | 📅 两年以上工作经验
+
+**岗位职责：**
+
+1.优化Agent能力，通过包括不限于RAG、Tools、Memory等方式，不断提升用户体验；
+
+2.了解行业最新动态，并总结产品创新路径，探索行业最佳实践；
+
+3.抽象沉淀通用组建和能力，完善Agent平台能力，提升业务迭代效率。
+
+---
+
+#### 元宝-大模型策略产品（语音方向）
+
+🔗 [投递链接](http://careers.tencent.com/jobdesc.html?postId=1984457400769466368) &nbsp;&nbsp; 来源: 腾讯
+
+📍 深圳 | 🏢 CSIG | 📅 三年以上工作经验
+
+**岗位职责：**
+
+1.负责从模型策略、架构设计、交互逻辑等提升端到端的语音效果和影响力；
+
+2.协同算法团队、工程团队、评测团队，从产品视角提出功能优化方向，确保产品体验和用户口碑在市场中处于领先位置；
+
+3.深入挖掘用户需求并提出产品策略，协同交互和设计团队，推动产品创新。
+
+---
+
+#### TAB实验平台-AI产品经理
+
+🔗 [投递链接](http://careers.tencent.com/jobdesc.html?postId=2009148280147169280) &nbsp;&nbsp; 来源: 腾讯
+
+📍 深圳 | 🏢 PCG | 📅 不限
+
+**岗位职责：**
+
+1.负责下一代AI实验评估体系的规划与落地，探索LLM及AI Native产品的科学评估方法论，包括Human Eval与Model-based Eval，对齐OpenAI等业界前沿标准；
+
+2.主导建设针对LLM应用（元宝、ima）的专项实验能力，解决非确定性输出的评估难题；
+
+3.打造实验平台的“AI Agent”，利用LLM能力重构实验流程，包括实验报告自动生成、ChatBot解决实验问题、指标智能归因及异常诊断；
+
+4.探索并落地MCP等开放协议，实现实验平台与业务AI Agent的高效互通与上下文协同；
+
+5.打通“训练-实验-发布”全链路，推动实验平台与模型训练平台、运营系统的深度融合，实现模型迭代的闭环管理；
+
+6.在公司内部推动AI实验文化的普及，建立高阶实验（如Interleaving、社交网络实验）的最佳实践标准。
+
+---
+
+#### 腾讯地图-AI策略产品经理
+
+🔗 [投递链接](http://careers.tencent.com/jobdesc.html?postId=1984165005532221440) &nbsp;&nbsp; 来源: 腾讯
+
+📍 深圳 | 🏢 CSIG | 📅 两年以上工作经验
+
+**岗位职责：**
+
+1.负责腾讯地图AI Agent能力的建设，支持地图出行AI场景，提升用户体验；
+
+2.结合AI技术的发展趋势，探索AI技术在地图出行场景下的创新应用并提出可落地的产品方案；
+
+3.基于目标和场景定义评估标准，分析地图AI效果，基于数据分析驱动解决问题，提升AI效果。
+
+---
+
+#### 元宝-AIGC产品经理
+
+🔗 [投递链接](http://careers.tencent.com/jobdesc.html?postId=2030596831590903808) &nbsp;&nbsp; 来源: 腾讯
+
+📍 北京 | 🏢 CSIG | 📅 三年以上工作经验
+
+**岗位职责：**
+
+1.负责元宝App内AIGC相关产品（图像生成、视频生成、创意工具等）的迭代路径的规划与迭代路径；
+
+2.深入洞察用户需求与行业趋势，探索AIGC在内容创作、社交互动等场景的创新应用，提升产品竞争力与用户体验；
+
+3.协同算法、工程、设计、运营团队，推动产品从0到1的闭环落地，确保项目高质量交付；
+
+4.建立产品数据指标体系，通过用户反馈与数据分析持续优化产品功能，提升核心指标；
+
+5.关注国内外AIGC技术动态与竞品动向，输出前瞻性产品策略，为团队提供方向指导。
+
+---
+
+#### 魔方工作室-后台开发工程师（AIGC产品）
+
+🔗 [投递链接](http://careers.tencent.com/jobdesc.html?postId=2034975551495766016) &nbsp;&nbsp; 来源: 腾讯
+
+📍 深圳 | 🏢 IEG | 📅 五年以上工作经验
+
+**岗位职责：**
+
+1.参与网站产品或API接口的设计与开发，确保代码的质量和执行效率；
+
+2.根据产品需求进行技术方案选型，承担数据库设计、服务端架构优化工作，提升系统的性能和稳定性；
+
+3.遵循编码规范，编写高可用、高扩展、易维护的后端代码，并进行充分的单元测试；
+
+4.负责数据表结构设计，对慢查询进行优化，保障数据的一致性和安全性；
+
+5.负责线上服务器的日常维护、部署上线，快速响应并处理线上突发故障，及时修复Bug，保障系统稳定运行；
+
+6.撰写相关技术设计文档、接口文档和部署手册，做好知识沉淀；
+
+7.与产品经理、前端开发工程师紧密配合，共同推进项目进度，确保产品按时高质量交付。
+
+---
+
+#### AI产品经理-代码智能化产品
+
+🔗 [投递链接](http://careers.tencent.com/jobdesc.html?postId=1867200289648439296) &nbsp;&nbsp; 来源: 腾讯
+
+📍 深圳 | 🏢 TEG | 📅 三年以上工作经验
+
+**岗位职责：**
+
+1.深度洞察开发者用户的需求和体验，跟踪AIGC技术的最新进展，并探索其在代码智能化场景中的创新应用；
+
+2.基于用户调研与市场分析结果，定义代码智能化产品核心应用场景，制定产品规划与阶段性目标，输出并持续完善具体的产品方案；
+
+3.通过数据分析工具，监测产品及策略效果，根据数据结果不断调整和优化产品策略；
+
+4.跨团队协作：与研发、算法、设计等团队紧密协作，推动产品方案的落地。
+
+---
+
+#### 元宝- AI策略产品经理（图片理解方向）
+
+🔗 [投递链接](http://careers.tencent.com/jobdesc.html?postId=2021846194141167616) &nbsp;&nbsp; 来源: 腾讯
+
+📍 北京 | 🏢 CSIG | 📅 一年以上工作经验
+
+**岗位职责：**
+
+1.端到端负责腾讯元宝VLM（图片理解）的链路设计和模型效果，从 0 到 1、从 1 到 N 推动核心能力落地；
+
+2.参与定义元宝在VLM方向上的长期产品形态，从大量数据中抽象出用户需求，和在VLM场景下的亮点功能，推动VLM在用户生活中解决实际问题；
+
+3.为用户体验与模型效果的最终结果负责，直接影响大规模用户的真实写作与工作效率，与算法、数据、评测团队深度协作，共同定义效果目标、评测体系与优化路径，形成可持续演进的产品闭环；
+
+4.将大模型能力沉淀为长期可复用的产品能力，把Prompt、Workflow、Agent等能力转化为稳定、可扩展的产品机制，推动能力在多个VLM场景中持续复用和放大。
+
+---
+
+#### 元宝- AI策略产品经理（图片理解方向）
+
+🔗 [投递链接](http://careers.tencent.com/jobdesc.html?postId=2021846191561666560) &nbsp;&nbsp; 来源: 腾讯
+
+📍 深圳 | 🏢 CSIG | 📅 一年以上工作经验
+
+**岗位职责：**
+
+1.端到端负责腾讯元宝VLM（图片理解）的链路设计和模型效果，从 0 到 1、从 1 到 N 推动核心能力落地；
+
+2.参与定义元宝在VLM方向上的长期产品形态，从大量数据中抽象出用户需求，和在VLM场景下的亮点功能，推动VLM在用户生活中解决实际问题；
+
+3.为用户体验与模型效果的最终结果负责，直接影响大规模用户的真实写作与工作效率，与算法、数据、评测团队深度协作，共同定义效果目标、评测体系与优化路径，形成可持续演进的产品闭环；
+
+4.将大模型能力沉淀为长期可复用的产品能力，把Prompt、Workflow、Agent等能力转化为稳定、可扩展的产品机制，推动能力在多个VLM场景中持续复用和放大。
+
+---
+
+#### Project W-AI产品策划（数据向）
+
+🔗 [投递链接](http://careers.tencent.com/jobdesc.html?postId=2018585811271970816) &nbsp;&nbsp; 来源: 腾讯
+
+📍 深圳 | 🏢 IEG | 📅 三年以上工作经验
+
+**岗位职责：**
+
+1.结合主流LLM能力，设计构建AI原生玩法体验；
+
+2.挖掘用户核心体验诉求 ，定义AI智能体虚拟角色的核心体验及应用场景。做相关产品规划，阶段性目标制定，体验设计及具体方案的输出和跟进；
+
+3.制作完整多模态虚拟角色，包括不限于虚拟角色的性格设定、形象、语音、动作表情、交互及自定义。推动程序美术等各职能紧密协作；
+
+4.构建训练数据及模型输出标准，持续迭代自有模型效果。
+
+---
+
+#### WeGame-高级产品经理-AI产品应用
+
+🔗 [投递链接](http://careers.tencent.com/jobdesc.html?postId=2018950192145006592) &nbsp;&nbsp; 来源: 腾讯
+
+📍 深圳 | 🏢 IEG | 📅 两年以上工作经验
+
+**岗位职责：**
+
+1.AI场景挖掘与定义： 深入洞察 PC 玩家在游戏全生命周期（找游戏、玩游戏、社区交流）中的痛点，定义 WeGame AI 助手及 AI 原生功能的应用场景；
+
+2.产品设计与落地： 负责从 0 到 1 推动 AI 功能的设计与落地。将 LLM（大语言模型）、多模态理解等前沿技术转化为“游戏助手”、“智能社区”等具体的交互体验；
+
+3.智能化演进驱动： 负责平台智能推荐、自动化工具及 AI 交互系统的迭代，推动 WeGame 从传统的“游戏启动器”向“智能游戏伙伴”跃进；
+
+4.跨部门协同： 与算法团队、工程团队及游戏运营团队紧密配合，把控技术实现的可能性与用户体验的平衡点，确保 AI 功能的高质量交付；
+
+5.效果评估与优化： 建立 AI 产品的量化评价体系，通过数据分析与用户反馈持续打磨模型效果，提升用户在 AI 场景下的留存与活跃。
+
+---
+
+#### AI产品经理-AI生成游戏
+
+🔗 [投递链接](http://careers.tencent.com/jobdesc.html?postId=2011285787706019840) &nbsp;&nbsp; 来源: 腾讯
+
+📍 深圳 | 🏢 IEG | 📅 一年以上工作经验
+
+**岗位职责：**
+
+1.制定AI生成游戏产品的整体战略规划和发展路线图，明确产品定位、目标用户和核心价值；
+
+2.基于市场趋势和用户需求，持续优化产品方向，推动AI生成游戏技术的创新应用；
+
+3.设计完整的用户旅程地图，覆盖从需求输入、策划案生成、参数配置到游戏构建的全流程体验；
+
+4.主导LLM对话交互设计，定义AI助手的角色、对话流程和话术规范，确保用户能够自然、高效地表达游戏创意；
+
+5.与AI工程师协作，设计LLM的系统提示词（System Prompt），定义AI的理解能力边界和输出规范；
+
+6.编写需求澄清问题库和对话示例集（Few-shot Examples），提升LLM对游戏需求的理解准确率；
+
+7.建立LLM能力评估体系，通过测试案例持续优化AI理解和生成质量。
+
+---
+
+
+*数据自动采集，更新于 2026-04-14 14:10。仅供求职参考，以各公司官网为准。*

@@ -19,7 +19,7 @@ from src.models import JobPosting, load_jobs_from_json, save_jobs_to_json
 from src.pipeline.normalizer import normalize_jobs
 from src.pipeline.dedup import deduplicate
 from src.pipeline.diff import compute_diff
-from src.pipeline.filter import filter_by_keywords
+from src.pipeline.filter import filter_strict
 from src.report import generate_readme
 from src.notifiers.feishu import send_feishu_notification
 
@@ -123,11 +123,10 @@ def main() -> None:
 
     # --- Phase 2: Process ---
     categories = config.get("categories", {})
-    keywords = config.get("keywords", [])
 
     processed = normalize_jobs(all_raw_jobs, categories)
     processed = deduplicate(processed)
-    processed = filter_by_keywords(processed, keywords)
+    processed = filter_strict(processed)
 
     logger.info("After processing: %d jobs", len(processed))
 

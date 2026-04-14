@@ -72,17 +72,53 @@ class BaiduScraper(BaseScraper):
 
     def _parse_html(self, html: str, keyword: str, city: str) -> list[JobPosting]:
         jobs = []
-        simple_pattern = re.compile(r'([^<（]+)（([A-Z]\d+)）')
+
+        ssr_pattern = re.compile(
+            r'window\.__INITIAL_DATA__\s*=\s*(\{.*?\})\s*(?:;|<)',
+            re.DOTALL,
+        )
+        for m_ssr in ssr_pattern.finditer(html):
+            try:
+                data = json.loads(m_ssr.group(1))
+                post_info = data.get("detailData", {}).get("postInfo", {})
+                if post_info and post_info.get("name"):
+                    name = post_info["name"]
+                    jid_match = re.search(r'（([A-Z]\d+)）', name)
+                    job_id = jid_match.group(1) if jid_match else name[:15]
+                    detail_url = f"https://talent.baidu.com/jobs/social-detail/{job_id}"
+                    job = JobPosting(
+                        job_id=job_id,
+                        platform="baidu",
+                        title=name,
+                        company="百度",
+                        department=post_info.get("businessGroup", ""),
+                        location=post_info.get("workPlace", ""),
+                        education=post_info.get("education", ""),
+                        description=post_info.get("description", ""),
+                        requirements=post_info.get("serviceCondition", ""),
+                        url=detail_url,
+                    )
+                    if not city or city in (job.location or html):
+                        jobs.append(job)
+            except (json.JSONDecodeError, KeyError):
+                continue
+
+        if jobs:
+            return jobs
+
+        simple_pattern = re.compile(r'(?:^|>)([^<>]{4,60}?)（([A-Z]\d+)）')
         for m in simple_pattern.finditer(html):
             raw_title = m.group(1).strip()
-            raw_title = re.sub(r'^(?:span|div|a|li|h\d)>', '', raw_title)
+            raw_title = re.sub(r'^(?:script|span|div|a|li|h\d)>', '', raw_title)
+            if not raw_title or raw_title.startswith("window.") or len(raw_title) < 3:
+                continue
             title = raw_title + f"（{m.group(2)}）"
             job = JobPosting(
                 job_id=m.group(2),
                 platform="baidu",
                 title=title,
                 company="百度",
-                url=f"https://talent.baidu.com/jobs/social-list?search={keyword}",
+                url=f"https://talent.baidu.com/jobs/social-detail/{m.group(2)}",
             )
             if not city or city in html:
                 jobs.append(job)
