@@ -125,6 +125,14 @@ DISPLAY_NAME = {
 }
 
 
+def _company_display_name(jobs: list[JobPosting], platform_key: str) -> str:
+    """Resolve the display name used in jobs/ files for a given platform."""
+    for j in jobs:
+        if j.platform == platform_key and j.company:
+            return j.company
+    return PLATFORM_NAMES.get(platform_key, DISPLAY_NAME.get(platform_key, platform_key))
+
+
 def _generate_overview_section(
     jobs: list[JobPosting],
     platforms_cfg: dict,
@@ -134,7 +142,7 @@ def _generate_overview_section(
     for j in jobs:
         job_counts[j.platform] += 1
 
-    active: list[tuple[str, str, int]] = []    # (key, name, count)
+    active: list[tuple[str, str, str, int]] = []    # (key, display, file_name, count)
     debugging: list[tuple[str, str, int]] = []
     planned: list[tuple[str, str]] = []
 
@@ -143,13 +151,14 @@ def _generate_overview_section(
         enabled = cfg.get("enabled", False)
         count = job_counts.get(key, 0)
         if enabled and count > 0:
-            active.append((key, name, count))
+            file_name = _company_display_name(jobs, key)
+            active.append((key, name, file_name, count))
         elif enabled and count == 0:
             debugging.append((key, name, count))
         else:
             planned.append((key, name))
 
-    active.sort(key=lambda x: -x[2])
+    active.sort(key=lambda x: -x[3])
     debugging.sort(key=lambda x: x[1])
     planned.sort(key=lambda x: x[1])
 
@@ -176,8 +185,9 @@ def _generate_overview_section(
         "| 公司 | 状态 | 岗位数 |",
         "| --- | --- | --- |",
     ])
-    for _key, name, count in active:
-        lines.append(f"| {name} | ✅ 已接入 | {count} |")
+    for _key, name, file_name, count in active:
+        link = f"[{name}](jobs/{file_name}.md)"
+        lines.append(f"| {link} | ✅ 已接入 | {count} |")
     for _key, name, count in debugging:
         lines.append(f"| {name} | 🔧 调试中 | {count} |")
     for _key, name in planned:
@@ -186,7 +196,7 @@ def _generate_overview_section(
 
     # -- 分区列表 --
     if active:
-        names = "、".join(n for _, n, _ in active)
+        names = "、".join(f"[{n}](jobs/{fn}.md)" for _, n, fn, _ in active)
         lines.append(f"**✅ 已接入（{len(active)} 家）**：{names}")
         lines.append("")
     if debugging:
