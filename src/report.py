@@ -2,7 +2,7 @@
 from __future__ import annotations
 
 import logging
-from collections import defaultdict
+from collections import Counter, defaultdict
 from datetime import datetime
 from pathlib import Path
 
@@ -101,6 +101,116 @@ def _render_job(j: JobPosting) -> list[str]:
     return lines
 
 
+DISPLAY_NAME = {
+    "tencent": "腾讯",
+    "quark": "阿里巴巴",
+    "alibaba": "阿里巴巴(集团主站)",
+    "antgroup": "蚂蚁集团",
+    "bytedance": "字节跳动",
+    "baidu": "百度",
+    "netease": "网易",
+    "meituan": "美团",
+    "kuaishou": "快手",
+    "xiaohongshu": "小红书",
+    "jd": "京东",
+    "didi": "滴滴",
+    "huawei": "华为",
+    "boss": "Boss直聘",
+    "liepin": "猎聘",
+    "zhilian": "智联招聘",
+    "job51": "前程无忧",
+    "lagou": "拉勾",
+    "linkedin": "LinkedIn",
+    "maimai": "脉脉",
+}
+
+
+def _company_display_name(jobs: list[JobPosting], platform_key: str) -> str:
+    """Resolve the display name used in jobs/ files for a given platform."""
+    for j in jobs:
+        if j.platform == platform_key and j.company:
+            return j.company
+    return PLATFORM_NAMES.get(platform_key, DISPLAY_NAME.get(platform_key, platform_key))
+
+
+def _generate_overview_section(
+    jobs: list[JobPosting],
+    platforms_cfg: dict,
+) -> list[str]:
+    """Generate filter criteria + data source coverage sections."""
+    job_counts: Counter[str] = Counter()
+    for j in jobs:
+        job_counts[j.platform] += 1
+
+    active: list[tuple[str, str, str, int]] = []    # (key, display, file_name, count)
+    debugging: list[tuple[str, str, int]] = []
+    planned: list[tuple[str, str]] = []
+
+    for key, cfg in platforms_cfg.items():
+        name = DISPLAY_NAME.get(key, cfg.get("name", key))
+        enabled = cfg.get("enabled", False)
+        count = job_counts.get(key, 0)
+        if enabled and count > 0:
+            file_name = _company_display_name(jobs, key)
+            active.append((key, name, file_name, count))
+        elif enabled and count == 0:
+            debugging.append((key, name, count))
+        else:
+            planned.append((key, name))
+
+    active.sort(key=lambda x: -x[3])
+    debugging.sort(key=lambda x: x[1])
+    planned.sort(key=lambda x: x[1])
+
+    lines: list[str] = []
+
+    # -- 筛选条件 --
+    lines.extend([
+        "## 筛选条件",
+        "",
+        "本项目仅追踪符合以下条件的岗位：",
+        "",
+        "- **招聘类型**: 仅社招，排除校招 / 实习 / 应届",
+        "- **学历要求**: 本科及以下，排除硕士 / 博士硬性要求",
+        "- **经验要求**: 3 年及以下，排除「五年以上」等高年限要求",
+        "- **岗位方向**: 必须与 AI / 大模型 / Agent 相关（标题或描述中包含关键词）",
+        "- **排除方向**: 硬件 / 嵌入式 / 芯片 / 安全攻防 / 游戏纯开发 / 运营 / 销售 / 行政等非目标方向",
+        "",
+    ])
+
+    # -- 数据源覆盖 --
+    lines.extend([
+        "## 数据源覆盖",
+        "",
+        "| 公司 | 状态 | 岗位数 |",
+        "| --- | --- | --- |",
+    ])
+    for _key, name, file_name, count in active:
+        link = f"[{name}](jobs/{file_name}.md)"
+        lines.append(f"| {link} | ✅ 已接入 | {count} |")
+    for _key, name, count in debugging:
+        lines.append(f"| {name} | 🔧 调试中 | {count} |")
+    for _key, name in planned:
+        lines.append(f"| {name} | 📋 计划中 | - |")
+    lines.append("")
+
+    # -- 分区列表 --
+    if active:
+        names = "、".join(f"[{n}](jobs/{fn}.md)" for _, n, fn, _ in active)
+        lines.append(f"**✅ 已接入（{len(active)} 家）**：{names}")
+        lines.append("")
+    if debugging:
+        names = "、".join(n for _, n, _ in debugging)
+        lines.append(f"**🔧 调试中（{len(debugging)} 家）**：{names}（爬虫已编写，数据接入调试中）")
+        lines.append("")
+    if planned:
+        names = "、".join(n for _, n in planned)
+        lines.append(f"**📋 计划中（{len(planned)} 家）**：{names}")
+        lines.append("")
+
+    return lines
+
+
 def generate_company_files(jobs: list[JobPosting], jobs_dir: Path) -> dict[str, Path]:
     """Generate per-company markdown files. Returns {company_name: file_path}."""
     jobs_dir.mkdir(parents=True, exist_ok=True)
@@ -141,7 +251,7 @@ def generate_company_files(jobs: list[JobPosting], jobs_dir: Path) -> dict[str, 
     return company_files
 
 
-def generate_readme(jobs: list[JobPosting], output_path: str | Path) -> None:
+def generate_readme(jobs: list[JobPosting], output_path: str | Path, config: dict | None = None) -> None:
     now = datetime.now().strftime("%Y-%m-%d %H:%M")
     project_root = Path(output_path).parent
     jobs_dir = project_root / "jobs"
@@ -188,8 +298,16 @@ def generate_readme(jobs: list[JobPosting], output_path: str | Path) -> None:
         if count:
             lines.append(f"| {cat} | {desc_map.get(cat, '')} | {count} |")
 
+    lines.append("")
+
+    # -- 信息总览：筛选条件 + 数据源覆盖 --
+    platforms_cfg = (config or {}).get("platforms", {})
+    if platforms_cfg:
+        lines.extend(_generate_overview_section(jobs, platforms_cfg))
+        lines.append("---")
+        lines.append("")
+
     lines.extend([
-        "",
         "## 各公司岗位",
         "",
     ])

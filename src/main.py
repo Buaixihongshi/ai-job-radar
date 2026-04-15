@@ -238,7 +238,7 @@ def main() -> None:
     # --- Phase 5: Report ---
     if not args.dry_run:
         project_root = Path(__file__).parent.parent
-        generate_readme(filtered, project_root / "README.md")
+        generate_readme(filtered, project_root / "README.md", config=config)
 
     # --- Phase 6: Notify ---
     if not args.dry_run:
