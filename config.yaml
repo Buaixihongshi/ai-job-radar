@@ -95,25 +95,25 @@ platforms:
     tier: 2
     name: "Boss直聘"
   liepin:
-    enabled: true
+    enabled: false
     tier: 2
     name: "猎聘"
   zhilian:
-    enabled: true
+    enabled: false
     tier: 2
     name: "智联招聘"
   job51:
-    enabled: true
+    enabled: false
     tier: 2
     name: "前程无忧"
   lagou:
-    enabled: true
+    enabled: false
     tier: 2
     name: "拉勾"
 
   # Tier 3: 浏览器自动化
   linkedin:
-    enabled: true
+    enabled: false
     tier: 3
     name: "LinkedIn"
   maimai:
