@@ -2269,5 +2269,23 @@
       "AIGC"
     ],
     "category": "other"
+  },
+  {
+    "job_id": "2016441108523012096",
+    "platform": "tencent",
+    "title": "混元大模型评测平台高级工程师（北京/深圳）",
+    "company": "腾讯",
+    "department": "TEG",
+    "location": "深圳",
+    "experience": "两年以上工作经验",
+    "education": "",
+    "salary": "",
+    "description": "1.负责大模型评测平台的架构设计与核心模块开发，支撑模型全生命周期的评测需求；\n2.设计并优化评测任务调度、数据管理、结果分析等核心系统，保障平台稳定性与可扩展性；\n3.构建自动化评测流水线，提升评测效率与研发迭代速度；\n4.与算法、产品团队紧密协作，理解评测需求并转化为可落地的技术方案。",
+    "requirements": "",
+    "url": "http://careers.tencent.com/jobdesc.html?postId=2016441108523012096",
+    "publish_date": "2026年03月12日",
+    "scraped_at": "2026-04-14 14:50:15",
+    "keywords_matched": [],
+    "category": "Agent评测"
   }
 ]
