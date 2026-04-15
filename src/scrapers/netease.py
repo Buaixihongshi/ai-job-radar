@@ -69,7 +69,7 @@ class NeteaseScraper(BaseScraper):
                     education=item.get("reqEducationName", ""),
                     description=item.get("description", ""),
                     requirements=item.get("requirement", ""),
-                    url=item.get("beeUrl", f"https://hr.163.com/job-detail.html?id={item.get('id', '')}"),
+                    url=item.get("beeUrl") or f"https://hr.163.com/job-detail.html?id={item.get('id', '')}",
                     publish_date=item.get("updateTime", ""),
                     category=item.get("firstPostTypeName", ""),
                 )

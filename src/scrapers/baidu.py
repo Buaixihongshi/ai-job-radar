@@ -85,7 +85,7 @@ class BaiduScraper(BaseScraper):
                     name = post_info["name"]
                     jid_match = re.search(r'（([A-Z]\d+)）', name)
                     job_id = jid_match.group(1) if jid_match else name[:15]
-                    detail_url = f"https://talent.baidu.com/jobs/social-detail/{job_id}"
+                    detail_url = f"https://talent.baidu.com/jobs/social-list?search={job_id}"
                     job = JobPosting(
                         job_id=job_id,
                         platform="baidu",
@@ -118,7 +118,7 @@ class BaiduScraper(BaseScraper):
                 platform="baidu",
                 title=title,
                 company="百度",
-                url=f"https://talent.baidu.com/jobs/social-detail/{m.group(2)}",
+                url=f"https://talent.baidu.com/jobs/social-list?search={m.group(2)}",
             )
             if not city or city in html:
                 jobs.append(job)
@@ -138,6 +138,6 @@ class BaiduScraper(BaseScraper):
             experience=d.get("workYear", ""),
             education=d.get("education", ""),
             description=d.get("description", d.get("responsibility", "")),
-            url=f"https://talent.baidu.com/jobs/social-detail/{jid}",
+            url=f"https://talent.baidu.com/jobs/social-list?search={jid}",
             publish_date=d.get("publishDate", d.get("updateDate", "")),
         )
