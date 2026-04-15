@@ -2,7 +2,8 @@ name: Daily Job Scrape
 
 on:
   schedule:
-    - cron: '0 1 * * *'  # UTC 01:00 = 北京时间 09:00
+    - cron: '0 1 * * *'   # UTC 01:00 = 北京时间 09:00
+    - cron: '0 9 * * *'   # UTC 09:00 = 北京时间 17:00 (下午再跑一次)
   workflow_dispatch:
     inputs:
       platform:
@@ -20,7 +21,7 @@ permissions:
 jobs:
   scrape:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 45
 
     steps:
       - name: Checkout
