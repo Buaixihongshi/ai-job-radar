@@ -33,7 +33,7 @@ from src.scrapers.tencent import TencentScraper
 from src.scrapers.baidu import BaiduScraper
 from src.scrapers.netease import NeteaseScraper
 
-# Tier 1: 公司官网 Playwright
+# Tier 1: 公司官网 Playwright (legacy, kept for fallback)
 from src.scrapers.bytedance import BytedanceScraper
 
 # Tier 2: 第三方招聘平台
@@ -59,8 +59,8 @@ SCRAPER_REGISTRY = {
     "tencent": TencentScraper,
     "baidu": BaiduScraper,
     "netease": NeteaseScraper,
-    # Tier 1: Playwright
-    "bytedance": BytedanceScraper,
+    # Tier 1: Playwright (legacy fallback)
+    # "bytedance": BytedanceScraper,
     # Tier 2 (browser-first for anti-bot)
     "boss": BossScraper,
     "liepin": LiepinScraper,
@@ -81,8 +81,10 @@ STANDALONE_SCRAPERS = {
     "kuaishou": ("src.scrapers.kuaishou", "scrape_kuaishou"),
     "xiaohongshu": ("src.scrapers.xiaohongshu", "scrape_xiaohongshu"),
     "jd": ("src.scrapers.jd", "scrape_jd"),
-    "didi": ("src.scrapers.didi", "scrape_didi"),
     "huawei": ("src.scrapers.huawei", "scrape_huawei"),
+    # bb-browser powered (requires local Chrome + daemon)
+    "bytedance": ("src.scrapers.bytedance_bb", "scrape_bytedance"),
+    "didi": ("src.scrapers.didi_bb", "scrape_didi_bb"),
 }
 
 CITIES = ["北京", "上海", "杭州", "深圳", "广州", "成都", "武汉", "南京"]

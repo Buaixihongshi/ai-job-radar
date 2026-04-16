@@ -1,0 +1,63 @@
+---
+description: bb-browser 集成经验 — 用真实浏览器 DOM 抓取反爬网站的关键注意事项
+globs: src/scrapers/*_bb.py,adapters/**/*.js
+alwaysApply: false
+---
+
+# bb-browser 爬虫集成经验
+
+## 核心原理
+
+bb-browser 通过 Chrome DevTools Protocol (CDP) 连接到用户真实运行的 Chrome 浏览器，可以在页面上下文中执行 JavaScript，绕过反爬检测。Python 端通过 subprocess 调用 `bb-browser eval/open/tab` 等命令。
+
+## 关键踩坑点
+
+### 1. 多标签页 CDP 定位混乱
+
+`bb-browser eval` 默认操作 CDP 认定的「活跃标签」。当打开大量标签时，活跃标签可能不是你期望的那个。
+
+**解决方案：**
+- 避免使用 `bb-browser open`（每次新开标签），改用 `bb-browser eval "window.location.href = 'URL'"` 在同一标签内导航
+- 运行爬虫前确保 Chrome 标签页数量最少
+- 如果 active tab 漂移，用循环关闭非目标标签直到目标标签变为 active
+
+### 2. `--tab <tabId>` 参数不可靠
+
+bb-browser 0.8.x 的 `--tab` 参数对 `eval`/`snapshot` 不生效，eval 始终操作第一个 active target。不要依赖此参数切换标签。
+
+### 3. SPA 页面翻页
+
+不同网站的翻页机制不同：
+- **字节跳动** (`jobs.bytedance.com`): 传统 URL 参数翻页 (`?current=N&limit=10`)，可用 `window.location.href` 直接跳转
+- **滴滴** (`talent.didiglobal.com`): Ant Design SPA，URL 路由不触发数据刷新，必须通过 JS 点击分页组件 `document.querySelector('.ant-pagination-item').querySelector('a').click()`
+
+### 4. `bb-browser fetch` vs `eval`
+
+- `fetch` 命令：仅 GET 请求，带 cookies，可跨域，适合获取 SSR HTML 或试探 API
+- `eval` 命令：在页面上下文执行 JS，可调用 `fetch()` 发 POST，但受同源策略限制
+- 如果目标站是 CSR（客户端渲染），`bb-browser fetch` 只能拿到空壳 HTML，必须用 `eval` 从渲染后的 DOM 提取数据
+
+### 5. Network 抓包限制
+
+`bb-browser network requests` 仅返回建立监听后的请求。页面加载完后再调用会返回空。需要在页面刷新前用 `eval` 注入 `fetch/XHR` 拦截器。
+
+## DOM 提取模板
+
+```javascript
+// 字节跳动岗位提取
+document.querySelectorAll('a[href*="/position/"]').forEach(a => {
+  var href = a.getAttribute('href');
+  var match = href.match(/\/experienced\/position\/(\w+)/);
+  // 从 span 提取标题，从 textContent 正则提取城市/部门
+});
+
+// 滴滴岗位提取 — 格式: "标题 (JRxxx)部门 / 类型 / 城市日期"
+text.match(/^(.+?)\s*\(([A-Z][A-Za-z0-9]+)\)(.+?)\/(.*?)\/(.*)/);
+```
+
+## 运行前置条件
+
+1. Chrome 已打开并登录目标网站（字节/滴滴）
+2. `bb-browser` CLI 已安装 (`npm i -g bb-browser`)
+3. bb-browser daemon 无需手动启动（0.8.x 会自动连接）
+4. 尽量只保留 1-2 个标签页，避免 CDP active target 漂移
