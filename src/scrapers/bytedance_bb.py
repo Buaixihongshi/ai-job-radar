@@ -49,7 +49,7 @@ JS_EXTRACT = r"""
     var jid = idm ? idm[1] : pid;
     if (title) {
       jobs.push({id: pid, jid: jid, title: title, city: city, dept: dept,
-                 url: 'https://jobs.bytedance.com/experienced/position/' + pid});
+                 url: 'https://jobs.bytedance.com/experienced/position/' + pid + '/detail'});
     }
   }
   return JSON.stringify({count: jobs.length, jobs: jobs});
