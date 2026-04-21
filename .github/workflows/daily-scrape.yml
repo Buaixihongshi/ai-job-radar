@@ -114,6 +114,7 @@ jobs:
           import json, shutil, os
           from pathlib import Path
           from src.models import JobPosting, load_jobs_from_json, save_jobs_to_json
+          from src.db import upsert_jobs, init_db
           from src.pipeline.dedup import deduplicate
           from src.pipeline.diff import compute_diff
           from src.report import generate_readme
@@ -138,7 +139,13 @@ jobs:
           previous = load_jobs_from_json("data/jobs.json")
           diff = compute_diff(merged, previous) if merged else compute_diff(previous, previous)
 
-          save_jobs_to_json(merged or previous, "data/jobs.json")
+          final_jobs = merged or previous
+          save_jobs_to_json(final_jobs, "data/jobs.json")
+
+          # Upsert into SQLite - DB already contains historical data from git checkout.
+          # first_seen is preserved for existing jobs; new jobs get today as first_seen.
+          db_counts = upsert_jobs(final_jobs)
+          print(f"SQLite upsert: {db_counts}")
 
           # copy daily files
           for src_dir in ["data-tier1/daily", "data-tier2/daily"]:
@@ -147,12 +154,12 @@ jobs:
                   for f in os.listdir(src_dir):
                       shutil.copy2(os.path.join(src_dir, f), os.path.join("data/daily", f))
 
-          generate_readme(merged or previous, Path("README.md"), config=config)
+          generate_readme(final_jobs, Path("README.md"), config=config)
           print(f"Diff: {diff.summary()}")
 
           webhook = os.environ.get("FEISHU_WEBHOOK_URL")
           if webhook and diff.has_changes:
-              send_feishu_notification(webhook, diff, total_active=len(merged or previous))
+              send_feishu_notification(webhook, diff, total_active=len(final_jobs))
           PYEOF
 
       - name: Commit and push
@@ -164,6 +171,7 @@ jobs:
           # moving HEAD to origin/main, eliminating rebase conflicts on data files.
           git fetch origin main
           git reset --mixed origin/main
+          # data/ includes jobs.json, jobs.db (SQLite history), and daily/ snapshots
           git add data/ README.md jobs/
           if git diff --staged --quiet; then
             echo "No changes to commit"
