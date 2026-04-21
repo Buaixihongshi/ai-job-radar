@@ -82,6 +82,10 @@ STANDALONE_SCRAPERS = {
     "xiaohongshu": ("src.scrapers.xiaohongshu", "scrape_xiaohongshu"),
     "jd": ("src.scrapers.jd", "scrape_jd"),
     "huawei": ("src.scrapers.huawei", "scrape_huawei"),
+    # Feishu Jobs (飞书招聘) - MiniMax, 智谱AI
+    "feishu": ("src.scrapers.feishu", "scrape_feishu"),
+    # MokaHR - DeepSeek, Kimi
+    "moka": ("src.scrapers.moka", "scrape_moka"),
     # bb-browser powered (requires local Chrome + daemon)
     "bytedance": ("src.scrapers.bytedance_bb", "scrape_bytedance"),
     "didi": ("src.scrapers.didi_bb", "scrape_didi_bb"),

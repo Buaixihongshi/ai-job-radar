@@ -88,6 +88,14 @@ platforms:
     enabled: true
     tier: 1
     name: "华为"
+  feishu:
+    enabled: true
+    tier: 1
+    name: "飞书招聘(MiniMax/智谱AI)"
+  moka:
+    enabled: true
+    tier: 1
+    name: "MokaHR(DeepSeek/Kimi)"
 
   # Tier 2: 第三方招聘平台（已升级为 Playwright）
   boss:
