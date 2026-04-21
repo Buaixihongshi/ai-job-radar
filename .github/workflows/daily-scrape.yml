@@ -164,5 +164,6 @@ jobs:
             echo "No changes to commit"
           else
             git commit -m "chore: daily job update $(date +%Y-%m-%d) [skip ci]"
+            git pull --rebase origin main
             git push
           fi
