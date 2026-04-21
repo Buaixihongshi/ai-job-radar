@@ -1,0 +1,155 @@
+"""Scraper for jobs.feishu.cn (飞书招聘) - 支持多家公司.
+
+DOM 提取：从 a[data-id] 卡片中获取标题、城市、描述，
+通过点击分页按钮翻页（最多 MAX_PAGES 页）。
+
+当前覆盖：MiniMax、智谱AI。
+"""
+from __future__ import annotations
+
+import json
+import logging
+import random
+import time
+
+from src.models import JobPosting
+
+logger = logging.getLogger(__name__)
+
+# (显示名称, 飞书租户 subdomain)
+FEISHU_COMPANIES = [
+    ("MiniMax", "vrfi1sk8a0"),
+    ("智谱AI", "zhipu-ai"),
+]
+
+MAX_PAGES = 8
+
+JS_EXTRACT = """
+(function() {
+  var items = document.querySelectorAll('a[data-id]');
+  var jobs = [];
+  for (var i = 0; i < items.length; i++) {
+    var el = items[i];
+    var jid = el.getAttribute('data-id');
+    var titleEl = el.querySelector('.positionItem-title-text');
+    var title = titleEl ? titleEl.textContent.trim() : '';
+    var subtitleSpans = el.querySelectorAll('.positionItem-subTitle span');
+    var city = subtitleSpans.length > 0 ? subtitleSpans[0].textContent.trim() : '';
+    var descEl = el.querySelector('[class*=jobDesc]');
+    var desc = descEl ? descEl.textContent.trim() : '';
+    var href = el.getAttribute('href');
+    if (jid && title) {
+      jobs.push({id: jid, title: title, city: city, desc: desc, href: href || ''});
+    }
+  }
+  return JSON.stringify(jobs);
+})()
+"""
+
+JS_NEXT_PAGE = """
+(function() {
+  var activeItem = document.querySelector('.atsx-pagination-item-active');
+  if (!activeItem) return 'no-pagination';
+  var next = activeItem.nextElementSibling;
+  while (next) {
+    var cls = next.className || '';
+    if (cls.includes('atsx-pagination-item') && !cls.includes('jump') && !cls.includes('ellipsis')) {
+      next.click();
+      return 'clicked:' + next.textContent.trim();
+    }
+    next = next.nextElementSibling;
+  }
+  return 'no-next';
+})()
+"""
+
+
+def scrape_feishu() -> list[JobPosting]:
+    from playwright.sync_api import sync_playwright
+    try:
+        from playwright_stealth import Stealth
+        stealth = Stealth()
+    except ImportError:
+        stealth = None
+
+    all_jobs: list[JobPosting] = []
+    seen_ids: set[str] = set()
+
+    with sync_playwright() as pw:
+        browser = pw.chromium.launch(headless=True)
+        context = browser.new_context(
+            user_agent=(
+                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+            ),
+            viewport={"width": 1920, "height": 1080},
+            locale="zh-CN",
+        )
+        page = context.new_page()
+        if stealth:
+            stealth.apply_stealth_sync(page)
+
+        for company_name, subdomain in FEISHU_COMPANIES:
+            url = f"https://{subdomain}.jobs.feishu.cn/index/"
+            logger.info("[feishu] scraping %s (%s)", company_name, url)
+
+            try:
+                page.goto(url, wait_until="domcontentloaded", timeout=25000)
+                page.wait_for_selector("a[data-id]", timeout=12000)
+            except Exception:
+                logger.warning("[feishu] page load failed for %s", company_name)
+                continue
+
+            company_count = 0
+            for page_no in range(1, MAX_PAGES + 1):
+                page.wait_for_timeout(1200)
+
+                raw = page.evaluate(JS_EXTRACT)
+                try:
+                    items = json.loads(raw)
+                except Exception:
+                    items = []
+
+                new_count = 0
+                for it in items:
+                    jid = str(it.get("id", ""))
+                    if not jid or jid in seen_ids:
+                        continue
+                    seen_ids.add(jid)
+                    new_count += 1
+
+                    href = it.get("href", "")
+                    job_url = (
+                        f"https://{subdomain}.jobs.feishu.cn{href}"
+                        if href.startswith("/")
+                        else f"https://{subdomain}.jobs.feishu.cn/index/position/{jid}/detail"
+                    )
+
+                    all_jobs.append(JobPosting(
+                        job_id=jid,
+                        platform="feishu",
+                        company=company_name,
+                        title=it.get("title", ""),
+                        location=it.get("city", ""),
+                        description=it.get("desc", ""),
+                        url=job_url,
+                    ))
+
+                company_count += new_count
+                logger.info("[feishu] %s page=%d items=%d new=%d", company_name, page_no, len(items), new_count)
+
+                if new_count == 0:
+                    break
+
+                result = page.evaluate(JS_NEXT_PAGE)
+                if result in ("no-next", "no-pagination"):
+                    break
+
+                time.sleep(random.uniform(0.8, 1.5))
+
+            logger.info("[feishu] %s done: %d jobs", company_name, company_count)
+
+        browser.close()
+
+    logger.info("[feishu] total: %d", len(all_jobs))
+    return all_jobs
