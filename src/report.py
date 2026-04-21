@@ -211,6 +211,79 @@ def _generate_overview_section(
     return lines
 
 
+def _generate_trend_section(db_path: Path) -> list[str]:
+    """Generate a trend analysis section from SQLite history.
+
+    Returns an empty list if the DB doesn't exist or has insufficient history
+    (< 2 distinct dates), so the README degrades gracefully on first run.
+    """
+    if not db_path.exists():
+        return []
+    try:
+        from src.analytics.trend import TrendAnalyzer
+        analyzer = TrendAnalyzer(db_path)
+        lifetimes = analyzer.job_lifetimes()
+        if not lifetimes:
+            return []
+
+        # Need at least 2 different first_seen dates to show meaningful trends
+        dates = {j["first_seen"] for j in lifetimes}
+        if len(dates) < 2:
+            return []
+
+        lines: list[str] = ["## 📈 招聘趋势分析", ""]
+
+        # ── 1. 持续在招
+        persistent = analyzer.long_lived_jobs(min_days=14)[:10]
+        if persistent:
+            lines += [
+                "### 持续在招岗位（≥14天，竞争相对较低）",
+                "",
+                "| 岗位 | 公司 | 已上线天数 | 首次发现 |",
+                "| --- | --- | --- | --- |",
+            ]
+            for j in persistent:
+                lines.append(
+                    f"| {j['title']} | {j['company']} | {j['active_days']}天 | {j['first_seen']} |"
+                )
+            lines.append("")
+
+        # ── 2. 快速下架
+        quick = analyzer.quick_filled_jobs(max_days=7)[:8]
+        if quick:
+            lines += [
+                "### 快速下架岗位（≤7天已消失，竞争激烈）",
+                "",
+                "| 岗位 | 公司 | 在线天数 | 下架时间 |",
+                "| --- | --- | --- | --- |",
+            ]
+            for j in quick:
+                lines.append(
+                    f"| {j['title']} | {j['company']} | {j['active_days']}天 | {j['last_seen']} |"
+                )
+            lines.append("")
+
+        # ── 3. 高频技能词
+        skills = analyzer.skill_frequency(days=30, active_only=True)[:15]
+        if skills:
+            lines += [
+                "### JD 高频技能词（近30天在招岗位）",
+                "",
+                "| 技能 | 出现次数 |",
+                "| --- | --- |",
+            ]
+            for skill, cnt in skills:
+                lines.append(f"| {skill} | {cnt} |")
+            lines.append("")
+
+        lines += ["---", ""]
+        return lines
+
+    except Exception:
+        logger.debug("Trend section generation failed (non-fatal)", exc_info=True)
+        return []
+
+
 def generate_company_files(jobs: list[JobPosting], jobs_dir: Path) -> dict[str, Path]:
     """Generate per-company markdown files. Returns {company_name: file_path}."""
     jobs_dir.mkdir(parents=True, exist_ok=True)
@@ -251,10 +324,19 @@ def generate_company_files(jobs: list[JobPosting], jobs_dir: Path) -> dict[str, 
     return company_files
 
 
-def generate_readme(jobs: list[JobPosting], output_path: str | Path, config: dict | None = None) -> None:
+def generate_readme(
+    jobs: list[JobPosting],
+    output_path: str | Path,
+    config: dict | None = None,
+    db_path: Path | None = None,
+) -> None:
     now = datetime.now().strftime("%Y-%m-%d %H:%M")
-    project_root = Path(output_path).parent
+    output_path = Path(output_path)
+    project_root = output_path.parent
     jobs_dir = project_root / "jobs"
+
+    if db_path is None:
+        db_path = project_root / "data" / "jobs.db"
 
     company_files = generate_company_files(jobs, jobs_dir)
 
@@ -307,6 +389,11 @@ def generate_readme(jobs: list[JobPosting], output_path: str | Path, config: dic
         lines.append("---")
         lines.append("")
 
+    # -- 趋势分析（从 SQLite 历史数据生成，初次运行自动跳过）--
+    trend_lines = _generate_trend_section(db_path)
+    if trend_lines:
+        lines.extend(trend_lines)
+
     lines.extend([
         "## 各公司岗位",
         "",
@@ -351,6 +438,5 @@ def generate_readme(jobs: list[JobPosting], output_path: str | Path, config: dic
         "",
     ])
 
-    output_path = Path(output_path)
     output_path.write_text("\n".join(lines), encoding="utf-8")
     logger.info("README generated: %s (%d jobs, %d companies)", output_path, len(jobs), len(company_files))
