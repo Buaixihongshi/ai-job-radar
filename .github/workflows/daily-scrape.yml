@@ -159,11 +159,15 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          # Sync to latest remote main BEFORE committing to guarantee fast-forward push.
+          # Using reset --mixed keeps the generated files in the working tree while
+          # moving HEAD to origin/main, eliminating rebase conflicts on data files.
+          git fetch origin main
+          git reset --mixed origin/main
           git add data/ README.md jobs/
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
             git commit -m "chore: daily job update $(date +%Y-%m-%d) [skip ci]"
-            git pull --rebase origin main
             git push
           fi
