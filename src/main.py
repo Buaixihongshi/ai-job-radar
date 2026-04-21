@@ -14,15 +14,19 @@ import re
 import signal
 import sys
 import threading
+import time
 from collections import Counter
-from concurrent.futures import ThreadPoolExecutor, as_completed, TimeoutError
+from concurrent.futures import ThreadPoolExecutor, TimeoutError
+from dataclasses import dataclass, field
 from datetime import datetime
 from pathlib import Path
 
 from src.config import load_config, get_data_dir, get_feishu_webhook_url
+from src.db import upsert_jobs, log_scrape_run
 from src.models import JobPosting, load_jobs_from_json, save_jobs_to_json
 from src.pipeline.normalizer import normalize_jobs
 from src.pipeline.dedup import deduplicate
+from src.pipeline.detail_fetcher import enrich_with_details
 from src.pipeline.diff import compute_diff
 from src.pipeline.filter import filter_strict
 from src.report import generate_readme
@@ -53,6 +57,44 @@ logging.basicConfig(
     datefmt="%H:%M:%S",
 )
 logger = logging.getLogger("ai-job-radar")
+
+
+# ── Per-platform health tracking ─────────────────────────────────────────────
+
+@dataclass
+class PlatformResult:
+    platform: str
+    status: str = "pending"       # pending / success / timeout / error
+    raw_count: int = 0
+    filtered_count: int = 0
+    duration: float = 0.0
+    error_msg: str = ""
+
+
+def _print_health_report(results: list[PlatformResult]) -> None:
+    """Print a structured health report to stdout; always shown in CI logs."""
+    total_raw = sum(r.raw_count for r in results)
+    total_filtered = sum(r.filtered_count for r in results)
+    ok = [r for r in results if r.status == "success"]
+    fail = [r for r in results if r.status in ("timeout", "error")]
+
+    sep = "=" * 60
+    print(f"\n{sep}")
+    print(f"  SCRAPER HEALTH REPORT")
+    print(f"  Platforms: {len(results)}  OK: {len(ok)}  FAILED: {len(fail)}")
+    print(f"  Raw jobs: {total_raw}   Filtered jobs: {total_filtered}")
+    print(sep)
+    for r in sorted(results, key=lambda x: x.status):
+        icon = "✓" if r.status == "success" else ("⏱" if r.status == "timeout" else "✗")
+        line = (
+            f"  {icon} {r.platform:<20} "
+            f"raw={r.raw_count:>4}  filtered={r.filtered_count:>4}  "
+            f"time={r.duration:>6.1f}s  [{r.status}]"
+        )
+        if r.error_msg:
+            line += f"\n       └─ {r.error_msg[:120]}"
+        print(line)
+    print(sep + "\n")
 
 SCRAPER_REGISTRY = {
     # Tier 1: API
@@ -127,6 +169,7 @@ def main() -> None:
     parser.add_argument("--tier", type=int, help="Run only scrapers of this tier (1/2/3)")
     parser.add_argument("--dry-run", action="store_true", help="Skip notification and report generation")
     parser.add_argument("--config", type=str, help="Path to config.yaml")
+    parser.add_argument("--enrich-details", action="store_true", help="Fetch full JD from detail pages after filtering")
     args = parser.parse_args()
 
     config = load_config(args.config)
@@ -180,17 +223,30 @@ def main() -> None:
 
     # --- Phase 1: Scrape (with per-platform timeout) ---
     all_raw_jobs: list[JobPosting] = []
+    health_results: list[PlatformResult] = []
 
     for pname in platform_names:
+        pr = PlatformResult(platform=pname)
+        health_results.append(pr)
+        t0 = time.monotonic()
         try:
             with ThreadPoolExecutor(max_workers=1) as executor:
                 future = executor.submit(_scrape_one, pname)
                 jobs = future.result(timeout=PLATFORM_TIMEOUT)
-                logger.info("[%s] raw jobs: %d", pname, len(jobs))
-                all_raw_jobs.extend(jobs)
+            pr.raw_count = len(jobs)
+            pr.duration = time.monotonic() - t0
+            pr.status = "success"
+            logger.info("[%s] raw jobs: %d", pname, len(jobs))
+            all_raw_jobs.extend(jobs)
         except TimeoutError:
+            pr.status = "timeout"
+            pr.duration = time.monotonic() - t0
+            pr.error_msg = f"exceeded {PLATFORM_TIMEOUT}s"
             logger.warning("[%s] TIMEOUT after %ds, skipping", pname, PLATFORM_TIMEOUT)
-        except Exception:
+        except Exception as exc:
+            pr.status = "error"
+            pr.duration = time.monotonic() - t0
+            pr.error_msg = str(exc)[:200]
             logger.error("[%s] scraper failed", pname, exc_info=True)
 
     logger.info("Total raw jobs from all platforms: %d", len(all_raw_jobs))
@@ -212,12 +268,23 @@ def main() -> None:
     filtered = filter_strict(processed)
     logger.info("After filter: %d jobs", len(filtered))
 
+    if args.enrich_details and filtered:
+        logger.info("Enriching job details...")
+        enrich_with_details(filtered, max_workers=3)
+
     cats = Counter(j.category for j in filtered)
     for c, n in cats.most_common():
         logger.info("  %s: %d", c, n)
     companies = Counter((j.company or j.platform) for j in filtered)
     for p, n in companies.most_common():
         logger.info("  %s: %d", p, n)
+
+    # Update per-platform filtered counts for health report
+    filtered_by_platform = Counter((j.company or j.platform) for j in filtered)
+    for pr in health_results:
+        pr.filtered_count = filtered_by_platform.get(
+            platforms_cfg.get(pr.platform, {}).get("name", pr.platform), 0
+        )
 
     # --- Phase 3: Diff ---
     jobs_file = data_dir / "jobs.json"
@@ -235,6 +302,27 @@ def main() -> None:
     # --- Phase 4: Save ---
     save_jobs_to_json(filtered, str(jobs_file))
     save_jobs_to_json(filtered, str(daily_dir / f"{today}.json"))
+
+    # SQLite dual-write
+    try:
+        db_counts = upsert_jobs(filtered)
+        logger.info("SQLite upsert: %s", db_counts)
+    except Exception:
+        logger.warning("SQLite upsert failed (non-fatal)", exc_info=True)
+
+    # Log per-platform health to DB
+    for pr in health_results:
+        try:
+            log_scrape_run(
+                platform=pr.platform,
+                raw_count=pr.raw_count,
+                filtered_count=pr.filtered_count,
+                duration=pr.duration,
+                status=pr.status,
+                error_msg=pr.error_msg,
+            )
+        except Exception:
+            pass
 
     if diff.removed_jobs:
         archive_dir = data_dir / "archive"
@@ -259,6 +347,9 @@ def main() -> None:
             send_feishu_notification(webhook_url, diff, total_active=len(filtered))
         elif not webhook_url:
             logger.info("FEISHU_WEBHOOK_URL not set, skipping notification")
+
+    # --- Health Report (always printed for CI log visibility) ---
+    _print_health_report(health_results)
 
     logger.info("Done. %d active jobs, %s", len(filtered), diff.summary())
 

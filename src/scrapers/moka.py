@@ -60,29 +60,12 @@ JS_EXTRACT = """
 
 
 def scrape_moka() -> list[JobPosting]:
-    from playwright.sync_api import sync_playwright
-    try:
-        from playwright_stealth import Stealth
-        stealth = Stealth()
-    except ImportError:
-        stealth = None
+    from src.scrapers.browser_base import playwright_page
 
     all_jobs: list[JobPosting] = []
     seen_ids: set[str] = set()
 
-    with sync_playwright() as pw:
-        browser = pw.chromium.launch(headless=True)
-        context = browser.new_context(
-            user_agent=(
-                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-                "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
-            ),
-            viewport={"width": 1920, "height": 1080},
-            locale="zh-CN",
-        )
-        page = context.new_page()
-        if stealth:
-            stealth.apply_stealth_sync(page)
+    with playwright_page() as page:
 
         for company_name, org_slug, org_id in MOKA_COMPANIES:
             base = f"https://app.mokahr.com/social-recruitment/{org_slug}/{org_id}"
@@ -125,10 +108,8 @@ def scrape_moka() -> list[JobPosting]:
                     url=job_url,
                 ))
 
-            logger.info("[moka] %s done: %d jobs", company_name, company_count)
-            time.sleep(random.uniform(1.0, 2.0))
-
-        browser.close()
+                logger.info("[moka] %s done: %d jobs", company_name, company_count)
+                time.sleep(random.uniform(1.0, 2.0))
 
     logger.info("[moka] total: %d", len(all_jobs))
     return all_jobs

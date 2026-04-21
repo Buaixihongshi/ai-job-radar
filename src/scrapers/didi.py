@@ -17,25 +17,11 @@ BASE_URL = "https://talent.didiglobal.com/social"
 
 
 def scrape_didi() -> list[JobPosting]:
-    from playwright.sync_api import sync_playwright
-    try:
-        from playwright_stealth import Stealth
-        stealth = Stealth()
-    except ImportError:
-        stealth = None
+    from src.scrapers.browser_base import playwright_page
 
     all_items: dict[str, dict] = {}
 
-    with sync_playwright() as pw:
-        browser = pw.chromium.launch(headless=True)
-        context = browser.new_context(
-            user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
-            viewport={"width": 1920, "height": 1080},
-            locale="zh-CN",
-        )
-        page = context.new_page()
-        if stealth:
-            stealth.apply_stealth_sync(page)
+    with playwright_page() as page:
 
         for kw in KEYWORDS:
             captured: list[dict] = []
@@ -102,7 +88,6 @@ def scrape_didi() -> list[JobPosting]:
             ))
 
         logger.info("[didi] total: %d", len(jobs))
-        browser.close()
 
     return jobs
 

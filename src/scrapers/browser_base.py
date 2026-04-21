@@ -5,11 +5,79 @@ import os
 import random
 import time
 from abc import ABC, abstractmethod
+from contextlib import contextmanager
 from pathlib import Path
+from typing import Generator
 
 from src.models import JobPosting
 
 logger = logging.getLogger(__name__)
+
+
+# ── Standalone helper ────────────────────────────────────────────────────────
+
+@contextmanager
+def playwright_page(
+    headless: bool = True,
+    locale: str = "zh-CN",
+    user_agent: str = (
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+    ),
+    viewport: dict | None = None,
+    stealth: bool = True,
+) -> Generator:
+    """Context manager that yields a configured Playwright page.
+
+    Usage::
+
+        from src.scrapers.browser_base import playwright_page
+
+        def scrape_xxx() -> list[JobPosting]:
+            with playwright_page() as page:
+                page.goto("https://...")
+                ...
+    """
+    from playwright.sync_api import sync_playwright
+
+    vp = viewport or {"width": 1920, "height": 1080}
+    proxy = os.environ.get("PROXY_URL")
+
+    pw = sync_playwright().start()
+    try:
+        launch_args: dict = {
+            "headless": headless,
+            "args": ["--no-sandbox", "--disable-blink-features=AutomationControlled"],
+        }
+        if proxy:
+            launch_args["proxy"] = {"server": proxy}
+
+        browser = pw.chromium.launch(**launch_args)
+        context = browser.new_context(
+            user_agent=user_agent,
+            viewport=vp,
+            locale=locale,
+            timezone_id="Asia/Shanghai",
+        )
+        page = context.new_page()
+
+        if stealth:
+            try:
+                from playwright_stealth import Stealth
+                Stealth().apply_stealth_sync(page)
+            except ImportError:
+                logger.debug("playwright_stealth not installed, skipping stealth")
+
+        yield page
+    finally:
+        try:
+            browser.close()
+        except Exception:
+            pass
+        try:
+            pw.stop()
+        except Exception:
+            pass
 
 COOKIES_DIR = Path(__file__).parent.parent.parent / "data" / ".cookies"
 
