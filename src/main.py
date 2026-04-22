@@ -270,7 +270,7 @@ def main() -> None:
 
     if args.enrich_details and filtered:
         logger.info("Enriching job details...")
-        enrich_with_details(filtered, max_workers=3)
+        enrich_with_details(filtered, http_max_workers=3)
 
     cats = Counter(j.category for j in filtered)
     for c, n in cats.most_common():
