@@ -3,7 +3,8 @@
 DOM 提取：从 a[data-id] 卡片中获取标题、城市、描述，
 通过点击分页按钮翻页（最多 MAX_PAGES 页）。
 
-当前覆盖：MiniMax、智谱AI。
+FEISHU_COMPANIES 格式：(显示名称, subdomain, 可选路径)
+  标准路径为 /index/；如公司使用自定义路径，显式指定第三个参数。
 """
 from __future__ import annotations
 
@@ -16,10 +17,16 @@ from src.models import JobPosting
 
 logger = logging.getLogger(__name__)
 
-# (显示名称, 飞书租户 subdomain)
-FEISHU_COMPANIES = [
-    ("MiniMax", "vrfi1sk8a0"),
-    ("智谱AI", "zhipu-ai"),
+# (显示名称, 飞书租户 subdomain, 可选路径前缀)
+# 标准路径 = /index/，百川等使用自定义二级路径
+FEISHU_COMPANIES: list[tuple[str, str, str]] = [
+    # ── 已有 ──────────────────────────────────────────────────────
+    ("MiniMax",  "vrfi1sk8a0",  "/index/"),
+    ("智谱AI",   "zhipu-ai",    "/index/"),
+    # ── 新增 ──────────────────────────────────────────────────────
+    ("商汤科技", "sensetime",   "/index/"),
+    ("零一万物", "01ai",        "/index/"),
+    ("百川智能", "cq6qe6bvfr6", "/baichuanzhaopin/"),
 ]
 
 MAX_PAGES = 8
@@ -72,8 +79,9 @@ def scrape_feishu() -> list[JobPosting]:
 
     with playwright_page() as page:
 
-        for company_name, subdomain in FEISHU_COMPANIES:
-            url = f"https://{subdomain}.jobs.feishu.cn/index/"
+        for entry in FEISHU_COMPANIES:
+            company_name, subdomain, path = entry
+            url = f"https://{subdomain}.jobs.feishu.cn{path}"
             logger.info("[feishu] scraping %s (%s)", company_name, url)
 
             try:
@@ -105,7 +113,7 @@ def scrape_feishu() -> list[JobPosting]:
                     job_url = (
                         f"https://{subdomain}.jobs.feishu.cn{href}"
                         if href.startswith("/")
-                        else f"https://{subdomain}.jobs.feishu.cn/index/position/{jid}/detail"
+                        else f"https://{subdomain}.jobs.feishu.cn{path}position/{jid}/detail"
                     )
 
                     all_jobs.append(JobPosting(

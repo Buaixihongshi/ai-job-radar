@@ -234,6 +234,75 @@ def _batch_xiaohongshu(jobs: list[JobPosting]) -> None:
 register_batch_fetcher("xiaohongshu", _batch_xiaohongshu)
 
 
+# ── 京东 ──────────────────────────────────────────────────────────────────────
+
+_JS_JD = """
+(function() {
+  var selectors = [
+    '[class*="job-desc"]', '[class*="position-desc"]',
+    '[class*="jd-content"]', '[class*="detail-info"]',
+    '.job-detail', 'article', '[class*="content-main"]'
+  ];
+  for (var i = 0; i < selectors.length; i++) {
+    var el = document.querySelector(selectors[i]);
+    if (el && el.innerText && el.innerText.trim().length > 100) {
+      return el.innerText.trim().substring(0, 3000);
+    }
+  }
+  return '';
+})()
+"""
+
+
+def _batch_jd(jobs: list[JobPosting]) -> None:
+    _playwright_batch_fetch(
+        jobs,
+        platform="jd",
+        extract_js=_JS_JD,
+        url_fn=lambda j: j.url or f"https://zhaopin.jd.com/web/job/job_info/{j.job_id}",
+        delay=2.0,
+    )
+
+
+register_batch_fetcher("jd", _batch_jd)
+
+
+# ── 华为 ──────────────────────────────────────────────────────────────────────
+
+_JS_HUAWEI = """
+(function() {
+  var selectors = [
+    '[class*="job-detail"]', '[class*="position-info"]',
+    '[class*="detail-content"]', '[class*="jd-desc"]',
+    '.recruit-detail', 'article', '[class*="content-area"]'
+  ];
+  for (var i = 0; i < selectors.length; i++) {
+    var el = document.querySelector(selectors[i]);
+    if (el && el.innerText && el.innerText.trim().length > 100) {
+      return el.innerText.trim().substring(0, 3000);
+    }
+  }
+  return '';
+})()
+"""
+
+
+def _batch_huawei(jobs: list[JobPosting]) -> None:
+    _playwright_batch_fetch(
+        jobs,
+        platform="huawei",
+        extract_js=_JS_HUAWEI,
+        url_fn=lambda j: j.url or (
+            f"https://career.huawei.com/reccampportal/portal5/"
+            f"social-recruitment-detail.html?jobId={j.job_id}"
+        ),
+        delay=2.5,
+    )
+
+
+register_batch_fetcher("huawei", _batch_huawei)
+
+
 # ── Public API ────────────────────────────────────────────────────────────────
 
 def enrich_with_details(

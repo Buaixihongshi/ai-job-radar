@@ -24,6 +24,8 @@ PLATFORM_NAMES = {
     "jd": "京东",
     "didi": "滴滴",
     "huawei": "华为",
+    "feishu": "飞书招聘",
+    "moka": "MokaHR",
     "boss": "Boss直聘",
     "liepin": "猎聘",
     "zhilian": "智联招聘",

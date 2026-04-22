@@ -268,7 +268,7 @@ platforms:
   feishu:
     enabled: true
     tier: 1
-    name: "飞书招聘(MiniMax/智谱AI)"
+    name: "飞书招聘(MiniMax/智谱AI/商汤/零一万物/百川)"
   moka:
     enabled: true
     tier: 1
