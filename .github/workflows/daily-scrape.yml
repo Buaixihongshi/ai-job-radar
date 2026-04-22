@@ -38,11 +38,11 @@ jobs:
           FEISHU_SECRET: ${{ secrets.FEISHU_SECRET }}
         run: |
           if [ -n "${{ github.event.inputs.platform }}" ]; then
-            python -m src.main --platform "${{ github.event.inputs.platform }}"
+            python -m src.main --platform "${{ github.event.inputs.platform }}" --enrich-details
           elif [ -n "${{ github.event.inputs.tier }}" ]; then
-            python -m src.main --tier "${{ github.event.inputs.tier }}"
+            python -m src.main --tier "${{ github.event.inputs.tier }}" --enrich-details
           else
-            python -m src.main --tier 1
+            python -m src.main --tier 1 --enrich-details
           fi
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
@@ -152,6 +152,14 @@ jobs:
           # first_seen is preserved for existing jobs; new jobs get today as first_seen.
           db_counts = upsert_jobs(final_jobs)
           print(f"SQLite upsert: {db_counts}")
+
+          # Enrich missing descriptions via HTTP fetchers (Tencent, Baidu).
+          # Playwright-based fetchers already ran in the tier1/tier2 scrape steps.
+          from src.pipeline.detail_fetcher import enrich_with_details
+          no_desc = [j for j in final_jobs if len((j.description or '') + (j.requirements or '')) < 50]
+          if no_desc:
+              print(f"Enriching {len(no_desc)} jobs with HTTP detail fetchers...")
+              enrich_with_details(final_jobs)
 
           # copy daily files
           for src_dir in ["data-tier1/daily", "data-tier2/daily"]:

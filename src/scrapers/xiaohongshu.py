@@ -13,29 +13,28 @@ logger = logging.getLogger(__name__)
 
 KEYWORDS = ["测试", "AI", "Agent", "评测", "质量", "算法", "大模型", "AIGC", "LLM"]
 
+# Common field names seen in XHS position detail API responses
+_DESC_KEYS  = ["positionDesc", "description", "jobDescription", "content", "duty", "responsibility"]
+_REQ_KEYS   = ["positionReq", "requirement", "jobRequirement", "qualification", "serviceCondition"]
+_EXP_KEYS   = ["workYear", "workExperience", "experience", "experienceRequire"]
+_EDU_KEYS   = ["education", "educationRequire", "degree"]
+
+
+def _pick(data: dict, keys: list[str]) -> str:
+    for k in keys:
+        v = data.get(k, "")
+        if v and isinstance(v, str) and len(v.strip()) > 3:
+            return v.strip()
+    return ""
+
 
 def scrape_xiaohongshu() -> list[JobPosting]:
-    from playwright.sync_api import sync_playwright
-    try:
-        from playwright_stealth import Stealth
-        stealth = Stealth()
-    except ImportError:
-        stealth = None
+    from src.scrapers.browser_base import playwright_page
 
     all_jobs: list[JobPosting] = []
     seen_ids: set[str] = set()
 
-    with sync_playwright() as pw:
-        browser = pw.chromium.launch(headless=True)
-        context = browser.new_context(
-            user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
-            viewport={"width": 1920, "height": 1080},
-            locale="zh-CN",
-        )
-        page = context.new_page()
-        if stealth:
-            stealth.apply_stealth_sync(page)
-
+    with playwright_page() as page:
         for kw in KEYWORDS:
             try:
                 page.goto(
@@ -64,8 +63,8 @@ def scrape_xiaohongshu() -> list[JobPosting]:
                     lines = [l.strip() for l in text.split("\n") if l.strip()]
                     if len(lines) >= 2:
                         title = lines[0]
-                        dept = lines[1] if len(lines) > 1 else ""
-                        loc = lines[2] if len(lines) > 2 else ""
+                        dept  = lines[1] if len(lines) > 1 else ""
+                        loc   = lines[2] if len(lines) > 2 else ""
                         all_jobs.append(JobPosting(
                             job_id=pid,
                             platform="xiaohongshu",
@@ -80,38 +79,66 @@ def scrape_xiaohongshu() -> list[JobPosting]:
             except Exception:
                 logger.warning("[xiaohongshu] keyword=%s failed", kw, exc_info=True)
 
+        # Fetch details for relevant jobs
         relevant_kw = ["测试", "评测", "质量", "QA", "Agent", "AI", "大模型"]
         relevant = [j for j in all_jobs if any(k in j.title for k in relevant_kw)]
         logger.info("[xiaohongshu] fetching details for %d relevant jobs", len(relevant))
 
-        for j in relevant[:25]:
+        for j in relevant[:30]:
             try:
                 detail_data: dict = {}
 
-                def handler(resp):
+                def handler(resp, _dd=detail_data):
                     ct = resp.headers.get("content-type", "")
                     if resp.status == 200 and "json" in ct and "position" in resp.url:
                         try:
-                            data = resp.json()
-                            if isinstance(data, dict) and "data" in data:
-                                detail_data.update(data.get("data", {}))
+                            raw = resp.json()
+                            # Unwrap common envelope patterns
+                            payload = raw
+                            for key in ("data", "result", "content"):
+                                if isinstance(payload, dict) and key in payload:
+                                    payload = payload[key]
+                            if isinstance(payload, dict) and len(payload) > 2:
+                                _dd.update(payload)
                         except Exception:
                             pass
 
                 page.on("response", handler)
-                page.goto(j.url, wait_until="domcontentloaded", timeout=10000)
-                page.wait_for_timeout(2000)
+                page.goto(j.url, wait_until="domcontentloaded", timeout=12000)
+                page.wait_for_timeout(2500)
                 page.remove_listener("response", handler)
 
                 if detail_data:
-                    j.description = detail_data.get("positionDesc", detail_data.get("description", ""))
-                    j.requirements = detail_data.get("positionReq", detail_data.get("requirement", ""))
-                    j.experience = detail_data.get("workYear", "")
-                    j.education = detail_data.get("education", "")
+                    j.description  = _pick(detail_data, _DESC_KEYS)
+                    j.requirements = _pick(detail_data, _REQ_KEYS)
+                    j.experience   = _pick(detail_data, _EXP_KEYS)
+                    j.education    = _pick(detail_data, _EDU_KEYS)
+                    logger.debug("[xiaohongshu] detail ok: %s desc_len=%d",
+                                 j.title[:40], len(j.description))
+
+                if not j.description:
+                    # Fallback: DOM extraction
+                    raw_text = page.evaluate("""
+                    (function() {
+                        var selectors = [
+                            '[class*="description"]', '[class*="position-info"]',
+                            '[class*="job-detail"]', '.job-desc', '.position-desc',
+                            '[class*="detail-content"]'
+                        ];
+                        for (var i = 0; i < selectors.length; i++) {
+                            var el = document.querySelector(selectors[i]);
+                            if (el && el.innerText && el.innerText.trim().length > 50) {
+                                return el.innerText.trim().substring(0, 3000);
+                            }
+                        }
+                        return '';
+                    })()
+                    """)
+                    if raw_text and len(raw_text.strip()) > 50:
+                        j.description = raw_text.strip()
+
             except Exception:
-                pass
+                logger.debug("[xiaohongshu] detail skip for %s", j.job_id)
 
-        logger.info("[xiaohongshu] total: %d", len(all_jobs))
-        browser.close()
-
+    logger.info("[xiaohongshu] total: %d", len(all_jobs))
     return all_jobs
