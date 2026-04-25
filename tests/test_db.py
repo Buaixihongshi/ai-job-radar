@@ -99,3 +99,41 @@ class TestRunLog:
         history = get_run_history(days=30, db_path=tmp_db)
         assert history[0]["status"] == "error"
         assert "page load" in history[0]["error_msg"]
+
+
+class TestCircuitBreaker:
+    def test_no_history_returns_false(self, tmp_db):
+        from src.db import check_circuit_breaker
+        assert check_circuit_breaker("boss", 3, tmp_db) is False
+
+    def test_fewer_runs_than_threshold(self, tmp_db):
+        from src.db import check_circuit_breaker
+        log_scrape_run("boss", raw_count=0, filtered_count=0, duration=1, db_path=tmp_db)
+        log_scrape_run("boss", raw_count=0, filtered_count=0, duration=1, db_path=tmp_db)
+        assert check_circuit_breaker("boss", 3, tmp_db) is False
+
+    def test_consecutive_zeros_trips(self, tmp_db):
+        from src.db import check_circuit_breaker
+        for _ in range(3):
+            log_scrape_run("boss", raw_count=0, filtered_count=0, duration=1, db_path=tmp_db)
+        assert check_circuit_breaker("boss", 3, tmp_db) is True
+
+    def test_one_success_resets(self, tmp_db):
+        from src.db import check_circuit_breaker
+        log_scrape_run("boss", raw_count=0, filtered_count=0, duration=1, db_path=tmp_db)
+        log_scrape_run("boss", raw_count=10, filtered_count=5, duration=1, db_path=tmp_db)
+        log_scrape_run("boss", raw_count=0, filtered_count=0, duration=1, db_path=tmp_db)
+        assert check_circuit_breaker("boss", 3, tmp_db) is False
+
+    def test_error_status_does_not_trip(self, tmp_db):
+        from src.db import check_circuit_breaker
+        for _ in range(3):
+            log_scrape_run("boss", raw_count=0, filtered_count=0, duration=1,
+                           status="error", db_path=tmp_db)
+        assert check_circuit_breaker("boss", 3, tmp_db) is False
+
+    def test_other_platform_unaffected(self, tmp_db):
+        from src.db import check_circuit_breaker
+        for _ in range(3):
+            log_scrape_run("boss", raw_count=0, filtered_count=0, duration=1, db_path=tmp_db)
+        assert check_circuit_breaker("tencent", 3, tmp_db) is False

@@ -23,7 +23,7 @@ from datetime import datetime
 from pathlib import Path
 
 from src.config import load_config, get_data_dir, get_feishu_webhook_url
-from src.db import upsert_jobs, log_scrape_run
+from src.db import upsert_jobs, log_scrape_run, check_circuit_breaker
 from src.models import JobPosting, load_jobs_from_json, save_jobs_to_json
 from src.pipeline.normalizer import normalize_jobs
 from src.pipeline.dedup import deduplicate
@@ -192,6 +192,21 @@ def main() -> None:
         ]
 
     platform_names.sort(key=lambda n: platforms_cfg.get(n, {}).get("tier", 99))
+
+    # Circuit breaker: skip platforms that returned 0 jobs for N consecutive runs.
+    circuit_breaker_days = config.get("circuit_breaker_days", 3)
+    db_path = data_dir / "jobs.db"
+    tripped: list[str] = []
+    for pname in list(platform_names):
+        if check_circuit_breaker(pname, circuit_breaker_days, db_path):
+            tripped.append(pname)
+            platform_names.remove(pname)
+    if tripped:
+        logger.warning(
+            "Circuit breaker tripped (raw=0 for %d consecutive runs): %s — skipping",
+            circuit_breaker_days, ", ".join(tripped),
+        )
+
     logger.info("Platforms to scrape: %s", platform_names)
 
     PLATFORM_TIMEOUT = 300  # 5 minutes max per platform

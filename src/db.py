@@ -181,6 +181,37 @@ def log_scrape_run(
         )
 
 
+def check_circuit_breaker(
+    platform: str,
+    consecutive_days: int = 3,
+    db_path: Path = DB_PATH,
+) -> bool:
+    """Return True if the platform should be **skipped** (circuit open).
+
+    A platform is tripped when its most recent *consecutive_days* runs all
+    have ``raw_count == 0`` and ``status == 'success'`` (i.e. the scraper ran
+    normally but found nothing — likely anti-scraping block, not a code bug).
+
+    Returns ``False`` (circuit closed, OK to scrape) when:
+    - fewer than *consecutive_days* runs exist, or
+    - any recent run had ``raw_count > 0``, or
+    - any recent run had a non-success status (we only trip on silent failures).
+    """
+    if not db_path.exists():
+        return False
+    init_db(db_path)
+    with _conn(db_path) as con:
+        rows = con.execute(
+            "SELECT raw_count, status FROM scrape_runs "
+            "WHERE platform = ? ORDER BY id DESC LIMIT ?",
+            (platform, consecutive_days),
+        ).fetchall()
+
+    if len(rows) < consecutive_days:
+        return False
+    return all(r["raw_count"] == 0 and r["status"] == "success" for r in rows)
+
+
 def query_jobs(
     platform: str | None = None,
     active_only: bool = True,

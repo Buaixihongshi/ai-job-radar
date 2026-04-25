@@ -172,6 +172,9 @@ filter_rules:
     - "平台产品经理"
     - "计算平台"
 
+# 反爬熔断：某平台连续 N 次抓取 raw_count=0 时自动跳过
+circuit_breaker_days: 3
+
 keywords:
   - "大模型测试"
   - "AI测试"
