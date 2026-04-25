@@ -135,9 +135,70 @@ def _company_display_name(jobs: list[JobPosting], platform_key: str) -> str:
     return PLATFORM_NAMES.get(platform_key, DISPLAY_NAME.get(platform_key, platform_key))
 
 
+def _generate_freshness_table(db_path: Path, platforms_cfg: dict) -> list[str]:
+    """Generate a per-platform data freshness table from scrape_runs history."""
+    try:
+        from src.db import get_platform_freshness
+        rows = get_platform_freshness(db_path)
+    except Exception:
+        return []
+    if not rows:
+        return []
+
+    def _age_label(run_date_str: str) -> str:
+        """Human-readable age like '2小时前', '3天前'."""
+        for fmt in ("%Y-%m-%d %H:%M:%S", "%Y-%m-%d"):
+            try:
+                dt = datetime.strptime(run_date_str, fmt)
+                break
+            except ValueError:
+                continue
+        else:
+            return run_date_str
+        delta = datetime.now() - dt
+        hours = delta.total_seconds() / 3600
+        if hours < 1:
+            return "刚刚"
+        if hours < 24:
+            return f"{int(hours)}小时前"
+        days = int(hours / 24)
+        return f"{days}天前"
+
+    def _status_icon(status: str) -> str:
+        if status == "success":
+            return "🟢"
+        if status == "error":
+            return "🔴"
+        return "🟡"
+
+    lines = [
+        "### 数据抓取鲜度",
+        "",
+        "| 平台 | 最近抓取 | 状态 | 原始 → 入库 | 在库岗位 |",
+        "| --- | --- | --- | --- | --- |",
+    ]
+    enabled_platforms = {k for k, v in platforms_cfg.items() if v.get("enabled")}
+    for r in rows:
+        pf = r["platform"]
+        if pf not in enabled_platforms:
+            continue
+        name = DISPLAY_NAME.get(pf, platforms_cfg.get(pf, {}).get("name", pf))
+        age = _age_label(r["last_run"])
+        icon = _status_icon(r["status"])
+        raw = r.get("raw_count", 0)
+        filtered = r.get("filtered_count", 0)
+        active = r.get("active_jobs", 0)
+        ratio = f"{raw} → {filtered}" if raw > 0 else f"{filtered}"
+        lines.append(f"| {name} | {age} | {icon} | {ratio} | {active} |")
+
+    lines.append("")
+    return lines
+
+
 def _generate_overview_section(
     jobs: list[JobPosting],
     platforms_cfg: dict,
+    db_path: Path | None = None,
 ) -> list[str]:
     """Generate filter criteria + data source coverage sections."""
     job_counts: Counter[str] = Counter()
@@ -209,6 +270,12 @@ def _generate_overview_section(
         names = "、".join(n for _, n in planned)
         lines.append(f"**📋 计划中（{len(planned)} 家）**：{names}")
         lines.append("")
+
+    # -- 数据抓取鲜度 --
+    if db_path is not None:
+        freshness_lines = _generate_freshness_table(db_path, platforms_cfg)
+        if freshness_lines:
+            lines.extend(freshness_lines)
 
     return lines
 
@@ -387,7 +454,7 @@ def generate_readme(
     # -- 信息总览：筛选条件 + 数据源覆盖 --
     platforms_cfg = (config or {}).get("platforms", {})
     if platforms_cfg:
-        lines.extend(_generate_overview_section(jobs, platforms_cfg))
+        lines.extend(_generate_overview_section(jobs, platforms_cfg, db_path=db_path))
         lines.append("---")
         lines.append("")
 
