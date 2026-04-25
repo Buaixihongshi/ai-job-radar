@@ -279,12 +279,12 @@ def main() -> None:
     for p, n in companies.most_common():
         logger.info("  %s: %d", p, n)
 
-    # Update per-platform filtered counts for health report
-    filtered_by_platform = Counter((j.company or j.platform) for j in filtered)
+    # Update per-platform filtered counts for health report.
+    # Key by j.platform (stable identifier) so multi-company platforms like
+    # feishu (MiniMax/智谱AI/...) and moka (DeepSeek/Kimi) aggregate correctly.
+    filtered_by_platform = Counter(j.platform for j in filtered)
     for pr in health_results:
-        pr.filtered_count = filtered_by_platform.get(
-            platforms_cfg.get(pr.platform, {}).get("name", pr.platform), 0
-        )
+        pr.filtered_count = filtered_by_platform.get(pr.platform, 0)
 
     # --- Phase 3: Diff ---
     jobs_file = data_dir / "jobs.json"
