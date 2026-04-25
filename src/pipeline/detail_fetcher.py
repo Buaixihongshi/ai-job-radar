@@ -354,8 +354,11 @@ def enrich_with_details(
                 text = _REGISTRY[job.platform](job)
                 if text:
                     job.description = text
-            except Exception:
-                pass
+            except Exception as exc:
+                logger.debug(
+                    "Detail enrich failed for %s/%s: %s",
+                    job.platform, job.job_id, exc,
+                )
 
         with ThreadPoolExecutor(max_workers=http_max_workers) as pool:
             futures = [pool.submit(_enrich_one, j) for j in http_jobs]

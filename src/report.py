@@ -239,7 +239,7 @@ def _generate_trend_section(db_path: Path) -> list[str]:
         persistent = analyzer.long_lived_jobs(min_days=14)[:10]
         if persistent:
             lines += [
-                "### 持续在招岗位（≥14天，竞争相对较低）",
+                "### 近两周仍在招（≥14天，关注度较高）",
                 "",
                 "| 岗位 | 公司 | 已上线天数 | 首次发现 |",
                 "| --- | --- | --- | --- |",
