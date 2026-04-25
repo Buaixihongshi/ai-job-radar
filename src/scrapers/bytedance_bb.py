@@ -1,22 +1,42 @@
-"""ByteDance job scraper using bb-browser (DOM-based).
+"""ByteDance job scraper using bb-browser.
 
-Navigates jobs.bytedance.com in the user's real Chrome, extracts job
-listings from the rendered DOM, and paginates through results.
+Two strategies, attempted in order:
+
+1. **API path** — runs ``adapters/bytedance/search.js`` in the active tab via
+   ``bb_run_adapter``. The adapter directly hits jobs.bytedance.com's internal
+   ``/api/v1/search/position`` endpoint, returning structured fields
+   (description, requirements, …) and supporting offset-based pagination.
+
+2. **DOM fallback** — original behaviour: navigate the search results page and
+   extract job cards from the rendered DOM. Used when the API path returns no
+   data (e.g. internal API changed) so the scraper always degrades gracefully.
+
+Both paths require the user's real Chrome to be open and logged in to
+jobs.bytedance.com so that cookies and same-origin policy let us reach the
+internal API.
 """
 from __future__ import annotations
 
 import logging
 import time
 import urllib.parse
+from pathlib import Path
 
 from src.models import JobPosting
-from src.scrapers.bb_base import bb_eval, bb_is_available
+from src.scrapers.bb_base import bb_eval, bb_is_available, bb_run_adapter
 
 logger = logging.getLogger(__name__)
 
 BASE_URL = "https://jobs.bytedance.com/experienced/position"
+ADAPTER_PATH = Path(__file__).parent.parent.parent / "adapters" / "bytedance" / "search.js"
+
+# DOM strategy
 PAGE_SIZE = 10
 MAX_PAGES = 8
+
+# API strategy (adapter)
+API_PAGE_SIZE = 50
+API_MAX_PAGES = 6
 
 KEYWORDS = [
     "大模型测试", "AI测试", "算法测试", "测试开发",
@@ -83,7 +103,7 @@ def _navigate(url: str, wait: float = 3.0) -> bool:
 
 
 def _extract_page() -> list[dict]:
-    """Run JS extraction on the current page."""
+    """Run JS extraction on the current page (DOM fallback path)."""
     data = bb_eval(JS_EXTRACT, timeout=10)
     if isinstance(data, dict):
         return data.get("jobs", [])
@@ -134,6 +154,108 @@ def _ensure_on_bytedance() -> bool:
     return False
 
 
+# ── API path via adapter ─────────────────────────────────────────────────────
+
+
+def _fetch_via_api(keyword: str, page: int, page_size: int = API_PAGE_SIZE) -> list[dict]:
+    """Fetch one page of results by running the JS adapter in the active tab.
+
+    Returns a list of normalized dicts with keys
+    ``jobId / title / department / city / description / requirements / url``.
+    Empty list on error or when adapter signals failure.
+    """
+    offset = (page - 1) * page_size
+    try:
+        result = bb_run_adapter(
+            ADAPTER_PATH,
+            {"keyword": keyword, "limit": page_size, "offset": offset},
+            timeout=20,
+        )
+    except (RuntimeError, FileNotFoundError) as exc:
+        logger.debug("[bytedance_bb] adapter call failed for %s: %s", keyword, exc)
+        return []
+
+    if not isinstance(result, dict):
+        return []
+    if "error" in result:
+        logger.debug("[bytedance_bb] adapter reported error: %s", result.get("error"))
+        return []
+
+    jobs = result.get("jobs", [])
+    return jobs if isinstance(jobs, list) else []
+
+
+def _store_api_jobs(items: list[dict], all_jobs: dict[str, JobPosting]) -> int:
+    """Convert adapter items into JobPosting and merge into *all_jobs*. Returns new count."""
+    new_count = 0
+    for it in items:
+        pid = str(it.get("jobId", ""))
+        if not pid or pid in all_jobs:
+            continue
+        all_jobs[pid] = JobPosting(
+            job_id=pid,
+            platform="bytedance",
+            title=it.get("title", ""),
+            company="字节跳动",
+            department=it.get("department", ""),
+            location=it.get("city", ""),
+            description=it.get("description", ""),
+            requirements=it.get("requirements", ""),
+            url=it.get("url", ""),
+        )
+        new_count += 1
+    return new_count
+
+
+# ── DOM path (legacy fallback) ───────────────────────────────────────────────
+
+
+def _scrape_keyword_via_dom(kw: str, all_jobs: dict[str, JobPosting]) -> int:
+    """DOM fallback: navigate paginated search and extract from cards. Returns total new."""
+    if not _navigate(_build_url(kw, 1), wait=3.0):
+        logger.warning("[bytedance_bb][dom] nav failed for keyword=%s", kw)
+        return 0
+
+    total_pages = min(_has_pagination() or 1, MAX_PAGES)
+    logger.info("[bytedance_bb][dom] kw=%s total_pages=%d (capped %d)", kw, total_pages, MAX_PAGES)
+
+    total_new = 0
+    for page in range(1, total_pages + 1):
+        if page > 1:
+            if not _navigate(_build_url(kw, page), wait=2.0):
+                logger.warning("[bytedance_bb][dom] page %d nav failed", page)
+                break
+
+        items = _extract_page()
+        if not items:
+            logger.info("[bytedance_bb][dom] page %d: no items, stopping", page)
+            break
+
+        new_count = 0
+        for item in items:
+            pid = str(item.get("id", ""))
+            if not pid or pid in all_jobs:
+                continue
+            all_jobs[pid] = JobPosting(
+                job_id=pid,
+                platform="bytedance",
+                title=item.get("title", ""),
+                company="字节跳动",
+                department=item.get("dept", ""),
+                location=item.get("city", ""),
+                url=item.get("url", ""),
+            )
+            new_count += 1
+        total_new += new_count
+
+        logger.info("[bytedance_bb][dom] kw=%s page=%d fetched=%d new=%d total=%d",
+                    kw, page, len(items), new_count, len(all_jobs))
+    return total_new
+
+
+# ── Orchestrator ─────────────────────────────────────────────────────────────
+
+
 def scrape_bytedance() -> list[JobPosting]:
     if not bb_is_available():
         logger.warning("[bytedance_bb] bb-browser not available, skipping")
@@ -144,47 +266,34 @@ def scrape_bytedance() -> list[JobPosting]:
         return []
 
     all_jobs: dict[str, JobPosting] = {}
+    use_api = ADAPTER_PATH.exists()
+    api_first_failed = False
 
     for kw in KEYWORDS:
         logger.info("[bytedance_bb] keyword=%s", kw)
-        if not _navigate(_build_url(kw, 1), wait=3.0):
-            logger.warning("[bytedance_bb] nav failed for keyword=%s", kw)
-            continue
 
-        total_pages = min(_has_pagination() or 1, MAX_PAGES)
-        logger.info("[bytedance_bb] keyword=%s total_pages=%d (capped %d)", kw, total_pages, MAX_PAGES)
+        if use_api and not api_first_failed:
+            page = 1
+            api_jobs = _fetch_via_api(kw, page=page)
+            if not api_jobs:
+                logger.info("[bytedance_bb][api] empty for kw=%s; will retry next kw", kw)
+                if not all_jobs:
+                    logger.info("[bytedance_bb] API path returned no data on first keyword; "
+                                "switching to DOM fallback for the rest")
+                    api_first_failed = True
+            else:
+                while api_jobs and page <= API_MAX_PAGES:
+                    new_count = _store_api_jobs(api_jobs, all_jobs)
+                    logger.info("[bytedance_bb][api] kw=%s page=%d fetched=%d new=%d total=%d",
+                                kw, page, len(api_jobs), new_count, len(all_jobs))
+                    if new_count == 0 or len(api_jobs) < API_PAGE_SIZE:
+                        break
+                    page += 1
+                    api_jobs = _fetch_via_api(kw, page=page)
+                time.sleep(1)
+                continue
 
-        for page in range(1, total_pages + 1):
-            if page > 1:
-                if not _navigate(_build_url(kw, page), wait=2.0):
-                    logger.warning("[bytedance_bb] page %d nav failed", page)
-                    break
-
-            items = _extract_page()
-            if not items:
-                logger.info("[bytedance_bb] page %d: no items, stopping", page)
-                break
-
-            new_count = 0
-            for item in items:
-                pid = str(item.get("id", ""))
-                if not pid or pid in all_jobs:
-                    continue
-                job = JobPosting(
-                    job_id=pid,
-                    platform="bytedance",
-                    title=item.get("title", ""),
-                    company="字节跳动",
-                    department=item.get("dept", ""),
-                    location=item.get("city", ""),
-                    url=item.get("url", ""),
-                )
-                all_jobs[pid] = job
-                new_count += 1
-
-            logger.info("[bytedance_bb] kw=%s page=%d fetched=%d new=%d total=%d",
-                        kw, page, len(items), new_count, len(all_jobs))
-
+        _scrape_keyword_via_dom(kw, all_jobs)
         time.sleep(1)
 
     logger.info("[bytedance_bb] done, total unique jobs: %d", len(all_jobs))

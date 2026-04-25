@@ -16,6 +16,9 @@ logger = logging.getLogger(__name__)
 BB_CMD = "bb-browser"
 ADAPTERS_DIR = Path(__file__).parent.parent.parent / "adapters"
 
+# bb-browser 0.8.x 不会自动扫描 ~/.bb-browser/sites/ 下的私有 adapter，
+# 因此我们用 bb_eval 直接执行 adapter JS（IIFE 形式），不依赖 CLI 注册。
+
 
 def bb_is_available() -> bool:
     """Check if bb-browser CLI is installed and can talk to Chrome."""
@@ -98,8 +101,37 @@ def bb_run_site(command: str, args: dict | None = None, timeout: int = 30) -> di
         raise RuntimeError(f"bb-browser returned non-JSON: {stdout[:200]}")
 
 
+def bb_run_adapter(adapter_path: str | Path, args: dict | None = None,
+                   timeout: int = 30) -> dict | list | str | int | None:
+    """Execute a project adapter JS file in the active tab via ``bb_eval``.
+
+    The adapter file must define a single top-level ``async function(args) {…}``
+    expression (optionally preceded by a ``/* @meta … */`` block). We wrap it
+    as an IIFE and call it with the provided *args* dict.
+
+    The active tab must already be on the adapter's expected origin so that
+    ``fetch('/api/...')`` calls go to the right server with cookies.
+
+    Returns whatever the adapter returns (after envelope unwrapping by
+    ``bb_eval``), typically a dict like ``{count, jobs: [...]}``.
+    """
+    path = Path(adapter_path)
+    if not path.exists():
+        raise FileNotFoundError(f"adapter not found: {path}")
+
+    js_body = path.read_text(encoding="utf-8")
+    args_json = json.dumps(args or {}, ensure_ascii=False)
+    iife = f"({js_body})({args_json})"
+    return bb_eval(iife, timeout=timeout)
+
+
 def ensure_adapters_linked() -> None:
-    """Ensure project adapters are symlinked to ~/.bb-browser/sites/."""
+    """Ensure project adapters are symlinked to ~/.bb-browser/sites/.
+
+    Note: this is best-effort and mainly useful when running adapters via
+    ``bb-browser site <name>`` CLI on bb-browser 0.11+. For 0.8.x we
+    bypass the CLI and call ``bb_run_adapter`` directly.
+    """
     bb_sites_dir = Path.home() / ".bb-browser" / "sites"
     bb_sites_dir.mkdir(parents=True, exist_ok=True)
 
