@@ -18,7 +18,7 @@ import threading
 import time
 from collections import Counter
 from concurrent.futures import ThreadPoolExecutor, TimeoutError
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from datetime import datetime
 from pathlib import Path
 
@@ -39,8 +39,6 @@ from src.scrapers.baidu import BaiduScraper
 from src.scrapers.netease import NeteaseScraper
 
 # Tier 1: 公司官网 Playwright (legacy, kept for fallback)
-from src.scrapers.bytedance import BytedanceScraper
-
 # Tier 2: 第三方招聘平台
 from src.scrapers.boss import BossScraper
 from src.scrapers.liepin import LiepinScraper
@@ -102,8 +100,6 @@ SCRAPER_REGISTRY = {
     "tencent": TencentScraper,
     "baidu": BaiduScraper,
     "netease": NeteaseScraper,
-    # Tier 1: Playwright (legacy fallback)
-    # "bytedance": BytedanceScraper,
     # Tier 2 (browser-first for anti-bot)
     "boss": BossScraper,
     "liepin": LiepinScraper,
@@ -280,12 +276,12 @@ def main() -> None:
     for p, n in companies.most_common():
         logger.info("  %s: %d", p, n)
 
-    # Update per-platform filtered counts for health report
-    filtered_by_platform = Counter((j.company or j.platform) for j in filtered)
+    # Update per-platform filtered counts for health report.
+    # Key by j.platform (stable identifier) so multi-company platforms like
+    # feishu (MiniMax/智谱AI/...) and moka (DeepSeek/Kimi) aggregate correctly.
+    filtered_by_platform = Counter(j.platform for j in filtered)
     for pr in health_results:
-        pr.filtered_count = filtered_by_platform.get(
-            platforms_cfg.get(pr.platform, {}).get("name", pr.platform), 0
-        )
+        pr.filtered_count = filtered_by_platform.get(pr.platform, 0)
 
     # --- Phase 3: Diff ---
     jobs_file = data_dir / "jobs.json"

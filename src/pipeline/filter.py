@@ -28,7 +28,7 @@ _DEFAULT_RULES: dict[str, Any] = {
     "exclude_education": ["硕士", "博士", "研究生", "Master", "PhD"],
     "exclude_experience_field": ["五年以上", "八年以上", "十年以上", "5-10年", "10年以上"],
     "max_experience_years": 3,
-    "campus_patterns": ["校招", "应届", "届+", "27届", "28届", "26届", "毕业生", "campus"],
+    "campus_patterns": ["校招", "应届", r"\d{2,4}届", "毕业生", "campus"],
     "exclude_title": [
         "硬件", "嵌入式", "芯片", "射频", "FPGA", "驱动工程", "电气", "机械", "光学",
         "相机测试", "传感器测试", "基带测试", "可靠性测试", "认证测试", "近距通信", "显示测试",
@@ -88,8 +88,10 @@ class _FilterRules:
 
     @staticmethod
     def _compile(keywords: list[str], flags: str = "") -> re.Pattern:
-        escaped = [re.escape(k) for k in keywords]
-        pattern = "(" + "|".join(escaped) + ")"
+        # Patterns are treated as raw regex fragments so callers can use
+        # metacharacters (e.g. \d{2,4}届). Plain-text keywords without regex
+        # metacharacters work unchanged.
+        pattern = "(" + "|".join(keywords) + ")"
         rf = re.IGNORECASE if "i" in flags else 0
         return re.compile(pattern, rf)
 
