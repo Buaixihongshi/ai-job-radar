@@ -228,6 +228,64 @@ def get_run_history(days: int = 30, db_path: Path = DB_PATH) -> list[dict]:
     return [dict(r) for r in rows]
 
 
+def get_platform_freshness(db_path: Path = DB_PATH) -> list[dict]:
+    """Per-platform freshness summary: latest scrape time, total active jobs, etc.
+
+    Returns a list of dicts sorted by ``last_run`` descending::
+
+        [{"platform": "tencent", "last_run": "2026-04-25 09:00:12",
+          "raw_count": 45, "filtered_count": 22, "active_jobs": 88, "status": "success"}, ...]
+
+    Falls back to ``jobs.last_seen`` aggregation when ``scrape_runs`` is empty
+    (e.g. fresh local clone without CI history).
+    """
+    if not db_path.exists():
+        return []
+    init_db(db_path)
+    with _conn(db_path) as con:
+        has_runs = con.execute("SELECT COUNT(*) FROM scrape_runs").fetchone()[0] > 0
+
+        if has_runs:
+            sql = """\
+            SELECT
+                r.platform,
+                r.run_date   AS last_run,
+                r.raw_count,
+                r.filtered_count,
+                r.status,
+                COALESCE(j.active_jobs, 0) AS active_jobs
+            FROM scrape_runs r
+            INNER JOIN (
+                SELECT platform, MAX(id) AS max_id
+                FROM scrape_runs
+                GROUP BY platform
+            ) latest ON r.id = latest.max_id
+            LEFT JOIN (
+                SELECT platform, COUNT(*) AS active_jobs
+                FROM jobs WHERE is_active = 1
+                GROUP BY platform
+            ) j ON r.platform = j.platform
+            ORDER BY r.run_date DESC
+            """
+        else:
+            sql = """\
+            SELECT
+                platform,
+                MAX(last_seen) AS last_run,
+                0              AS raw_count,
+                COUNT(*)       AS filtered_count,
+                'success'      AS status,
+                COUNT(*)       AS active_jobs
+            FROM jobs
+            WHERE is_active = 1
+            GROUP BY platform
+            ORDER BY last_run DESC
+            """
+
+        rows = con.execute(sql).fetchall()
+    return [dict(r) for r in rows]
+
+
 def _row_to_job(row: sqlite3.Row) -> JobPosting:
     d = dict(row)
     d.pop("first_seen", None)
