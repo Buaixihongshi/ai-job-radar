@@ -125,12 +125,15 @@ def bb_run_adapter(adapter_path: str | Path, args: dict | None = None,
     return bb_eval(iife, timeout=timeout)
 
 
-def ensure_adapters_linked() -> None:
-    """Ensure project adapters are symlinked to ~/.bb-browser/sites/.
+def ensure_adapters_installed() -> None:
+    """Copy project adapters into ``~/.bb-browser/sites/`` for CLI discovery.
 
-    Note: this is best-effort and mainly useful when running adapters via
-    ``bb-browser site <name>`` CLI on bb-browser 0.11+. For 0.8.x we
-    bypass the CLI and call ``bb_run_adapter`` directly.
+    bb-browser 0.11+ scans ``~/.bb-browser/sites/<platform>/<command>.js``
+    for private adapters (shown with ``(local)`` tag in ``site list``).
+    Symlinks are **not** followed by the scanner, so we copy files instead.
+
+    This is best-effort — ``bb_run_adapter`` works regardless (it reads the
+    adapter JS directly from the project tree and executes via ``bb_eval``).
     """
     bb_sites_dir = Path.home() / ".bb-browser" / "sites"
     bb_sites_dir.mkdir(parents=True, exist_ok=True)
@@ -138,11 +141,17 @@ def ensure_adapters_linked() -> None:
     for adapter_dir in ADAPTERS_DIR.iterdir():
         if not adapter_dir.is_dir():
             continue
-        target = bb_sites_dir / adapter_dir.name
-        if target.exists() or target.is_symlink():
-            continue
-        try:
-            target.symlink_to(adapter_dir.resolve())
-            logger.info("Linked adapter: %s -> %s", target, adapter_dir)
-        except OSError:
-            logger.warning("Failed to symlink adapter %s", adapter_dir.name)
+        target_dir = bb_sites_dir / adapter_dir.name
+        target_dir.mkdir(parents=True, exist_ok=True)
+
+        for js_file in adapter_dir.glob("*.js"):
+            target_file = target_dir / js_file.name
+            try:
+                import filecmp
+                if target_file.exists() and filecmp.cmp(str(js_file), str(target_file)):
+                    continue
+                import shutil as _shutil
+                _shutil.copy2(str(js_file), str(target_file))
+                logger.info("Installed adapter: %s -> %s", js_file.name, target_dir)
+            except OSError:
+                logger.warning("Failed to install adapter %s/%s", adapter_dir.name, js_file.name)
