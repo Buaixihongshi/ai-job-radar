@@ -11,13 +11,10 @@ from __future__ import annotations
 import argparse
 import logging
 import re
-import signal
-import sys
-import threading
 import time
 from collections import Counter
 from concurrent.futures import ThreadPoolExecutor, TimeoutError
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from datetime import datetime
 from pathlib import Path
 
@@ -38,8 +35,6 @@ from src.scrapers.baidu import BaiduScraper
 from src.scrapers.netease import NeteaseScraper
 
 # Tier 1: 公司官网 Playwright (legacy, kept for fallback)
-from src.scrapers.bytedance import BytedanceScraper
-
 # Tier 2: 第三方招聘平台
 from src.scrapers.boss import BossScraper
 from src.scrapers.liepin import LiepinScraper
@@ -101,8 +96,6 @@ SCRAPER_REGISTRY = {
     "tencent": TencentScraper,
     "baidu": BaiduScraper,
     "netease": NeteaseScraper,
-    # Tier 1: Playwright (legacy fallback)
-    # "bytedance": BytedanceScraper,
     # Tier 2 (browser-first for anti-bot)
     "boss": BossScraper,
     "liepin": LiepinScraper,
