@@ -1,6 +1,6 @@
 # DeepSeek - AI 相关岗位
 
-> 岗位数: 1 | 更新时间: 2026-05-20 12:12
+> 岗位数: 1 | 更新时间: 2026-05-21 05:25
 
 ## AI/Agent产品（1）
 
@@ -38,14 +38,12 @@ Model + Harness = Agent
 
 2年以上产品经理从业经验，产品逻辑清晰。特别优秀候选人可放宽年限。
 
-学历本科及以上。
+知名高校本科学历及以上。
 
 能够使用 vibe coding 写代码，不一定需要技术背景。
 
 能够设计系统性的收集数据的方法（包括问卷、访谈、A/B测试、灰度测试等），并使用统计学的工具严谨科学的分析数据。对此有系统性的思考和实践。
 
-是 Agent 产品的高强度用户，熟悉 Agent 产品的各种形态，对 Agent 有极大的热情，对模型行为有品味有判断力，对开发者体验及用户体验有强感知。深度使用过 Claude Code、Cowork、Codex、Cursor、OpenCode、GitHub Copilot、Manus、OpenClaw、Hermes 等类似产品，并将相关产品的使用融入到自己的工作和生活中。
-
-...
+是 Agent 产品的高强度用户，熟悉 Agent 产品的各种形态，对 Agent 有极大的热情，对模型行为有品味有判断力，对开发者体验及用户体验有强感知。深度使用过 Claude Code、Cowork、Codex、Cursor、OpenCode、GitHub Copilot、Manus、OpenClaw、Hermes 等类似产品，并将相关产品的使用融入到自己的工作和生...
 
 ---
