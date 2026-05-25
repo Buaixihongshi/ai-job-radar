@@ -1,12 +1,12 @@
 # DeepSeek - AI 相关岗位
 
-> 岗位数: 1 | 更新时间: 2026-05-25 05:39
+> 岗位数: 1 | 更新时间: 2026-05-25 12:50
 
 ## AI/Agent产品（1）
 
 ### Agent Harness 产品经理
 
-📍 北京
+📍 杭州
 
 🔗 [投递链接](https://app.mokahr.com/social-recruitment/high-flyer/140576#/job/54f386a9-913b-4626-9bf4-e1709b62fcda)
 
