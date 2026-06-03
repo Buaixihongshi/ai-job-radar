@@ -1,8 +1,44 @@
 # Kimi - AI 相关岗位
 
-> 岗位数: 2 | 更新时间: 2026-06-03 06:19
+> 岗位数: 3 | 更新时间: 2026-06-03 13:36
 
-## Agent评测（1）
+## Agent评测（2）
+
+### Agent 评估产品（Eval Product）
+
+📍 北京
+
+🔗 [投递链接](https://app.mokahr.com/social-recruitment/moonshot/148506#/job/93c4c86b-ff22-4f5a-a579-94526e913789)
+
+**岗位职责：**
+
+当 Agent 开始被赋予一台完整的电脑、浏览器、终端与各类软件环境，甚至连接不同硬件并与真实世界互动时，我们将面对一个全新的问题：我们究竟该如何衡量真正的智能？传统意义上的"跑分"正在迅速失效，公开榜单上的漂亮数字也越来越难以回答那个最关键的问题——Agent 是否真的能稳定完成真实世界中的复杂工作？
+
+你将直接定义
+
+设计并构建 Internal Benchmark，不断挑战 Agent 的能力边界，让用户第一次看到"Agent 也能做这个"的可能
+
+搭建 Agent 能力边界的持续监控体系，信息搜集与研究、因子挖掘、金融建模、预测市场分析与多步骤商业决策
+
+深入分析 Agent Trace，定位失败根因——区分 context 管理、规划能力、工具调用、底层推理等不同层级的问题，并将分析转化为可执行的改进建议
+
+开发 scalable、verifiable 的任务构造方法与自动化评估流水线，让新 Benchmark 的上线周期从周级降到天级
+
+核心要求
+
+热爱 Coding 与具备较强的动手能力，可以快速实现 Benchmark 的 ideas，也欢迎研发/研究员同学投递
+
+不迷信权威 ◦ 对公开 Benchmark 和流行评测框架保持天然警惕，能敏锐识别"看起来变强了"的幻觉；有强观点，但愿意在数据面前快速修正
+
+对"好任务"有极致品味 ◦ 能构造出逼近真实工作流的高价值任务；对 long-horizon task、self-evolving agents、proactive agents 等前沿趋势有强烈兴趣
+
+洞悉智能的根因 ◦ 不满足于 pass@k、accuracy 等聚合指标，更关心 Agent 为什么成功、为什么失败；能系统性地拆解 planning failure、retrieval hallucination、tool misuse 等不同失败模式
+
+加分项
+
+...
+
+---
 
 ### 大模型Eval评测（工程方向/产品方向）
 
