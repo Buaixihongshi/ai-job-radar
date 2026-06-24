@@ -1,6 +1,6 @@
 # DeepSeek - AI 相关岗位
 
-> 岗位数: 1 | 更新时间: 2026-06-23 12:21
+> 岗位数: 1 | 更新时间: 2026-06-24 05:22
 
 ## AI/Agent产品（1）
 
@@ -12,13 +12,15 @@
 
 **岗位职责：**
 
+加入 DeepSeek Harness 团队，探索定义下一代 Agent 产品形态。
+
 团队使命
 
 Model + Harness = Agent
 
-我们正在把 DeepSeek 的前沿模型能力，转化为领先的 Agent 产品。这其中除模型本身以外的所有工作，都属于 Harness 的范畴。
+我们正在以研究、工程、产品相结合的方式，把 DeepSeek 的模型能力转化为前沿的科研突破与领先的 Agent 产品。
 
-你将加入 Harness 团队，与工程师、研究员紧密协作，参与 DeepSeek 桌面端 Agent 产品的全过程，定义 DeepSeek 对 Harness 的理解。
+你将加入 Harness 团队，与产品经理、工程师、研究员紧密协作，参与 DeepSeek 出品的 Agent 产品的全过程，定义 DeepSeek 对 Harness 的理解。
 
 主要职责
 
@@ -44,8 +46,6 @@ Model + Harness = Agent
 
 具备UI/UX设计素养。能够在 AI 辅助下完成产品原型图设计、UI设计等相关的产品设计工作。
 
-是 Agent 产品的高强度用户，熟悉 Agent 产品的各种形态，对 Agent 有极大的热情，对模型行为有品味有判断力，对开发者体验及用户体验有强感知。深度使用过 Claude Code、Cowork、Codex、Cursor、OpenCode、GitHub Copilot、Manus、OpenClaw、Hermes 等类似产品，并将相关产品的使用融入到自己的工作和生活中。
-
-理解 LLM 以及 Agent 基本机制及其技术原理，包括 LLM API...
+是 Agent 产品的高强度用户，熟悉 Agent 产品的各种形态，对 Agent 有极大的热情，对模型行为有品味有判断力，对开发者体验及用户体验有强感知。深度使用过 Claude Code、Cowork、Codex、Cursor、OpenCode、GitHub Copilot、Manus、OpenClaw、Hermes 等类似产品，并将相关产品的使用融入到自己的工作和生活中。...
 
 ---
