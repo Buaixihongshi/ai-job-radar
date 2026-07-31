@@ -1,6 +1,6 @@
 # AI 岗位雷达
 
-> 更新时间: 2026-07-31 04:40 | 岗位总数: **303**
+> 更新时间: 2026-07-31 11:49 | 岗位总数: **303**
 
 自动追踪大模型测试 / AI测试 / Agent评测 / 测试开发(AI方向) / AI产品 相关岗位。
 
@@ -64,17 +64,17 @@
 
 | 平台 | 最近抓取 | 状态 | 原始 → 入库 | 在库岗位 |
 | --- | --- | --- | --- | --- |
-| 小红书 | 4小时前 | 🟢 | 13 | 13 |
-| 腾讯 | 4小时前 | 🟢 | 40 | 40 |
-| 阿里巴巴 | 4小时前 | 🟢 | 30 | 30 |
-| 网易 | 4小时前 | 🟢 | 7 | 7 |
-| MokaHR(DeepSeek/Kimi) | 4小时前 | 🟢 | 4 | 4 |
-| 美团 | 4小时前 | 🟢 | 39 | 39 |
-| 快手 | 4小时前 | 🟢 | 34 | 34 |
-| 飞书招聘(MiniMax/智谱AI/商汤/零一万物/百川) | 4小时前 | 🟢 | 18 | 18 |
-| 滴滴 | 4小时前 | 🟢 | 2 | 2 |
-| 字节跳动 | 4小时前 | 🟢 | 83 | 83 |
-| 百度 | 4小时前 | 🟢 | 33 | 33 |
+| 小红书 | 11小时前 | 🟢 | 13 | 13 |
+| 腾讯 | 11小时前 | 🟢 | 40 | 40 |
+| 阿里巴巴 | 11小时前 | 🟢 | 30 | 30 |
+| 网易 | 11小时前 | 🟢 | 7 | 7 |
+| MokaHR(DeepSeek/Kimi) | 11小时前 | 🟢 | 4 | 4 |
+| 美团 | 11小时前 | 🟢 | 39 | 39 |
+| 快手 | 11小时前 | 🟢 | 34 | 34 |
+| 飞书招聘(MiniMax/智谱AI/商汤/零一万物/百川) | 11小时前 | 🟢 | 18 | 18 |
+| 滴滴 | 11小时前 | 🟢 | 2 | 2 |
+| 字节跳动 | 11小时前 | 🟢 | 83 | 83 |
+| 百度 | 11小时前 | 🟢 | 33 | 33 |
 
 ---
 
@@ -421,8 +421,8 @@ _Agent评测 20 / AI/Agent产品 15 / 测试开发(AI方向) 3 / 大模型/AI测
 | [无人机-算法评测工程师](https://zhaopin.meituan.com/web/social-recruitment/4480765348) | Agent评测 | 北京 |  |
 | [无人机-算法评测工程师](https://zhaopin.meituan.com/web/social-recruitment/3890437373) | Agent评测 | 北京 |  |
 | [AI Agent 产品经理](https://zhaopin.meituan.com/web/social-recruitment/4613923553) | AI/Agent产品 | 北京 | 核心本地商业-基础研发平台 |
-| [AI Agent 产品经理](https://zhaopin.meituan.com/web/social-recruitment/4564894591) | AI/Agent产品 | 北京 | 核心本地商业-美团平台 |
 | [AI Agent 产品经理（C端方向）](https://zhaopin.meituan.com/web/social-recruitment/4464664634) | AI/Agent产品 | 上海 |  |
+| [AI Agent 产品经理（微信生态方向）](https://zhaopin.meituan.com/web/social-recruitment/4564894591) | AI/Agent产品 | 北京 | 核心本地商业-美团平台 |
 | [AI Agent生产力产品专家](https://zhaopin.meituan.com/web/social-recruitment/4511832447) | AI/Agent产品 | 北京 | 核心本地商业-基础研发平台 |
 | [AI Agent高级产品专家](https://zhaopin.meituan.com/web/social-recruitment/4284706485) | AI/Agent产品 | 北京 | 核心本地商业-基础研发平台 |
 | [AI产品专家/高级产品经理——智能客服Agent平台](https://zhaopin.meituan.com/web/social-recruitment/4566880943) | AI/Agent产品 | 北京 | 核心本地商业-基础研发平台 |
@@ -535,4 +535,4 @@ _测试开发(AI方向) 16 / Agent评测 5 / AI/Agent产品 5 / 大模型/AI测�
 
 ---
 
-*数据自动采集，更新于 2026-07-31 04:40。仅供求职参考。*
+*数据自动采集，更新于 2026-07-31 11:49。仅供求职参考。*
