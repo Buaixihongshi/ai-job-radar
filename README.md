@@ -1,6 +1,6 @@
 # AI 岗位雷达
 
-> 更新时间: 2026-08-04 04:22 | 岗位总数: **304**
+> 更新时间: 2026-08-04 11:44 | 岗位总数: **306**
 
 自动追踪大模型测试 / AI测试 / Agent评测 / 测试开发(AI方向) / AI产品 相关岗位。
 
@@ -12,7 +12,7 @@
 
 | 方向 | 说明 | 岗位数 |
 | --- | --- | --- |
-| 大模型/AI测试 | 大模型评测、算法测试、AI质量保障 | 29 |
+| 大模型/AI测试 | 大模型评测、算法测试、AI质量保障 | 31 |
 | 测试开发(AI方向) | AI方向的测试开发、评测平台、自动化框架 | 69 |
 | Agent评测 | Agent/大模型效果评测、Benchmark建设 | 122 |
 | AI/Agent产品 | AI策略产品、Agent产品、AIGC产品 | 84 |
@@ -34,13 +34,13 @@
 | [字节跳动](jobs/字节跳动.md) | ✅ 已接入 | 83 |
 | [腾讯](jobs/腾讯.md) | ✅ 已接入 | 40 |
 | [美团](jobs/美团.md) | ✅ 已接入 | 40 |
+| [百度](jobs/百度.md) | ✅ 已接入 | 34 |
 | [快手](jobs/快手.md) | ✅ 已接入 | 34 |
-| [百度](jobs/百度.md) | ✅ 已接入 | 33 |
 | [阿里巴巴](jobs/阿里巴巴.md) | ✅ 已接入 | 30 |
 | [飞书招聘(MiniMax/智谱AI/商汤/零一万物/百川)](jobs/MiniMax.md) | ✅ 已接入 | 18 |
 | [小红书](jobs/小红书.md) | ✅ 已接入 | 13 |
 | [网易](jobs/网易.md) | ✅ 已接入 | 7 |
-| [MokaHR(DeepSeek/Kimi)](jobs/Kimi.md) | ✅ 已接入 | 4 |
+| [MokaHR(DeepSeek/Kimi)](jobs/Kimi.md) | ✅ 已接入 | 5 |
 | [滴滴](jobs/滴滴.md) | ✅ 已接入 | 2 |
 | 京东 | 🔧 调试中 | 0 |
 | 华为 | 🔧 调试中 | 0 |
@@ -54,7 +54,7 @@
 | 猎聘 | 📋 计划中 | - |
 | 脉脉 | 📋 计划中 | - |
 
-**✅ 已接入（11 家）**：[字节跳动](jobs/字节跳动.md)、[腾讯](jobs/腾讯.md)、[美团](jobs/美团.md)、[快手](jobs/快手.md)、[百度](jobs/百度.md)、[阿里巴巴](jobs/阿里巴巴.md)、[飞书招聘(MiniMax/智谱AI/商汤/零一万物/百川)](jobs/MiniMax.md)、[小红书](jobs/小红书.md)、[网易](jobs/网易.md)、[MokaHR(DeepSeek/Kimi)](jobs/Kimi.md)、[滴滴](jobs/滴滴.md)
+**✅ 已接入（11 家）**：[字节跳动](jobs/字节跳动.md)、[腾讯](jobs/腾讯.md)、[美团](jobs/美团.md)、[百度](jobs/百度.md)、[快手](jobs/快手.md)、[阿里巴巴](jobs/阿里巴巴.md)、[飞书招聘(MiniMax/智谱AI/商汤/零一万物/百川)](jobs/MiniMax.md)、[小红书](jobs/小红书.md)、[网易](jobs/网易.md)、[MokaHR(DeepSeek/Kimi)](jobs/Kimi.md)、[滴滴](jobs/滴滴.md)
 
 **🔧 调试中（4 家）**：京东、华为、蚂蚁集团、阿里巴巴(集团主站)（爬虫已编写，数据接入调试中）
 
@@ -64,17 +64,17 @@
 
 | 平台 | 最近抓取 | 状态 | 原始 → 入库 | 在库岗位 |
 | --- | --- | --- | --- | --- |
-| 小红书 | 4小时前 | 🟢 | 13 | 13 |
-| 腾讯 | 4小时前 | 🟢 | 40 | 40 |
-| 阿里巴巴 | 4小时前 | 🟢 | 30 | 30 |
-| 网易 | 4小时前 | 🟢 | 7 | 7 |
-| MokaHR(DeepSeek/Kimi) | 4小时前 | 🟢 | 4 | 4 |
-| 美团 | 4小时前 | 🟢 | 40 | 40 |
-| 快手 | 4小时前 | 🟢 | 34 | 34 |
-| 飞书招聘(MiniMax/智谱AI/商汤/零一万物/百川) | 4小时前 | 🟢 | 18 | 18 |
-| 滴滴 | 4小时前 | 🟢 | 2 | 2 |
-| 字节跳动 | 4小时前 | 🟢 | 83 | 83 |
-| 百度 | 4小时前 | 🟢 | 33 | 33 |
+| 小红书 | 11小时前 | 🟢 | 13 | 13 |
+| 腾讯 | 11小时前 | 🟢 | 40 | 40 |
+| 阿里巴巴 | 11小时前 | 🟢 | 30 | 30 |
+| 网易 | 11小时前 | 🟢 | 7 | 7 |
+| MokaHR(DeepSeek/Kimi) | 11小时前 | 🟢 | 5 | 5 |
+| 美团 | 11小时前 | 🟢 | 40 | 40 |
+| 快手 | 11小时前 | 🟢 | 34 | 34 |
+| 飞书招聘(MiniMax/智谱AI/商汤/零一万物/百川) | 11小时前 | 🟢 | 18 | 18 |
+| 滴滴 | 11小时前 | 🟢 | 2 | 2 |
+| 字节跳动 | 11小时前 | 🟢 | 83 | 83 |
+| 百度 | 11小时前 | 🟢 | 34 | 34 |
 
 ---
 
@@ -127,12 +127,13 @@ _AI/Agent产品 1_
 | --- | --- | --- | --- |
 | [Agent Harness 产品经理](https://app.mokahr.com/social-recruitment/high-flyer/140576#/job/54f386a9-913b-4626-9bf4-e1709b62fcda) | AI/Agent产品 | 杭州 |  |
 
-### [Kimi](jobs/Kimi.md)（3 个岗位）
+### [Kimi](jobs/Kimi.md)（4 个岗位）
 
-_Agent评测 2 / AI/Agent产品 1_
+_Agent评测 2 / 大模型/AI测试 1 / AI/Agent产品 1_
 
 | 岗位 | 方向 | 城市 | 部门 |
 | --- | --- | --- | --- |
+| [资深产品测试工程师](https://app.mokahr.com/social-recruitment/moonshot/148506#/job/d1884d98-9284-4d25-9df1-b4d82c85ba59) | 大模型/AI测试 |  |  |
 | [Agent 评估产品（Eval Product）](https://app.mokahr.com/social-recruitment/moonshot/148506#/job/93c4c86b-ff22-4f5a-a579-94526e913789) | Agent评测 | 北京 |  |
 | [大模型Eval评测（工程方向/产品方向）](https://app.mokahr.com/social-recruitment/moonshot/148506#/job/965b7d3d-35e7-400f-a372-4a934a7f336b) | Agent评测 |  |  |
 | [AI Native 产品经理（C端 / Agent方向）](https://app.mokahr.com/social-recruitment/moonshot/148506#/job/90ec12d1-684b-4aae-a243-838f94a2e1aa) | AI/Agent产品 |  |  |
@@ -336,12 +337,13 @@ _Agent评测 3_
 | [兼职肿瘤科医生（医学评测/内容审核方向）](https://cq6qe6bvfr6.jobs.feishu.cn/baichuanzhaopin/position/7611439370256156954/detail) | Agent评测 | 北京 |  |
 | [百川智能-大模型产品经理（评测方向）](https://cq6qe6bvfr6.jobs.feishu.cn/baichuanzhaopin/position/7367648471140026662/detail) | Agent评测 | 北京 |  |
 
-### [百度](jobs/百度.md)（33 个岗位）
+### [百度](jobs/百度.md)（34 个岗位）
 
-_AI/Agent产品 19 / Agent评测 8 / 测试开发(AI方向) 6_
+_AI/Agent产品 19 / Agent评测 8 / 测试开发(AI方向) 6 / 大模型/AI测试 1_
 
 | 岗位 | 方向 | 城市 | 部门 |
 | --- | --- | --- | --- |
+| [AI效能与质量保障（J104103）](https://talent.baidu.com/jobs/social-detail/J104103) | 大模型/AI测试 |  |  |
 | [AI计算平台测试开发工程师（J97448）](https://talent.baidu.com/jobs/social-detail/J97448) | 测试开发(AI方向) |  |  |
 | [AI计算测试开发工程师（J98291）](https://talent.baidu.com/jobs/social-detail/J98291) | 测试开发(AI方向) |  |  |
 | [AI软件测试开发工程师（J93911）](https://talent.baidu.com/jobs/social-detail/J93911) | 测试开发(AI方向) |  |  |
@@ -536,4 +538,4 @@ _测试开发(AI方向) 16 / Agent评测 5 / AI/Agent产品 5 / 大模型/AI测�
 
 ---
 
-*数据自动采集，更新于 2026-08-04 04:22。仅供求职参考。*
+*数据自动采集，更新于 2026-08-04 11:44。仅供求职参考。*
