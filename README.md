@@ -1,6 +1,6 @@
 # AI 岗位雷达
 
-> 更新时间: 2026-08-13 03:46 | 岗位总数: **307**
+> 更新时间: 2026-08-13 10:23 | 岗位总数: **307**
 
 自动追踪大模型测试 / AI测试 / Agent评测 / 测试开发(AI方向) / AI产品 相关岗位。
 
@@ -64,17 +64,17 @@
 
 | 平台 | 最近抓取 | 状态 | 原始 → 入库 | 在库岗位 |
 | --- | --- | --- | --- | --- |
-| 小红书 | 3小时前 | 🟢 | 13 | 13 |
-| 腾讯 | 3小时前 | 🟢 | 40 | 40 |
-| 阿里巴巴 | 3小时前 | 🟢 | 30 | 30 |
-| 网易 | 3小时前 | 🟢 | 7 | 7 |
-| MokaHR(DeepSeek/Kimi) | 3小时前 | 🟢 | 5 | 5 |
-| 美团 | 3小时前 | 🟢 | 40 | 40 |
-| 快手 | 3小时前 | 🟢 | 34 | 34 |
-| 飞书招聘(MiniMax/智谱AI/商汤/零一万物/百川) | 3小时前 | 🟢 | 18 | 18 |
-| 滴滴 | 3小时前 | 🟢 | 2 | 2 |
-| 字节跳动 | 3小时前 | 🟢 | 83 | 83 |
-| 百度 | 3小时前 | 🟢 | 35 | 35 |
+| 小红书 | 10小时前 | 🟢 | 13 | 13 |
+| 腾讯 | 10小时前 | 🟢 | 40 | 40 |
+| 阿里巴巴 | 10小时前 | 🟢 | 30 | 30 |
+| 网易 | 10小时前 | 🟢 | 7 | 7 |
+| MokaHR(DeepSeek/Kimi) | 10小时前 | 🟢 | 5 | 5 |
+| 美团 | 10小时前 | 🟢 | 40 | 40 |
+| 快手 | 10小时前 | 🟢 | 34 | 34 |
+| 飞书招聘(MiniMax/智谱AI/商汤/零一万物/百川) | 10小时前 | 🟢 | 18 | 18 |
+| 滴滴 | 10小时前 | 🟢 | 2 | 2 |
+| 字节跳动 | 10小时前 | 🟢 | 83 | 83 |
+| 百度 | 10小时前 | 🟢 | 35 | 35 |
 
 ---
 
@@ -99,7 +99,7 @@
 
 | 技能 | 出现次数 |
 | --- | --- |
-| agent | 142 |
+| agent | 144 |
 | llm | 33 |
 | prompt | 26 |
 | python | 23 |
@@ -409,12 +409,12 @@ _Agent评测 20 / AI/Agent产品 15 / 测试开发(AI方向) 4 / 大模型/AI测
 | [Agent评测平台产品经理](https://zhaopin.meituan.com/web/social-recruitment/4614990439) | Agent评测 | 北京 | 核心本地商业-业务研发平台 |
 | [Beam 评测项目负责人](https://zhaopin.meituan.com/web/social-recruitment/4146822050) | Agent评测 | 北京 | 核心本地商业-美团平台 |
 | [Java-Agent开发&Agent评测系统开发](https://zhaopin.meituan.com/web/social-recruitment/4035612004) | Agent评测 | 北京 | 核心本地商业-业务研发平台 |
+| [LongCat - Agent评测产品经理](https://zhaopin.meituan.com/web/social-recruitment/3506281745) | Agent评测 | 北京 | 核心本地商业-基础研发平台 |
 | [LongCat - 基座 Agent 评测分析算法研究员](https://zhaopin.meituan.com/web/social-recruitment/3604450999) | Agent评测 | 北京 | 核心本地商业-基础研发平台 |
 | [LongCat - 基座agent评测分析算法研究员（生产力方向）](https://zhaopin.meituan.com/web/social-recruitment/4381199673) | Agent评测 | 北京 | 核心本地商业-基础研发平台 |
 | [LongCat - 基座大模型评测分析算法研究员](https://zhaopin.meituan.com/web/social-recruitment/3057805095) | Agent评测 | 上海 | 核心本地商业-基础研发平台 |
 | [LongCat - 大模型基座认知分析算法研究员（具身前沿研究、多模态评测）](https://zhaopin.meituan.com/web/social-recruitment/3848257556) | Agent评测 | 北京 | 核心本地商业-基础研发平台 |
 | [LongCat大模型 - Agent 评测产品经理（欢迎算法/工程转型）](https://zhaopin.meituan.com/web/social-recruitment/4301295312) | Agent评测 | 北京 | 核心本地商业-基础研发平台 |
-| [LongCat大模型 - 大模型评测平台产品经理](https://zhaopin.meituan.com/web/social-recruitment/3506281745) | Agent评测 | 北京 | 核心本地商业-基础研发平台 |
 | [具身智能基座大模型评测和认知分析研究员](https://zhaopin.meituan.com/web/social-recruitment/4347674479) | Agent评测 | 北京 | 核心本地商业-基础研发平台 |
 | [基座大模型算法-LLM评测分析研究员](https://zhaopin.meituan.com/web/social-recruitment/3849905359) | Agent评测 | 北京 | 核心本地商业-基础研发平台 |
 | [大模型应用评测算法工程师](https://zhaopin.meituan.com/web/social-recruitment/3373938136) | Agent评测 | 北京 | 核心本地商业-基础研发平台 |
@@ -464,8 +464,8 @@ _AI/Agent产品 18 / Agent评测 17 / 测试开发(AI方向) 3 / 大模型/AI测
 | [混元多模态大模型评测（北京）](http://careers.tencent.com/jobdesc.html?postId=1997884330793394176) | Agent评测 | 深圳 | TEG |
 | [混元大模型评测算法研究员（北京）](http://careers.tencent.com/jobdesc.html?postId=1915233782491881472) | Agent评测 | 深圳 | TEG |
 | [混元数据算法工程师（Coding 数据质量与评测方向）](http://careers.tencent.com/jobdesc.html?postId=2042431106661380096) | Agent评测 | 北京 | TEG |
-| [腾讯游戏-大模型评测专家](http://careers.tencent.com/jobdesc.html?postId=2072330918441435136) | Agent评测 | 深圳 | IEG |
 | [腾讯游戏-大模型评测专家](http://careers.tencent.com/jobdesc.html?postId=2072330916012933120) | Agent评测 | 杭州 | IEG |
+| [腾讯游戏-大模型评测专家](http://careers.tencent.com/jobdesc.html?postId=2072330918441435136) | Agent评测 | 深圳 | IEG |
 | [腾讯游戏-大模型评测专家](http://careers.tencent.com/jobdesc.html?postId=2072330913710260224) | Agent评测 | 北京 | IEG |
 | [腾讯营销-商业化策略产品-大模型评测方向](http://careers.tencent.com/jobdesc.html?postId=2012016099826225152) | Agent评测 | 上海 | CDG |
 | [QQ-Agent产品经理](http://careers.tencent.com/jobdesc.html?postId=2077347119940939776) | AI/Agent产品 | 深圳 | PCG |
@@ -539,4 +539,4 @@ _测试开发(AI方向) 15 / 大模型/AI测试 5 / Agent评测 5 / AI/Agent产�
 
 ---
 
-*数据自动采集，更新于 2026-08-13 03:46。仅供求职参考。*
+*数据自动采集，更新于 2026-08-13 10:23。仅供求职参考。*
