@@ -1,6 +1,6 @@
 # AI 岗位雷达
 
-> 更新时间: 2026-08-26 10:00 | 岗位总数: **321**
+> 更新时间: 2026-08-27 11:09 | 岗位总数: **323**
 
 自动追踪大模型测试 / AI测试 / Agent评测 / 测试开发(AI方向) / AI产品 相关岗位。
 
@@ -14,7 +14,7 @@
 | --- | --- | --- |
 | 大模型/AI测试 | 大模型评测、算法测试、AI质量保障 | 40 |
 | 测试开发(AI方向) | AI方向的测试开发、评测平台、自动化框架 | 71 |
-| Agent评测 | Agent/大模型效果评测、Benchmark建设 | 124 |
+| Agent评测 | Agent/大模型效果评测、Benchmark建设 | 126 |
 | AI/Agent产品 | AI策略产品、Agent产品、AIGC产品 | 86 |
 
 ## 筛选条件
@@ -36,9 +36,9 @@
 | [腾讯](jobs/腾讯.md) | ✅ 已接入 | 42 |
 | [阿里巴巴](jobs/阿里巴巴.md) | ✅ 已接入 | 36 |
 | [百度](jobs/百度.md) | ✅ 已接入 | 36 |
-| [快手](jobs/快手.md) | ✅ 已接入 | 35 |
+| [快手](jobs/快手.md) | ✅ 已接入 | 36 |
 | [飞书招聘(MiniMax/智谱AI/商汤/零一万物/百川)](jobs/MiniMax.md) | ✅ 已接入 | 19 |
-| [小红书](jobs/小红书.md) | ✅ 已接入 | 13 |
+| [小红书](jobs/小红书.md) | ✅ 已接入 | 14 |
 | [网易](jobs/网易.md) | ✅ 已接入 | 7 |
 | [MokaHR(DeepSeek/Kimi)](jobs/Kimi.md) | ✅ 已接入 | 5 |
 | [滴滴](jobs/滴滴.md) | ✅ 已接入 | 2 |
@@ -64,17 +64,17 @@
 
 | 平台 | 最近抓取 | 状态 | 原始 → 入库 | 在库岗位 |
 | --- | --- | --- | --- | --- |
-| 小红书 | 10小时前 | 🟢 | 13 | 13 |
-| 腾讯 | 10小时前 | 🟢 | 42 | 42 |
-| 阿里巴巴 | 10小时前 | 🟢 | 36 | 36 |
-| 网易 | 10小时前 | 🟢 | 7 | 7 |
-| MokaHR(DeepSeek/Kimi) | 10小时前 | 🟢 | 5 | 5 |
-| 美团 | 10小时前 | 🟢 | 43 | 43 |
-| 快手 | 10小时前 | 🟢 | 35 | 35 |
-| 飞书招聘(MiniMax/智谱AI/商汤/零一万物/百川) | 10小时前 | 🟢 | 19 | 19 |
-| 滴滴 | 10小时前 | 🟢 | 2 | 2 |
-| 字节跳动 | 10小时前 | 🟢 | 83 | 83 |
-| 百度 | 10小时前 | 🟢 | 36 | 36 |
+| 小红书 | 11小时前 | 🟢 | 14 | 14 |
+| 腾讯 | 11小时前 | 🟢 | 42 | 42 |
+| 阿里巴巴 | 11小时前 | 🟢 | 36 | 36 |
+| 网易 | 11小时前 | 🟢 | 7 | 7 |
+| MokaHR(DeepSeek/Kimi) | 11小时前 | 🟢 | 5 | 5 |
+| 美团 | 11小时前 | 🟢 | 43 | 43 |
+| 快手 | 11小时前 | 🟢 | 36 | 36 |
+| 飞书招聘(MiniMax/智谱AI/商汤/零一万物/百川) | 11小时前 | 🟢 | 19 | 19 |
+| 滴滴 | 11小时前 | 🟢 | 2 | 2 |
+| 字节跳动 | 11小时前 | 🟢 | 83 | 83 |
+| 百度 | 11小时前 | 🟢 | 36 | 36 |
 
 ---
 
@@ -84,33 +84,33 @@
 
 | 岗位 | 公司 | 已上线天数 | 首次发现 |
 | --- | --- | --- | --- |
-| 大模型测试工程师（北京/深圳） | 腾讯 | 127天 | 2026-04-22 |
-| 元宝-AIGC产品经理 | 腾讯 | 127天 | 2026-04-22 |
-| ima-AI Agent 策略产品经理(深圳/北京) | 腾讯 | 127天 | 2026-04-22 |
-| 元宝- AI策略产品经理 | 腾讯 | 127天 | 2026-04-22 |
-| 元宝- AI策略产品经理 | 腾讯 | 127天 | 2026-04-22 |
-| 元宝- AI策略产品经理（图片理解方向） | 腾讯 | 127天 | 2026-04-22 |
-| 元宝- AI策略产品经理（图片理解方向） | 腾讯 | 127天 | 2026-04-22 |
-| 元宝-大模型策略产品（语音方向） | 腾讯 | 127天 | 2026-04-22 |
-| 元宝-大模型策略产品（语音方向） | 腾讯 | 127天 | 2026-04-22 |
-| 企业微信-AI Agent高级评测工程师 | 腾讯 | 127天 | 2026-04-22 |
+| 大模型测试工程师（北京/深圳） | 腾讯 | 128天 | 2026-04-22 |
+| 元宝-AIGC产品经理 | 腾讯 | 128天 | 2026-04-22 |
+| ima-AI Agent 策略产品经理(深圳/北京) | 腾讯 | 128天 | 2026-04-22 |
+| 元宝- AI策略产品经理 | 腾讯 | 128天 | 2026-04-22 |
+| 元宝- AI策略产品经理 | 腾讯 | 128天 | 2026-04-22 |
+| 元宝- AI策略产品经理（图片理解方向） | 腾讯 | 128天 | 2026-04-22 |
+| 元宝- AI策略产品经理（图片理解方向） | 腾讯 | 128天 | 2026-04-22 |
+| 元宝-大模型策略产品（语音方向） | 腾讯 | 128天 | 2026-04-22 |
+| 元宝-大模型策略产品（语音方向） | 腾讯 | 128天 | 2026-04-22 |
+| 企业微信-AI Agent高级评测工程师 | 腾讯 | 128天 | 2026-04-22 |
 
 ### JD 高频技能词（近30天在招岗位）
 
 | 技能 | 出现次数 |
 | --- | --- |
-| agent | 177 |
-| llm | 35 |
-| python | 28 |
+| agent | 186 |
+| llm | 37 |
+| python | 29 |
 | prompt | 26 |
-| benchmark | 22 |
-| java | 18 |
+| benchmark | 23 |
+| java | 19 |
 | rag | 18 |
-| badcase | 14 |
+| badcase | 16 |
 | 大模型 | 10 |
+| go | 7 |
 | typescript | 7 |
-| go | 6 |
-| 多模态 | 5 |
+| 多模态 | 6 |
 | aigc | 4 |
 | sql | 4 |
 | ci/cd | 3 |
@@ -258,9 +258,9 @@ _Agent评测 41 / 测试开发(AI方向) 27 / 大模型/AI测试 8 / AI/Agent产
 | [Agent产品经理-火山引擎](https://jobs.bytedance.com/experienced/position/7301333135140063497/detail) | AI/Agent产品 | 上海 | 产品 - 产品经理职位 |
 | [Agent产品经理-火山引擎](https://jobs.bytedance.com/experienced/position/7044435284037798174/detail) | AI/Agent产品 | 深圳 | 产品 - 产品经理职位 |
 
-### [小红书](jobs/小红书.md)（13 个岗位）
+### [小红书](jobs/小红书.md)（14 个岗位）
 
-_Agent评测 5 / AI/Agent产品 3 / 大模型/AI测试 3 / 测试开发(AI方向) 2_
+_Agent评测 6 / AI/Agent产品 3 / 大模型/AI测试 3 / 测试开发(AI方向) 2_
 
 | 岗位 | 方向 | 城市 | 部门 |
 | --- | --- | --- | --- |
@@ -270,6 +270,7 @@ _Agent评测 5 / AI/Agent产品 3 / 大模型/AI测试 3 / 测试开发(AI方向
 | [AI测试开发工程师](https://job.xiaohongshu.com/social/position/20686) | 测试开发(AI方向) | 北京 | 测试开发 |
 | [AI测试开发工程师](https://job.xiaohongshu.com/social/position/20941) | 测试开发(AI方向) | 上海 | 测试开发 |
 | [AI搜索评测产品经理](https://job.xiaohongshu.com/social/position/20081) | Agent评测 | 北京 | 产品经理 |
+| [【Agent 平台】AI 大模型评测平台研发工程师 / 专家](https://job.xiaohongshu.com/social/position/21896) | Agent评测 | 北京 | 机器学习平台 |
 | [【Dots】大模型评测](https://job.xiaohongshu.com/social/position/21093) | Agent评测 | 北京 | 大模型 |
 | [模型标注-AI应用评测专家](https://job.xiaohongshu.com/social/position/16916) | Agent评测 | 北京 | 模型标注 |
 | [模型标注-海外搜索评测](https://job.xiaohongshu.com/social/position/19239) | Agent评测 | 杭州 | 模型标注 |
@@ -278,9 +279,9 @@ _Agent评测 5 / AI/Agent产品 3 / 大模型/AI测试 3 / 测试开发(AI方向
 | [【急聘】AI Agent 产品研发工程师](https://job.xiaohongshu.com/social/position/16393) | AI/Agent产品 | 北京 | 客户端开发 |
 | [职能Domain Agent产品经理](https://job.xiaohongshu.com/social/position/21398) | AI/Agent产品 | 上海 | 产品经理 |
 
-### [快手](jobs/快手.md)（35 个岗位）
+### [快手](jobs/快手.md)（36 个岗位）
 
-_Agent评测 16 / AI/Agent产品 9 / 大模型/AI测试 7 / 测试开发(AI方向) 3_
+_Agent评测 17 / AI/Agent产品 9 / 大模型/AI测试 7 / 测试开发(AI方向) 3_
 
 | 岗位 | 方向 | 城市 | 部门 |
 | --- | --- | --- | --- |
@@ -306,6 +307,7 @@ _Agent评测 16 / AI/Agent产品 9 / 大模型/AI测试 7 / 测试开发(AI方�
 | [大模型评测算法工程师](https://zhaopin.kuaishou.cn/recruit/e/#/official/social/detail/30460) | Agent评测 |  |  |
 | [文生图/可控式编辑大模型评测工程师（可灵AI专项）](https://zhaopin.kuaishou.cn/recruit/e/#/official/social/detail/27559) | Agent评测 |  |  |
 | [算法/大模型评测工程师](https://zhaopin.kuaishou.cn/recruit/e/#/official/social/detail/27887) | Agent评测 |  |  |
+| [训练数据质量评测专家 -【可灵AI】](https://zhaopin.kuaishou.cn/recruit/e/#/official/social/detail/32325) | Agent评测 |  |  |
 | [评测工具开发工程师（大模型方向）](https://zhaopin.kuaishou.cn/recruit/e/#/official/social/detail/27146) | Agent评测 |  |  |
 | [评测平台研发工程师-【Java方向】](https://zhaopin.kuaishou.cn/recruit/e/#/official/social/detail/29645) | Agent评测 |  |  |
 | [音视频大模型评测工程师](https://zhaopin.kuaishou.cn/recruit/e/#/official/social/detail/29905) | Agent评测 |  |  |
@@ -544,7 +546,7 @@ _测试开发(AI方向) 16 / 大模型/AI测试 9 / Agent评测 6 / AI/Agent产�
 
 | 城市 | 岗位数 |
 | --- | --- |
-| 北京 | 148 |
+| 北京 | 149 |
 | 深圳 | 34 |
 | 上海 | 28 |
 | 杭州 | 20 |
@@ -553,4 +555,4 @@ _测试开发(AI方向) 16 / 大模型/AI测试 9 / Agent评测 6 / AI/Agent产�
 
 ---
 
-*数据自动采集，更新于 2026-08-26 10:00。仅供求职参考。*
+*数据自动采集，更新于 2026-08-27 11:09。仅供求职参考。*
