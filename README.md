@@ -1,6 +1,6 @@
 # AI 岗位雷达
 
-> 更新时间: 2026-08-28 12:47 | 岗位总数: **324**
+> 更新时间: 2026-08-28 21:03 | 岗位总数: **324**
 
 自动追踪大模型测试 / AI测试 / Agent评测 / 测试开发(AI方向) / AI产品 相关岗位。
 
@@ -64,17 +64,17 @@
 
 | 平台 | 最近抓取 | 状态 | 原始 → 入库 | 在库岗位 |
 | --- | --- | --- | --- | --- |
-| 小红书 | 12小时前 | 🟢 | 14 | 14 |
-| 腾讯 | 12小时前 | 🟢 | 42 | 42 |
-| 阿里巴巴 | 12小时前 | 🟢 | 36 | 36 |
-| 网易 | 12小时前 | 🟢 | 7 | 7 |
-| MokaHR(DeepSeek/Kimi) | 12小时前 | 🟢 | 5 | 5 |
-| 美团 | 12小时前 | 🟢 | 43 | 43 |
-| 快手 | 12小时前 | 🟢 | 37 | 37 |
-| 飞书招聘(MiniMax/智谱AI/商汤/零一万物/百川) | 12小时前 | 🟢 | 19 | 19 |
-| 滴滴 | 12小时前 | 🟢 | 2 | 2 |
-| 字节跳动 | 12小时前 | 🟢 | 83 | 83 |
-| 百度 | 12小时前 | 🟢 | 36 | 36 |
+| 小红书 | 21小时前 | 🟢 | 14 | 14 |
+| 腾讯 | 21小时前 | 🟢 | 42 | 42 |
+| 阿里巴巴 | 21小时前 | 🟢 | 36 | 36 |
+| 网易 | 21小时前 | 🟢 | 7 | 7 |
+| MokaHR(DeepSeek/Kimi) | 21小时前 | 🟢 | 5 | 5 |
+| 美团 | 21小时前 | 🟢 | 43 | 43 |
+| 快手 | 21小时前 | 🟢 | 37 | 37 |
+| 飞书招聘(MiniMax/智谱AI/商汤/零一万物/百川) | 21小时前 | 🟢 | 19 | 19 |
+| 滴滴 | 21小时前 | 🟢 | 2 | 2 |
+| 字节跳动 | 21小时前 | 🟢 | 83 | 83 |
+| 百度 | 21小时前 | 🟢 | 36 | 36 |
 
 ---
 
@@ -474,9 +474,9 @@ _AI/Agent产品 19 / Agent评测 17 / 大模型/AI测试 3 / 测试开发(AI方�
 | [混元多模态大模型评测（北京）](http://careers.tencent.com/jobdesc.html?postId=1997884330793394176) | Agent评测 | 深圳 | TEG |
 | [混元大模型评测算法研究员（北京）](http://careers.tencent.com/jobdesc.html?postId=1915233782491881472) | Agent评测 | 深圳 | TEG |
 | [混元数据算法工程师（Coding 数据质量与评测方向）](http://careers.tencent.com/jobdesc.html?postId=2042431106661380096) | Agent评测 | 北京 | TEG |
+| [腾讯游戏-大模型评测专家](http://careers.tencent.com/jobdesc.html?postId=2072330913710260224) | Agent评测 | 北京 | IEG |
 | [腾讯游戏-大模型评测专家](http://careers.tencent.com/jobdesc.html?postId=2072330918441435136) | Agent评测 | 深圳 | IEG |
 | [腾讯游戏-大模型评测专家](http://careers.tencent.com/jobdesc.html?postId=2072330916012933120) | Agent评测 | 杭州 | IEG |
-| [腾讯游戏-大模型评测专家](http://careers.tencent.com/jobdesc.html?postId=2072330913710260224) | Agent评测 | 北京 | IEG |
 | [腾讯营销-商业化策略产品-大模型评测方向](http://careers.tencent.com/jobdesc.html?postId=2012016099826225152) | Agent评测 | 上海 | CDG |
 | [AI产品经理-AI平台（Agent）方向](http://careers.tencent.com/jobdesc.html?postId=2088450750270324736) | AI/Agent产品 | 深圳 | CDG |
 | [QQ-Agent产品经理](http://careers.tencent.com/jobdesc.html?postId=2077347119940939776) | AI/Agent产品 | 深圳 | PCG |
@@ -556,4 +556,4 @@ _测试开发(AI方向) 16 / 大模型/AI测试 9 / Agent评测 6 / AI/Agent产�
 
 ---
 
-*数据自动采集，更新于 2026-08-28 12:47。仅供求职参考。*
+*数据自动采集，更新于 2026-08-28 21:03。仅供求职参考。*
