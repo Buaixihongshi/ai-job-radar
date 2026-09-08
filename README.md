@@ -1,6 +1,6 @@
 # AI 岗位雷达
 
-> 更新时间: 2026-09-08 05:51 | 岗位总数: **331**
+> 更新时间: 2026-09-08 13:43 | 岗位总数: **332**
 
 自动追踪大模型测试 / AI测试 / Agent评测 / 测试开发(AI方向) / AI产品 相关岗位。
 
@@ -14,7 +14,7 @@
 | --- | --- | --- |
 | 大模型/AI测试 | 大模型评测、算法测试、AI质量保障 | 40 |
 | 测试开发(AI方向) | AI方向的测试开发、评测平台、自动化框架 | 72 |
-| Agent评测 | Agent/大模型效果评测、Benchmark建设 | 130 |
+| Agent评测 | Agent/大模型效果评测、Benchmark建设 | 131 |
 | AI/Agent产品 | AI策略产品、Agent产品、AIGC产品 | 89 |
 
 ## 筛选条件
@@ -34,7 +34,7 @@
 | [字节跳动](jobs/字节跳动.md) | ✅ 已接入 | 83 |
 | [腾讯](jobs/腾讯.md) | ✅ 已接入 | 45 |
 | [美团](jobs/美团.md) | ✅ 已接入 | 45 |
-| [百度](jobs/百度.md) | ✅ 已接入 | 37 |
+| [百度](jobs/百度.md) | ✅ 已接入 | 38 |
 | [快手](jobs/快手.md) | ✅ 已接入 | 37 |
 | [阿里巴巴](jobs/阿里巴巴.md) | ✅ 已接入 | 36 |
 | [飞书招聘(MiniMax/智谱AI/商汤/零一万物/百川)](jobs/MiniMax.md) | ✅ 已接入 | 19 |
@@ -64,17 +64,17 @@
 
 | 平台 | 最近抓取 | 状态 | 原始 → 入库 | 在库岗位 |
 | --- | --- | --- | --- | --- |
-| 小红书 | 5小时前 | 🟢 | 15 | 15 |
-| 腾讯 | 5小时前 | 🟢 | 45 | 45 |
-| 阿里巴巴 | 5小时前 | 🟢 | 36 | 36 |
-| 网易 | 5小时前 | 🟢 | 7 | 7 |
-| MokaHR(DeepSeek/Kimi) | 5小时前 | 🟢 | 5 | 5 |
-| 美团 | 5小时前 | 🟢 | 45 | 45 |
-| 快手 | 5小时前 | 🟢 | 37 | 37 |
-| 飞书招聘(MiniMax/智谱AI/商汤/零一万物/百川) | 5小时前 | 🟢 | 19 | 19 |
-| 滴滴 | 5小时前 | 🟢 | 2 | 2 |
-| 字节跳动 | 5小时前 | 🟢 | 83 | 83 |
-| 百度 | 5小时前 | 🟢 | 37 | 37 |
+| 小红书 | 13小时前 | 🟢 | 15 | 15 |
+| 腾讯 | 13小时前 | 🟢 | 45 | 45 |
+| 阿里巴巴 | 13小时前 | 🟢 | 36 | 36 |
+| 网易 | 13小时前 | 🟢 | 7 | 7 |
+| MokaHR(DeepSeek/Kimi) | 13小时前 | 🟢 | 5 | 5 |
+| 美团 | 13小时前 | 🟢 | 45 | 45 |
+| 快手 | 13小时前 | 🟢 | 37 | 37 |
+| 飞书招聘(MiniMax/智谱AI/商汤/零一万物/百川) | 13小时前 | 🟢 | 19 | 19 |
+| 滴滴 | 13小时前 | 🟢 | 2 | 2 |
+| 字节跳动 | 13小时前 | 🟢 | 83 | 83 |
+| 百度 | 13小时前 | 🟢 | 38 | 38 |
 
 ---
 
@@ -286,7 +286,7 @@ _Agent评测 17 / AI/Agent产品 9 / 大模型/AI测试 7 / 测试开发(AI方�
 
 | 岗位 | 方向 | 城市 | 部门 |
 | --- | --- | --- | --- |
-| [B端高级测试工程师（可灵AI专项）](https://zhaopin.kuaishou.cn/recruit/e/#/official/social/detail/26961) | 大模型/AI测试 |  |  |
+| [B端高级测试工程师（可灵AI）](https://zhaopin.kuaishou.cn/recruit/e/#/official/social/detail/26961) | 大模型/AI测试 |  |  |
 | [多模态数据链路质量专家-【可灵AI专项】](https://zhaopin.kuaishou.cn/recruit/e/#/official/social/detail/31178) | 大模型/AI测试 |  |  |
 | [多模态训练数据策略专家（数据质量与验收方向）-【可灵AI】](https://zhaopin.kuaishou.cn/recruit/e/#/official/social/detail/32163) | 大模型/AI测试 |  |  |
 | [多模态训练数据质量专家](https://zhaopin.kuaishou.cn/recruit/e/#/official/social/detail/31728) | 大模型/AI测试 |  |  |
@@ -343,9 +343,9 @@ _Agent评测 3_
 | [兼职肿瘤科医生（医学评测/内容审核方向）](https://cq6qe6bvfr6.jobs.feishu.cn/baichuanzhaopin/position/7611439370256156954/detail) | Agent评测 | 北京 |  |
 | [百川智能-大模型产品经理（评测方向）](https://cq6qe6bvfr6.jobs.feishu.cn/baichuanzhaopin/position/7367648471140026662/detail) | Agent评测 | 北京 |  |
 
-### [百度](jobs/百度.md)（37 个岗位）
+### [百度](jobs/百度.md)（38 个岗位）
 
-_AI/Agent产品 20 / Agent评测 9 / 测试开发(AI方向) 7 / 大模型/AI测试 1_
+_AI/Agent产品 20 / Agent评测 10 / 测试开发(AI方向) 7 / 大模型/AI测试 1_
 
 | 岗位 | 方向 | 城市 | 部门 |
 | --- | --- | --- | --- |
@@ -360,6 +360,7 @@ _AI/Agent产品 20 / Agent评测 9 / 测试开发(AI方向) 7 / 大模型/AI测�
 | [DuMate效果评测产品经理（J100354）](https://talent.baidu.com/jobs/social-detail/J100354) | Agent评测 |  |  |
 | [DuMate策略PM（Agent评测方向）（J104381）](https://talent.baidu.com/jobs/social-detail/J104381) | Agent评测 |  |  |
 | [DuMate评测产品经理（J99493）](https://talent.baidu.com/jobs/social-detail/J99493) | Agent评测 |  |  |
+| [具身智能仿真评测研发工程师（J105511）](https://talent.baidu.com/jobs/social-detail/J105511) | Agent评测 |  |  |
 | [大模型效果评测工程师（J97941）](https://talent.baidu.com/jobs/social-detail/J97941) | Agent评测 |  |  |
 | [大模型算法工程师-模型评测方向（J98466）](https://talent.baidu.com/jobs/social-detail/J98466) | Agent评测 |  |  |
 | [大模型评估策略PM（J98762）](https://talent.baidu.com/jobs/social-detail/J98762) | Agent评测 |  |  |
@@ -563,4 +564,4 @@ _测试开发(AI方向) 16 / 大模型/AI测试 9 / Agent评测 6 / AI/Agent产�
 
 ---
 
-*数据自动采集，更新于 2026-09-08 05:51。仅供求职参考。*
+*数据自动采集，更新于 2026-09-08 13:43。仅供求职参考。*
