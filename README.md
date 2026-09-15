@@ -1,6 +1,6 @@
 # AI 岗位雷达
 
-> 更新时间: 2026-09-15 05:58 | 岗位总数: **338**
+> 更新时间: 2026-09-15 14:31 | 岗位总数: **339**
 
 自动追踪大模型测试 / AI测试 / Agent评测 / 测试开发(AI方向) / AI产品 相关岗位。
 
@@ -14,7 +14,7 @@
 | --- | --- | --- |
 | 大模型/AI测试 | 大模型评测、算法测试、AI质量保障 | 43 |
 | 测试开发(AI方向) | AI方向的测试开发、评测平台、自动化框架 | 72 |
-| Agent评测 | Agent/大模型效果评测、Benchmark建设 | 131 |
+| Agent评测 | Agent/大模型效果评测、Benchmark建设 | 132 |
 | AI/Agent产品 | AI策略产品、Agent产品、AIGC产品 | 92 |
 
 ## 筛选条件
@@ -38,7 +38,7 @@
 | [阿里巴巴](jobs/阿里巴巴.md) | ✅ 已接入 | 37 |
 | [快手](jobs/快手.md) | ✅ 已接入 | 37 |
 | [飞书招聘(MiniMax/智谱AI/商汤/零一万物/百川)](jobs/MiniMax.md) | ✅ 已接入 | 20 |
-| [小红书](jobs/小红书.md) | ✅ 已接入 | 15 |
+| [小红书](jobs/小红书.md) | ✅ 已接入 | 16 |
 | [网易](jobs/网易.md) | ✅ 已接入 | 7 |
 | [MokaHR(DeepSeek/Kimi)](jobs/Kimi.md) | ✅ 已接入 | 5 |
 | [滴滴](jobs/滴滴.md) | ✅ 已接入 | 2 |
@@ -64,17 +64,17 @@
 
 | 平台 | 最近抓取 | 状态 | 原始 → 入库 | 在库岗位 |
 | --- | --- | --- | --- | --- |
-| 小红书 | 5小时前 | 🟢 | 15 | 15 |
-| 腾讯 | 5小时前 | 🟢 | 48 | 48 |
-| 阿里巴巴 | 5小时前 | 🟢 | 37 | 37 |
-| 网易 | 5小时前 | 🟢 | 7 | 7 |
-| MokaHR(DeepSeek/Kimi) | 5小时前 | 🟢 | 5 | 5 |
-| 美团 | 5小时前 | 🟢 | 46 | 46 |
-| 快手 | 5小时前 | 🟢 | 37 | 37 |
-| 飞书招聘(MiniMax/智谱AI/商汤/零一万物/百川) | 5小时前 | 🟢 | 20 | 20 |
-| 滴滴 | 5小时前 | 🟢 | 2 | 2 |
-| 字节跳动 | 5小时前 | 🟢 | 83 | 83 |
-| 百度 | 5小时前 | 🟢 | 38 | 38 |
+| 小红书 | 14小时前 | 🟢 | 16 | 16 |
+| 腾讯 | 14小时前 | 🟢 | 48 | 48 |
+| 阿里巴巴 | 14小时前 | 🟢 | 37 | 37 |
+| 网易 | 14小时前 | 🟢 | 7 | 7 |
+| MokaHR(DeepSeek/Kimi) | 14小时前 | 🟢 | 5 | 5 |
+| 美团 | 14小时前 | 🟢 | 46 | 46 |
+| 快手 | 14小时前 | 🟢 | 37 | 37 |
+| 飞书招聘(MiniMax/智谱AI/商汤/零一万物/百川) | 14小时前 | 🟢 | 20 | 20 |
+| 滴滴 | 14小时前 | 🟢 | 2 | 2 |
+| 字节跳动 | 14小时前 | 🟢 | 83 | 83 |
+| 百度 | 14小时前 | 🟢 | 38 | 38 |
 
 ---
 
@@ -99,12 +99,12 @@
 
 | 技能 | 出现次数 |
 | --- | --- |
-| agent | 237 |
-| llm | 43 |
+| agent | 241 |
+| llm | 41 |
 | prompt | 32 |
 | python | 28 |
-| benchmark | 23 |
 | rag | 20 |
+| benchmark | 19 |
 | java | 18 |
 | badcase | 17 |
 | 大模型 | 10 |
@@ -258,9 +258,9 @@ _Agent评测 41 / 测试开发(AI方向) 27 / 大模型/AI测试 8 / AI/Agent产
 | [Agent产品经理-火山引擎](https://jobs.bytedance.com/experienced/position/7301333135140063497/detail) | AI/Agent产品 | 上海 | 产品 - 产品经理职位 |
 | [Agent产品经理-火山引擎](https://jobs.bytedance.com/experienced/position/7044435284037798174/detail) | AI/Agent产品 | 深圳 | 产品 - 产品经理职位 |
 
-### [小红书](jobs/小红书.md)（15 个岗位）
+### [小红书](jobs/小红书.md)（16 个岗位）
 
-_Agent评测 7 / 大模型/AI测试 3 / AI/Agent产品 3 / 测试开发(AI方向) 2_
+_Agent评测 8 / 大模型/AI测试 3 / AI/Agent产品 3 / 测试开发(AI方向) 2_
 
 | 岗位 | 方向 | 城市 | 部门 |
 | --- | --- | --- | --- |
@@ -272,7 +272,8 @@ _Agent评测 7 / 大模型/AI测试 3 / AI/Agent产品 3 / 测试开发(AI方向
 | [AI 评测平台 Leader](https://job.xiaohongshu.com/social/position/21976) | Agent评测 | 上海 | 后端开发 |
 | [AI搜索评测产品经理](https://job.xiaohongshu.com/social/position/20081) | Agent评测 | 北京 | 产品经理 |
 | [Agent 评估与进化工程师 - Agent Evaluation & Evolution Engineer](https://job.xiaohongshu.com/social/position/21896) | Agent评测 | 北京 | 机器学习平台 |
-| [【Dots】大模型评测](https://job.xiaohongshu.com/social/position/21093) | Agent评测 | 北京 | 大模型 |
+| [Dots-大模型能力评测师](https://job.xiaohongshu.com/social/position/22455) | Agent评测 | 北京 | 大模型 |
+| [【Dots】大模型评测算法工程师](https://job.xiaohongshu.com/social/position/21093) | Agent评测 | 北京 | 大模型 |
 | [模型标注-AI应用评测专家](https://job.xiaohongshu.com/social/position/16916) | Agent评测 | 北京 | 模型标注 |
 | [模型标注-海外搜索评测](https://job.xiaohongshu.com/social/position/19239) | Agent评测 | 杭州 | 模型标注 |
 | [社区AI评测产品经理](https://job.xiaohongshu.com/social/position/21336) | Agent评测 | 北京 | 产品经理 |
@@ -561,7 +562,7 @@ _测试开发(AI方向) 15 / 大模型/AI测试 10 / AI/Agent产品 6 / Agent评
 
 | 城市 | 岗位数 |
 | --- | --- |
-| 北京 | 154 |
+| 北京 | 155 |
 | 深圳 | 38 |
 | 上海 | 31 |
 | 杭州 | 20 |
@@ -570,4 +571,4 @@ _测试开发(AI方向) 15 / 大模型/AI测试 10 / AI/Agent产品 6 / Agent评
 
 ---
 
-*数据自动采集，更新于 2026-09-15 05:58。仅供求职参考。*
+*数据自动采集，更新于 2026-09-15 14:31。仅供求职参考。*
