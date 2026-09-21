@@ -1,6 +1,6 @@
 # AI 岗位雷达
 
-> 更新时间: 2026-09-21 06:03 | 岗位总数: **346**
+> 更新时间: 2026-09-21 16:01 | 岗位总数: **347**
 
 自动追踪大模型测试 / AI测试 / Agent评测 / 测试开发(AI方向) / AI产品 相关岗位。
 
@@ -14,7 +14,7 @@
 | --- | --- | --- |
 | 大模型/AI测试 | 大模型评测、算法测试、AI质量保障 | 43 |
 | 测试开发(AI方向) | AI方向的测试开发、评测平台、自动化框架 | 75 |
-| Agent评测 | Agent/大模型效果评测、Benchmark建设 | 135 |
+| Agent评测 | Agent/大模型效果评测、Benchmark建设 | 136 |
 | AI/Agent产品 | AI策略产品、Agent产品、AIGC产品 | 93 |
 
 ## 筛选条件
@@ -35,8 +35,8 @@
 | [腾讯](jobs/腾讯.md) | ✅ 已接入 | 51 |
 | [美团](jobs/美团.md) | ✅ 已接入 | 48 |
 | [百度](jobs/百度.md) | ✅ 已接入 | 39 |
+| [快手](jobs/快手.md) | ✅ 已接入 | 38 |
 | [阿里巴巴](jobs/阿里巴巴.md) | ✅ 已接入 | 37 |
-| [快手](jobs/快手.md) | ✅ 已接入 | 37 |
 | [飞书招聘(MiniMax/智谱AI/商汤/零一万物/百川)](jobs/MiniMax.md) | ✅ 已接入 | 20 |
 | [小红书](jobs/小红书.md) | ✅ 已接入 | 16 |
 | [网易](jobs/网易.md) | ✅ 已接入 | 8 |
@@ -54,7 +54,7 @@
 | 猎聘 | 📋 计划中 | - |
 | 脉脉 | 📋 计划中 | - |
 
-**✅ 已接入（11 家）**：[字节跳动](jobs/字节跳动.md)、[腾讯](jobs/腾讯.md)、[美团](jobs/美团.md)、[百度](jobs/百度.md)、[阿里巴巴](jobs/阿里巴巴.md)、[快手](jobs/快手.md)、[飞书招聘(MiniMax/智谱AI/商汤/零一万物/百川)](jobs/MiniMax.md)、[小红书](jobs/小红书.md)、[网易](jobs/网易.md)、[MokaHR(DeepSeek/Kimi)](jobs/Kimi.md)、[滴滴](jobs/滴滴.md)
+**✅ 已接入（11 家）**：[字节跳动](jobs/字节跳动.md)、[腾讯](jobs/腾讯.md)、[美团](jobs/美团.md)、[百度](jobs/百度.md)、[快手](jobs/快手.md)、[阿里巴巴](jobs/阿里巴巴.md)、[飞书招聘(MiniMax/智谱AI/商汤/零一万物/百川)](jobs/MiniMax.md)、[小红书](jobs/小红书.md)、[网易](jobs/网易.md)、[MokaHR(DeepSeek/Kimi)](jobs/Kimi.md)、[滴滴](jobs/滴滴.md)
 
 **🔧 调试中（4 家）**：京东、华为、蚂蚁集团、阿里巴巴(集团主站)（爬虫已编写，数据接入调试中）
 
@@ -64,17 +64,17 @@
 
 | 平台 | 最近抓取 | 状态 | 原始 → 入库 | 在库岗位 |
 | --- | --- | --- | --- | --- |
-| 小红书 | 6小时前 | 🟢 | 16 | 16 |
-| 腾讯 | 6小时前 | 🟢 | 51 | 51 |
-| 阿里巴巴 | 6小时前 | 🟢 | 37 | 37 |
-| 网易 | 6小时前 | 🟢 | 8 | 8 |
-| MokaHR(DeepSeek/Kimi) | 6小时前 | 🟢 | 5 | 5 |
-| 美团 | 6小时前 | 🟢 | 48 | 48 |
-| 快手 | 6小时前 | 🟢 | 37 | 37 |
-| 飞书招聘(MiniMax/智谱AI/商汤/零一万物/百川) | 6小时前 | 🟢 | 20 | 20 |
-| 滴滴 | 6小时前 | 🟢 | 2 | 2 |
-| 字节跳动 | 6小时前 | 🟢 | 83 | 83 |
-| 百度 | 6小时前 | 🟢 | 39 | 39 |
+| 小红书 | 16小时前 | 🟢 | 16 | 16 |
+| 腾讯 | 16小时前 | 🟢 | 51 | 51 |
+| 阿里巴巴 | 16小时前 | 🟢 | 37 | 37 |
+| 网易 | 16小时前 | 🟢 | 8 | 8 |
+| MokaHR(DeepSeek/Kimi) | 16小时前 | 🟢 | 5 | 5 |
+| 美团 | 16小时前 | 🟢 | 48 | 48 |
+| 快手 | 16小时前 | 🟢 | 38 | 38 |
+| 飞书招聘(MiniMax/智谱AI/商汤/零一万物/百川) | 16小时前 | 🟢 | 20 | 20 |
+| 滴滴 | 16小时前 | 🟢 | 2 | 2 |
+| 字节跳动 | 16小时前 | 🟢 | 83 | 83 |
+| 百度 | 16小时前 | 🟢 | 39 | 39 |
 
 ---
 
@@ -281,9 +281,9 @@ _Agent评测 8 / AI/Agent产品 3 / 大模型/AI测试 3 / 测试开发(AI方向
 | [【急聘】AI Agent 产品研发工程师](https://job.xiaohongshu.com/social/position/16393) | AI/Agent产品 | 北京 | 客户端开发 |
 | [职能Domain Agent产品经理](https://job.xiaohongshu.com/social/position/21398) | AI/Agent产品 | 上海 | 产品经理 |
 
-### [快手](jobs/快手.md)（37 个岗位）
+### [快手](jobs/快手.md)（38 个岗位）
 
-_Agent评测 17 / AI/Agent产品 9 / 大模型/AI测试 7 / 测试开发(AI方向) 4_
+_Agent评测 18 / AI/Agent产品 9 / 大模型/AI测试 7 / 测试开发(AI方向) 4_
 
 | 岗位 | 方向 | 城市 | 部门 |
 | --- | --- | --- | --- |
@@ -313,6 +313,7 @@ _Agent评测 17 / AI/Agent产品 9 / 大模型/AI测试 7 / 测试开发(AI方�
 | [训练数据质量评测专家 -【可灵AI】](https://zhaopin.kuaishou.cn/recruit/e/#/official/social/detail/32325) | Agent评测 |  |  |
 | [评测工具开发工程师（大模型方向）](https://zhaopin.kuaishou.cn/recruit/e/#/official/social/detail/27146) | Agent评测 |  |  |
 | [评测平台研发工程师-【Java方向】](https://zhaopin.kuaishou.cn/recruit/e/#/official/social/detail/29645) | Agent评测 |  |  |
+| [音视频大模型评测工程师](https://zhaopin.kuaishou.cn/recruit/e/#/official/social/detail/32797) | Agent评测 |  |  |
 | [音视频大模型评测工程师](https://zhaopin.kuaishou.cn/recruit/e/#/official/social/detail/29905) | Agent评测 |  |  |
 | [音频大模型评测工程师-【可灵AI专项】](https://zhaopin.kuaishou.cn/recruit/e/#/official/social/detail/29965) | Agent评测 |  |  |
 | [AIGC产品专家-【商业化】](https://zhaopin.kuaishou.cn/recruit/e/#/official/social/detail/31827) | AI/Agent产品 |  |  |
@@ -578,4 +579,4 @@ _测试开发(AI方向) 15 / 大模型/AI测试 10 / AI/Agent产品 6 / Agent评
 
 ---
 
-*数据自动采集，更新于 2026-09-21 06:03。仅供求职参考。*
+*数据自动采集，更新于 2026-09-21 16:01。仅供求职参考。*
