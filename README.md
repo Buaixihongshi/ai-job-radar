@@ -1,6 +1,6 @@
 # AI 岗位雷达
 
-> 更新时间: 2026-10-20 05:56 | 岗位总数: **359**
+> 更新时间: 2026-10-20 14:26 | 岗位总数: **360**
 
 自动追踪大模型测试 / AI测试 / Agent评测 / 测试开发(AI方向) / AI产品 相关岗位。
 
@@ -12,7 +12,7 @@
 
 | 方向 | 说明 | 岗位数 |
 | --- | --- | --- |
-| 大模型/AI测试 | 大模型评测、算法测试、AI质量保障 | 44 |
+| 大模型/AI测试 | 大模型评测、算法测试、AI质量保障 | 45 |
 | 测试开发(AI方向) | AI方向的测试开发、评测平台、自动化框架 | 76 |
 | Agent评测 | Agent/大模型效果评测、Benchmark建设 | 142 |
 | AI/Agent产品 | AI策略产品、Agent产品、AIGC产品 | 97 |
@@ -32,7 +32,7 @@
 | 公司 | 状态 | 岗位数 |
 | --- | --- | --- |
 | [字节跳动](jobs/字节跳动.md) | ✅ 已接入 | 83 |
-| [腾讯](jobs/腾讯.md) | ✅ 已接入 | 54 |
+| [腾讯](jobs/腾讯.md) | ✅ 已接入 | 55 |
 | [美团](jobs/美团.md) | ✅ 已接入 | 51 |
 | [百度](jobs/百度.md) | ✅ 已接入 | 42 |
 | [阿里巴巴](jobs/阿里巴巴.md) | ✅ 已接入 | 38 |
@@ -64,17 +64,17 @@
 
 | 平台 | 最近抓取 | 状态 | 原始 → 入库 | 在库岗位 |
 | --- | --- | --- | --- | --- |
-| 小红书 | 5小时前 | 🟢 | 17 | 17 |
-| 腾讯 | 5小时前 | 🟢 | 54 | 54 |
-| 阿里巴巴 | 5小时前 | 🟢 | 38 | 38 |
-| 网易 | 5小时前 | 🟢 | 9 | 9 |
-| MokaHR(DeepSeek/Kimi) | 5小时前 | 🟢 | 5 | 5 |
-| 美团 | 5小时前 | 🟢 | 51 | 51 |
-| 快手 | 5小时前 | 🟢 | 38 | 38 |
-| 飞书招聘(MiniMax/智谱AI/商汤/零一万物/百川) | 5小时前 | 🟢 | 20 | 20 |
-| 滴滴 | 5小时前 | 🟢 | 2 | 2 |
-| 字节跳动 | 5小时前 | 🟢 | 83 | 83 |
-| 百度 | 5小时前 | 🟢 | 42 | 42 |
+| 小红书 | 14小时前 | 🟢 | 17 | 17 |
+| 腾讯 | 14小时前 | 🟢 | 55 | 55 |
+| 阿里巴巴 | 14小时前 | 🟢 | 38 | 38 |
+| 网易 | 14小时前 | 🟢 | 9 | 9 |
+| MokaHR(DeepSeek/Kimi) | 14小时前 | 🟢 | 5 | 5 |
+| 美团 | 14小时前 | 🟢 | 51 | 51 |
+| 快手 | 14小时前 | 🟢 | 38 | 38 |
+| 飞书招聘(MiniMax/智谱AI/商汤/零一万物/百川) | 14小时前 | 🟢 | 20 | 20 |
+| 滴滴 | 14小时前 | 🟢 | 2 | 2 |
+| 字节跳动 | 14小时前 | 🟢 | 83 | 83 |
+| 百度 | 14小时前 | 🟢 | 42 | 42 |
 
 ---
 
@@ -99,7 +99,7 @@
 
 | 技能 | 出现次数 |
 | --- | --- |
-| agent | 248 |
+| agent | 249 |
 | llm | 41 |
 | prompt | 32 |
 | python | 27 |
@@ -470,13 +470,14 @@ _Agent评测 25 / AI/Agent产品 18 / 测试开发(AI方向) 5 / 大模型/AI测
 | [酒店agent收益产品](https://zhaopin.meituan.com/web/social-recruitment/4654075979) | AI/Agent产品 | 北京 | 软硬件服务-酒店SaaS业务部 |
 | [闪购-导购Agent产品经理](https://zhaopin.meituan.com/web/social-recruitment/4698722766) | AI/Agent产品 | 北京 | 核心本地商业-闪购事业部 |
 
-### [腾讯](jobs/腾讯.md)（54 个岗位）
+### [腾讯](jobs/腾讯.md)（55 个岗位）
 
-_AI/Agent产品 23 / Agent评测 20 / 测试开发(AI方向) 7 / 大模型/AI测试 4_
+_AI/Agent产品 23 / Agent评测 20 / 测试开发(AI方向) 7 / 大模型/AI测试 5_
 
 | 岗位 | 方向 | 城市 | 部门 |
 | --- | --- | --- | --- |
 | [光子 AI-大模型质量工程师-游戏方向](http://careers.tencent.com/jobdesc.html?postId=2078028283043299328) | 大模型/AI测试 | 深圳 | IEG |
+| [大模型测试工程师（北京/深圳）](http://careers.tencent.com/jobdesc.html?postId=2079125521983254528) | 大模型/AI测试 | 北京 | TEG |
 | [大模型测试工程师（北京/深圳）](http://careers.tencent.com/jobdesc.html?postId=2031246319435284480) | 大模型/AI测试 | 北京 | TEG |
 | [混元大语言数据质量工程师（北京）](http://careers.tencent.com/jobdesc.html?postId=2090359476719894528) | 大模型/AI测试 | 深圳 | TEG |
 | [腾讯云-AI平台测试工程师](http://careers.tencent.com/jobdesc.html?postId=2095048211722059776) | 大模型/AI测试 | 深圳 | CSIG |
@@ -562,7 +563,7 @@ _测试开发(AI方向) 15 / 大模型/AI测试 10 / AI/Agent产品 7 / Agent评
 | [千问事业部-高级测试开发工程师-广州](https://talent.quark.cn/off-campus/position-detail?positionId=7000004301) | 测试开发(AI方向) | 广州 |  |
 | [千问事业部-高级测试开发工程师/测试开发专家-北京](https://talent.quark.cn/off-campus/position-detail?positionId=7000039806) | 测试开发(AI方向) | 北京 |  |
 | [智元科技-测试开发工程师-智能助手](https://talent.quark.cn/off-campus/position-detail?positionId=100018600002) | 测试开发(AI方向) | 杭州 |  |
-| [千问事业部-AI agent评测平台产品-北京](https://talent.quark.cn/off-campus/position-detail?positionId=100033200001) | Agent评测 | 北京 |  |
+| [千问事业部-AI agent评测平台产品经理-北京](https://talent.quark.cn/off-campus/position-detail?positionId=100033200001) | Agent评测 | 北京 |  |
 | [千问事业部-内容安全自动化评测专家-北京](https://talent.quark.cn/off-campus/position-detail?positionId=100018640025) | Agent评测 | 北京 |  |
 | [千问事业部-大模型产品Agentic评测运营-京/杭](https://talent.quark.cn/off-campus/position-detail?positionId=100021680004) | Agent评测 | 北京 |  |
 | [千问事业部-大模型智能化评测专家-杭州/深圳/上海](https://talent.quark.cn/off-campus/position-detail?positionId=100010700008) | Agent评测 | 深圳 |  |
@@ -582,7 +583,7 @@ _测试开发(AI方向) 15 / 大模型/AI测试 10 / AI/Agent产品 7 / Agent评
 
 | 城市 | 岗位数 |
 | --- | --- |
-| 北京 | 162 |
+| 北京 | 163 |
 | 深圳 | 40 |
 | 上海 | 34 |
 | 杭州 | 20 |
@@ -591,4 +592,4 @@ _测试开发(AI方向) 15 / 大模型/AI测试 10 / AI/Agent产品 7 / Agent评
 
 ---
 
-*数据自动采集，更新于 2026-10-20 05:56。仅供求职参考。*
+*数据自动采集，更新于 2026-10-20 14:26。仅供求职参考。*
