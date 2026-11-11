@@ -1,6 +1,6 @@
 # AI 岗位雷达
 
-> 更新时间: 2026-11-11 07:46 | 岗位总数: **380**
+> 更新时间: 2026-11-11 17:19 | 岗位总数: **383**
 
 自动追踪大模型测试 / AI测试 / Agent评测 / 测试开发(AI方向) / AI产品 相关岗位。
 
@@ -15,7 +15,7 @@
 | 大模型/AI测试 | 大模型评测、算法测试、AI质量保障 | 49 |
 | 测试开发(AI方向) | AI方向的测试开发、评测平台、自动化框架 | 79 |
 | Agent评测 | Agent/大模型效果评测、Benchmark建设 | 148 |
-| AI/Agent产品 | AI策略产品、Agent产品、AIGC产品 | 104 |
+| AI/Agent产品 | AI策略产品、Agent产品、AIGC产品 | 107 |
 
 ## 筛选条件
 
@@ -35,7 +35,7 @@
 | [腾讯](jobs/腾讯.md) | ✅ 已接入 | 64 |
 | [美团](jobs/美团.md) | ✅ 已接入 | 54 |
 | [百度](jobs/百度.md) | ✅ 已接入 | 45 |
-| [阿里巴巴](jobs/阿里巴巴.md) | ✅ 已接入 | 39 |
+| [阿里巴巴](jobs/阿里巴巴.md) | ✅ 已接入 | 42 |
 | [快手](jobs/快手.md) | ✅ 已接入 | 38 |
 | [飞书招聘(MiniMax/智谱AI/商汤/零一万物/百川)](jobs/MiniMax.md) | ✅ 已接入 | 22 |
 | [小红书](jobs/小红书.md) | ✅ 已接入 | 18 |
@@ -64,17 +64,17 @@
 
 | 平台 | 最近抓取 | 状态 | 原始 → 入库 | 在库岗位 |
 | --- | --- | --- | --- | --- |
-| 小红书 | 7小时前 | 🟢 | 18 | 18 |
-| 腾讯 | 7小时前 | 🟢 | 64 | 64 |
-| 阿里巴巴 | 7小时前 | 🟢 | 39 | 39 |
-| 网易 | 7小时前 | 🟢 | 10 | 10 |
-| MokaHR(DeepSeek/Kimi) | 7小时前 | 🟢 | 5 | 5 |
-| 美团 | 7小时前 | 🟢 | 54 | 54 |
-| 快手 | 7小时前 | 🟢 | 38 | 38 |
-| 飞书招聘(MiniMax/智谱AI/商汤/零一万物/百川) | 7小时前 | 🟢 | 22 | 22 |
-| 滴滴 | 7小时前 | 🟢 | 2 | 2 |
-| 字节跳动 | 7小时前 | 🟢 | 83 | 83 |
-| 百度 | 7小时前 | 🟢 | 45 | 45 |
+| 小红书 | 17小时前 | 🟢 | 18 | 18 |
+| 腾讯 | 17小时前 | 🟢 | 64 | 64 |
+| 阿里巴巴 | 17小时前 | 🟢 | 42 | 42 |
+| 网易 | 17小时前 | 🟢 | 10 | 10 |
+| MokaHR(DeepSeek/Kimi) | 17小时前 | 🟢 | 5 | 5 |
+| 美团 | 17小时前 | 🟢 | 54 | 54 |
+| 快手 | 17小时前 | 🟢 | 38 | 38 |
+| 飞书招聘(MiniMax/智谱AI/商汤/零一万物/百川) | 17小时前 | 🟢 | 22 | 22 |
+| 滴滴 | 17小时前 | 🟢 | 2 | 2 |
+| 字节跳动 | 17小时前 | 🟢 | 83 | 83 |
+| 百度 | 17小时前 | 🟢 | 45 | 45 |
 
 ---
 
@@ -99,9 +99,9 @@
 
 | 技能 | 出现次数 |
 | --- | --- |
-| agent | 269 |
+| agent | 281 |
 | llm | 42 |
-| prompt | 32 |
+| prompt | 34 |
 | python | 27 |
 | rag | 22 |
 | benchmark | 20 |
@@ -551,9 +551,9 @@ _AI/Agent产品 27 / Agent评测 22 / 测试开发(AI方向) 8 / 大模型/AI测
 | [证券-AI产品经理-Agent方向](http://careers.tencent.com/jobdesc.html?postId=2110653070814916608) | AI/Agent产品 | 深圳 | CDG |
 | [魔方高级 AIGC产品经理（大模型方向）](http://careers.tencent.com/jobdesc.html?postId=2071610936929730560) | AI/Agent产品 | 深圳 | IEG |
 
-### [阿里巴巴](jobs/阿里巴巴.md)（39 个岗位）
+### [阿里巴巴](jobs/阿里巴巴.md)（42 个岗位）
 
-_测试开发(AI方向) 16 / 大模型/AI测试 10 / AI/Agent产品 7 / Agent评测 6_
+_测试开发(AI方向) 16 / AI/Agent产品 10 / 大模型/AI测试 10 / Agent评测 6_
 
 | 岗位 | 方向 | 城市 | 部门 |
 | --- | --- | --- | --- |
@@ -596,6 +596,9 @@ _测试开发(AI方向) 16 / 大模型/AI测试 10 / AI/Agent产品 7 / Agent评
 | [千问事业部-AIGC产品经理（超级汇川）-北京](https://talent.quark.cn/off-campus/position-detail?positionId=100010180020) | AI/Agent产品 | 北京 |  |
 | [千问事业部-千问 Agent产品经理-北京/杭州](https://talent.quark.cn/off-campus/position-detail?positionId=100010200013) | AI/Agent产品 | 北京 |  |
 | [千问事业部-千问Agent 产品专家-AI 办公场景-北京](https://talent.quark.cn/off-campus/position-detail?positionId=100018640019) | AI/Agent产品 | 北京 |  |
+| [千问事业部-千问Go-Agent 产品运营-北京](https://talent.quark.cn/off-campus/position-detail?positionId=100055900003) | AI/Agent产品 | 北京 |  |
+| [千问事业部-千问Go-Agent 垂类产品经理-北京](https://talent.quark.cn/off-campus/position-detail?positionId=100055940003) | AI/Agent产品 | 北京 |  |
+| [千问事业部-用户产品经理-Agent](https://talent.quark.cn/off-campus/position-detail?positionId=100055960003) | AI/Agent产品 | 北京 |  |
 
 ---
 
@@ -603,7 +606,7 @@ _测试开发(AI方向) 16 / 大模型/AI测试 10 / AI/Agent产品 7 / Agent评
 
 | 城市 | 岗位数 |
 | --- | --- |
-| 北京 | 167 |
+| 北京 | 170 |
 | 深圳 | 49 |
 | 上海 | 37 |
 | 杭州 | 20 |
@@ -612,4 +615,4 @@ _测试开发(AI方向) 16 / 大模型/AI测试 10 / AI/Agent产品 7 / Agent评
 
 ---
 
-*数据自动采集，更新于 2026-11-11 07:46。仅供求职参考。*
+*数据自动采集，更新于 2026-11-11 17:19。仅供求职参考。*
